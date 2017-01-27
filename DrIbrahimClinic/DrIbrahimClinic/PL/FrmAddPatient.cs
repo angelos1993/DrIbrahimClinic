@@ -24,7 +24,7 @@ namespace DrIbrahimClinic.PL
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtName.Text = string.Empty;
-            //dateBirthdate.Value = null;
+            dtBirthdate.Value = new DateTime(1, 1, 1);
             switchBtnGender.Value = true;
             txtPhone.Text = string.Empty;
             txtAddress.Text = string.Empty;

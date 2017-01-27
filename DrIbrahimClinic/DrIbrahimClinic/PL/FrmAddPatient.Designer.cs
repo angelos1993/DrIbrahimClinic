@@ -32,7 +32,7 @@
             this.switchBtnBirthType = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.switchBtnSucklingType = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.switchBtnGender = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.dateBirthdate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.dtBirthdate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.txtAddress = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtPhone = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtName = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -47,7 +47,7 @@
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.btnSave = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateBirthdate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtBirthdate)).BeginInit();
             this.SuspendLayout();
             // 
             // groupPanel1
@@ -57,7 +57,7 @@
             this.groupPanel1.Controls.Add(this.switchBtnBirthType);
             this.groupPanel1.Controls.Add(this.switchBtnSucklingType);
             this.groupPanel1.Controls.Add(this.switchBtnGender);
-            this.groupPanel1.Controls.Add(this.dateBirthdate);
+            this.groupPanel1.Controls.Add(this.dtBirthdate);
             this.groupPanel1.Controls.Add(this.txtAddress);
             this.groupPanel1.Controls.Add(this.txtPhone);
             this.groupPanel1.Controls.Add(this.txtName);
@@ -159,55 +159,55 @@
             this.switchBtnGender.TabIndex = 2;
             this.switchBtnGender.Value = true;
             // 
-            // dateBirthdate
+            // dtBirthdate
             // 
             // 
             // 
             // 
-            this.dateBirthdate.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dateBirthdate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateBirthdate.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.dateBirthdate.ButtonDropDown.Visible = true;
-            this.dateBirthdate.Location = new System.Drawing.Point(153, 54);
+            this.dtBirthdate.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dtBirthdate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtBirthdate.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dtBirthdate.ButtonDropDown.Visible = true;
+            this.dtBirthdate.Location = new System.Drawing.Point(153, 54);
             // 
             // 
             // 
-            this.dateBirthdate.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            this.dtBirthdate.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
             // 
             // 
             // 
-            this.dateBirthdate.MonthCalendar.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.dateBirthdate.MonthCalendar.BackgroundStyle.Class = "";
-            this.dateBirthdate.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateBirthdate.MonthCalendar.ClearButtonVisible = true;
+            this.dtBirthdate.MonthCalendar.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.dtBirthdate.MonthCalendar.BackgroundStyle.Class = "";
+            this.dtBirthdate.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtBirthdate.MonthCalendar.ClearButtonVisible = true;
             // 
             // 
             // 
-            this.dateBirthdate.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.dateBirthdate.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.dateBirthdate.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.dateBirthdate.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.dateBirthdate.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.dateBirthdate.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.dateBirthdate.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.dateBirthdate.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateBirthdate.MonthCalendar.DisplayMonth = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
-            this.dateBirthdate.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.dateBirthdate.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            this.dtBirthdate.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dtBirthdate.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dtBirthdate.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dtBirthdate.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dtBirthdate.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dtBirthdate.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dtBirthdate.MonthCalendar.CommandsBackgroundStyle.Class = "";
+            this.dtBirthdate.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtBirthdate.MonthCalendar.DisplayMonth = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
+            this.dtBirthdate.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.dtBirthdate.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
             // 
             // 
             // 
-            this.dateBirthdate.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.dateBirthdate.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.dateBirthdate.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.dateBirthdate.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.dateBirthdate.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateBirthdate.MonthCalendar.TodayButtonVisible = true;
-            this.dateBirthdate.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.dateBirthdate.Name = "dateBirthdate";
-            this.dateBirthdate.Size = new System.Drawing.Size(200, 26);
-            this.dateBirthdate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dateBirthdate.TabIndex = 1;
+            this.dtBirthdate.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dtBirthdate.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dtBirthdate.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dtBirthdate.MonthCalendar.NavigationBackgroundStyle.Class = "";
+            this.dtBirthdate.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtBirthdate.MonthCalendar.TodayButtonVisible = true;
+            this.dtBirthdate.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.dtBirthdate.Name = "dtBirthdate";
+            this.dtBirthdate.Size = new System.Drawing.Size(200, 26);
+            this.dtBirthdate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dtBirthdate.TabIndex = 1;
             // 
             // txtAddress
             // 
@@ -414,7 +414,7 @@
             this.Name = "FrmAddPatient";
             this.Text = "إضافة مريض";
             this.groupPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dateBirthdate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtBirthdate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -429,7 +429,7 @@
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX8;
         private DevComponents.DotNetBar.LabelX labelX7;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput dateBirthdate;
+        private DevComponents.Editors.DateTimeAdv.DateTimeInput dtBirthdate;
         private DevComponents.DotNetBar.Controls.TextBoxX txtAddress;
         private DevComponents.DotNetBar.Controls.TextBoxX txtPhone;
         private DevComponents.DotNetBar.Controls.TextBoxX txtName;
