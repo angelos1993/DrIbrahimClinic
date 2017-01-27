@@ -1,0 +1,14 @@
+c:\users\angelos\documents\visual studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DrIbrahimClinic.exe
+C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddExamination.resources
+C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddExaminatios.resources
+C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddPatient.resources
+C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddTreatment.resources
+C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.Index.resources
+C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.Properties.Resources.resources
+C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.csproj.GenerateResource.Cache
+C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.exe
+C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.pdb
+C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DrIbrahimClinic.pdb
+C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.csprojResolveAssemblyReference.cache
