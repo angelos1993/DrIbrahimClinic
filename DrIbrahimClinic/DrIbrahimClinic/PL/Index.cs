@@ -47,7 +47,8 @@ namespace DrIbrahimClinic.PL
 
         private void btnEditPatient_Click(object sender, EventArgs e)
         {
-
+            FrmEditPatient frmEditPatient = new FrmEditPatient();
+            frmEditPatient.ShowDialog();
         }
 
         private void btnSearchPatients_Click(object sender, EventArgs e)
@@ -73,7 +74,8 @@ namespace DrIbrahimClinic.PL
 
         private void btnSearchTreatment_Click(object sender, EventArgs e)
         {
-
+            FrmSearchTreatment frmSearchTreatment = new FrmSearchTreatment();
+            frmSearchTreatment.ShowDialog();
         }
 
         #endregion

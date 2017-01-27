@@ -71,11 +71,23 @@
     <Compile Include="PL\FrmAddTreatment.Designer.cs">
       <DependentUpon>FrmAddTreatment.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\FrmEditPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmEditPatient.Designer.cs">
+      <DependentUpon>FrmEditPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FrmEditTreatment.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PL\FrmEditTreatment.Designer.cs">
       <DependentUpon>FrmEditTreatment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmSearchTreatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmSearchTreatment.Designer.cs">
+      <DependentUpon>FrmSearchTreatment.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\Index.cs">
       <SubType>Form</SubType>
@@ -103,8 +115,14 @@
     <EmbeddedResource Include="PL\FrmAddTreatment.resx">
       <DependentUpon>FrmAddTreatment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmEditPatient.resx">
+      <DependentUpon>FrmEditPatient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\FrmEditTreatment.resx">
       <DependentUpon>FrmEditTreatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmSearchTreatment.resx">
+      <DependentUpon>FrmSearchTreatment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
