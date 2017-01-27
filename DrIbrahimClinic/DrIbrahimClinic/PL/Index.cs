@@ -67,7 +67,8 @@ namespace DrIbrahimClinic.PL
 
         private void btnEditTreatment_Click(object sender, EventArgs e)
         {
-
+            FrmEditTreatment frmEditTreatment = new FrmEditTreatment();
+            frmEditTreatment.ShowDialog();
         }
 
         private void btnSearchTreatment_Click(object sender, EventArgs e)

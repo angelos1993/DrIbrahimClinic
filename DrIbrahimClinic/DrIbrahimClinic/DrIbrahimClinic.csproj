@@ -71,6 +71,12 @@
     <Compile Include="PL\FrmAddTreatment.Designer.cs">
       <DependentUpon>FrmAddTreatment.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\FrmEditTreatment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmEditTreatment.Designer.cs">
+      <DependentUpon>FrmEditTreatment.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\Index.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\FrmAddTreatment.resx">
       <DependentUpon>FrmAddTreatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmEditTreatment.resx">
+      <DependentUpon>FrmEditTreatment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Index.resx">
       <DependentUpon>Index.cs</DependentUpon>

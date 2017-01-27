@@ -14,7 +14,6 @@ C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahim
 C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.csprojResolveAssemblyReference.cache
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DrIbrahimClinic.exe
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DrIbrahimClinic.pdb
-G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.csprojResolveAssemblyReference.cache
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddExamination.resources
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddExaminatios.resources
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddPatient.resources
@@ -26,3 +25,4 @@ G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\Dr
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.pdb
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DevComponents.DotNetBar2.dll
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DevComponents.DotNetBar2.xml
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmEditTreatment.resources
