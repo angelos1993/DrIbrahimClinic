@@ -32,6 +32,26 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new DevComponents.DotNetBar.TabControl();
+            this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
+            this.pnlExamination = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.dblInPatientWeight = new DevComponents.Editors.DoubleInput();
+            this.dblInPatientHeadCircumference = new DevComponents.Editors.DoubleInput();
+            this.dblInPatientLength = new DevComponents.Editors.DoubleInput();
+            this.labelX13 = new DevComponents.DotNetBar.LabelX();
+            this.labelX12 = new DevComponents.DotNetBar.LabelX();
+            this.labelX11 = new DevComponents.DotNetBar.LabelX();
+            this.pnlTreatment = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.dgvTreatments = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.lstViewDiagnosis = new DevComponents.DotNetBar.Controls.ListViewEx();
+            this.btnAddDiagnosis = new DevComponents.DotNetBar.ButtonX();
+            this.txtComplaint = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtDiagnosis = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX10 = new DevComponents.DotNetBar.LabelX();
+            this.labelX9 = new DevComponents.DotNetBar.LabelX();
+            this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
             this.pnlPatientData = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.expPanelInoculations = new DevComponents.DotNetBar.ExpandablePanel();
@@ -64,38 +84,25 @@
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.tabPatientData = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
-            this.pnlExamination = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.pnlTreatment = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.dgvTreatments = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.lstViewDiagnosis = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.btnAddDiagnosis = new DevComponents.DotNetBar.ButtonX();
-            this.txtComplaint = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtDiagnosis = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX10 = new DevComponents.DotNetBar.LabelX();
-            this.labelX9 = new DevComponents.DotNetBar.LabelX();
-            this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel4 = new DevComponents.DotNetBar.TabControlPanel();
-            this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
             this.pnlPreviousVisits = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.dgvPreviousVisits = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.tabItem2 = new DevComponents.DotNetBar.TabItem(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.tabControlPanel3.SuspendLayout();
+            this.pnlExamination.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dblInPatientWeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblInPatientHeadCircumference)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblInPatientLength)).BeginInit();
+            this.pnlTreatment.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).BeginInit();
             this.tabControlPanel1.SuspendLayout();
             this.pnlPatientData.SuspendLayout();
             this.expPanelInoculations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtInoculationDate)).BeginInit();
             this.expandablePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateBirthdate)).BeginInit();
-            this.tabControlPanel3.SuspendLayout();
-            this.pnlExamination.SuspendLayout();
-            this.pnlTreatment.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).BeginInit();
             this.tabControlPanel2.SuspendLayout();
             this.pnlPreviousVisits.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPreviousVisits)).BeginInit();
@@ -108,12 +115,11 @@
             this.tabControl1.Controls.Add(this.tabControlPanel1);
             this.tabControl1.Controls.Add(this.tabControlPanel2);
             this.tabControl1.Controls.Add(this.tabControlPanel3);
-            this.tabControl1.Controls.Add(this.tabControlPanel4);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabControl1.SelectedTabFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.tabControl1.SelectedTabIndex = 3;
+            this.tabControl1.SelectedTabIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(849, 476);
             this.tabControl1.Style = DevComponents.DotNetBar.eTabStripStyle.RoundHeader;
             this.tabControl1.TabIndex = 0;
@@ -121,8 +127,364 @@
             this.tabControl1.Tabs.Add(this.tabPatientData);
             this.tabControl1.Tabs.Add(this.tabItem2);
             this.tabControl1.Tabs.Add(this.tabItem3);
-            this.tabControl1.Tabs.Add(this.tabItem1);
             this.tabControl1.Text = "tabControl1";
+            // 
+            // tabControlPanel3
+            // 
+            this.tabControlPanel3.Controls.Add(this.pnlExamination);
+            this.tabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlPanel3.Location = new System.Drawing.Point(0, 28);
+            this.tabControlPanel3.Name = "tabControlPanel3";
+            this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
+            this.tabControlPanel3.Size = new System.Drawing.Size(849, 448);
+            this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.White;
+            this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(215)))));
+            this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.tabControlPanel3.Style.BorderColor.Color = System.Drawing.SystemColors.ControlDarkDark;
+            this.tabControlPanel3.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.tabControlPanel3.Style.GradientAngle = 90;
+            this.tabControlPanel3.TabIndex = 3;
+            this.tabControlPanel3.TabItem = this.tabItem3;
+            // 
+            // pnlExamination
+            // 
+            this.pnlExamination.CanvasColor = System.Drawing.SystemColors.Control;
+            this.pnlExamination.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.pnlExamination.Controls.Add(this.dblInPatientWeight);
+            this.pnlExamination.Controls.Add(this.dblInPatientHeadCircumference);
+            this.pnlExamination.Controls.Add(this.dblInPatientLength);
+            this.pnlExamination.Controls.Add(this.labelX13);
+            this.pnlExamination.Controls.Add(this.labelX12);
+            this.pnlExamination.Controls.Add(this.labelX11);
+            this.pnlExamination.Controls.Add(this.pnlTreatment);
+            this.pnlExamination.Controls.Add(this.lstViewDiagnosis);
+            this.pnlExamination.Controls.Add(this.btnAddDiagnosis);
+            this.pnlExamination.Controls.Add(this.txtComplaint);
+            this.pnlExamination.Controls.Add(this.txtDiagnosis);
+            this.pnlExamination.Controls.Add(this.labelX10);
+            this.pnlExamination.Controls.Add(this.labelX9);
+            this.pnlExamination.Location = new System.Drawing.Point(4, 4);
+            this.pnlExamination.Name = "pnlExamination";
+            this.pnlExamination.Size = new System.Drawing.Size(841, 440);
+            // 
+            // 
+            // 
+            this.pnlExamination.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.pnlExamination.Style.BackColorGradientAngle = 90;
+            this.pnlExamination.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.pnlExamination.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlExamination.Style.BorderBottomWidth = 1;
+            this.pnlExamination.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.pnlExamination.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlExamination.Style.BorderLeftWidth = 1;
+            this.pnlExamination.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlExamination.Style.BorderRightWidth = 1;
+            this.pnlExamination.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlExamination.Style.BorderTopWidth = 1;
+            this.pnlExamination.Style.Class = "";
+            this.pnlExamination.Style.CornerDiameter = 4;
+            this.pnlExamination.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.pnlExamination.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.pnlExamination.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.pnlExamination.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.pnlExamination.StyleMouseDown.Class = "";
+            this.pnlExamination.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.pnlExamination.StyleMouseOver.Class = "";
+            this.pnlExamination.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.pnlExamination.TabIndex = 5;
+            this.pnlExamination.Text = "بيانات الكشف";
+            // 
+            // dblInPatientWeight
+            // 
+            // 
+            // 
+            // 
+            this.dblInPatientWeight.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dblInPatientWeight.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dblInPatientWeight.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.dblInPatientWeight.Increment = 1D;
+            this.dblInPatientWeight.Location = new System.Drawing.Point(151, 3);
+            this.dblInPatientWeight.Name = "dblInPatientWeight";
+            this.dblInPatientWeight.ShowUpDown = true;
+            this.dblInPatientWeight.Size = new System.Drawing.Size(60, 26);
+            this.dblInPatientWeight.TabIndex = 25;
+            // 
+            // dblInPatientHeadCircumference
+            // 
+            // 
+            // 
+            // 
+            this.dblInPatientHeadCircumference.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dblInPatientHeadCircumference.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dblInPatientHeadCircumference.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.dblInPatientHeadCircumference.Increment = 1D;
+            this.dblInPatientHeadCircumference.Location = new System.Drawing.Point(9, 3);
+            this.dblInPatientHeadCircumference.Name = "dblInPatientHeadCircumference";
+            this.dblInPatientHeadCircumference.ShowUpDown = true;
+            this.dblInPatientHeadCircumference.Size = new System.Drawing.Size(60, 26);
+            this.dblInPatientHeadCircumference.TabIndex = 24;
+            // 
+            // dblInPatientLength
+            // 
+            // 
+            // 
+            // 
+            this.dblInPatientLength.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dblInPatientLength.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dblInPatientLength.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.dblInPatientLength.Increment = 1D;
+            this.dblInPatientLength.Location = new System.Drawing.Point(260, 3);
+            this.dblInPatientLength.Name = "dblInPatientLength";
+            this.dblInPatientLength.ShowUpDown = true;
+            this.dblInPatientLength.Size = new System.Drawing.Size(60, 26);
+            this.dblInPatientLength.TabIndex = 17;
+            // 
+            // labelX13
+            // 
+            this.labelX13.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX13.BackgroundStyle.Class = "";
+            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX13.Location = new System.Drawing.Point(77, -1);
+            this.labelX13.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX13.Name = "labelX13";
+            this.labelX13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX13.Size = new System.Drawing.Size(66, 34);
+            this.labelX13.TabIndex = 20;
+            this.labelX13.Text = "محيط الرأس";
+            // 
+            // labelX12
+            // 
+            this.labelX12.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX12.BackgroundStyle.Class = "";
+            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX12.Location = new System.Drawing.Point(219, -1);
+            this.labelX12.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX12.Name = "labelX12";
+            this.labelX12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX12.Size = new System.Drawing.Size(33, 34);
+            this.labelX12.TabIndex = 19;
+            this.labelX12.Text = "الوزن";
+            // 
+            // labelX11
+            // 
+            this.labelX11.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX11.BackgroundStyle.Class = "";
+            this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX11.Location = new System.Drawing.Point(328, 0);
+            this.labelX11.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX11.Name = "labelX11";
+            this.labelX11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX11.Size = new System.Drawing.Size(33, 34);
+            this.labelX11.TabIndex = 18;
+            this.labelX11.Text = "الطول";
+            // 
+            // pnlTreatment
+            // 
+            this.pnlTreatment.CanvasColor = System.Drawing.SystemColors.Control;
+            this.pnlTreatment.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.pnlTreatment.Controls.Add(this.buttonX2);
+            this.pnlTreatment.Controls.Add(this.textBoxX4);
+            this.pnlTreatment.Controls.Add(this.textBoxX5);
+            this.pnlTreatment.Controls.Add(this.dgvTreatments);
+            this.pnlTreatment.Location = new System.Drawing.Point(367, 10);
+            this.pnlTreatment.Name = "pnlTreatment";
+            this.pnlTreatment.Size = new System.Drawing.Size(465, 322);
+            // 
+            // 
+            // 
+            this.pnlTreatment.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.pnlTreatment.Style.BackColorGradientAngle = 90;
+            this.pnlTreatment.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.pnlTreatment.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlTreatment.Style.BorderBottomWidth = 1;
+            this.pnlTreatment.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.pnlTreatment.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlTreatment.Style.BorderLeftWidth = 1;
+            this.pnlTreatment.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlTreatment.Style.BorderRightWidth = 1;
+            this.pnlTreatment.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.pnlTreatment.Style.BorderTopWidth = 1;
+            this.pnlTreatment.Style.Class = "";
+            this.pnlTreatment.Style.CornerDiameter = 4;
+            this.pnlTreatment.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.pnlTreatment.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.pnlTreatment.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.pnlTreatment.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.pnlTreatment.StyleMouseDown.Class = "";
+            this.pnlTreatment.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.pnlTreatment.StyleMouseOver.Class = "";
+            this.pnlTreatment.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.pnlTreatment.TabIndex = 17;
+            this.pnlTreatment.Text = "العلاج";
+            // 
+            // buttonX2
+            // 
+            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX2.Image = global::DrIbrahimClinic.Properties.Resources.Add;
+            this.buttonX2.ImageFixedSize = new System.Drawing.Size(20, 20);
+            this.buttonX2.Location = new System.Drawing.Point(2, 3);
+            this.buttonX2.Name = "buttonX2";
+            this.buttonX2.Size = new System.Drawing.Size(26, 26);
+            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX2.TabIndex = 16;
+            // 
+            // textBoxX4
+            // 
+            // 
+            // 
+            // 
+            this.textBoxX4.Border.Class = "TextBoxBorder";
+            this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX4.Location = new System.Drawing.Point(34, 3);
+            this.textBoxX4.Name = "textBoxX4";
+            this.textBoxX4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBoxX4.Size = new System.Drawing.Size(208, 26);
+            this.textBoxX4.TabIndex = 13;
+            // 
+            // textBoxX5
+            // 
+            // 
+            // 
+            // 
+            this.textBoxX5.Border.Class = "TextBoxBorder";
+            this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX5.Location = new System.Drawing.Point(248, 3);
+            this.textBoxX5.Name = "textBoxX5";
+            this.textBoxX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textBoxX5.Size = new System.Drawing.Size(208, 26);
+            this.textBoxX5.TabIndex = 12;
+            // 
+            // dgvTreatments
+            // 
+            this.dgvTreatments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTreatments.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvTreatments.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvTreatments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgvTreatments.Location = new System.Drawing.Point(0, 35);
+            this.dgvTreatments.Name = "dgvTreatments";
+            this.dgvTreatments.Size = new System.Drawing.Size(459, 260);
+            this.dgvTreatments.TabIndex = 0;
+            // 
+            // lstViewDiagnosis
+            // 
+            // 
+            // 
+            // 
+            this.lstViewDiagnosis.Border.Class = "ListViewBorder";
+            this.lstViewDiagnosis.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lstViewDiagnosis.FullRowSelect = true;
+            this.lstViewDiagnosis.GridLines = true;
+            this.lstViewDiagnosis.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.lstViewDiagnosis.Location = new System.Drawing.Point(5, 112);
+            this.lstViewDiagnosis.Name = "lstViewDiagnosis";
+            this.lstViewDiagnosis.Size = new System.Drawing.Size(356, 248);
+            this.lstViewDiagnosis.TabIndex = 16;
+            this.lstViewDiagnosis.UseCompatibleStateImageBehavior = false;
+            this.lstViewDiagnosis.View = System.Windows.Forms.View.Details;
+            // 
+            // btnAddDiagnosis
+            // 
+            this.btnAddDiagnosis.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddDiagnosis.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddDiagnosis.Image = global::DrIbrahimClinic.Properties.Resources.Add;
+            this.btnAddDiagnosis.ImageFixedSize = new System.Drawing.Size(20, 20);
+            this.btnAddDiagnosis.Location = new System.Drawing.Point(335, 80);
+            this.btnAddDiagnosis.Name = "btnAddDiagnosis";
+            this.btnAddDiagnosis.Size = new System.Drawing.Size(26, 26);
+            this.btnAddDiagnosis.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddDiagnosis.TabIndex = 15;
+            // 
+            // txtComplaint
+            // 
+            // 
+            // 
+            // 
+            this.txtComplaint.Border.Class = "TextBoxBorder";
+            this.txtComplaint.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtComplaint.Location = new System.Drawing.Point(97, 40);
+            this.txtComplaint.Name = "txtComplaint";
+            this.txtComplaint.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtComplaint.Size = new System.Drawing.Size(264, 26);
+            this.txtComplaint.TabIndex = 12;
+            // 
+            // txtDiagnosis
+            // 
+            // 
+            // 
+            // 
+            this.txtDiagnosis.Border.Class = "TextBoxBorder";
+            this.txtDiagnosis.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtDiagnosis.Location = new System.Drawing.Point(97, 80);
+            this.txtDiagnosis.Name = "txtDiagnosis";
+            this.txtDiagnosis.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtDiagnosis.Size = new System.Drawing.Size(232, 26);
+            this.txtDiagnosis.TabIndex = 11;
+            // 
+            // labelX10
+            // 
+            this.labelX10.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX10.BackgroundStyle.Class = "";
+            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX10.Location = new System.Drawing.Point(5, 74);
+            this.labelX10.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX10.Name = "labelX10";
+            this.labelX10.Size = new System.Drawing.Size(84, 34);
+            this.labelX10.TabIndex = 3;
+            this.labelX10.Text = "Diagnosis";
+            // 
+            // labelX9
+            // 
+            this.labelX9.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX9.BackgroundStyle.Class = "";
+            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX9.Location = new System.Drawing.Point(5, 34);
+            this.labelX9.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX9.Name = "labelX9";
+            this.labelX9.Size = new System.Drawing.Size(84, 34);
+            this.labelX9.TabIndex = 2;
+            this.labelX9.Text = "Complaint";
+            // 
+            // tabItem3
+            // 
+            this.tabItem3.AttachedControl = this.tabControlPanel3;
+            this.tabItem3.Name = "tabItem3";
+            this.tabItem3.Text = "الكشف";
             // 
             // tabControlPanel1
             // 
@@ -742,287 +1104,6 @@
             this.tabPatientData.Name = "tabPatientData";
             this.tabPatientData.Text = "المريض";
             // 
-            // tabControlPanel3
-            // 
-            this.tabControlPanel3.Controls.Add(this.pnlExamination);
-            this.tabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel3.Location = new System.Drawing.Point(0, 28);
-            this.tabControlPanel3.Name = "tabControlPanel3";
-            this.tabControlPanel3.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel3.Size = new System.Drawing.Size(849, 448);
-            this.tabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.tabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(215)))));
-            this.tabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel3.Style.BorderColor.Color = System.Drawing.SystemColors.ControlDarkDark;
-            this.tabControlPanel3.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel3.Style.GradientAngle = 90;
-            this.tabControlPanel3.TabIndex = 3;
-            this.tabControlPanel3.TabItem = this.tabItem3;
-            // 
-            // pnlExamination
-            // 
-            this.pnlExamination.CanvasColor = System.Drawing.SystemColors.Control;
-            this.pnlExamination.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.pnlExamination.Controls.Add(this.pnlTreatment);
-            this.pnlExamination.Controls.Add(this.lstViewDiagnosis);
-            this.pnlExamination.Controls.Add(this.btnAddDiagnosis);
-            this.pnlExamination.Controls.Add(this.txtComplaint);
-            this.pnlExamination.Controls.Add(this.txtDiagnosis);
-            this.pnlExamination.Controls.Add(this.labelX10);
-            this.pnlExamination.Controls.Add(this.labelX9);
-            this.pnlExamination.Location = new System.Drawing.Point(4, 4);
-            this.pnlExamination.Name = "pnlExamination";
-            this.pnlExamination.Size = new System.Drawing.Size(841, 440);
-            // 
-            // 
-            // 
-            this.pnlExamination.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.pnlExamination.Style.BackColorGradientAngle = 90;
-            this.pnlExamination.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.pnlExamination.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.pnlExamination.Style.BorderBottomWidth = 1;
-            this.pnlExamination.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.pnlExamination.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.pnlExamination.Style.BorderLeftWidth = 1;
-            this.pnlExamination.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.pnlExamination.Style.BorderRightWidth = 1;
-            this.pnlExamination.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.pnlExamination.Style.BorderTopWidth = 1;
-            this.pnlExamination.Style.Class = "";
-            this.pnlExamination.Style.CornerDiameter = 4;
-            this.pnlExamination.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.pnlExamination.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.pnlExamination.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.pnlExamination.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.pnlExamination.StyleMouseDown.Class = "";
-            this.pnlExamination.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.pnlExamination.StyleMouseOver.Class = "";
-            this.pnlExamination.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.pnlExamination.TabIndex = 5;
-            this.pnlExamination.Text = "بيانات الكشف";
-            // 
-            // pnlTreatment
-            // 
-            this.pnlTreatment.CanvasColor = System.Drawing.SystemColors.Control;
-            this.pnlTreatment.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.pnlTreatment.Controls.Add(this.buttonX2);
-            this.pnlTreatment.Controls.Add(this.textBoxX4);
-            this.pnlTreatment.Controls.Add(this.textBoxX5);
-            this.pnlTreatment.Controls.Add(this.dgvTreatments);
-            this.pnlTreatment.Location = new System.Drawing.Point(367, 10);
-            this.pnlTreatment.Name = "pnlTreatment";
-            this.pnlTreatment.Size = new System.Drawing.Size(465, 322);
-            // 
-            // 
-            // 
-            this.pnlTreatment.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.pnlTreatment.Style.BackColorGradientAngle = 90;
-            this.pnlTreatment.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.pnlTreatment.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.pnlTreatment.Style.BorderBottomWidth = 1;
-            this.pnlTreatment.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.pnlTreatment.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.pnlTreatment.Style.BorderLeftWidth = 1;
-            this.pnlTreatment.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.pnlTreatment.Style.BorderRightWidth = 1;
-            this.pnlTreatment.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.pnlTreatment.Style.BorderTopWidth = 1;
-            this.pnlTreatment.Style.Class = "";
-            this.pnlTreatment.Style.CornerDiameter = 4;
-            this.pnlTreatment.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.pnlTreatment.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.pnlTreatment.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.pnlTreatment.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.pnlTreatment.StyleMouseDown.Class = "";
-            this.pnlTreatment.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.pnlTreatment.StyleMouseOver.Class = "";
-            this.pnlTreatment.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.pnlTreatment.TabIndex = 17;
-            this.pnlTreatment.Text = "العلاج";
-            // 
-            // buttonX2
-            // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Image = global::DrIbrahimClinic.Properties.Resources.Add;
-            this.buttonX2.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.buttonX2.Location = new System.Drawing.Point(2, 3);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(26, 26);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 16;
-            // 
-            // textBoxX4
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX4.Border.Class = "TextBoxBorder";
-            this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX4.Location = new System.Drawing.Point(34, 3);
-            this.textBoxX4.Name = "textBoxX4";
-            this.textBoxX4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBoxX4.Size = new System.Drawing.Size(208, 26);
-            this.textBoxX4.TabIndex = 13;
-            // 
-            // textBoxX5
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX5.Border.Class = "TextBoxBorder";
-            this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX5.Location = new System.Drawing.Point(248, 3);
-            this.textBoxX5.Name = "textBoxX5";
-            this.textBoxX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBoxX5.Size = new System.Drawing.Size(208, 26);
-            this.textBoxX5.TabIndex = 12;
-            // 
-            // dgvTreatments
-            // 
-            this.dgvTreatments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTreatments.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvTreatments.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvTreatments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvTreatments.Location = new System.Drawing.Point(0, 35);
-            this.dgvTreatments.Name = "dgvTreatments";
-            this.dgvTreatments.Size = new System.Drawing.Size(459, 260);
-            this.dgvTreatments.TabIndex = 0;
-            // 
-            // lstViewDiagnosis
-            // 
-            // 
-            // 
-            // 
-            this.lstViewDiagnosis.Border.Class = "ListViewBorder";
-            this.lstViewDiagnosis.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lstViewDiagnosis.FullRowSelect = true;
-            this.lstViewDiagnosis.GridLines = true;
-            this.lstViewDiagnosis.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lstViewDiagnosis.Location = new System.Drawing.Point(5, 84);
-            this.lstViewDiagnosis.Name = "lstViewDiagnosis";
-            this.lstViewDiagnosis.Size = new System.Drawing.Size(356, 248);
-            this.lstViewDiagnosis.TabIndex = 16;
-            this.lstViewDiagnosis.UseCompatibleStateImageBehavior = false;
-            this.lstViewDiagnosis.View = System.Windows.Forms.View.Details;
-            // 
-            // btnAddDiagnosis
-            // 
-            this.btnAddDiagnosis.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAddDiagnosis.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAddDiagnosis.Image = global::DrIbrahimClinic.Properties.Resources.Add;
-            this.btnAddDiagnosis.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnAddDiagnosis.Location = new System.Drawing.Point(335, 52);
-            this.btnAddDiagnosis.Name = "btnAddDiagnosis";
-            this.btnAddDiagnosis.Size = new System.Drawing.Size(26, 26);
-            this.btnAddDiagnosis.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddDiagnosis.TabIndex = 15;
-            // 
-            // txtComplaint
-            // 
-            // 
-            // 
-            // 
-            this.txtComplaint.Border.Class = "TextBoxBorder";
-            this.txtComplaint.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtComplaint.Location = new System.Drawing.Point(97, 10);
-            this.txtComplaint.Name = "txtComplaint";
-            this.txtComplaint.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtComplaint.Size = new System.Drawing.Size(264, 26);
-            this.txtComplaint.TabIndex = 12;
-            // 
-            // txtDiagnosis
-            // 
-            // 
-            // 
-            // 
-            this.txtDiagnosis.Border.Class = "TextBoxBorder";
-            this.txtDiagnosis.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtDiagnosis.Location = new System.Drawing.Point(97, 52);
-            this.txtDiagnosis.Name = "txtDiagnosis";
-            this.txtDiagnosis.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtDiagnosis.Size = new System.Drawing.Size(232, 26);
-            this.txtDiagnosis.TabIndex = 11;
-            // 
-            // labelX10
-            // 
-            this.labelX10.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX10.BackgroundStyle.Class = "";
-            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX10.Location = new System.Drawing.Point(5, 46);
-            this.labelX10.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.labelX10.Name = "labelX10";
-            this.labelX10.Size = new System.Drawing.Size(84, 34);
-            this.labelX10.TabIndex = 3;
-            this.labelX10.Text = "Diagnosis";
-            // 
-            // labelX9
-            // 
-            this.labelX9.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX9.BackgroundStyle.Class = "";
-            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX9.Location = new System.Drawing.Point(5, 4);
-            this.labelX9.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.labelX9.Name = "labelX9";
-            this.labelX9.Size = new System.Drawing.Size(84, 34);
-            this.labelX9.TabIndex = 2;
-            this.labelX9.Text = "Complaint";
-            // 
-            // tabItem3
-            // 
-            this.tabItem3.AttachedControl = this.tabControlPanel3;
-            this.tabItem3.Name = "tabItem3";
-            this.tabItem3.Text = "الكشف";
-            // 
-            // tabControlPanel4
-            // 
-            this.tabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel4.Location = new System.Drawing.Point(0, 28);
-            this.tabControlPanel4.Name = "tabControlPanel4";
-            this.tabControlPanel4.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel4.Size = new System.Drawing.Size(849, 448);
-            this.tabControlPanel4.Style.BackColor1.Color = System.Drawing.Color.White;
-            this.tabControlPanel4.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(215)))));
-            this.tabControlPanel4.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel4.Style.BorderColor.Color = System.Drawing.SystemColors.ControlDarkDark;
-            this.tabControlPanel4.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right) 
-            | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel4.Style.GradientAngle = 90;
-            this.tabControlPanel4.TabIndex = 4;
-            this.tabControlPanel4.TabItem = this.tabItem1;
-            // 
-            // tabItem1
-            // 
-            this.tabItem1.AttachedControl = this.tabControlPanel4;
-            this.tabItem1.Name = "tabItem1";
-            this.tabItem1.Text = "الروشتة";
-            // 
             // tabControlPanel2
             // 
             this.tabControlPanel2.Controls.Add(this.pnlPreviousVisits);
@@ -1118,16 +1199,19 @@
             this.Text = "إضافة كشف جديد";
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tabControlPanel3.ResumeLayout(false);
+            this.pnlExamination.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dblInPatientWeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblInPatientHeadCircumference)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dblInPatientLength)).EndInit();
+            this.pnlTreatment.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).EndInit();
             this.tabControlPanel1.ResumeLayout(false);
             this.pnlPatientData.ResumeLayout(false);
             this.expPanelInoculations.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtInoculationDate)).EndInit();
             this.expandablePanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dateBirthdate)).EndInit();
-            this.tabControlPanel3.ResumeLayout(false);
-            this.pnlExamination.ResumeLayout(false);
-            this.pnlTreatment.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).EndInit();
             this.tabControlPanel2.ResumeLayout(false);
             this.pnlPreviousVisits.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPreviousVisits)).EndInit();
@@ -1144,8 +1228,6 @@
         private DevComponents.DotNetBar.TabItem tabItem2;
         private DevComponents.DotNetBar.TabControlPanel tabControlPanel3;
         private DevComponents.DotNetBar.TabItem tabItem3;
-        private DevComponents.DotNetBar.TabControlPanel tabControlPanel4;
-        private DevComponents.DotNetBar.TabItem tabItem1;
         private DevComponents.DotNetBar.Controls.GroupPanel pnlPatientData;
         private DevComponents.DotNetBar.ButtonX btnClearPatientData;
         private DevComponents.DotNetBar.ButtonX btnEditPatientData;
@@ -1190,5 +1272,11 @@
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvTreatments;
+        private DevComponents.DotNetBar.LabelX labelX13;
+        private DevComponents.DotNetBar.LabelX labelX12;
+        private DevComponents.DotNetBar.LabelX labelX11;
+        private DevComponents.Editors.DoubleInput dblInPatientLength;
+        private DevComponents.Editors.DoubleInput dblInPatientWeight;
+        private DevComponents.Editors.DoubleInput dblInPatientHeadCircumference;
     }
 }
