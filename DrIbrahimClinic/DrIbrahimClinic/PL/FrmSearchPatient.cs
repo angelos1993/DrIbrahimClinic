@@ -15,5 +15,13 @@ namespace DrIbrahimClinic.PL
         {
             InitializeComponent();
         }
+
+        private void btnClearSearch_Click(object sender, EventArgs e)
+        {
+            txtPatientId.Text = string.Empty;
+            txtPatientName.Text = string.Empty;
+            dtPatientBirthdate.Value = new DateTime(1, 1, 1);
+            txtPatientPhone.Text = string.Empty;
+        }
     }
 }
