@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new DevComponents.DotNetBar.TabControl();
             this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
             this.pnlPatientData = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -106,9 +106,9 @@
             this.tabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.tabControl1.CanReorderTabs = true;
             this.tabControl1.Controls.Add(this.tabControlPanel1);
+            this.tabControl1.Controls.Add(this.tabControlPanel2);
             this.tabControl1.Controls.Add(this.tabControlPanel3);
             this.tabControl1.Controls.Add(this.tabControlPanel4);
-            this.tabControl1.Controls.Add(this.tabControlPanel2);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -213,9 +213,11 @@
             this.expPanelInoculations.Controls.Add(this.dtInoculationDate);
             this.expPanelInoculations.Controls.Add(this.btnAddInoculation);
             this.expPanelInoculations.Controls.Add(this.lstVwPatientInoculations);
+            this.expPanelInoculations.Expanded = false;
+            this.expPanelInoculations.ExpandedBounds = new System.Drawing.Rectangle(3, 230, 435, 167);
             this.expPanelInoculations.Location = new System.Drawing.Point(3, 230);
             this.expPanelInoculations.Name = "expPanelInoculations";
-            this.expPanelInoculations.Size = new System.Drawing.Size(435, 167);
+            this.expPanelInoculations.Size = new System.Drawing.Size(435, 26);
             this.expPanelInoculations.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.expPanelInoculations.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.expPanelInoculations.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -319,7 +321,7 @@
             this.lstVwPatientInoculations.FullRowSelect = true;
             this.lstVwPatientInoculations.GridLines = true;
             this.lstVwPatientInoculations.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lstVwPatientInoculations.Location = new System.Drawing.Point(0, 79);
+            this.lstVwPatientInoculations.Location = new System.Drawing.Point(0, -62);
             this.lstVwPatientInoculations.Name = "lstVwPatientInoculations";
             this.lstVwPatientInoculations.Size = new System.Drawing.Size(435, 88);
             this.lstVwPatientInoculations.TabIndex = 17;
@@ -346,9 +348,11 @@
             this.expandablePanel1.Controls.Add(this.buttonX1);
             this.expandablePanel1.Controls.Add(this.textBoxX2);
             this.expandablePanel1.Controls.Add(this.lstVwMedicalHistory);
+            this.expandablePanel1.Expanded = false;
+            this.expandablePanel1.ExpandedBounds = new System.Drawing.Rectangle(3, 20, 349, 209);
             this.expandablePanel1.Location = new System.Drawing.Point(3, 20);
             this.expandablePanel1.Name = "expandablePanel1";
-            this.expandablePanel1.Size = new System.Drawing.Size(349, 209);
+            this.expandablePanel1.Size = new System.Drawing.Size(349, 26);
             this.expandablePanel1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.expandablePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.expandablePanel1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -890,14 +894,14 @@
             // dgvTreatments
             // 
             this.dgvTreatments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTreatments.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTreatments.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTreatments.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvTreatments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvTreatments.Location = new System.Drawing.Point(0, 35);
@@ -1082,14 +1086,14 @@
             // dgvPreviousVisits
             // 
             this.dgvPreviousVisits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPreviousVisits.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPreviousVisits.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPreviousVisits.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPreviousVisits.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvPreviousVisits.Location = new System.Drawing.Point(0, 0);

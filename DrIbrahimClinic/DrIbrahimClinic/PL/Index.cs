@@ -119,5 +119,15 @@ namespace DrIbrahimClinic.PL
         #endregion
 
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new FrmAddExaminatios().ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new FrmAddExamination().ShowDialog();
+        }
     }
 }

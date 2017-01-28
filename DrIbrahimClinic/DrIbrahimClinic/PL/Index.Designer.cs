@@ -49,6 +49,8 @@
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.timerClock = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelButtons.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -263,11 +265,33 @@
             this.timerClock.Interval = 1000;
             this.timerClock.Tick += new System.EventHandler(this.timerClock_Tick);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(476, 196);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(191, 91);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "كشف 1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(279, 196);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(191, 91);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "كشف 2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 394);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panelButtons);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
@@ -302,5 +326,7 @@
         private DevComponents.DotNetBar.ButtonX btnBackupAndRestoreDB;
         private DevComponents.DotNetBar.ButtonItem btnPatientInoculations;
         private System.Windows.Forms.Timer timerClock;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
