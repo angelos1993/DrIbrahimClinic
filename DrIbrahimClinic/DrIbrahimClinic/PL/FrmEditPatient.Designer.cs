@@ -92,7 +92,7 @@
             this.btnCancel.Size = new System.Drawing.Size(103, 35);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnCancel.TabIndex = 2;
-            this.btnCancel.Text = "إلغاء";
+            this.btnCancel.Text = "خروج";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // grpPanelPatient

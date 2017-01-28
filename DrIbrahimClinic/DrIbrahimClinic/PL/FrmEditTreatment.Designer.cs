@@ -76,7 +76,7 @@
             this.btnCancel.Size = new System.Drawing.Size(75, 35);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnCancel.TabIndex = 5;
-            this.btnCancel.Text = "إلغاء";
+            this.btnCancel.Text = "خروج";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
