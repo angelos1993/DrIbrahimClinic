@@ -11,7 +11,8 @@
     <RootNamespace>DrIbrahimClinic</RootNamespace>
     <AssemblyName>DrIbrahimClinic</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -83,6 +84,18 @@
     <Compile Include="PL\FrmEditTreatment.Designer.cs">
       <DependentUpon>FrmEditTreatment.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\FrmPatientInoculations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmPatientInoculations.Designer.cs">
+      <DependentUpon>FrmPatientInoculations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FrmSearchPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmSearchPatient.Designer.cs">
+      <DependentUpon>FrmSearchPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FrmSearchTreatment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +134,12 @@
     <EmbeddedResource Include="PL\FrmEditTreatment.resx">
       <DependentUpon>FrmEditTreatment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmPatientInoculations.resx">
+      <DependentUpon>FrmPatientInoculations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmSearchPatient.resx">
+      <DependentUpon>FrmSearchPatient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\FrmSearchTreatment.resx">
       <DependentUpon>FrmSearchTreatment.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +156,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="DB\DrIbrahimClinic.bak" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

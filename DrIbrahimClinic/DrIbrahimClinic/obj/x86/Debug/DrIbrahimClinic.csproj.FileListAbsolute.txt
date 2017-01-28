@@ -1,30 +1,20 @@
-c:\users\angelos\documents\visual studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DrIbrahimClinic.exe
-C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DevComponents.DotNetBar2.dll
-C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DevComponents.DotNetBar2.xml
-C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddExamination.resources
-C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddExaminatios.resources
-C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddPatient.resources
-C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddTreatment.resources
-C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.Index.resources
-C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.Properties.Resources.resources
-C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.csproj.GenerateResource.Cache
-C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.exe
-C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.pdb
-C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DrIbrahimClinic.pdb
-C:\Users\Angelos\Documents\Visual Studio 2010\Projects\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.csprojResolveAssemblyReference.cache
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.csproj.GenerateResource.Cache
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DrIbrahimClinic.exe.config
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DrIbrahimClinic.exe
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DrIbrahimClinic.pdb
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddExamination.resources
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddExaminatios.resources
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddPatient.resources
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddTreatment.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmEditPatient.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmEditTreatment.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmPatientInoculations.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmSearchPatient.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmSearchTreatment.resources
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.Index.resources
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.Properties.Resources.resources
-G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.csproj.GenerateResource.Cache
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.exe
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.pdb
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DevComponents.DotNetBar2.dll
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DevComponents.DotNetBar2.xml
-G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmEditTreatment.resources
-G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmSearchTreatment.resources
-G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmEditPatient.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.csprojResolveAssemblyReference.cache

@@ -53,7 +53,14 @@ namespace DrIbrahimClinic.PL
 
         private void btnSearchPatients_Click(object sender, EventArgs e)
         {
+            FrmSearchPatient frmSearchPatient = new FrmSearchPatient();
+            frmSearchPatient.ShowDialog();
+        }
 
+        private void btnPatientInoculations_Click(object sender, EventArgs e)
+        {
+            FrmPatientInoculations frmPatientInoculations = new FrmPatientInoculations();
+            frmPatientInoculations.ShowDialog();
         }
 
         #endregion
@@ -96,7 +103,7 @@ namespace DrIbrahimClinic.PL
         {
 
         }
-   
+
         #endregion
     }
 }

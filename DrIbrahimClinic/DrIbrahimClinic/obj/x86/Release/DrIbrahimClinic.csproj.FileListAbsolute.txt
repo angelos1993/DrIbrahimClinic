@@ -1,0 +1,17 @@
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Release\DrIbrahimClinic.exe
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Release\DrIbrahimClinic.pdb
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.PL.FrmAddExamination.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.PL.FrmAddExaminatios.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.PL.FrmAddPatient.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.PL.FrmAddTreatment.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.PL.FrmEditPatient.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.PL.FrmEditTreatment.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.PL.FrmPatientInoculations.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.PL.FrmSearchPatient.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.PL.FrmSearchTreatment.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.PL.Index.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.Properties.Resources.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.csproj.GenerateResource.Cache
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.exe
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.pdb
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Release\DrIbrahimClinic.exe.config

@@ -41,13 +41,13 @@
             this.btnAddPatient = new DevComponents.DotNetBar.ButtonItem();
             this.btnEditPatient = new DevComponents.DotNetBar.ButtonItem();
             this.btnSearchPatients = new DevComponents.DotNetBar.ButtonItem();
+            this.btnPatientInoculations = new DevComponents.DotNetBar.ButtonItem();
             this.btnExamination = new DevComponents.DotNetBar.ButtonX();
             this.btnAddExamination = new DevComponents.DotNetBar.ButtonItem();
             this.btnEditExamination = new DevComponents.DotNetBar.ButtonItem();
             this.btnSearchExaminations = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
-            this.btnPatientInoculations = new DevComponents.DotNetBar.ButtonItem();
             this.panelButtons.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -196,6 +196,13 @@
             this.btnSearchPatients.Text = "بحث ...";
             this.btnSearchPatients.Click += new System.EventHandler(this.btnSearchPatients_Click);
             // 
+            // btnPatientInoculations
+            // 
+            this.btnPatientInoculations.GlobalItem = false;
+            this.btnPatientInoculations.Name = "btnPatientInoculations";
+            this.btnPatientInoculations.Text = "تطعيمات المريض ...";
+            this.btnPatientInoculations.Click += new System.EventHandler(this.btnPatientInoculations_Click);
+            // 
             // btnExamination
             // 
             this.btnExamination.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -248,12 +255,6 @@
             this.buttonItem2.GlobalItem = false;
             this.buttonItem2.Name = "buttonItem2";
             this.buttonItem2.Text = "buttonItem2";
-            // 
-            // btnPatientInoculations
-            // 
-            this.btnPatientInoculations.GlobalItem = false;
-            this.btnPatientInoculations.Name = "btnPatientInoculations";
-            this.btnPatientInoculations.Text = "تطعيمات المريض ...";
             // 
             // Index
             // 
