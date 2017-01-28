@@ -266,7 +266,7 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Index";
-            this.Text = "Index";
+            this.Text = "د / ابراهيم رزق الميري";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelButtons.ResumeLayout(false);
             this.ResumeLayout(false);

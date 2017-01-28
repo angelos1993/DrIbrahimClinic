@@ -32,7 +32,8 @@ namespace DrIbrahimClinic.PL
 
         private void btnSearchExaminations_Click(object sender, EventArgs e)
         {
-
+            FrmSearchExamination frmSearchExamination = new FrmSearchExamination();
+            frmSearchExamination.ShowDialog();
         }
         
         #endregion
