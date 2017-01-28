@@ -23,8 +23,7 @@ namespace DrIbrahimClinic.PL
 
         private void btnExamination_Click(object sender, EventArgs e)
         {
-            FrmAddExaminatios frmAddExaminatios = new FrmAddExaminatios();
-            frmAddExaminatios.ShowDialog();
+            new FrmAddExaminatios().ShowDialog();
         }
 
         private void btnEditExamination_Click(object sender, EventArgs e)
@@ -34,36 +33,31 @@ namespace DrIbrahimClinic.PL
 
         private void btnSearchExaminations_Click(object sender, EventArgs e)
         {
-            FrmSearchExamination frmSearchExamination = new FrmSearchExamination();
-            frmSearchExamination.ShowDialog();
+            new FrmSearchExamination().ShowDialog();
         }
-        
+
         #endregion
 
         #region Patient
 
         private void btnPatient_Click(object sender, EventArgs e)
         {
-            FrmAddPatient frmAddPatient = new FrmAddPatient();
-            frmAddPatient.ShowDialog();
+            new FrmAddPatient().ShowDialog();
         }
 
         private void btnEditPatient_Click(object sender, EventArgs e)
         {
-            FrmEditPatient frmEditPatient = new FrmEditPatient();
-            frmEditPatient.ShowDialog();
+            new FrmEditPatient().ShowDialog();
         }
 
         private void btnSearchPatients_Click(object sender, EventArgs e)
         {
-            FrmSearchPatient frmSearchPatient = new FrmSearchPatient();
-            frmSearchPatient.ShowDialog();
+            new FrmSearchPatient().ShowDialog();
         }
 
         private void btnPatientInoculations_Click(object sender, EventArgs e)
         {
-            FrmPatientInoculations frmPatientInoculations = new FrmPatientInoculations();
-            frmPatientInoculations.ShowDialog();
+            new FrmPatientInoculations().ShowDialog();
         }
 
         #endregion
@@ -72,20 +66,17 @@ namespace DrIbrahimClinic.PL
 
         private void btnTreatment_Click(object sender, EventArgs e)
         {
-            FrmAddTreatment frmAddTreatment = new FrmAddTreatment();
-            frmAddTreatment.ShowDialog();
+            new FrmAddTreatment().ShowDialog();
         }
 
         private void btnEditTreatment_Click(object sender, EventArgs e)
         {
-            FrmEditTreatment frmEditTreatment = new FrmEditTreatment();
-            frmEditTreatment.ShowDialog();
+            new FrmEditTreatment().ShowDialog();
         }
 
         private void btnSearchTreatment_Click(object sender, EventArgs e)
         {
-            FrmSearchTreatment frmSearchTreatment = new FrmSearchTreatment();
-            frmSearchTreatment.ShowDialog();
+            new FrmSearchTreatment().ShowDialog();
         }
 
         #endregion
@@ -94,8 +85,7 @@ namespace DrIbrahimClinic.PL
 
         private void btnStatistics_Click(object sender, EventArgs e)
         {
-            FrmAddExamination frmAddExamination = new FrmAddExamination();
-            frmAddExamination.ShowDialog();
+
         }
 
         #endregion
