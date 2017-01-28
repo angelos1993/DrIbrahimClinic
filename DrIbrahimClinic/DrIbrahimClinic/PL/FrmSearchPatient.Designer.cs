@@ -30,11 +30,18 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSearchPatients = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.radStartsWith = new System.Windows.Forms.RadioButton();
-            this.radContains = new System.Windows.Forms.RadioButton();
-            this.txtTreatmentName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btnClearSearch = new DevComponents.DotNetBar.ButtonX();
+            this.txtPatientPhone = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.dtPatientBirthdate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX6 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.txtPatientId = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtPatientName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.dgvTreatments = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.pnlSearchPatients.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtPatientBirthdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,9 +49,15 @@
             // 
             this.pnlSearchPatients.CanvasColor = System.Drawing.SystemColors.Control;
             this.pnlSearchPatients.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.pnlSearchPatients.Controls.Add(this.radStartsWith);
-            this.pnlSearchPatients.Controls.Add(this.radContains);
-            this.pnlSearchPatients.Controls.Add(this.txtTreatmentName);
+            this.pnlSearchPatients.Controls.Add(this.btnClearSearch);
+            this.pnlSearchPatients.Controls.Add(this.txtPatientPhone);
+            this.pnlSearchPatients.Controls.Add(this.labelX5);
+            this.pnlSearchPatients.Controls.Add(this.dtPatientBirthdate);
+            this.pnlSearchPatients.Controls.Add(this.labelX2);
+            this.pnlSearchPatients.Controls.Add(this.labelX6);
+            this.pnlSearchPatients.Controls.Add(this.labelX1);
+            this.pnlSearchPatients.Controls.Add(this.txtPatientId);
+            this.pnlSearchPatients.Controls.Add(this.txtPatientName);
             this.pnlSearchPatients.Controls.Add(this.dgvTreatments);
             this.pnlSearchPatients.Location = new System.Drawing.Point(12, 12);
             this.pnlSearchPatients.Name = "pnlSearchPatients";
@@ -83,41 +96,169 @@
             this.pnlSearchPatients.TabIndex = 7;
             this.pnlSearchPatients.Text = "بحث عن مريض";
             // 
-            // radStartsWith
+            // btnClearSearch
             // 
-            this.radStartsWith.AutoSize = true;
-            this.radStartsWith.BackColor = System.Drawing.Color.Transparent;
-            this.radStartsWith.Checked = true;
-            this.radStartsWith.Location = new System.Drawing.Point(273, 3);
-            this.radStartsWith.Name = "radStartsWith";
-            this.radStartsWith.Size = new System.Drawing.Size(108, 23);
-            this.radStartsWith.TabIndex = 1;
-            this.radStartsWith.TabStop = true;
-            this.radStartsWith.Text = "Starts with";
-            this.radStartsWith.UseVisualStyleBackColor = false;
+            this.btnClearSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnClearSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnClearSearch.Image = global::DrIbrahimClinic.Properties.Resources.Undo;
+            this.btnClearSearch.ImageFixedSize = new System.Drawing.Size(20, 20);
+            this.btnClearSearch.Location = new System.Drawing.Point(3, 3);
+            this.btnClearSearch.Name = "btnClearSearch";
+            this.btnClearSearch.Size = new System.Drawing.Size(185, 70);
+            this.btnClearSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnClearSearch.TabIndex = 4;
+            this.btnClearSearch.Text = "إلغاء البحث";
+            this.btnClearSearch.Click += new System.EventHandler(this.btnClearSearch_Click);
             // 
-            // radContains
-            // 
-            this.radContains.AutoSize = true;
-            this.radContains.BackColor = System.Drawing.Color.Transparent;
-            this.radContains.Location = new System.Drawing.Point(384, 3);
-            this.radContains.Name = "radContains";
-            this.radContains.Size = new System.Drawing.Size(96, 23);
-            this.radContains.TabIndex = 2;
-            this.radContains.Text = "Contains";
-            this.radContains.UseVisualStyleBackColor = false;
-            // 
-            // txtTreatmentName
+            // txtPatientPhone
             // 
             // 
             // 
             // 
-            this.txtTreatmentName.Border.Class = "TextBoxBorder";
-            this.txtTreatmentName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTreatmentName.Location = new System.Drawing.Point(3, 3);
-            this.txtTreatmentName.Name = "txtTreatmentName";
-            this.txtTreatmentName.Size = new System.Drawing.Size(264, 26);
-            this.txtTreatmentName.TabIndex = 0;
+            this.txtPatientPhone.Border.Class = "TextBoxBorder";
+            this.txtPatientPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPatientPhone.Location = new System.Drawing.Point(194, 47);
+            this.txtPatientPhone.Name = "txtPatientPhone";
+            this.txtPatientPhone.Size = new System.Drawing.Size(200, 26);
+            this.txtPatientPhone.TabIndex = 3;
+            // 
+            // labelX5
+            // 
+            this.labelX5.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX5.BackgroundStyle.Class = "";
+            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX5.Location = new System.Drawing.Point(402, 41);
+            this.labelX5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX5.Name = "labelX5";
+            this.labelX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX5.Size = new System.Drawing.Size(68, 34);
+            this.labelX5.TabIndex = 17;
+            this.labelX5.Text = "تليفون";
+            // 
+            // dtPatientBirthdate
+            // 
+            // 
+            // 
+            // 
+            this.dtPatientBirthdate.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dtPatientBirthdate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtPatientBirthdate.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dtPatientBirthdate.ButtonDropDown.Visible = true;
+            this.dtPatientBirthdate.Location = new System.Drawing.Point(194, 3);
+            // 
+            // 
+            // 
+            this.dtPatientBirthdate.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dtPatientBirthdate.MonthCalendar.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.dtPatientBirthdate.MonthCalendar.BackgroundStyle.Class = "";
+            this.dtPatientBirthdate.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtPatientBirthdate.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.dtPatientBirthdate.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dtPatientBirthdate.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dtPatientBirthdate.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dtPatientBirthdate.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dtPatientBirthdate.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dtPatientBirthdate.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dtPatientBirthdate.MonthCalendar.CommandsBackgroundStyle.Class = "";
+            this.dtPatientBirthdate.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtPatientBirthdate.MonthCalendar.DisplayMonth = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
+            this.dtPatientBirthdate.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.dtPatientBirthdate.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dtPatientBirthdate.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dtPatientBirthdate.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dtPatientBirthdate.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dtPatientBirthdate.MonthCalendar.NavigationBackgroundStyle.Class = "";
+            this.dtPatientBirthdate.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtPatientBirthdate.MonthCalendar.TodayButtonVisible = true;
+            this.dtPatientBirthdate.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.dtPatientBirthdate.Name = "dtPatientBirthdate";
+            this.dtPatientBirthdate.Size = new System.Drawing.Size(200, 26);
+            this.dtPatientBirthdate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dtPatientBirthdate.TabIndex = 2;
+            // 
+            // labelX2
+            // 
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.Class = "";
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Location = new System.Drawing.Point(402, -3);
+            this.labelX2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX2.Size = new System.Drawing.Size(68, 34);
+            this.labelX2.TabIndex = 15;
+            this.labelX2.Text = "تاريخ الميلاد";
+            // 
+            // labelX6
+            // 
+            this.labelX6.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX6.BackgroundStyle.Class = "";
+            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX6.Location = new System.Drawing.Point(753, -3);
+            this.labelX6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX6.Name = "labelX6";
+            this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX6.Size = new System.Drawing.Size(68, 34);
+            this.labelX6.TabIndex = 13;
+            this.labelX6.Text = "رقم المريض";
+            // 
+            // labelX1
+            // 
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.Class = "";
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Location = new System.Drawing.Point(753, 41);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX1.Size = new System.Drawing.Size(68, 34);
+            this.labelX1.TabIndex = 12;
+            this.labelX1.Text = "اسم المريض";
+            // 
+            // txtPatientId
+            // 
+            // 
+            // 
+            // 
+            this.txtPatientId.Border.Class = "TextBoxBorder";
+            this.txtPatientId.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPatientId.Location = new System.Drawing.Point(481, 3);
+            this.txtPatientId.Name = "txtPatientId";
+            this.txtPatientId.Size = new System.Drawing.Size(264, 26);
+            this.txtPatientId.TabIndex = 0;
+            // 
+            // txtPatientName
+            // 
+            // 
+            // 
+            // 
+            this.txtPatientName.Border.Class = "TextBoxBorder";
+            this.txtPatientName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPatientName.Location = new System.Drawing.Point(481, 47);
+            this.txtPatientName.Name = "txtPatientName";
+            this.txtPatientName.Size = new System.Drawing.Size(264, 26);
+            this.txtPatientName.TabIndex = 1;
             // 
             // dgvTreatments
             // 
@@ -132,10 +273,10 @@
             this.dgvTreatments.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTreatments.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvTreatments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvTreatments.Location = new System.Drawing.Point(0, 80);
+            this.dgvTreatments.Location = new System.Drawing.Point(0, 82);
             this.dgvTreatments.Name = "dgvTreatments";
-            this.dgvTreatments.Size = new System.Drawing.Size(826, 414);
-            this.dgvTreatments.TabIndex = 3;
+            this.dgvTreatments.Size = new System.Drawing.Size(826, 412);
+            this.dgvTreatments.TabIndex = 5;
             // 
             // FrmSearchPatient
             // 
@@ -147,7 +288,7 @@
             this.Name = "FrmSearchPatient";
             this.Text = "بحث عن مريض";
             this.pnlSearchPatients.ResumeLayout(false);
-            this.pnlSearchPatients.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtPatientBirthdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).EndInit();
             this.ResumeLayout(false);
 
@@ -156,9 +297,15 @@
         #endregion
 
         private DevComponents.DotNetBar.Controls.GroupPanel pnlSearchPatients;
-        private System.Windows.Forms.RadioButton radStartsWith;
-        private System.Windows.Forms.RadioButton radContains;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtTreatmentName;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPatientName;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvTreatments;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPatientId;
+        private DevComponents.DotNetBar.LabelX labelX6;
+        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.Editors.DateTimeAdv.DateTimeInput dtPatientBirthdate;
+        private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPatientPhone;
+        private DevComponents.DotNetBar.LabelX labelX5;
+        private DevComponents.DotNetBar.ButtonX btnClearSearch;
     }
 }
