@@ -322,7 +322,7 @@
             // 
             this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnCancel.Image = global::DrIbrahimClinic.Properties.Resources.X;
+            this.btnCancel.Image = global::DrIbrahimClinic.Properties.Resources.Exit;
             this.btnCancel.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnCancel.Location = new System.Drawing.Point(140, 435);
             this.btnCancel.Name = "btnCancel";
