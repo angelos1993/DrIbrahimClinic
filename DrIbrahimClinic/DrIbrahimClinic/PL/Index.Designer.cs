@@ -48,6 +48,7 @@
             this.btnSearchExaminations = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.timerClock = new System.Windows.Forms.Timer(this.components);
             this.panelButtons.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +71,7 @@
             this.panelButtons.Name = "panelButtons";
             this.panelButtons.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.panelButtons.RightToLeftLayout = true;
-            this.panelButtons.Size = new System.Drawing.Size(537, 100);
+            this.panelButtons.Size = new System.Drawing.Size(802, 100);
             this.panelButtons.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelButtons.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelButtons.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -256,11 +257,17 @@
             this.buttonItem2.Name = "buttonItem2";
             this.buttonItem2.Text = "buttonItem2";
             // 
+            // timerClock
+            // 
+            this.timerClock.Enabled = true;
+            this.timerClock.Interval = 1000;
+            this.timerClock.Tick += new System.EventHandler(this.timerClock_Tick);
+            // 
             // Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 360);
+            this.ClientSize = new System.Drawing.Size(802, 394);
             this.Controls.Add(this.panelButtons);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
@@ -294,5 +301,6 @@
         private DevComponents.DotNetBar.ButtonX btnStatistics;
         private DevComponents.DotNetBar.ButtonX btnBackupAndRestoreDB;
         private DevComponents.DotNetBar.ButtonItem btnPatientInoculations;
+        private System.Windows.Forms.Timer timerClock;
     }
 }

@@ -17,6 +17,8 @@ namespace DrIbrahimClinic.PL
             InitializeComponent();
         }
 
+        #region Events
+
         #region Examination
 
         private void btnExamination_Click(object sender, EventArgs e)
@@ -104,6 +106,17 @@ namespace DrIbrahimClinic.PL
         {
 
         }
+
+        #endregion
+
+        #region Timer - Clock
+
+        private void timerClock_Tick(object sender, EventArgs e)
+        {
+            //TODO: clock ...
+        }
+
+        #endregion
 
         #endregion
     }
