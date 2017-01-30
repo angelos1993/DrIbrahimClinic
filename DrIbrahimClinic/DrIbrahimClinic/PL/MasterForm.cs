@@ -18,8 +18,9 @@ namespace DrIbrahimClinic.PL
             this.MaximizeBox = false;
             this.EnableGlass = false;
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.ShowInTaskbar = false;
+            this.AutoScaleMode = AutoScaleMode.Dpi;
         }
     }
 }
