@@ -23,7 +23,7 @@ namespace DrIbrahimClinic.PL
 
         private void btnExamination_Click(object sender, EventArgs e)
         {
-            new FrmAddExaminatios().ShowDialog();
+            new FrmAddExamination().ShowDialog();
         }
 
         private void btnEditExamination_Click(object sender, EventArgs e)
@@ -109,15 +109,5 @@ namespace DrIbrahimClinic.PL
         #endregion
 
         #endregion
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            new FrmAddExaminatios().ShowDialog();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            new FrmAddExamination().ShowDialog();
-        }
     }
 }

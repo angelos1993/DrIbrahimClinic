@@ -3,7 +3,6 @@ G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DrIbra
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DrIbrahimClinic.exe
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\DrIbrahimClinic.pdb
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddExamination.resources
-G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddExaminatios.resources
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddPatient.resources
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmAddTreatment.resources
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmEditPatient.resources
