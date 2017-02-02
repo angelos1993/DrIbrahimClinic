@@ -121,6 +121,7 @@
             this.txtPatientPhone.Name = "txtPatientPhone";
             this.txtPatientPhone.Size = new System.Drawing.Size(200, 26);
             this.txtPatientPhone.TabIndex = 3;
+            this.txtPatientPhone.TextChanged += new System.EventHandler(this.FindPatient);
             // 
             // labelX5
             // 
@@ -187,6 +188,7 @@
             this.dtPatientBirthdate.Size = new System.Drawing.Size(200, 26);
             this.dtPatientBirthdate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dtPatientBirthdate.TabIndex = 2;
+            this.dtPatientBirthdate.TextChanged += new System.EventHandler(this.FindPatient);
             // 
             // labelX2
             // 
@@ -247,6 +249,7 @@
             this.txtPatientId.Name = "txtPatientId";
             this.txtPatientId.Size = new System.Drawing.Size(264, 26);
             this.txtPatientId.TabIndex = 0;
+            this.txtPatientId.TextChanged += new System.EventHandler(this.FindPatient);
             // 
             // txtPatientName
             // 
@@ -259,13 +262,14 @@
             this.txtPatientName.Name = "txtPatientName";
             this.txtPatientName.Size = new System.Drawing.Size(264, 26);
             this.txtPatientName.TabIndex = 1;
+            this.txtPatientName.TextChanged += new System.EventHandler(this.FindPatient);
             // 
             // dgvTreatments
             // 
             this.dgvTreatments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -287,6 +291,7 @@
             this.DoubleBuffered = true;
             this.Name = "FrmSearchPatient";
             this.Text = "بحث عن مريض";
+            this.Load += new System.EventHandler(this.FrmSearchPatient_Load);
             this.pnlSearchPatients.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtPatientBirthdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).EndInit();
