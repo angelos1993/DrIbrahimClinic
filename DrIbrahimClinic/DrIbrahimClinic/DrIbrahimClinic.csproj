@@ -210,6 +210,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB\DrIbrahimClinic.sql" />
+    <None Include="Resources\Print.png" />
     <None Include="Resources\Undo.png" />
     <None Include="Resources\Exit.png" />
   </ItemGroup>

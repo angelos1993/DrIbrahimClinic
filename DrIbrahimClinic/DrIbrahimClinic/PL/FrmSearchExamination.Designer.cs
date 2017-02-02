@@ -31,14 +31,29 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSearchExaminations = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.dgvExaminations = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.btnClearSearch = new DevComponents.DotNetBar.ButtonX();
+            this.dtExaminationDate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX6 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.txtPatientId = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtPatientName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.pnlSearchExaminations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExaminations)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtExaminationDate)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSearchExaminations
             // 
             this.pnlSearchExaminations.CanvasColor = System.Drawing.SystemColors.Control;
             this.pnlSearchExaminations.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.pnlSearchExaminations.Controls.Add(this.btnClearSearch);
+            this.pnlSearchExaminations.Controls.Add(this.dtExaminationDate);
+            this.pnlSearchExaminations.Controls.Add(this.labelX2);
+            this.pnlSearchExaminations.Controls.Add(this.labelX6);
+            this.pnlSearchExaminations.Controls.Add(this.labelX1);
+            this.pnlSearchExaminations.Controls.Add(this.txtPatientId);
+            this.pnlSearchExaminations.Controls.Add(this.txtPatientName);
             this.pnlSearchExaminations.Controls.Add(this.dgvExaminations);
             this.pnlSearchExaminations.Location = new System.Drawing.Point(12, 12);
             this.pnlSearchExaminations.Name = "pnlSearchExaminations";
@@ -82,7 +97,7 @@
             this.dgvExaminations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -95,6 +110,141 @@
             this.dgvExaminations.Size = new System.Drawing.Size(869, 414);
             this.dgvExaminations.TabIndex = 3;
             // 
+            // btnClearSearch
+            // 
+            this.btnClearSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnClearSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnClearSearch.Image = global::DrIbrahimClinic.Properties.Resources.Undo;
+            this.btnClearSearch.ImageFixedSize = new System.Drawing.Size(20, 20);
+            this.btnClearSearch.Location = new System.Drawing.Point(331, 45);
+            this.btnClearSearch.Name = "btnClearSearch";
+            this.btnClearSearch.Size = new System.Drawing.Size(185, 26);
+            this.btnClearSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnClearSearch.TabIndex = 19;
+            this.btnClearSearch.Text = "إلغاء البحث";
+            // 
+            // dtExaminationDate
+            // 
+            // 
+            // 
+            // 
+            this.dtExaminationDate.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dtExaminationDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtExaminationDate.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dtExaminationDate.ButtonDropDown.Visible = true;
+            this.dtExaminationDate.Location = new System.Drawing.Point(332, 10);
+            // 
+            // 
+            // 
+            this.dtExaminationDate.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dtExaminationDate.MonthCalendar.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.dtExaminationDate.MonthCalendar.BackgroundStyle.Class = "";
+            this.dtExaminationDate.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtExaminationDate.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.dtExaminationDate.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dtExaminationDate.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dtExaminationDate.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dtExaminationDate.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dtExaminationDate.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dtExaminationDate.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dtExaminationDate.MonthCalendar.CommandsBackgroundStyle.Class = "";
+            this.dtExaminationDate.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtExaminationDate.MonthCalendar.DisplayMonth = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
+            this.dtExaminationDate.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.dtExaminationDate.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dtExaminationDate.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dtExaminationDate.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dtExaminationDate.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dtExaminationDate.MonthCalendar.NavigationBackgroundStyle.Class = "";
+            this.dtExaminationDate.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtExaminationDate.MonthCalendar.TodayButtonVisible = true;
+            this.dtExaminationDate.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.dtExaminationDate.Name = "dtExaminationDate";
+            this.dtExaminationDate.Size = new System.Drawing.Size(137, 26);
+            this.dtExaminationDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dtExaminationDate.TabIndex = 18;
+            // 
+            // labelX2
+            // 
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.Class = "";
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Location = new System.Drawing.Point(448, 4);
+            this.labelX2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX2.Size = new System.Drawing.Size(68, 34);
+            this.labelX2.TabIndex = 22;
+            this.labelX2.Text = "التاريخ";
+            // 
+            // labelX6
+            // 
+            this.labelX6.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX6.BackgroundStyle.Class = "";
+            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX6.Location = new System.Drawing.Point(796, 4);
+            this.labelX6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX6.Name = "labelX6";
+            this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX6.Size = new System.Drawing.Size(68, 34);
+            this.labelX6.TabIndex = 21;
+            this.labelX6.Text = "رقم المريض";
+            // 
+            // labelX1
+            // 
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.Class = "";
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Location = new System.Drawing.Point(796, 39);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX1.Size = new System.Drawing.Size(68, 34);
+            this.labelX1.TabIndex = 20;
+            this.labelX1.Text = "اسم المريض";
+            // 
+            // txtPatientId
+            // 
+            // 
+            // 
+            // 
+            this.txtPatientId.Border.Class = "TextBoxBorder";
+            this.txtPatientId.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPatientId.Location = new System.Drawing.Point(524, 10);
+            this.txtPatientId.Name = "txtPatientId";
+            this.txtPatientId.Size = new System.Drawing.Size(264, 26);
+            this.txtPatientId.TabIndex = 16;
+            // 
+            // txtPatientName
+            // 
+            // 
+            // 
+            // 
+            this.txtPatientName.Border.Class = "TextBoxBorder";
+            this.txtPatientName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPatientName.Location = new System.Drawing.Point(524, 45);
+            this.txtPatientName.Name = "txtPatientName";
+            this.txtPatientName.Size = new System.Drawing.Size(264, 26);
+            this.txtPatientName.TabIndex = 17;
+            // 
             // FrmSearchExamination
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -106,6 +256,7 @@
             this.Text = "بحث عن كشف";
             this.pnlSearchExaminations.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvExaminations)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtExaminationDate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -114,5 +265,12 @@
 
         private DevComponents.DotNetBar.Controls.GroupPanel pnlSearchExaminations;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvExaminations;
+        private DevComponents.DotNetBar.ButtonX btnClearSearch;
+        private DevComponents.Editors.DateTimeAdv.DateTimeInput dtExaminationDate;
+        private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.LabelX labelX6;
+        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPatientId;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPatientName;
     }
 }
