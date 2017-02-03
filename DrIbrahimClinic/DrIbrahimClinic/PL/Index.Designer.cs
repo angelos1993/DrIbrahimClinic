@@ -137,6 +137,8 @@
             // btnAddTreatment
             // 
             this.btnAddTreatment.GlobalItem = false;
+            this.btnAddTreatment.Image = global::DrIbrahimClinic.Properties.Resources.Add;
+            this.btnAddTreatment.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnAddTreatment.Name = "btnAddTreatment";
             this.btnAddTreatment.Text = "إضافة علاج جديد ...";
             this.btnAddTreatment.Click += new System.EventHandler(this.btnTreatment_Click);
@@ -144,6 +146,8 @@
             // btnEditTreatment
             // 
             this.btnEditTreatment.GlobalItem = false;
+            this.btnEditTreatment.Image = global::DrIbrahimClinic.Properties.Resources.Edit;
+            this.btnEditTreatment.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnEditTreatment.Name = "btnEditTreatment";
             this.btnEditTreatment.Text = "تعديل بيانات علاج ...";
             this.btnEditTreatment.Click += new System.EventHandler(this.btnEditTreatment_Click);
@@ -151,6 +155,8 @@
             // btnSearchTreatment
             // 
             this.btnSearchTreatment.GlobalItem = false;
+            this.btnSearchTreatment.Image = global::DrIbrahimClinic.Properties.Resources.Search;
+            this.btnSearchTreatment.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnSearchTreatment.Name = "btnSearchTreatment";
             this.btnSearchTreatment.Text = "بحث ...";
             this.btnSearchTreatment.Click += new System.EventHandler(this.btnSearchTreatment_Click);
@@ -179,6 +185,8 @@
             // btnAddPatient
             // 
             this.btnAddPatient.GlobalItem = false;
+            this.btnAddPatient.Image = global::DrIbrahimClinic.Properties.Resources.Add;
+            this.btnAddPatient.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnAddPatient.Name = "btnAddPatient";
             this.btnAddPatient.Text = "إضافة مريض جديد ...";
             this.btnAddPatient.Click += new System.EventHandler(this.btnPatient_Click);
@@ -186,6 +194,8 @@
             // btnEditPatient
             // 
             this.btnEditPatient.GlobalItem = false;
+            this.btnEditPatient.Image = global::DrIbrahimClinic.Properties.Resources.Edit;
+            this.btnEditPatient.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnEditPatient.Name = "btnEditPatient";
             this.btnEditPatient.Text = "تعديل بيانات مريض ...";
             this.btnEditPatient.Click += new System.EventHandler(this.btnEditPatient_Click);
@@ -193,6 +203,8 @@
             // btnSearchPatients
             // 
             this.btnSearchPatients.GlobalItem = false;
+            this.btnSearchPatients.Image = global::DrIbrahimClinic.Properties.Resources.Search;
+            this.btnSearchPatients.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnSearchPatients.Name = "btnSearchPatients";
             this.btnSearchPatients.Text = "بحث ...";
             this.btnSearchPatients.Click += new System.EventHandler(this.btnSearchPatients_Click);
@@ -200,6 +212,7 @@
             // btnPatientInoculations
             // 
             this.btnPatientInoculations.GlobalItem = false;
+            this.btnPatientInoculations.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnPatientInoculations.Name = "btnPatientInoculations";
             this.btnPatientInoculations.Text = "تطعيمات المريض ...";
             this.btnPatientInoculations.Click += new System.EventHandler(this.btnPatientInoculations_Click);
@@ -227,6 +240,8 @@
             // btnAddExamination
             // 
             this.btnAddExamination.GlobalItem = false;
+            this.btnAddExamination.Image = global::DrIbrahimClinic.Properties.Resources.Add;
+            this.btnAddExamination.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnAddExamination.Name = "btnAddExamination";
             this.btnAddExamination.Text = "إضافة كشف جديد ...";
             this.btnAddExamination.Click += new System.EventHandler(this.btnExamination_Click);
@@ -234,6 +249,8 @@
             // btnEditExamination
             // 
             this.btnEditExamination.GlobalItem = false;
+            this.btnEditExamination.Image = global::DrIbrahimClinic.Properties.Resources.Edit;
+            this.btnEditExamination.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnEditExamination.Name = "btnEditExamination";
             this.btnEditExamination.Text = "تعديل كشف ...";
             this.btnEditExamination.Click += new System.EventHandler(this.btnEditExamination_Click);
@@ -241,6 +258,8 @@
             // btnSearchExaminations
             // 
             this.btnSearchExaminations.GlobalItem = false;
+            this.btnSearchExaminations.Image = global::DrIbrahimClinic.Properties.Resources.Search;
+            this.btnSearchExaminations.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnSearchExaminations.Name = "btnSearchExaminations";
             this.btnSearchExaminations.Text = "بحث ...";
             this.btnSearchExaminations.Click += new System.EventHandler(this.btnSearchExaminations_Click);
