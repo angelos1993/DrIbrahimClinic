@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using static System.DateTime;
 using DevComponents.DotNetBar;
+using DrIbrahimClinic.Utility;
 
 namespace DrIbrahimClinic.PL
 {
@@ -18,6 +20,17 @@ namespace DrIbrahimClinic.PL
         }
 
         #region Events
+
+        #region Form
+
+        private void Index_Load(object sender, EventArgs e)
+        {
+            PrepareCalendarAndTime();
+            SetCurrentDate();
+            SetCurrentTime();
+        }
+
+        #endregion
 
         #region Examination
 
@@ -103,10 +116,56 @@ namespace DrIbrahimClinic.PL
 
         private void timerClock_Tick(object sender, EventArgs e)
         {
-            //TODO: clock ...
+            SetCurrentTime();
+            if (Now.Hour == 1 && Now.Minute == 0 && Now.Second == 0)
+                SetCurrentDate();
         }
 
         #endregion
+
+        #endregion
+
+        #region Methods
+
+        private void PrepareCalendarAndTime()
+        {
+            var pos = PointToScreen(lblMonthName.Location);
+            pos = picBoxCalendar.PointToClient(pos);
+            lblMonthName.Parent = picBoxCalendar;
+            lblMonthName.Location = pos;
+            lblMonthName.BackColor = Color.Transparent;
+
+            pos = PointToScreen(lblDayOfMonth.Location);
+            pos = picBoxCalendar.PointToClient(pos);
+            lblDayOfMonth.Parent = picBoxCalendar;
+            lblDayOfMonth.Location = pos;
+            lblDayOfMonth.BackColor = Color.Transparent;
+
+            pos = PointToScreen(lblHrs.Location);
+            pos = picBoxCalendar.PointToClient(pos);
+            lblHrs.Parent = picBoxCalendar;
+            lblHrs.Location = pos;
+            lblHrs.BackColor = Color.Transparent;
+
+            pos = PointToScreen(lblMins.Location);
+            pos = picBoxCalendar.PointToClient(pos);
+            lblMins.Parent = picBoxCalendar;
+            lblMins.Location = pos;
+            lblMins.BackColor = Color.Transparent;
+        }
+
+        private void SetCurrentDate()
+        {
+            lblMonthName.Text = Now.ToMonthName();
+            lblDayOfMonth.Text = Now.ToDayNumber();
+            lblDayName.Text = Now.ToDayName();
+        }
+
+        private void SetCurrentTime()
+        {
+            lblHrs.Text = Now.ToHour();
+            lblMins.Text = Now.ToMinute();
+        }
 
         #endregion
     }

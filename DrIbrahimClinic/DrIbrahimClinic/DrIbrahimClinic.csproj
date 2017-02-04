@@ -116,6 +116,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\DateTimeExtensions.cs" />
+    <Compile Include="Utility\StringExtensions.cs" />
     <EmbeddedResource Include="PL\FrmAddExamination.resx">
       <DependentUpon>FrmAddExamination.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +212,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB\DrIbrahimClinic.sql" />
+    <None Include="Resources\Time.png" />
+    <None Include="Resources\Calendar.png" />
     <None Include="Resources\Print.png" />
     <None Include="Resources\Undo.png" />
     <None Include="Resources\Exit.png" />
