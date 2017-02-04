@@ -52,13 +52,13 @@
             this.btnAddExamination = new DevComponents.DotNetBar.ButtonItem();
             this.btnEditExamination = new DevComponents.DotNetBar.ButtonItem();
             this.btnSearchExaminations = new DevComponents.DotNetBar.ButtonItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picBoxClock = new System.Windows.Forms.PictureBox();
             this.lblHrs = new DevComponents.DotNetBar.LabelX();
             this.lblMins = new DevComponents.DotNetBar.LabelX();
             this.lblDayName = new DevComponents.DotNetBar.LabelX();
             this.panelButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCalendar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxClock)).BeginInit();
             this.SuspendLayout();
             // 
             // styleManager1
@@ -334,15 +334,15 @@
             this.btnSearchExaminations.Text = "بحث ...";
             this.btnSearchExaminations.Click += new System.EventHandler(this.btnSearchExaminations_Click);
             // 
-            // pictureBox1
+            // picBoxClock
             // 
-            this.pictureBox1.Image = global::DrIbrahimClinic.Properties.Resources.Time;
-            this.pictureBox1.Location = new System.Drawing.Point(40, 106);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.picBoxClock.Image = global::DrIbrahimClinic.Properties.Resources.Time;
+            this.picBoxClock.Location = new System.Drawing.Point(40, 106);
+            this.picBoxClock.Name = "picBoxClock";
+            this.picBoxClock.Size = new System.Drawing.Size(200, 200);
+            this.picBoxClock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxClock.TabIndex = 4;
+            this.picBoxClock.TabStop = false;
             // 
             // lblHrs
             // 
@@ -352,7 +352,7 @@
             // 
             this.lblHrs.BackgroundStyle.Class = "";
             this.lblHrs.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblHrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHrs.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHrs.ForeColor = System.Drawing.Color.Black;
             this.lblHrs.Location = new System.Drawing.Point(91, 192);
             this.lblHrs.Name = "lblHrs";
@@ -368,6 +368,7 @@
             // 
             this.lblMins.BackgroundStyle.Class = "";
             this.lblMins.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblMins.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMins.ForeColor = System.Drawing.Color.Black;
             this.lblMins.Location = new System.Drawing.Point(153, 192);
             this.lblMins.Name = "lblMins";
@@ -395,10 +396,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 576);
-            this.Controls.Add(this.lblDayName);
             this.Controls.Add(this.lblMins);
             this.Controls.Add(this.lblHrs);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblDayName);
+            this.Controls.Add(this.picBoxClock);
             this.Controls.Add(this.lblDayOfMonth);
             this.Controls.Add(this.lblMonthName);
             this.Controls.Add(this.picBoxCalendar);
@@ -412,7 +413,7 @@
             this.Load += new System.EventHandler(this.Index_Load);
             this.panelButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxCalendar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxClock)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -442,7 +443,7 @@
         private System.Windows.Forms.PictureBox picBoxCalendar;
         private DevComponents.DotNetBar.LabelX lblMonthName;
         private DevComponents.DotNetBar.LabelX lblDayOfMonth;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picBoxClock;
         private DevComponents.DotNetBar.LabelX lblHrs;
         private DevComponents.DotNetBar.LabelX lblMins;
         private DevComponents.DotNetBar.LabelX lblDayName;

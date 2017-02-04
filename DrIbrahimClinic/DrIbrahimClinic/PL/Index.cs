@@ -142,14 +142,14 @@ namespace DrIbrahimClinic.PL
             lblDayOfMonth.BackColor = Color.Transparent;
 
             pos = PointToScreen(lblHrs.Location);
-            pos = picBoxCalendar.PointToClient(pos);
-            lblHrs.Parent = picBoxCalendar;
+            pos = picBoxClock.PointToClient(pos);
+            lblHrs.Parent = picBoxClock;
             lblHrs.Location = pos;
             lblHrs.BackColor = Color.Transparent;
 
             pos = PointToScreen(lblMins.Location);
-            pos = picBoxCalendar.PointToClient(pos);
-            lblMins.Parent = picBoxCalendar;
+            pos = picBoxClock.PointToClient(pos);
+            lblMins.Parent = picBoxClock;
             lblMins.Location = pos;
             lblMins.BackColor = Color.Transparent;
         }
