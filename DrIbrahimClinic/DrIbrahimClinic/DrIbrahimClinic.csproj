@@ -212,6 +212,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB\DrIbrahimClinic.sql" />
+    <None Include="Resources\Header.jpg" />
     <None Include="Resources\Time.png" />
     <None Include="Resources\Calendar.png" />
     <None Include="Resources\Print.png" />

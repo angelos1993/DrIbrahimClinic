@@ -31,12 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.panelButtons = new DevComponents.DotNetBar.PanelEx();
-            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
-            this.timerClock = new System.Windows.Forms.Timer(this.components);
-            this.lblMonthName = new DevComponents.DotNetBar.LabelX();
-            this.lblDayOfMonth = new DevComponents.DotNetBar.LabelX();
-            this.picBoxCalendar = new System.Windows.Forms.PictureBox();
             this.btnBackupAndRestoreDB = new DevComponents.DotNetBar.ButtonX();
             this.btnStatistics = new DevComponents.DotNetBar.ButtonX();
             this.btnTreatment = new DevComponents.DotNetBar.ButtonX();
@@ -52,6 +46,12 @@
             this.btnAddExamination = new DevComponents.DotNetBar.ButtonItem();
             this.btnEditExamination = new DevComponents.DotNetBar.ButtonItem();
             this.btnSearchExaminations = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.timerClock = new System.Windows.Forms.Timer(this.components);
+            this.lblMonthName = new DevComponents.DotNetBar.LabelX();
+            this.lblDayOfMonth = new DevComponents.DotNetBar.LabelX();
+            this.picBoxCalendar = new System.Windows.Forms.PictureBox();
             this.picBoxClock = new System.Windows.Forms.PictureBox();
             this.lblHrs = new DevComponents.DotNetBar.LabelX();
             this.lblMins = new DevComponents.DotNetBar.LabelX();
@@ -84,73 +84,11 @@
             this.panelButtons.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelButtons.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelButtons.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.panelButtons.Style.BackgroundImage = global::DrIbrahimClinic.Properties.Resources.Background;
-            this.panelButtons.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.panelButtons.Style.BackgroundImage = global::DrIbrahimClinic.Properties.Resources.Header;
             this.panelButtons.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
             this.panelButtons.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelButtons.Style.GradientAngle = 90;
             this.panelButtons.TabIndex = 0;
-            // 
-            // buttonItem1
-            // 
-            this.buttonItem1.GlobalItem = false;
-            this.buttonItem1.Name = "buttonItem1";
-            this.buttonItem1.Text = "buttonItem1";
-            // 
-            // buttonItem2
-            // 
-            this.buttonItem2.GlobalItem = false;
-            this.buttonItem2.Name = "buttonItem2";
-            this.buttonItem2.Text = "buttonItem2";
-            // 
-            // timerClock
-            // 
-            this.timerClock.Enabled = true;
-            this.timerClock.Interval = 1000;
-            this.timerClock.Tick += new System.EventHandler(this.timerClock_Tick);
-            // 
-            // lblMonthName
-            // 
-            this.lblMonthName.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.lblMonthName.BackgroundStyle.Class = "";
-            this.lblMonthName.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblMonthName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMonthName.ForeColor = System.Drawing.Color.White;
-            this.lblMonthName.Location = new System.Drawing.Point(46, 462);
-            this.lblMonthName.Name = "lblMonthName";
-            this.lblMonthName.Size = new System.Drawing.Size(130, 35);
-            this.lblMonthName.TabIndex = 2;
-            this.lblMonthName.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // lblDayOfMonth
-            // 
-            this.lblDayOfMonth.AntiAlias = false;
-            this.lblDayOfMonth.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.lblDayOfMonth.BackgroundStyle.Class = "";
-            this.lblDayOfMonth.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblDayOfMonth.Font = new System.Drawing.Font("Arial", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDayOfMonth.ForeColor = System.Drawing.Color.Red;
-            this.lblDayOfMonth.Location = new System.Drawing.Point(64, 354);
-            this.lblDayOfMonth.Name = "lblDayOfMonth";
-            this.lblDayOfMonth.Size = new System.Drawing.Size(150, 90);
-            this.lblDayOfMonth.TabIndex = 3;
-            this.lblDayOfMonth.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // picBoxCalendar
-            // 
-            this.picBoxCalendar.Image = global::DrIbrahimClinic.Properties.Resources.Calendar;
-            this.picBoxCalendar.Location = new System.Drawing.Point(40, 312);
-            this.picBoxCalendar.Name = "picBoxCalendar";
-            this.picBoxCalendar.Size = new System.Drawing.Size(200, 200);
-            this.picBoxCalendar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBoxCalendar.TabIndex = 1;
-            this.picBoxCalendar.TabStop = false;
             // 
             // btnBackupAndRestoreDB
             // 
@@ -334,6 +272,67 @@
             this.btnSearchExaminations.Text = "بحث ...";
             this.btnSearchExaminations.Click += new System.EventHandler(this.btnSearchExaminations_Click);
             // 
+            // buttonItem1
+            // 
+            this.buttonItem1.GlobalItem = false;
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.Text = "buttonItem1";
+            // 
+            // buttonItem2
+            // 
+            this.buttonItem2.GlobalItem = false;
+            this.buttonItem2.Name = "buttonItem2";
+            this.buttonItem2.Text = "buttonItem2";
+            // 
+            // timerClock
+            // 
+            this.timerClock.Enabled = true;
+            this.timerClock.Interval = 1000;
+            this.timerClock.Tick += new System.EventHandler(this.timerClock_Tick);
+            // 
+            // lblMonthName
+            // 
+            this.lblMonthName.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.lblMonthName.BackgroundStyle.Class = "";
+            this.lblMonthName.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblMonthName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonthName.ForeColor = System.Drawing.Color.White;
+            this.lblMonthName.Location = new System.Drawing.Point(46, 462);
+            this.lblMonthName.Name = "lblMonthName";
+            this.lblMonthName.Size = new System.Drawing.Size(130, 35);
+            this.lblMonthName.TabIndex = 2;
+            this.lblMonthName.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // lblDayOfMonth
+            // 
+            this.lblDayOfMonth.AntiAlias = false;
+            this.lblDayOfMonth.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.lblDayOfMonth.BackgroundStyle.Class = "";
+            this.lblDayOfMonth.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblDayOfMonth.Font = new System.Drawing.Font("Arial", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDayOfMonth.ForeColor = System.Drawing.Color.Red;
+            this.lblDayOfMonth.Location = new System.Drawing.Point(64, 354);
+            this.lblDayOfMonth.Name = "lblDayOfMonth";
+            this.lblDayOfMonth.Size = new System.Drawing.Size(150, 90);
+            this.lblDayOfMonth.TabIndex = 3;
+            this.lblDayOfMonth.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // picBoxCalendar
+            // 
+            this.picBoxCalendar.Image = global::DrIbrahimClinic.Properties.Resources.Calendar;
+            this.picBoxCalendar.Location = new System.Drawing.Point(40, 312);
+            this.picBoxCalendar.Name = "picBoxCalendar";
+            this.picBoxCalendar.Size = new System.Drawing.Size(200, 200);
+            this.picBoxCalendar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxCalendar.TabIndex = 1;
+            this.picBoxCalendar.TabStop = false;
+            // 
             // picBoxClock
             // 
             this.picBoxClock.Image = global::DrIbrahimClinic.Properties.Resources.Time;
@@ -395,6 +394,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(802, 576);
             this.Controls.Add(this.lblMins);
             this.Controls.Add(this.lblHrs);
