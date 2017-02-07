@@ -46,9 +46,9 @@
             this.pnlSearchTreatments.Controls.Add(this.radContains);
             this.pnlSearchTreatments.Controls.Add(this.txtTreatmentName);
             this.pnlSearchTreatments.Controls.Add(this.dgvTreatments);
-            this.pnlSearchTreatments.Location = new System.Drawing.Point(12, 12);
+            this.pnlSearchTreatments.Location = new System.Drawing.Point(12, 13);
             this.pnlSearchTreatments.Name = "pnlSearchTreatments";
-            this.pnlSearchTreatments.Size = new System.Drawing.Size(489, 476);
+            this.pnlSearchTreatments.Size = new System.Drawing.Size(513, 501);
             // 
             // 
             // 
@@ -90,7 +90,7 @@
             this.radStartsWith.Checked = true;
             this.radStartsWith.Location = new System.Drawing.Point(273, 3);
             this.radStartsWith.Name = "radStartsWith";
-            this.radStartsWith.Size = new System.Drawing.Size(108, 23);
+            this.radStartsWith.Size = new System.Drawing.Size(113, 24);
             this.radStartsWith.TabIndex = 1;
             this.radStartsWith.TabStop = true;
             this.radStartsWith.Text = "Starts with";
@@ -101,9 +101,9 @@
             // 
             this.radContains.AutoSize = true;
             this.radContains.BackColor = System.Drawing.Color.Transparent;
-            this.radContains.Location = new System.Drawing.Point(384, 3);
+            this.radContains.Location = new System.Drawing.Point(392, 3);
             this.radContains.Name = "radContains";
-            this.radContains.Size = new System.Drawing.Size(96, 23);
+            this.radContains.Size = new System.Drawing.Size(98, 24);
             this.radContains.TabIndex = 2;
             this.radContains.Text = "Contains";
             this.radContains.UseVisualStyleBackColor = false;
@@ -127,7 +127,7 @@
             this.dgvTreatments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -135,16 +135,16 @@
             this.dgvTreatments.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTreatments.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvTreatments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvTreatments.Location = new System.Drawing.Point(0, 35);
+            this.dgvTreatments.Location = new System.Drawing.Point(0, 38);
             this.dgvTreatments.Name = "dgvTreatments";
-            this.dgvTreatments.Size = new System.Drawing.Size(483, 414);
+            this.dgvTreatments.Size = new System.Drawing.Size(507, 436);
             this.dgvTreatments.TabIndex = 3;
             // 
             // FrmSearchTreatment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 500);
+            this.ClientSize = new System.Drawing.Size(537, 526);
             this.Controls.Add(this.pnlSearchTreatments);
             this.DoubleBuffered = true;
             this.Name = "FrmSearchTreatment";

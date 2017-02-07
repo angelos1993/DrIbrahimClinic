@@ -29,7 +29,6 @@ G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\pt\Mic
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
-G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.csprojResolveAssemblyReference.cache
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmRo4etta.resources
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\EntityFramework.dll
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\EntityFramework.SqlServer.dll

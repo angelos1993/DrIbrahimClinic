@@ -45,9 +45,9 @@
             // 
             this.txtTreatmentOldName.Border.Class = "TextBoxBorder";
             this.txtTreatmentOldName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTreatmentOldName.Location = new System.Drawing.Point(12, 12);
+            this.txtTreatmentOldName.Location = new System.Drawing.Point(12, 13);
             this.txtTreatmentOldName.Name = "txtTreatmentOldName";
-            this.txtTreatmentOldName.Size = new System.Drawing.Size(286, 26);
+            this.txtTreatmentOldName.Size = new System.Drawing.Size(278, 26);
             this.txtTreatmentOldName.TabIndex = 0;
             // 
             // labelX1
@@ -61,7 +61,7 @@
             this.labelX1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.labelX1.Name = "labelX1";
             this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX1.Size = new System.Drawing.Size(64, 34);
+            this.labelX1.Size = new System.Drawing.Size(64, 36);
             this.labelX1.TabIndex = 5;
             this.labelX1.Text = "اسم العلاج";
             // 
@@ -71,9 +71,9 @@
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnCancel.Image = global::DrIbrahimClinic.Properties.Resources.Exit;
             this.btnCancel.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnCancel.Location = new System.Drawing.Point(12, 76);
+            this.btnCancel.Location = new System.Drawing.Point(12, 80);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 35);
+            this.btnCancel.Size = new System.Drawing.Size(75, 37);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "خروج";
@@ -85,9 +85,9 @@
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnSave.Image = global::DrIbrahimClinic.Properties.Resources.Save;
             this.btnSave.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnSave.Location = new System.Drawing.Point(174, 76);
+            this.btnSave.Location = new System.Drawing.Point(174, 80);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 35);
+            this.btnSave.Size = new System.Drawing.Size(75, 37);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "حفظ";
@@ -99,9 +99,9 @@
             this.btnSaveAndNew.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnSaveAndNew.Image = global::DrIbrahimClinic.Properties.Resources.Save;
             this.btnSaveAndNew.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnSaveAndNew.Location = new System.Drawing.Point(255, 76);
+            this.btnSaveAndNew.Location = new System.Drawing.Point(255, 80);
             this.btnSaveAndNew.Name = "btnSaveAndNew";
-            this.btnSaveAndNew.Size = new System.Drawing.Size(115, 35);
+            this.btnSaveAndNew.Size = new System.Drawing.Size(115, 37);
             this.btnSaveAndNew.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnSaveAndNew.TabIndex = 2;
             this.btnSaveAndNew.Text = "حفظ وتعديل آخر";
@@ -114,9 +114,9 @@
             // 
             this.txtTreatmentNewName.Border.Class = "TextBoxBorder";
             this.txtTreatmentNewName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTreatmentNewName.Location = new System.Drawing.Point(12, 44);
+            this.txtTreatmentNewName.Location = new System.Drawing.Point(12, 46);
             this.txtTreatmentNewName.Name = "txtTreatmentNewName";
-            this.txtTreatmentNewName.Size = new System.Drawing.Size(286, 26);
+            this.txtTreatmentNewName.Size = new System.Drawing.Size(278, 26);
             this.txtTreatmentNewName.TabIndex = 1;
             // 
             // labelX2
@@ -126,11 +126,11 @@
             // 
             this.labelX2.BackgroundStyle.Class = "";
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(306, 38);
+            this.labelX2.Location = new System.Drawing.Point(298, 40);
             this.labelX2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.labelX2.Name = "labelX2";
             this.labelX2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX2.Size = new System.Drawing.Size(64, 34);
+            this.labelX2.Size = new System.Drawing.Size(72, 36);
             this.labelX2.TabIndex = 11;
             this.labelX2.Text = "الاسم الجديد";
             // 
@@ -140,9 +140,9 @@
             this.btnClear.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnClear.Image = global::DrIbrahimClinic.Properties.Resources.Clear;
             this.btnClear.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnClear.Location = new System.Drawing.Point(93, 76);
+            this.btnClear.Location = new System.Drawing.Point(93, 80);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 35);
+            this.btnClear.Size = new System.Drawing.Size(75, 37);
             this.btnClear.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnClear.TabIndex = 4;
             this.btnClear.Text = "مسح";
@@ -150,9 +150,9 @@
             // 
             // FrmEditTreatment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 125);
+            this.ClientSize = new System.Drawing.Size(383, 132);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.txtTreatmentNewName);
