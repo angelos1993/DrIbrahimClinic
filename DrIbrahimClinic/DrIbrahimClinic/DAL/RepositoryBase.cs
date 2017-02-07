@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using DrIbrahimClinic.DAL.Model;
+
 namespace DrIbrahimClinic.DAL
 {
     interface IRepository<T> : IDisposable where T : class
@@ -21,6 +22,8 @@ namespace DrIbrahimClinic.DAL
 
     public abstract class RepositoryBase<T> : IRepository<T> where T : class
     {
+        #region Properties
+
         private DrIbrahimClinicEntities _context;
 
         public DrIbrahimClinicEntities Context
@@ -32,6 +35,9 @@ namespace DrIbrahimClinic.DAL
         private DbSet<T> _dbSet;
         public DbSet<T> DbSet => _dbSet ?? (_dbSet = Context.Set<T>());
 
+        #endregion
+
+        #region Methods
 
         public void Add(T entity)
         {
@@ -82,5 +88,7 @@ namespace DrIbrahimClinic.DAL
             Context.Dispose();
             Context = null;
         }
+
+        #endregion
     }
 }
