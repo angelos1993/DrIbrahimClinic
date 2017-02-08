@@ -13,8 +13,8 @@ namespace DrIbrahimClinic.DAL
         void Update(T entity);
         void Delete(T entity);
         void Save();
-        IQueryable<T> GatAll();
-        T GatById(int id);
+        IQueryable<T> GetAll();
+        T GetById(int id);
         IQueryable<T> Get(Expression<Func<T, bool>> predicate);
     }
 
@@ -53,19 +53,19 @@ namespace DrIbrahimClinic.DAL
             Context.Entry(entity).State = EntityState.Modified;
         }
 
-        public IQueryable<T> GatAll()
+        public IQueryable<T> GetAll()
         {
             return DbSet;
         }
 
-        public T GatById(int id)
+        public T GetById(int id)
         {
             return DbSet.Find(id);
         }
 
         public IQueryable<T> Get(Expression<Func<T, bool>> predicate)
         {
-            return GatAll().Where(predicate);
+            return GetAll().Where(predicate);
         }
 
         public void Save()
