@@ -49,7 +49,7 @@ namespace DrIbrahimClinic.PL
                 SucklingType = switchBtnSucklingType.Value ? (byte) 1 : (byte) 2
             };
             PatientManager.AddPatient(patient);
-            ShowInfoMsg($"تم إضافة المريض بنجاح - رقم المريض هو {patient.Id}");
+            ShowInfoMsg($"تم إضافة المريض بنجاح\nرقم المريض هو: {patient.Id}");
             Close();
         }
 
