@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-
-namespace DrIbrahimClinic.BBL
+﻿namespace DrIbrahimClinic.BBL
 {
     public abstract class BaseManager
     {
