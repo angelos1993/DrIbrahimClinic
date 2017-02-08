@@ -2,7 +2,7 @@
 
 namespace DrIbrahimClinic.DAL
 {
-    public class PatientRepository : RepositoryBase<Patient>
+    public class TreatmentRepository : RepositoryBase<Treatment>
     {
     }
 }

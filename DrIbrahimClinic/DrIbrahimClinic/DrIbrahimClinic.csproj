@@ -64,6 +64,10 @@
   <ItemGroup>
     <Compile Include="BLL\BaseManager.cs" />
     <Compile Include="BLL\PatientManager.cs" />
+    <Compile Include="DAL\DiagnosisRepository.cs" />
+    <Compile Include="DAL\ExaminationRepository.cs" />
+    <Compile Include="DAL\InoculationRepository.cs" />
+    <Compile Include="DAL\MedicalHistoryRepository.cs" />
     <Compile Include="DAL\RepositoryBase.cs" />
     <Compile Include="DAL\Model\Diagnosi.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -114,6 +118,7 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\PatientRepository.cs" />
+    <Compile Include="DAL\TreatmentRepository.cs" />
     <Compile Include="PL\FrmAddExamination.cs">
       <SubType>Form</SubType>
     </Compile>
