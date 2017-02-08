@@ -14,10 +14,14 @@ namespace DrIbrahimClinic.BLL
 
         #endregion
 
+        #region Methods
+
         public void AddPatient(Patient patient)
         {
             PatientRepository.Add(patient);
             PatientRepository.Save();
         }
+
+        #endregion
     }
 }

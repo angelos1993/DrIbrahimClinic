@@ -63,7 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BaseManager.cs" />
+    <Compile Include="BLL\DiagnosisManager.cs" />
+    <Compile Include="BLL\ExaminationManager.cs" />
+    <Compile Include="BLL\InoculationManager.cs" />
+    <Compile Include="BLL\MedicalHistoryManager.cs" />
     <Compile Include="BLL\PatientManager.cs" />
+    <Compile Include="BLL\TreatmentManager.cs" />
     <Compile Include="DAL\DiagnosisRepository.cs" />
     <Compile Include="DAL\ExaminationRepository.cs" />
     <Compile Include="DAL\InoculationRepository.cs" />
