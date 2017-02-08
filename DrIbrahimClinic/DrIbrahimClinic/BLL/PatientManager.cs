@@ -1,7 +1,7 @@
 ﻿using DrIbrahimClinic.DAL.Model;
 using DrIbrahimClinic.DAL;
 
-namespace DrIbrahimClinic.BBL
+namespace DrIbrahimClinic.BLL
 {
     public class PatientManager : BaseManager
     {
