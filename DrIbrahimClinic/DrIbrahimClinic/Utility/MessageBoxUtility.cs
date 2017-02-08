@@ -16,5 +16,10 @@ namespace DrIbrahimClinic.Utility
         {
             MessageBox.Show(msg, "تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
+
+        public static void ShowInfoMsg(string msg)
+        {
+            MessageBox.Show(msg, "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

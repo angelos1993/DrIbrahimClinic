@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DrIbrahimClinic.DAL
 {
-    class PatientRepository : RepositoryBase<Patient>
+    public class PatientRepository : RepositoryBase<Patient>
     {
 
     }
