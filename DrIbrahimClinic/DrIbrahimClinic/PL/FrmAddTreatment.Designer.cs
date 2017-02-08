@@ -42,11 +42,11 @@
             // 
             this.labelX1.BackgroundStyle.Class = "";
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(294, 4);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX1.Location = new System.Drawing.Point(294, 7);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelX1.Name = "labelX1";
             this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX1.Size = new System.Drawing.Size(61, 34);
+            this.labelX1.Size = new System.Drawing.Size(71, 36);
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "اسم العلاج";
             // 
@@ -57,9 +57,9 @@
             // 
             this.txtTreatmentName.Border.Class = "TextBoxBorder";
             this.txtTreatmentName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtTreatmentName.Location = new System.Drawing.Point(12, 12);
+            this.txtTreatmentName.Location = new System.Drawing.Point(11, 13);
             this.txtTreatmentName.Name = "txtTreatmentName";
-            this.txtTreatmentName.Size = new System.Drawing.Size(274, 26);
+            this.txtTreatmentName.Size = new System.Drawing.Size(288, 26);
             this.txtTreatmentName.TabIndex = 1;
             // 
             // btnSaveAndNew
@@ -68,9 +68,9 @@
             this.btnSaveAndNew.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnSaveAndNew.Image = global::DrIbrahimClinic.Properties.Resources.Save;
             this.btnSaveAndNew.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnSaveAndNew.Location = new System.Drawing.Point(228, 47);
+            this.btnSaveAndNew.Location = new System.Drawing.Point(205, 49);
             this.btnSaveAndNew.Name = "btnSaveAndNew";
-            this.btnSaveAndNew.Size = new System.Drawing.Size(129, 35);
+            this.btnSaveAndNew.Size = new System.Drawing.Size(160, 37);
             this.btnSaveAndNew.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnSaveAndNew.TabIndex = 2;
             this.btnSaveAndNew.Text = "حفظ وإضافة آخر";
@@ -82,9 +82,9 @@
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnCancel.Image = global::DrIbrahimClinic.Properties.Resources.Exit;
             this.btnCancel.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnCancel.Location = new System.Drawing.Point(10, 47);
+            this.btnCancel.Location = new System.Drawing.Point(9, 49);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(103, 35);
+            this.btnCancel.Size = new System.Drawing.Size(93, 37);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "خروج";
@@ -96,9 +96,9 @@
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnSave.Image = global::DrIbrahimClinic.Properties.Resources.Save;
             this.btnSave.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnSave.Location = new System.Drawing.Point(119, 47);
+            this.btnSave.Location = new System.Drawing.Point(107, 49);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(103, 35);
+            this.btnSave.Size = new System.Drawing.Size(93, 37);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "حفظ";
@@ -106,16 +106,16 @@
             // 
             // FrmAddTreatment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 92);
+            this.ClientSize = new System.Drawing.Size(378, 97);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnSaveAndNew);
             this.Controls.Add(this.txtTreatmentName);
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "FrmAddTreatment";
             this.RightToLeftLayout = true;
             this.Text = "إضافة علاج جديد";

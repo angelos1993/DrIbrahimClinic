@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSearchPatients = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btnClearSearch = new DevComponents.DotNetBar.ButtonX();
             this.txtPatientPhone = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -59,9 +59,9 @@
             this.pnlSearchPatients.Controls.Add(this.txtPatientId);
             this.pnlSearchPatients.Controls.Add(this.txtPatientName);
             this.pnlSearchPatients.Controls.Add(this.dgvTreatments);
-            this.pnlSearchPatients.Location = new System.Drawing.Point(12, 13);
+            this.pnlSearchPatients.Location = new System.Drawing.Point(11, 13);
             this.pnlSearchPatients.Name = "pnlSearchPatients";
-            this.pnlSearchPatients.Size = new System.Drawing.Size(832, 548);
+            this.pnlSearchPatients.Size = new System.Drawing.Size(791, 548);
             // 
             // 
             // 
@@ -104,7 +104,7 @@
             this.btnClearSearch.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnClearSearch.Location = new System.Drawing.Point(3, 3);
             this.btnClearSearch.Name = "btnClearSearch";
-            this.btnClearSearch.Size = new System.Drawing.Size(185, 58);
+            this.btnClearSearch.Size = new System.Drawing.Size(166, 58);
             this.btnClearSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnClearSearch.TabIndex = 4;
             this.btnClearSearch.Text = "إلغاء البحث";
@@ -117,9 +117,9 @@
             // 
             this.txtPatientPhone.Border.Class = "TextBoxBorder";
             this.txtPatientPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPatientPhone.Location = new System.Drawing.Point(194, 35);
+            this.txtPatientPhone.Location = new System.Drawing.Point(175, 35);
             this.txtPatientPhone.Name = "txtPatientPhone";
-            this.txtPatientPhone.Size = new System.Drawing.Size(188, 26);
+            this.txtPatientPhone.Size = new System.Drawing.Size(169, 26);
             this.txtPatientPhone.TabIndex = 3;
             this.txtPatientPhone.TextChanged += new System.EventHandler(this.FindPatient);
             // 
@@ -131,11 +131,11 @@
             // 
             this.labelX5.BackgroundStyle.Class = "";
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Location = new System.Drawing.Point(402, 29);
-            this.labelX5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX5.Location = new System.Drawing.Point(351, 29);
+            this.labelX5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelX5.Name = "labelX5";
             this.labelX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX5.Size = new System.Drawing.Size(68, 36);
+            this.labelX5.Size = new System.Drawing.Size(83, 36);
             this.labelX5.TabIndex = 17;
             this.labelX5.Text = "تليفون";
             // 
@@ -148,7 +148,7 @@
             this.dtPatientBirthdate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dtPatientBirthdate.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dtPatientBirthdate.ButtonDropDown.Visible = true;
-            this.dtPatientBirthdate.Location = new System.Drawing.Point(194, 3);
+            this.dtPatientBirthdate.Location = new System.Drawing.Point(175, 3);
             // 
             // 
             // 
@@ -185,7 +185,7 @@
             this.dtPatientBirthdate.MonthCalendar.TodayButtonVisible = true;
             this.dtPatientBirthdate.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dtPatientBirthdate.Name = "dtPatientBirthdate";
-            this.dtPatientBirthdate.Size = new System.Drawing.Size(188, 26);
+            this.dtPatientBirthdate.Size = new System.Drawing.Size(169, 26);
             this.dtPatientBirthdate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dtPatientBirthdate.TabIndex = 2;
             this.dtPatientBirthdate.TextChanged += new System.EventHandler(this.FindPatient);
@@ -198,11 +198,11 @@
             // 
             this.labelX2.BackgroundStyle.Class = "";
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(390, -3);
-            this.labelX2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX2.Location = new System.Drawing.Point(351, -3);
+            this.labelX2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelX2.Name = "labelX2";
             this.labelX2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX2.Size = new System.Drawing.Size(80, 36);
+            this.labelX2.Size = new System.Drawing.Size(83, 36);
             this.labelX2.TabIndex = 15;
             this.labelX2.Text = "تاريخ الميلاد";
             // 
@@ -214,11 +214,11 @@
             // 
             this.labelX6.BackgroundStyle.Class = "";
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(753, -3);
-            this.labelX6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX6.Location = new System.Drawing.Point(688, -3);
+            this.labelX6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelX6.Name = "labelX6";
             this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX6.Size = new System.Drawing.Size(68, 36);
+            this.labelX6.Size = new System.Drawing.Size(93, 36);
             this.labelX6.TabIndex = 13;
             this.labelX6.Text = "رقم المريض";
             // 
@@ -230,11 +230,11 @@
             // 
             this.labelX1.BackgroundStyle.Class = "";
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(747, 29);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.labelX1.Location = new System.Drawing.Point(688, 29);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelX1.Name = "labelX1";
             this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX1.Size = new System.Drawing.Size(74, 36);
+            this.labelX1.Size = new System.Drawing.Size(93, 36);
             this.labelX1.TabIndex = 12;
             this.labelX1.Text = "اسم المريض";
             // 
@@ -245,9 +245,9 @@
             // 
             this.txtPatientId.Border.Class = "TextBoxBorder";
             this.txtPatientId.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPatientId.Location = new System.Drawing.Point(481, 3);
+            this.txtPatientId.Location = new System.Drawing.Point(449, 3);
             this.txtPatientId.Name = "txtPatientId";
-            this.txtPatientId.Size = new System.Drawing.Size(258, 26);
+            this.txtPatientId.Size = new System.Drawing.Size(232, 26);
             this.txtPatientId.TabIndex = 0;
             this.txtPatientId.TextChanged += new System.EventHandler(this.FindPatient);
             // 
@@ -258,35 +258,35 @@
             // 
             this.txtPatientName.Border.Class = "TextBoxBorder";
             this.txtPatientName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPatientName.Location = new System.Drawing.Point(481, 35);
+            this.txtPatientName.Location = new System.Drawing.Point(449, 35);
             this.txtPatientName.Name = "txtPatientName";
-            this.txtPatientName.Size = new System.Drawing.Size(258, 26);
+            this.txtPatientName.Size = new System.Drawing.Size(232, 26);
             this.txtPatientName.TabIndex = 1;
             this.txtPatientName.TextChanged += new System.EventHandler(this.FindPatient);
             // 
             // dgvTreatments
             // 
             this.dgvTreatments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTreatments.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTreatments.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTreatments.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvTreatments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvTreatments.Location = new System.Drawing.Point(0, 72);
             this.dgvTreatments.Name = "dgvTreatments";
-            this.dgvTreatments.Size = new System.Drawing.Size(826, 449);
+            this.dgvTreatments.Size = new System.Drawing.Size(785, 449);
             this.dgvTreatments.TabIndex = 5;
             // 
             // FrmSearchPatient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 574);
+            this.ClientSize = new System.Drawing.Size(814, 574);
             this.Controls.Add(this.pnlSearchPatients);
             this.DoubleBuffered = true;
             this.Name = "FrmSearchPatient";

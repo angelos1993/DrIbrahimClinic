@@ -305,6 +305,7 @@
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
     <Content Include="DB\DrIbrahimClinic.sql" />
+    <None Include="Resources\Ro4etta.png" />
     <None Include="Resources\Header.jpg" />
     <None Include="Resources\Time.png" />
     <None Include="Resources\Calendar.png" />
