@@ -1,4 +1,8 @@
-﻿using DrIbrahimClinic.DAL;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using DrIbrahimClinic.DAL;
+using DrIbrahimClinic.DAL.Model;
 
 namespace DrIbrahimClinic.BLL
 {
@@ -14,6 +18,39 @@ namespace DrIbrahimClinic.BLL
         #endregion
 
         #region Methods
+
+        public void AddMedicalHistory(MedicalHistory medicalHistory)
+        {
+            MedicalHistoryRepository.Add(medicalHistory);
+            MedicalHistoryRepository.Save();
+        }
+
+        public void UpdateMedicalHistory(MedicalHistory medicalHistory)
+        {
+            MedicalHistoryRepository.Update(medicalHistory);
+            MedicalHistoryRepository.Save();
+        }
+
+        public void DeleteMedicalHistory(MedicalHistory medicalHistory)
+        {
+            MedicalHistoryRepository.Delete(medicalHistory);
+            MedicalHistoryRepository.Save();
+        }
+
+        public IEnumerable<MedicalHistory> GetAllMedicalHistorys()
+        {
+            return MedicalHistoryRepository.GetAll().AsEnumerable();
+        }
+
+        public MedicalHistory GetMedicalHistoryById(int medicalHistoryId)
+        {
+            return GetAllMedicalHistorys().FirstOrDefault(medicalHistory => medicalHistory.Id == medicalHistoryId);
+        }
+
+        public IEnumerable<MedicalHistory> GetMedicalHistorys(Func<MedicalHistory, bool> where)
+        {
+            return GetAllMedicalHistorys().Where(where);
+        }
 
         #endregion
     }
