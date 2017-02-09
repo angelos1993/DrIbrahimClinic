@@ -2,6 +2,7 @@
 using System.Linq;
 using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
+using DrIbrahimClinic.Utility;
 
 namespace DrIbrahimClinic.PL
 {
@@ -52,13 +53,19 @@ namespace DrIbrahimClinic.PL
         {
             txtPatientId.Text = string.Empty;
             txtPatientName.Text = string.Empty;
-            dtPatientBirthdate.Value = new DateTime(1, 1, 1);
             txtPatientPhone.Text = string.Empty;
         }
 
         private void FindPatient(object sender, EventArgs e)
         {
-            FillGrid(patient => patient.Name.Contains(txtPatientName.Text));
+            int patientId;
+            if (!string.IsNullOrEmpty(txtPatientId.Text.FullTrim()) && int.TryParse(txtPatientId.Text, out patientId))
+                FillGrid(patient => patient.Id == patientId);
+            else
+                FillGrid(
+                    patient =>
+                        patient.Name.Contains(txtPatientName.Text.FullTrim()) &&
+                        patient.Phone.Contains(txtPatientPhone.Text.FullTrim()));
         }
 
         #endregion
