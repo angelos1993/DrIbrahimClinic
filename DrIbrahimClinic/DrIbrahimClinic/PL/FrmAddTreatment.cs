@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
 using DrIbrahimClinic.Utility;
+using static DrIbrahimClinic.Utility.Constants;
 
 namespace DrIbrahimClinic.PL
 {
@@ -50,7 +50,7 @@ namespace DrIbrahimClinic.PL
         {
             if (string.IsNullOrEmpty(txtTreatmentName.Text.FullTrim()))
             {
-                txtTreatmentName.BackColor = Color.HotPink;
+                txtTreatmentName.BackColor = ErrorColor;
                 txtTreatmentName.Focus();
                 return;
             }

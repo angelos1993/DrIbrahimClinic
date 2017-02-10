@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Drawing;
 using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
 using static DrIbrahimClinic.Utility.MessageBoxUtility;
 using static DrIbrahimClinic.Utility.StringExtensions;
+using static DrIbrahimClinic.Utility.Constants;
 
 namespace DrIbrahimClinic.PL
 {
@@ -29,7 +29,7 @@ namespace DrIbrahimClinic.PL
             if (string.IsNullOrEmpty(txtName.Text.FullTrim()))
             {
                 isFormValid = false;
-                txtName.BackColor = Color.HotPink;
+                txtName.BackColor = ErrorColor;
             }
             if (!isFormValid) return;
             var patient = new Patient
