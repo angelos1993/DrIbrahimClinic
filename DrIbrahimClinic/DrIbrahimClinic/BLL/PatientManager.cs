@@ -47,6 +47,11 @@ namespace DrIbrahimClinic.BLL
             return GetAllPatients().FirstOrDefault(patient => patient.Id == patientId);
         }
 
+        public Patient GetPatientByName(string patientName)
+        {
+            return GetAllPatients().FirstOrDefault(patient => patient.Name == patientName);
+        }
+
         public IEnumerable<Patient> GetPatients(Func<Patient, bool> where)
         {
             return GetAllPatients().Where(where);

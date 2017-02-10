@@ -34,7 +34,7 @@ namespace DrIbrahimClinic.PL
             if (!isFormValid) return;
             var patient = new Patient
             {
-                Name = txtName.Text,
+                Name = txtName.Text.FullTrim(),
                 Birthdate = dtBirthdate.Value != default(DateTime) ? dtBirthdate.Value : (DateTime?) null,
                 Gender = switchBtnGender.Value ? "M" : "F",
                 Phone = txtPhone.Text.FullTrim(),
