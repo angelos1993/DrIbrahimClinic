@@ -125,6 +125,7 @@ namespace DrIbrahimClinic.PL
             switchBtnBirthType.Enabled = isEnabled;
             switchBtnSucklingType.Enabled = isEnabled;
             btnSave.Enabled = isEnabled;
+            btnFindPatient.Enabled = !isEnabled;
         }
 
         #endregion
