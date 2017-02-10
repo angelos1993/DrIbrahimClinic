@@ -46,9 +46,9 @@
             this.pnlSearchTreatments.Controls.Add(this.radContains);
             this.pnlSearchTreatments.Controls.Add(this.txtTreatmentName);
             this.pnlSearchTreatments.Controls.Add(this.dgvTreatments);
-            this.pnlSearchTreatments.Location = new System.Drawing.Point(12, 13);
+            this.pnlSearchTreatments.Location = new System.Drawing.Point(11, 13);
             this.pnlSearchTreatments.Name = "pnlSearchTreatments";
-            this.pnlSearchTreatments.Size = new System.Drawing.Size(513, 501);
+            this.pnlSearchTreatments.Size = new System.Drawing.Size(462, 501);
             // 
             // 
             // 
@@ -88,26 +88,26 @@
             this.radStartsWith.AutoSize = true;
             this.radStartsWith.BackColor = System.Drawing.Color.Transparent;
             this.radStartsWith.Checked = true;
-            this.radStartsWith.Location = new System.Drawing.Point(273, 3);
+            this.radStartsWith.Location = new System.Drawing.Point(246, 3);
             this.radStartsWith.Name = "radStartsWith";
-            this.radStartsWith.Size = new System.Drawing.Size(113, 24);
+            this.radStartsWith.Size = new System.Drawing.Size(102, 24);
             this.radStartsWith.TabIndex = 1;
             this.radStartsWith.TabStop = true;
             this.radStartsWith.Text = "Starts with";
             this.radStartsWith.UseVisualStyleBackColor = false;
-            this.radStartsWith.CheckedChanged += new System.EventHandler(this.radSearchType_CheckedChanged);
+            this.radStartsWith.CheckedChanged += new System.EventHandler(this.FindTreatment);
             // 
             // radContains
             // 
             this.radContains.AutoSize = true;
             this.radContains.BackColor = System.Drawing.Color.Transparent;
-            this.radContains.Location = new System.Drawing.Point(392, 3);
+            this.radContains.Location = new System.Drawing.Point(353, 3);
             this.radContains.Name = "radContains";
-            this.radContains.Size = new System.Drawing.Size(98, 24);
+            this.radContains.Size = new System.Drawing.Size(90, 24);
             this.radContains.TabIndex = 2;
             this.radContains.Text = "Contains";
             this.radContains.UseVisualStyleBackColor = false;
-            this.radContains.CheckedChanged += new System.EventHandler(this.radSearchType_CheckedChanged);
+            this.radContains.CheckedChanged += new System.EventHandler(this.FindTreatment);
             // 
             // txtTreatmentName
             // 
@@ -118,16 +118,17 @@
             this.txtTreatmentName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTreatmentName.Location = new System.Drawing.Point(3, 3);
             this.txtTreatmentName.Name = "txtTreatmentName";
-            this.txtTreatmentName.Size = new System.Drawing.Size(264, 26);
+            this.txtTreatmentName.Size = new System.Drawing.Size(238, 26);
             this.txtTreatmentName.TabIndex = 0;
-            this.txtTreatmentName.TextChanged += new System.EventHandler(this.txtTreatmentName_TextChanged);
+            this.txtTreatmentName.TextChanged += new System.EventHandler(this.FindTreatment);
             // 
             // dgvTreatments
             // 
+            this.dgvTreatments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTreatments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -137,14 +138,16 @@
             this.dgvTreatments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvTreatments.Location = new System.Drawing.Point(0, 38);
             this.dgvTreatments.Name = "dgvTreatments";
-            this.dgvTreatments.Size = new System.Drawing.Size(507, 436);
+            this.dgvTreatments.ReadOnly = true;
+            this.dgvTreatments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTreatments.Size = new System.Drawing.Size(456, 436);
             this.dgvTreatments.TabIndex = 3;
             // 
             // FrmSearchTreatment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 526);
+            this.ClientSize = new System.Drawing.Size(483, 526);
             this.Controls.Add(this.pnlSearchTreatments);
             this.DoubleBuffered = true;
             this.Name = "FrmSearchTreatment";

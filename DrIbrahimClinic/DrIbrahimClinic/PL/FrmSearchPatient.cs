@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
@@ -31,6 +30,18 @@ namespace DrIbrahimClinic.PL
         private void FrmSearchPatient_Load(object sender, EventArgs e)
         {
             FillGrid();
+        }
+
+        private void FindPatient(object sender, EventArgs e)
+        {
+            int patientId;
+            if (!string.IsNullOrEmpty(txtPatientId.Text.FullTrim()) && int.TryParse(txtPatientId.Text, out patientId))
+                FillGrid(patient => patient.Id == patientId);
+            else
+                FillGrid(
+                    patient =>
+                        patient.Name.Contains(txtPatientName.Text.FullTrim()) &&
+                        patient.Phone.Contains(txtPatientPhone.Text.FullTrim()));
         }
 
         private void btnClearSearch_Click(object sender, EventArgs e)
@@ -69,19 +80,7 @@ namespace DrIbrahimClinic.PL
             txtPatientName.Text = string.Empty;
             txtPatientPhone.Text = string.Empty;
         }
-
-        private void FindPatient(object sender, EventArgs e)
-        {
-            int patientId;
-            if (!string.IsNullOrEmpty(txtPatientId.Text.FullTrim()) && int.TryParse(txtPatientId.Text, out patientId))
-                FillGrid(patient => patient.Id == patientId);
-            else
-                FillGrid(
-                    patient =>
-                        patient.Name.Contains(txtPatientName.Text.FullTrim()) &&
-                        patient.Phone.Contains(txtPatientPhone.Text.FullTrim()));
-        }
-
+        
         #endregion
     }
 }

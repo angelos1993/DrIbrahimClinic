@@ -1,4 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using DrIbrahimClinic.BLL;
+using DrIbrahimClinic.DAL.Model;
+using DrIbrahimClinic.DAL.VMs;
+using DrIbrahimClinic.Utility;
 
 namespace DrIbrahimClinic.PL
 {
@@ -9,19 +15,44 @@ namespace DrIbrahimClinic.PL
             InitializeComponent();
         }
 
+        #region Properties
+
+        private TreatmentManager _treatmentManager;
+        private TreatmentManager TreatmentManager => _treatmentManager ?? (_treatmentManager = new TreatmentManager());
+
+        private IEnumerable<Treatment> _treatments;
+        private IEnumerable<Treatment> Treatments => _treatments ?? (_treatments = TreatmentManager.GetAllTreatments());
+
+        #endregion
+
+        #region Events
+
         private void FrmSearchTreatment_Load(object sender, EventArgs e)
         {
-
+            FillGrid();
         }
 
-        private void txtTreatmentName_TextChanged(object sender, EventArgs e)
+        private void FindTreatment(object sender, EventArgs e)
         {
-
+            if (radStartsWith.Checked)
+                FillGrid(treatment => treatment.Name.ToLower().StartsWith(txtTreatmentName.Text.FullTrim().ToLower()));
+            else
+                FillGrid(treatment => treatment.Name.ToLower().Contains(txtTreatmentName.Text.FullTrim().ToLower()));
         }
 
-        private void radSearchType_CheckedChanged(object sender, EventArgs e)
+        #endregion
+
+        #region Methods
+
+        private void FillGrid(Func<Treatment, bool> where = null)
         {
-
+            dgvTreatments.DataSource = Treatments.Where(where ?? (p => 1 == 1)).Select(treatment => new TreatmentVm
+            {
+                //Id = treatment.Id,
+                Name = treatment.Name
+            }).ToList();
         }
+
+        #endregion
     }
 }
