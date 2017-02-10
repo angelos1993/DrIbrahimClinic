@@ -5,28 +5,28 @@ namespace DrIbrahimClinic.DAL.VMs
 {
     public class PatientVm
     {
-        [DisplayName("الرقم")]
+        [DisplayName(@"الرقم")]
         public int Id { get; set; }
 
-        [DisplayName("الاسم")]
+        [DisplayName(@"الاسم")]
         public string Name { get; set; }
 
-        [DisplayName("تاريخ الميلاد")]
+        [DisplayName(@"تاريخ الميلاد")]
         public DateTime? Birthdate { get; set; }
 
-        [DisplayName("النوع")]
+        [DisplayName(@"النوع")]
         public string Gender { get; set; }
 
-        [DisplayName("العنوان")]
+        [DisplayName(@"العنوان")]
         public string Address { get; set; }
 
-        [DisplayName("تليفون")]
+        [DisplayName(@"تليفون")]
         public string Phone { get; set; }
 
-        [DisplayName("نوع الولادة")]
+        [DisplayName(@"نوع الولادة")]
         public string BirthType { get; set; }
 
-        [DisplayName("نوع الرضاعة")]
+        [DisplayName(@"نوع الرضاعة")]
         public string SucklingType { get; set; }
     }
 }
