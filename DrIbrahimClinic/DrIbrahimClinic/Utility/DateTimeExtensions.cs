@@ -3,7 +3,7 @@ using static System.Globalization.CultureInfo;
 
 namespace DrIbrahimClinic.Utility
 {
-    static class DateTimeExtensions
+    public static class DateTimeExtensions
     {
         public static string ToMonthName(this DateTime dateTime)
         {

@@ -2,7 +2,7 @@
 
 namespace DrIbrahimClinic.Utility
 {
-    static class StringExtensions
+    public static class StringExtensions
     {
         public static string FullTrim(this string str)
         {

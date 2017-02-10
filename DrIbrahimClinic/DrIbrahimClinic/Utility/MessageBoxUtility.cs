@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 namespace DrIbrahimClinic.Utility
 {
-    static class MessageBoxUtility
+    public static class MessageBoxUtility
     {
         public static void ShowErrorMsg(string msg)
         {

@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSearchPatients = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.btnClearSearch = new DevComponents.DotNetBar.ButtonX();
             this.txtPatientPhone = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
@@ -38,6 +37,7 @@
             this.txtPatientId = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtPatientName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.dgvPatients = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.btnClearSearch = new DevComponents.DotNetBar.ButtonX();
             this.pnlSearchPatients.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
             this.SuspendLayout();
@@ -90,20 +90,6 @@
             this.pnlSearchPatients.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.pnlSearchPatients.TabIndex = 7;
             this.pnlSearchPatients.Text = "بحث عن مريض";
-            // 
-            // btnClearSearch
-            // 
-            this.btnClearSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnClearSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnClearSearch.Image = global::DrIbrahimClinic.Properties.Resources.Undo;
-            this.btnClearSearch.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnClearSearch.Location = new System.Drawing.Point(175, 39);
-            this.btnClearSearch.Name = "btnClearSearch";
-            this.btnClearSearch.Size = new System.Drawing.Size(259, 26);
-            this.btnClearSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClearSearch.TabIndex = 4;
-            this.btnClearSearch.Text = "إلغاء البحث";
-            this.btnClearSearch.Click += new System.EventHandler(this.btnClearSearch_Click);
             // 
             // txtPatientPhone
             // 
@@ -194,21 +180,38 @@
             // 
             // dgvPatients
             // 
+            this.dgvPatients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPatients.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPatients.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPatients.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvPatients.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvPatients.Location = new System.Drawing.Point(0, 72);
             this.dgvPatients.Name = "dgvPatients";
+            this.dgvPatients.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dgvPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPatients.Size = new System.Drawing.Size(785, 449);
             this.dgvPatients.TabIndex = 5;
+            // 
+            // btnClearSearch
+            // 
+            this.btnClearSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnClearSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnClearSearch.Image = global::DrIbrahimClinic.Properties.Resources.Undo;
+            this.btnClearSearch.ImageFixedSize = new System.Drawing.Size(20, 20);
+            this.btnClearSearch.Location = new System.Drawing.Point(175, 39);
+            this.btnClearSearch.Name = "btnClearSearch";
+            this.btnClearSearch.Size = new System.Drawing.Size(259, 26);
+            this.btnClearSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnClearSearch.TabIndex = 4;
+            this.btnClearSearch.Text = "إلغاء البحث";
+            this.btnClearSearch.Click += new System.EventHandler(this.btnClearSearch_Click);
             // 
             // FrmSearchPatient
             // 
