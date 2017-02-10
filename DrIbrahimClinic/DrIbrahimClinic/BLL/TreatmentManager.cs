@@ -47,6 +47,11 @@ namespace DrIbrahimClinic.BLL
             return GetAllTreatments().FirstOrDefault(treatment => treatment.Id == treatmentId);
         }
 
+        public Treatment GeTreatmentByName(string treatmentName)
+        {
+            return GetAllTreatments().FirstOrDefault(treatment => string.Equals(treatment.Name, treatmentName, StringComparison.CurrentCultureIgnoreCase));
+        }
+
         public IEnumerable<Treatment> GetTreatments(Func<Treatment, bool> where)
         {
             return GetAllTreatments().Where(where);

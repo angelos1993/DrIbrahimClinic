@@ -34,9 +34,7 @@ namespace DrIbrahimClinic.PL
         private void FrmEditPatient_Load(object sender, EventArgs e)
         {
             ResetForm();
-            var namesCollection = new AutoCompleteStringCollection();
-            namesCollection.AddRange(Patients.Select(p => p.Name).ToArray());
-            SetAutoCompleteSourceForTextBox(txtName, namesCollection);
+            SetAutoCompletion();
         }
 
         private void btnFindPatient_Click(object sender, EventArgs e)
@@ -95,6 +93,13 @@ namespace DrIbrahimClinic.PL
             txtAddress.Text = string.Empty;
             switchBtnBirthType.Value = true;
             switchBtnSucklingType.Value = true;
+        }
+
+        private void SetAutoCompletion()
+        {
+            var namesCollection = new AutoCompleteStringCollection();
+            namesCollection.AddRange(Patients.Select(p => p.Name).ToArray());
+            SetAutoCompleteSourceForTextBox(txtName, namesCollection);
         }
 
         private void ShowPatient(Patient patient)

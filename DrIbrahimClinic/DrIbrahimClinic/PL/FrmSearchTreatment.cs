@@ -50,7 +50,7 @@ namespace DrIbrahimClinic.PL
             {
                 //Id = treatment.Id,
                 Name = treatment.Name
-            }).ToList();
+            }).OrderBy(treatment => treatment.Name).ToList();
         }
 
         #endregion
