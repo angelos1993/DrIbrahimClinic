@@ -126,6 +126,7 @@
     </Compile>
     <Compile Include="DAL\PatientRepository.cs" />
     <Compile Include="DAL\TreatmentRepository.cs" />
+    <Compile Include="DAL\VMs\InoculationVm.cs" />
     <Compile Include="DAL\VMs\PatientVm.cs" />
     <Compile Include="DAL\VMs\TreatmentVm.cs" />
     <Compile Include="PL\FrmAddExamination.cs">
@@ -333,6 +334,7 @@
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
     <Content Include="DB\DrIbrahimClinic.sql" />
+    <None Include="Resources\Inoculations.png" />
     <None Include="Resources\Restore.png" />
     <None Include="Resources\Backup.png" />
     <None Include="Resources\Ro4etta.png" />

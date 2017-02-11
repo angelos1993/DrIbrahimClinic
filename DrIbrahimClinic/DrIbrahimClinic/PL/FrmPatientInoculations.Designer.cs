@@ -28,30 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpPanelPatientData = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.intInputPatientId = new DevComponents.Editors.IntegerInput();
             this.btnFindPatient = new DevComponents.DotNetBar.ButtonX();
-            this.txtPatientId = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.txtPatientName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtInoculationName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.dtInoculationDate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.btnAddInoculation = new DevComponents.DotNetBar.ButtonX();
-            this.lstVwPatientInoculations = new DevComponents.DotNetBar.Controls.ListViewEx();
             this.grpPanelPatientInoculations = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.dgvPatientInoculations = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.btnClear = new DevComponents.DotNetBar.ButtonX();
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.grpPanelPatientData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.intInputPatientId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtInoculationDate)).BeginInit();
             this.grpPanelPatientInoculations.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPatientInoculations)).BeginInit();
             this.SuspendLayout();
             // 
             // grpPanelPatientData
             // 
             this.grpPanelPatientData.CanvasColor = System.Drawing.SystemColors.Control;
             this.grpPanelPatientData.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.grpPanelPatientData.Controls.Add(this.intInputPatientId);
             this.grpPanelPatientData.Controls.Add(this.btnFindPatient);
-            this.grpPanelPatientData.Controls.Add(this.txtPatientId);
             this.grpPanelPatientData.Controls.Add(this.labelX6);
             this.grpPanelPatientData.Controls.Add(this.txtPatientName);
             this.grpPanelPatientData.Controls.Add(this.labelX1);
@@ -92,6 +95,21 @@
             this.grpPanelPatientData.TabIndex = 11;
             this.grpPanelPatientData.Text = "بيانات المريض";
             // 
+            // intInputPatientId
+            // 
+            // 
+            // 
+            // 
+            this.intInputPatientId.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.intInputPatientId.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.intInputPatientId.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.intInputPatientId.Location = new System.Drawing.Point(80, 13);
+            this.intInputPatientId.MinValue = 0;
+            this.intInputPatientId.Name = "intInputPatientId";
+            this.intInputPatientId.ShowUpDown = true;
+            this.intInputPatientId.Size = new System.Drawing.Size(234, 26);
+            this.intInputPatientId.TabIndex = 12;
+            // 
             // btnFindPatient
             // 
             this.btnFindPatient.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -107,19 +125,6 @@
             this.btnFindPatient.Text = "بحث";
             this.btnFindPatient.Click += new System.EventHandler(this.btnFindPatient_Click);
             // 
-            // txtPatientId
-            // 
-            // 
-            // 
-            // 
-            this.txtPatientId.Border.Class = "TextBoxBorder";
-            this.txtPatientId.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPatientId.Location = new System.Drawing.Point(80, 12);
-            this.txtPatientId.Name = "txtPatientId";
-            this.txtPatientId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtPatientId.Size = new System.Drawing.Size(235, 26);
-            this.txtPatientId.TabIndex = 0;
-            // 
             // labelX6
             // 
             this.labelX6.BackColor = System.Drawing.Color.Transparent;
@@ -129,7 +134,7 @@
             this.labelX6.BackgroundStyle.Class = "";
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX6.Location = new System.Drawing.Point(322, 3);
-            this.labelX6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX6.Margin = new System.Windows.Forms.Padding(4);
             this.labelX6.Name = "labelX6";
             this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX6.Size = new System.Drawing.Size(88, 36);
@@ -158,25 +163,25 @@
             this.labelX1.BackgroundStyle.Class = "";
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Location = new System.Drawing.Point(322, 49);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(4);
             this.labelX1.Name = "labelX1";
             this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX1.Size = new System.Drawing.Size(88, 36);
             this.labelX1.TabIndex = 1;
             this.labelX1.Text = "اسم المريض";
             // 
-            // textBoxX3
+            // txtInoculationName
             // 
             // 
             // 
             // 
-            this.textBoxX3.Border.Class = "TextBoxBorder";
-            this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX3.Location = new System.Drawing.Point(3, 3);
-            this.textBoxX3.Name = "textBoxX3";
-            this.textBoxX3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textBoxX3.Size = new System.Drawing.Size(248, 26);
-            this.textBoxX3.TabIndex = 0;
+            this.txtInoculationName.Border.Class = "TextBoxBorder";
+            this.txtInoculationName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtInoculationName.Location = new System.Drawing.Point(3, 3);
+            this.txtInoculationName.Name = "txtInoculationName";
+            this.txtInoculationName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtInoculationName.Size = new System.Drawing.Size(248, 26);
+            this.txtInoculationName.TabIndex = 0;
             // 
             // dtInoculationDate
             // 
@@ -241,30 +246,12 @@
             this.btnAddInoculation.TabIndex = 2;
             this.btnAddInoculation.Click += new System.EventHandler(this.btnAddInoculation_Click);
             // 
-            // lstVwPatientInoculations
-            // 
-            // 
-            // 
-            // 
-            this.lstVwPatientInoculations.Border.Class = "ListViewBorder";
-            this.lstVwPatientInoculations.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lstVwPatientInoculations.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lstVwPatientInoculations.FullRowSelect = true;
-            this.lstVwPatientInoculations.GridLines = true;
-            this.lstVwPatientInoculations.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.lstVwPatientInoculations.Location = new System.Drawing.Point(0, 38);
-            this.lstVwPatientInoculations.Name = "lstVwPatientInoculations";
-            this.lstVwPatientInoculations.Size = new System.Drawing.Size(413, 238);
-            this.lstVwPatientInoculations.TabIndex = 22;
-            this.lstVwPatientInoculations.UseCompatibleStateImageBehavior = false;
-            this.lstVwPatientInoculations.View = System.Windows.Forms.View.Details;
-            // 
             // grpPanelPatientInoculations
             // 
             this.grpPanelPatientInoculations.CanvasColor = System.Drawing.SystemColors.Control;
             this.grpPanelPatientInoculations.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.grpPanelPatientInoculations.Controls.Add(this.textBoxX3);
-            this.grpPanelPatientInoculations.Controls.Add(this.lstVwPatientInoculations);
+            this.grpPanelPatientInoculations.Controls.Add(this.dgvPatientInoculations);
+            this.grpPanelPatientInoculations.Controls.Add(this.txtInoculationName);
             this.grpPanelPatientInoculations.Controls.Add(this.dtInoculationDate);
             this.grpPanelPatientInoculations.Controls.Add(this.btnAddInoculation);
             this.grpPanelPatientInoculations.Location = new System.Drawing.Point(11, 145);
@@ -303,6 +290,28 @@
             this.grpPanelPatientInoculations.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.grpPanelPatientInoculations.TabIndex = 16;
             this.grpPanelPatientInoculations.Text = "التطعيمات";
+            // 
+            // dgvPatientInoculations
+            // 
+            this.dgvPatientInoculations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPatientInoculations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPatientInoculations.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPatientInoculations.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvPatientInoculations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgvPatientInoculations.Location = new System.Drawing.Point(0, 36);
+            this.dgvPatientInoculations.Name = "dgvPatientInoculations";
+            this.dgvPatientInoculations.ReadOnly = true;
+            this.dgvPatientInoculations.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dgvPatientInoculations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPatientInoculations.Size = new System.Drawing.Size(413, 240);
+            this.dgvPatientInoculations.TabIndex = 3;
             // 
             // btnClear
             // 
@@ -346,8 +355,10 @@
             this.Text = "تطعيمات المريض";
             this.Load += new System.EventHandler(this.FrmPatientInoculations_Load);
             this.grpPanelPatientData.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.intInputPatientId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtInoculationDate)).EndInit();
             this.grpPanelPatientInoculations.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPatientInoculations)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -356,16 +367,16 @@
 
         private DevComponents.DotNetBar.Controls.GroupPanel grpPanelPatientData;
         private DevComponents.DotNetBar.ButtonX btnFindPatient;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtPatientId;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.Controls.TextBoxX txtPatientName;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtInoculationName;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dtInoculationDate;
         private DevComponents.DotNetBar.ButtonX btnAddInoculation;
-        private DevComponents.DotNetBar.Controls.ListViewEx lstVwPatientInoculations;
         private DevComponents.DotNetBar.Controls.GroupPanel grpPanelPatientInoculations;
         private DevComponents.DotNetBar.ButtonX btnClear;
         private DevComponents.DotNetBar.ButtonX btnCancel;
+        private DevComponents.Editors.IntegerInput intInputPatientId;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvPatientInoculations;
     }
 }

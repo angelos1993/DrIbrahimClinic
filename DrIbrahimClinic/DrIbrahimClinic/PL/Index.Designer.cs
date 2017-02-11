@@ -237,6 +237,7 @@
             // btnPatientInoculations
             // 
             this.btnPatientInoculations.GlobalItem = false;
+            this.btnPatientInoculations.Image = global::DrIbrahimClinic.Properties.Resources.Inoculations;
             this.btnPatientInoculations.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnPatientInoculations.Name = "btnPatientInoculations";
             this.btnPatientInoculations.Text = "تطعيمات المريض ...";
