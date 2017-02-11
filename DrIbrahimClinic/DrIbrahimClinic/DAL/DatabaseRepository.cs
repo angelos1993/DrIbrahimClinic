@@ -7,7 +7,6 @@ namespace DrIbrahimClinic.DAL
 {
     public class DatabaseRepository : RepositoryBase<object>
     {
-
         #region Methods
 
         public void Backup(string bacFolderPath)
