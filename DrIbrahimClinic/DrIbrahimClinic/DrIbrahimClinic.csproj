@@ -63,12 +63,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\BaseManager.cs" />
+    <Compile Include="BLL\DatabaseManager.cs" />
     <Compile Include="BLL\DiagnosisManager.cs" />
     <Compile Include="BLL\ExaminationManager.cs" />
     <Compile Include="BLL\InoculationManager.cs" />
     <Compile Include="BLL\MedicalHistoryManager.cs" />
     <Compile Include="BLL\PatientManager.cs" />
     <Compile Include="BLL\TreatmentManager.cs" />
+    <Compile Include="DAL\DatabaseRepository.cs" />
     <Compile Include="DAL\DiagnosisRepository.cs" />
     <Compile Include="DAL\ExaminationRepository.cs" />
     <Compile Include="DAL\InoculationRepository.cs" />
@@ -144,6 +146,12 @@
     <Compile Include="PL\FrmAddTreatment.Designer.cs">
       <DependentUpon>FrmAddTreatment.cs</DependentUpon>
     </Compile>
+    <Compile Include="PL\FrmBackupAndRestore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FrmBackupAndRestore.Designer.cs">
+      <DependentUpon>FrmBackupAndRestore.cs</DependentUpon>
+    </Compile>
     <Compile Include="PL\FrmEditPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +222,9 @@
     <EmbeddedResource Include="PL\FrmAddTreatment.resx">
       <DependentUpon>FrmAddTreatment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PL\FrmBackupAndRestore.resx">
+      <DependentUpon>FrmBackupAndRestore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PL\FrmEditPatient.resx">
       <DependentUpon>FrmEditPatient.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PL\Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\MasterForm.resx">
+      <DependentUpon>MasterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -319,6 +333,8 @@
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
     <Content Include="DB\DrIbrahimClinic.sql" />
+    <None Include="Resources\Restore.png" />
+    <None Include="Resources\Backup.png" />
     <None Include="Resources\Ro4etta.png" />
     <None Include="Resources\Header.jpg" />
     <None Include="Resources\Time.png" />

@@ -106,6 +106,7 @@
             this.btnBackupAndRestoreDB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnBackupAndRestoreDB.TabIndex = 10;
             this.btnBackupAndRestoreDB.Text = "قاعدة البيانات";
+            this.btnBackupAndRestoreDB.Click += new System.EventHandler(this.btnBackupAndRestoreDB_Click);
             // 
             // btnStatistics
             // 

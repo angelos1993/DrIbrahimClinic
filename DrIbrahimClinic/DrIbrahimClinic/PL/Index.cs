@@ -110,7 +110,7 @@ namespace DrIbrahimClinic.PL
 
         private void btnBackupAndRestoreDB_Click(object sender, EventArgs e)
         {
-
+            new FrmBackupAndRestore().ShowDialog();
         }
 
         #endregion

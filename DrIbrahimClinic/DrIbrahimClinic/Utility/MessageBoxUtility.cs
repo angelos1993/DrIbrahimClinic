@@ -5,17 +5,17 @@ namespace DrIbrahimClinic.Utility
     {
         public static void ShowErrorMsg(string msg)
         {
-            MessageBox.Show(msg, "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(msg, @"خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public static void ShowWarningMsg(string msg)
         {
-            MessageBox.Show(msg, "تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(msg, @"تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         public static void ShowInfoMsg(string msg)
         {
-            MessageBox.Show(msg, "تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(msg, @"تنبية", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

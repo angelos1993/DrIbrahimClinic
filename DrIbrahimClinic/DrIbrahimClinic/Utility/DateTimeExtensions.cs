@@ -34,5 +34,10 @@ namespace DrIbrahimClinic.Utility
         {
             return dateTime.Minute.ToString();
         }
+
+        public static string ToFormattedDate(this DateTime dateTime)
+        {
+            return $"{dateTime.ToShortMonthName()} {dateTime.Day}, {dateTime.Year}";
+        }
     }
 }
