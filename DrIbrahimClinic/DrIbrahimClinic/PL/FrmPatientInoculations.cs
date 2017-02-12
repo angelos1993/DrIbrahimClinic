@@ -8,7 +8,6 @@ using DrIbrahimClinic.DAL.VMs;
 using DrIbrahimClinic.Utility;
 using static DrIbrahimClinic.Utility.MessageBoxUtility;
 using static DrIbrahimClinic.Utility.Utility;
-using static DrIbrahimClinic.Utility.DateTimeExtensions;
 
 namespace DrIbrahimClinic.PL
 {
