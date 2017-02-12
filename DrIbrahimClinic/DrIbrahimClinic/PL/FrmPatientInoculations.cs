@@ -8,6 +8,7 @@ using DrIbrahimClinic.DAL.VMs;
 using DrIbrahimClinic.Utility;
 using static DrIbrahimClinic.Utility.MessageBoxUtility;
 using static DrIbrahimClinic.Utility.Utility;
+using static DrIbrahimClinic.Utility.DateTimeExtensions;
 
 namespace DrIbrahimClinic.PL
 {
@@ -48,6 +49,7 @@ namespace DrIbrahimClinic.PL
             if (intInputPatientId.Value == 0 && string.IsNullOrEmpty(txtPatientName.Text))
             {
                 ShowInfoMsg("يجب إدخال رقم المريض او اسم المريض");
+                Cursor = Cursors.Default;
                 return;
             }
             Patient = intInputPatientId.Value != 0
@@ -68,12 +70,15 @@ namespace DrIbrahimClinic.PL
                 ShowErrorMsg("يجب إدخال اسم التطعيم");
                 return;
             }
-            InoculationManager.AddInoculation(new Inoculation
+            var inoculation = new Inoculation
             {
                 Name = txtInoculationName.Text.FullTrim(),
                 Date = dtInoculationDate.Value != default(DateTime) ? dtInoculationDate.Value : (DateTime?) null,
                 PatientId = Patient.Id
-            });
+            };
+            InoculationManager.AddInoculation(inoculation);
+            Patient.Inoculations.Add(inoculation);
+            ClearInoculationInputs();
             FillGrid();
             Cursor = Cursors.Default;
         }
@@ -88,6 +93,20 @@ namespace DrIbrahimClinic.PL
             Close();
         }
 
+        private void dgvPatientInoculations_DoubleClick(object sender, EventArgs e)
+        {
+            if (ShowConfirmationDialog("هل أنت متأكد من أنك تريد حذف التطعيم المحدد؟") != DialogResult.Yes)
+                return;
+            var inoculation =
+                InoculationManager.GetInoculationByNameAndPatientId(
+                    dgvPatientInoculations.SelectedRows[0].Cells[0].Value.ToString(), Patient.Id);
+            if (inoculation == null)
+                return;
+            InoculationManager.DeleteInoculation(inoculation);
+            Patient.Inoculations.Remove(inoculation);
+            FillGrid();
+        }
+
         #endregion
 
         #region Methods
@@ -96,10 +115,15 @@ namespace DrIbrahimClinic.PL
         {
             intInputPatientId.Value = 0;
             txtPatientName.Text = string.Empty;
-            txtInoculationName.Text = string.Empty;
-            dtInoculationDate.Value = default(DateTime);
+            ClearInoculationInputs();
             dgvPatientInoculations.DataSource = null;
             ShowOrHideControls(false);
+        }
+
+        private void ClearInoculationInputs()
+        {
+            txtInoculationName.Text = string.Empty;
+            dtInoculationDate.Value = default(DateTime);
         }
 
         private void ShowOrHideControls(bool isEnabled)
@@ -121,7 +145,7 @@ namespace DrIbrahimClinic.PL
             dgvPatientInoculations.DataSource = Patient.Inoculations.Select(inoculation => new InoculationVm
             {
                 Name = inoculation.Name,
-                Date = inoculation.Date.ToString()
+                Date = inoculation.Date?.ToFormattedArabicDate()
             }).ToList();
         }
 

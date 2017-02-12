@@ -52,6 +52,14 @@ namespace DrIbrahimClinic.BLL
             return GetAllInoculations().Where(where);
         }
 
+        public Inoculation GetInoculationByNameAndPatientId(string inoculationName, int patientId)
+        {
+            return
+                GetAllInoculations()
+                    .FirstOrDefault(
+                        inoculation => inoculation.Name == inoculationName && inoculation.PatientId == patientId);
+        }
+
         #endregion
     }
 }

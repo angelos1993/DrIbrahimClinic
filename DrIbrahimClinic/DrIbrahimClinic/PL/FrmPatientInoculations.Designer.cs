@@ -306,12 +306,14 @@
             this.dgvPatientInoculations.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvPatientInoculations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvPatientInoculations.Location = new System.Drawing.Point(0, 36);
+            this.dgvPatientInoculations.MultiSelect = false;
             this.dgvPatientInoculations.Name = "dgvPatientInoculations";
             this.dgvPatientInoculations.ReadOnly = true;
             this.dgvPatientInoculations.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvPatientInoculations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPatientInoculations.Size = new System.Drawing.Size(413, 240);
             this.dgvPatientInoculations.TabIndex = 3;
+            this.dgvPatientInoculations.DoubleClick += new System.EventHandler(this.dgvPatientInoculations_DoubleClick);
             // 
             // btnClear
             // 

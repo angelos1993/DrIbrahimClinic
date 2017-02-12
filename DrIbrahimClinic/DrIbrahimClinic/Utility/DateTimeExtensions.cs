@@ -39,5 +39,10 @@ namespace DrIbrahimClinic.Utility
         {
             return $"{dateTime.ToShortMonthName()} {dateTime.Day}, {dateTime.Year}";
         }
+
+        public static string ToFormattedArabicDate(this DateTime dateTime)
+        {
+            return dateTime.ToString("dd MMMM yyyy", GetCultureInfo("ar-AE"));
+        }
     }
 }
