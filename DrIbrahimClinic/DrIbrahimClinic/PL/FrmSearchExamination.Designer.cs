@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSearchExaminations = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btnClearSearch = new DevComponents.DotNetBar.ButtonX();
             this.dtExaminationDate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
@@ -104,6 +104,7 @@
             this.btnClearSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnClearSearch.TabIndex = 19;
             this.btnClearSearch.Text = "إلغاء البحث";
+            this.btnClearSearch.Click += new System.EventHandler(this.btnClearSearch_Click);
             // 
             // dtExaminationDate
             // 
@@ -154,6 +155,7 @@
             this.dtExaminationDate.Size = new System.Drawing.Size(123, 26);
             this.dtExaminationDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dtExaminationDate.TabIndex = 18;
+            this.dtExaminationDate.ValueChanged += new System.EventHandler(this.FindExamination);
             // 
             // labelX2
             // 
@@ -164,7 +166,7 @@
             this.labelX2.BackgroundStyle.Class = "";
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Location = new System.Drawing.Point(367, 3);
-            this.labelX2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX2.Margin = new System.Windows.Forms.Padding(4);
             this.labelX2.Name = "labelX2";
             this.labelX2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX2.Size = new System.Drawing.Size(61, 36);
@@ -180,7 +182,7 @@
             this.labelX6.BackgroundStyle.Class = "";
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX6.Location = new System.Drawing.Point(681, 4);
-            this.labelX6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX6.Margin = new System.Windows.Forms.Padding(4);
             this.labelX6.Name = "labelX6";
             this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX6.Size = new System.Drawing.Size(97, 36);
@@ -196,7 +198,7 @@
             this.labelX1.BackgroundStyle.Class = "";
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Location = new System.Drawing.Point(681, 41);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(4);
             this.labelX1.Name = "labelX1";
             this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX1.Size = new System.Drawing.Size(97, 36);
@@ -214,6 +216,7 @@
             this.txtPatientId.Name = "txtPatientId";
             this.txtPatientId.Size = new System.Drawing.Size(238, 26);
             this.txtPatientId.TabIndex = 16;
+            this.txtPatientId.TextChanged += new System.EventHandler(this.FindExamination);
             // 
             // txtPatientName
             // 
@@ -226,18 +229,19 @@
             this.txtPatientName.Name = "txtPatientName";
             this.txtPatientName.Size = new System.Drawing.Size(238, 26);
             this.txtPatientName.TabIndex = 17;
+            this.txtPatientName.TextChanged += new System.EventHandler(this.FindExamination);
             // 
             // dgvExaminations
             // 
             this.dgvExaminations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvExaminations.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvExaminations.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvExaminations.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvExaminations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvExaminations.Location = new System.Drawing.Point(0, 85);
@@ -254,6 +258,7 @@
             this.DoubleBuffered = true;
             this.Name = "FrmSearchExamination";
             this.Text = "بحث عن كشف";
+            this.Load += new System.EventHandler(this.FrmSearchExamination_Load);
             this.pnlSearchExaminations.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtExaminationDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExaminations)).EndInit();

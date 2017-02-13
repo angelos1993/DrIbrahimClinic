@@ -46,7 +46,7 @@ namespace DrIbrahimClinic.PL
 
         private void FillGrid(Func<Treatment, bool> where = null)
         {
-            dgvTreatments.DataSource = Treatments.Where(where ?? (p => 1 == 1)).Select(treatment => new TreatmentVm
+            dgvTreatments.DataSource = Treatments.Where(where ?? (p => true)).Select(treatment => new TreatmentVm
             {
                 //Id = treatment.Id,
                 Name = treatment.Name

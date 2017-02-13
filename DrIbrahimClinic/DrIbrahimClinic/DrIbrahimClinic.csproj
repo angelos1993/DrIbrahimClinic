@@ -126,6 +126,7 @@
     </Compile>
     <Compile Include="DAL\PatientRepository.cs" />
     <Compile Include="DAL\TreatmentRepository.cs" />
+    <Compile Include="DAL\VMs\ExaminationVm.cs" />
     <Compile Include="DAL\VMs\InoculationVm.cs" />
     <Compile Include="DAL\VMs\PatientVm.cs" />
     <Compile Include="DAL\VMs\TreatmentVm.cs" />

@@ -34,9 +34,8 @@ namespace DrIbrahimClinic.PL
 
         private void FindPatient(object sender, EventArgs e)
         {
-            int patientId;
-            if (!string.IsNullOrEmpty(txtPatientId.Text.FullTrim()) && int.TryParse(txtPatientId.Text, out patientId))
-                FillGrid(patient => patient.Id == patientId);
+            if (intInputPatientId.Value != 0)
+                FillGrid(patient => patient.Id == intInputPatientId.Value);
             else
                 FillGrid(
                     patient =>
@@ -55,7 +54,7 @@ namespace DrIbrahimClinic.PL
 
         private void FillGrid(Func<Patient, bool> where = null)
         {
-            dgvPatients.DataSource = Patients.Where(where ?? (p => 1 == 1)).Select(patient => new PatientVm
+            dgvPatients.DataSource = Patients.Where(where ?? (p => true)).Select(patient => new PatientVm
             {
                 Id = patient.Id,
                 Name = patient.Name,
@@ -76,7 +75,7 @@ namespace DrIbrahimClinic.PL
 
         private void ClearForm()
         {
-            txtPatientId.Text = string.Empty;
+            intInputPatientId.Value = 0;
             txtPatientName.Text = string.Empty;
             txtPatientPhone.Text = string.Empty;
         }

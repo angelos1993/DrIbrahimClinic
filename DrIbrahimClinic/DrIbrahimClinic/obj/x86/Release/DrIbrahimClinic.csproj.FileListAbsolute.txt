@@ -34,3 +34,6 @@ G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Release\ru\M
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Release\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Release\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.PL.FrmRo4etta.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.csprojResolveAssemblyReference.cache
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.PL.FrmBackupAndRestore.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Release\DrIbrahimClinic.PL.MasterForm.resources
