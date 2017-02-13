@@ -28,31 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSearchExaminations = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btnClearSearch = new DevComponents.DotNetBar.ButtonX();
             this.dtExaminationDate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.txtPatientId = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtPatientName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.dgvExaminations = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.intInputPatientId = new DevComponents.Editors.IntegerInput();
             this.pnlSearchExaminations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtExaminationDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExaminations)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.intInputPatientId)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSearchExaminations
             // 
             this.pnlSearchExaminations.CanvasColor = System.Drawing.SystemColors.Control;
             this.pnlSearchExaminations.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.pnlSearchExaminations.Controls.Add(this.intInputPatientId);
             this.pnlSearchExaminations.Controls.Add(this.btnClearSearch);
             this.pnlSearchExaminations.Controls.Add(this.dtExaminationDate);
             this.pnlSearchExaminations.Controls.Add(this.labelX2);
             this.pnlSearchExaminations.Controls.Add(this.labelX6);
             this.pnlSearchExaminations.Controls.Add(this.labelX1);
-            this.pnlSearchExaminations.Controls.Add(this.txtPatientId);
             this.pnlSearchExaminations.Controls.Add(this.txtPatientName);
             this.pnlSearchExaminations.Controls.Add(this.dgvExaminations);
             this.pnlSearchExaminations.Location = new System.Drawing.Point(11, 13);
@@ -205,19 +206,6 @@
             this.labelX1.TabIndex = 20;
             this.labelX1.Text = "اسم المريض";
             // 
-            // txtPatientId
-            // 
-            // 
-            // 
-            // 
-            this.txtPatientId.Border.Class = "TextBoxBorder";
-            this.txtPatientId.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPatientId.Location = new System.Drawing.Point(436, 10);
-            this.txtPatientId.Name = "txtPatientId";
-            this.txtPatientId.Size = new System.Drawing.Size(238, 26);
-            this.txtPatientId.TabIndex = 16;
-            this.txtPatientId.TextChanged += new System.EventHandler(this.FindExamination);
-            // 
             // txtPatientName
             // 
             // 
@@ -234,20 +222,35 @@
             // dgvExaminations
             // 
             this.dgvExaminations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvExaminations.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvExaminations.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvExaminations.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvExaminations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvExaminations.Location = new System.Drawing.Point(0, 85);
             this.dgvExaminations.Name = "dgvExaminations";
             this.dgvExaminations.Size = new System.Drawing.Size(781, 436);
             this.dgvExaminations.TabIndex = 3;
+            // 
+            // intInputPatientId
+            // 
+            // 
+            // 
+            // 
+            this.intInputPatientId.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.intInputPatientId.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.intInputPatientId.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.intInputPatientId.Location = new System.Drawing.Point(436, 13);
+            this.intInputPatientId.Name = "intInputPatientId";
+            this.intInputPatientId.ShowUpDown = true;
+            this.intInputPatientId.Size = new System.Drawing.Size(238, 26);
+            this.intInputPatientId.TabIndex = 23;
+            this.intInputPatientId.ValueChanged += new System.EventHandler(this.FindExamination);
             // 
             // FrmSearchExamination
             // 
@@ -262,6 +265,7 @@
             this.pnlSearchExaminations.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtExaminationDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExaminations)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.intInputPatientId)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,7 +279,7 @@
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtPatientId;
         private DevComponents.DotNetBar.Controls.TextBoxX txtPatientName;
+        private DevComponents.Editors.IntegerInput intInputPatientId;
     }
 }

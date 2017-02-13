@@ -39,7 +39,13 @@ namespace DrIbrahimClinic.PL
 
         private void FindExamination(object sender, EventArgs e)
         {
-            
+            if (intInputPatientId.Value != 0)
+                FillGrid(examination => examination.PatientId == intInputPatientId.Value);
+            else
+                FillGrid(
+                    examination =>
+                        examination.Patient.Name.Contains(txtPatientName.Text) &&
+                        (dtExaminationDate.Value != default(DateTime) && examination.Date == dtExaminationDate.Value));
         }
 
         private void btnClearSearch_Click(object sender, EventArgs e)
@@ -81,7 +87,7 @@ namespace DrIbrahimClinic.PL
 
         private void ClearForm()
         {
-            txtPatientId.Text = string.Empty;
+            intInputPatientId.Value = 0;
             txtPatientName.Text = string.Empty;
             dtExaminationDate.Value = default(DateTime);
         }
