@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSearchPatients = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.intInputPatientId = new DevComponents.Editors.IntegerInput();
             this.btnClearSearch = new DevComponents.DotNetBar.ButtonX();
             this.txtPatientPhone = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
@@ -37,10 +38,9 @@
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.txtPatientName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.dgvPatients = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.intInputPatientId = new DevComponents.Editors.IntegerInput();
             this.pnlSearchPatients.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.intInputPatientId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSearchPatients
@@ -91,6 +91,22 @@
             this.pnlSearchPatients.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.pnlSearchPatients.TabIndex = 7;
             this.pnlSearchPatients.Text = "بحث عن مريض";
+            // 
+            // intInputPatientId
+            // 
+            // 
+            // 
+            // 
+            this.intInputPatientId.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.intInputPatientId.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.intInputPatientId.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.intInputPatientId.Location = new System.Drawing.Point(449, 3);
+            this.intInputPatientId.MinValue = 0;
+            this.intInputPatientId.Name = "intInputPatientId";
+            this.intInputPatientId.ShowUpDown = true;
+            this.intInputPatientId.Size = new System.Drawing.Size(232, 26);
+            this.intInputPatientId.TabIndex = 0;
+            this.intInputPatientId.ValueChanged += new System.EventHandler(this.FindPatient);
             // 
             // btnClearSearch
             // 
@@ -184,14 +200,14 @@
             // 
             this.dgvPatients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPatients.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPatients.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPatients.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvPatients.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvPatients.Location = new System.Drawing.Point(0, 72);
@@ -201,21 +217,6 @@
             this.dgvPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPatients.Size = new System.Drawing.Size(785, 449);
             this.dgvPatients.TabIndex = 5;
-            // 
-            // intInputPatientId
-            // 
-            // 
-            // 
-            // 
-            this.intInputPatientId.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.intInputPatientId.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.intInputPatientId.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.intInputPatientId.Location = new System.Drawing.Point(449, 3);
-            this.intInputPatientId.Name = "intInputPatientId";
-            this.intInputPatientId.ShowUpDown = true;
-            this.intInputPatientId.Size = new System.Drawing.Size(232, 26);
-            this.intInputPatientId.TabIndex = 0;
-            this.intInputPatientId.ValueChanged += new System.EventHandler(this.FindPatient);
             // 
             // FrmSearchPatient
             // 
@@ -228,8 +229,8 @@
             this.Text = "بحث عن مريض";
             this.Load += new System.EventHandler(this.FrmSearchPatient_Load);
             this.pnlSearchPatients.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.intInputPatientId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPatients)).EndInit();
             this.ResumeLayout(false);
 
         }
