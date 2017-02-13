@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSearchExaminations = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.intInputPatientId = new DevComponents.Editors.IntegerInput();
             this.btnClearSearch = new DevComponents.DotNetBar.ButtonX();
             this.dtExaminationDate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
@@ -37,11 +38,10 @@
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.txtPatientName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.dgvExaminations = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.intInputPatientId = new DevComponents.Editors.IntegerInput();
             this.pnlSearchExaminations.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.intInputPatientId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtExaminationDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExaminations)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.intInputPatientId)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSearchExaminations
@@ -92,6 +92,22 @@
             this.pnlSearchExaminations.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.pnlSearchExaminations.TabIndex = 8;
             this.pnlSearchExaminations.Text = "بحث عن كشف";
+            // 
+            // intInputPatientId
+            // 
+            // 
+            // 
+            // 
+            this.intInputPatientId.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.intInputPatientId.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.intInputPatientId.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.intInputPatientId.Location = new System.Drawing.Point(436, 13);
+            this.intInputPatientId.MinValue = 0;
+            this.intInputPatientId.Name = "intInputPatientId";
+            this.intInputPatientId.ShowUpDown = true;
+            this.intInputPatientId.Size = new System.Drawing.Size(238, 26);
+            this.intInputPatientId.TabIndex = 23;
+            this.intInputPatientId.ValueChanged += new System.EventHandler(this.FindExamination);
             // 
             // btnClearSearch
             // 
@@ -237,21 +253,6 @@
             this.dgvExaminations.Size = new System.Drawing.Size(781, 436);
             this.dgvExaminations.TabIndex = 3;
             // 
-            // intInputPatientId
-            // 
-            // 
-            // 
-            // 
-            this.intInputPatientId.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.intInputPatientId.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.intInputPatientId.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.intInputPatientId.Location = new System.Drawing.Point(436, 13);
-            this.intInputPatientId.Name = "intInputPatientId";
-            this.intInputPatientId.ShowUpDown = true;
-            this.intInputPatientId.Size = new System.Drawing.Size(238, 26);
-            this.intInputPatientId.TabIndex = 23;
-            this.intInputPatientId.ValueChanged += new System.EventHandler(this.FindExamination);
-            // 
             // FrmSearchExamination
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -263,9 +264,9 @@
             this.Text = "بحث عن كشف";
             this.Load += new System.EventHandler(this.FrmSearchExamination_Load);
             this.pnlSearchExaminations.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.intInputPatientId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtExaminationDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExaminations)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.intInputPatientId)).EndInit();
             this.ResumeLayout(false);
 
         }
