@@ -30,8 +30,11 @@ namespace DrIbrahimClinic.PL
         private IEnumerable<Patient> _patients;
         private IEnumerable<Patient> Patients => _patients ?? (_patients = PatientManager.GetAllPatients());
 
-        private ExaminationManager _examinationManager;
+        private MedicalHistoryManager _medicalHistoryManager;
+        private MedicalHistoryManager MedicalHistoryManager
+            => _medicalHistoryManager ?? (_medicalHistoryManager = new MedicalHistoryManager());
 
+        private ExaminationManager _examinationManager;
         private ExaminationManager ExaminationManager
             => _examinationManager ?? (_examinationManager = new ExaminationManager());
 
@@ -169,7 +172,21 @@ namespace DrIbrahimClinic.PL
         private void btnAddMedicalHistory_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
-            if(txtmed)
+            if (string.IsNullOrEmpty(txtMedicalHistory.Text.FullTrim()))
+            {
+                txtMedicalHistory.BackColor = ErrorColor;
+                Cursor = Cursors.Default;
+                return;
+            }
+            var medicalHistory = new MedicalHistory
+            {
+                Description = txtMedicalHistory.Text.FullTrim(),
+                PatientId = Patient.Id
+            };
+            MedicalHistoryManager.AddMedicalHistory(medicalHistory);
+            Patient.MedicalHistories.Add(medicalHistory);
+            ClearMedicalHistoryInputs();
+            FillMedicalHistoryGrid();
             Cursor = Cursors.Default;
         }
 
@@ -297,8 +314,23 @@ namespace DrIbrahimClinic.PL
             switchBtnPatientSucklingType.Value = true;
             expPanelMedicalHistory.Expanded = false;
             expPanelInoculations.Expanded = false;
-            //clear Medical History
-            //clear Inoculations
+            ClearMedicalHistoryInputs();
+            dgvMedicalHistory.DataSource = null;
+            ClearInoculationInputs();
+            dgvInoculations.DataSource = null;
+        }
+
+        private void ClearMedicalHistoryInputs()
+        {
+            txtMedicalHistory.Text = string.Empty;
+            txtMedicalHistory.BackColor = Color.Empty;
+        }
+
+        private void ClearInoculationInputs()
+        {
+            txtInoculation.Text = string.Empty;
+            txtInoculation.BackColor = Color.Empty;
+            dtInoculationDate.Value = default(DateTime);
         }
 
         private void ShowOrHidePatientControls(AddExaminationFormMode mode)
@@ -353,9 +385,9 @@ namespace DrIbrahimClinic.PL
 
         private void FillMedicalHistoryGrid()
         {
-            dgvMedicalHistory.DataSource = dgvMedicalHistory.DataSource ??
-                                           Patient.MedicalHistories.Select(
-                                               medicalHistory => medicalHistory.Description).ToList();
+            dgvMedicalHistory.DataSource =
+                Patient.MedicalHistories.Select(
+                    medicalHistory => new MedicalHistoryVm {Description = medicalHistory.Description}).ToList();
         }
 
         private void ClearPreviousVisitsDgv()
@@ -370,5 +402,21 @@ namespace DrIbrahimClinic.PL
         }
 
         #endregion
+
+        private void dgvMedicalHistory_DoubleClick(object sender, EventArgs e)
+        {
+            if (ShowConfirmationDialog("هل أنت متأكد من أنك تريد حذف التاريخ المرضي المحدد؟") != DialogResult.Yes)
+                return;
+            Cursor = Cursors.WaitCursor;
+            var medicalHistory =
+                MedicalHistoryManager.GetMedicalHistoryByDescriptionAndPatientId(
+                    dgvMedicalHistory.SelectedRows[0].Cells[0].Value.ToString(), Patient.Id);
+            if (medicalHistory == null)
+                return;
+            Patient.MedicalHistories.Remove(medicalHistory);
+            MedicalHistoryManager.DeleteMedicalHistory(medicalHistory);
+            FillMedicalHistoryGrid();
+            Cursor = Cursors.Default;
+        }
     }
 }

@@ -101,8 +101,8 @@ namespace DrIbrahimClinic.PL
                     dgvPatientInoculations.SelectedRows[0].Cells[0].Value.ToString(), Patient.Id);
             if (inoculation == null)
                 return;
-            InoculationManager.DeleteInoculation(inoculation);
             Patient.Inoculations.Remove(inoculation);
+            InoculationManager.DeleteInoculation(inoculation);
             FillGrid();
         }
 

@@ -52,6 +52,20 @@ namespace DrIbrahimClinic.BLL
             return GetAllMedicalHistorys().Where(where);
         }
 
+        public IEnumerable<MedicalHistory> GetMedicalHistorysByPatientId(int patientId)
+        {
+            return GetMedicalHistorys(medicalHistory => medicalHistory.PatientId == patientId);
+        }
+
+        public MedicalHistory GetMedicalHistoryByDescriptionAndPatientId(string description, int patientId)
+        {
+            return
+                GetAllMedicalHistorys()
+                    .FirstOrDefault(
+                        medicalHistory =>
+                            medicalHistory.Description == description && medicalHistory.PatientId == patientId);
+        }
+
         #endregion
     }
 }
