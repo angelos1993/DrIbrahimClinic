@@ -1,11 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Globalization;
+using System.Linq;
 using System.Windows.Forms;
 using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
+using DrIbrahimClinic.DAL.VMs;
 using DrIbrahimClinic.Utility;
 using static DrIbrahimClinic.Utility.MessageBoxUtility;
 using static DrIbrahimClinic.Utility.Constants;
 using DrIbrahimClinic.Properties;
+using static DrIbrahimClinic.Utility.Utility;
 
 namespace DrIbrahimClinic.PL
 {
@@ -21,6 +27,9 @@ namespace DrIbrahimClinic.PL
         private PatientManager _patientManager;
         private PatientManager PatientManager => _patientManager ?? (_patientManager = new PatientManager());
 
+        private IEnumerable<Patient> _patients;
+        private IEnumerable<Patient> Patients => _patients ?? (_patients = PatientManager.GetAllPatients());
+
         private ExaminationManager _examinationManager;
 
         private ExaminationManager ExaminationManager
@@ -29,6 +38,8 @@ namespace DrIbrahimClinic.PL
         public Patient Patient { get; set; }
 
         public Examination Examination { get; set; }
+
+        public AddExaminationFormMode Mode { get; set; }
 
         #endregion
 
@@ -39,6 +50,7 @@ namespace DrIbrahimClinic.PL
         private void FrmAddExamination_Load(object sender, EventArgs e)
         {
             ClearForm();
+            SetAutoCompletion();
         }
 
         #endregion
@@ -143,9 +155,36 @@ namespace DrIbrahimClinic.PL
             Cursor = Cursors.Default;
         }
 
+        #region Medical Histort Panel
+
+        private void expPanelMedicalHistory_ExpandedChanged(object sender,
+            DevComponents.DotNetBar.ExpandedChangeEventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            if (e.NewExpandedValue)
+                FillMedicalHistoryGrid();
+            Cursor = Cursors.Default;
+        }
+
         private void btnAddMedicalHistory_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
+            if(txtmed)
+            Cursor = Cursors.Default;
+        }
+
+        #endregion
+
+        #region Inoculations Panel
+
+        private void expPanelInoculations_ExpandedChanged(object sender,
+            DevComponents.DotNetBar.ExpandedChangeEventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            if (e.NewExpandedValue)
+            {
+
+            }
             Cursor = Cursors.Default;
         }
 
@@ -154,6 +193,8 @@ namespace DrIbrahimClinic.PL
             Cursor = Cursors.WaitCursor;
             Cursor = Cursors.Default;
         }
+
+        #endregion
 
         #endregion
 
@@ -181,6 +222,49 @@ namespace DrIbrahimClinic.PL
 
         #endregion
 
+        #region Selected Tab Change...
+
+        private void tabExamination_SelectedTabChanged(object sender,
+            DevComponents.DotNetBar.TabStripTabChangedEventArgs e)
+        {
+            if (e.NewTab.Text != @"المريض" && (Patient == null || Mode != AddExaminationFormMode.HasPatient))
+            {
+                ShowWarningMsg(@"يجب إدخال المريض أولاً");
+                e.NewTab.AttachedControl.Enabled = false;
+                return;
+            }
+            e.NewTab.AttachedControl.Enabled = true;
+            if (e.NewTab.Text != @"الزيارات السابقة")
+                return;
+            dgvPreviousVisits.DataSource = dgvPreviousVisits.DataSource ??
+                                           ExaminationManager.GetExaminationsByPatientId(Patient.Id)
+                                               .Select(examination => new ExaminationVm
+                                               {
+                                                   PatientId = examination.PatientId,
+                                                   PatientName = examination.Patient.Name,
+                                                   ExaminationDate = examination.Date.ToFormattedArabicDate(),
+                                                   ExaminationType = examination.ExaminationType == 1 ? "كشف" : @"إعادة",
+                                                   Complaint = examination.Complaint,
+                                                   Diagnosis =
+                                                       examination.ExaminationDiagnosis.Select(
+                                                           examinationDiagnosis => examinationDiagnosis.Diagnosi)
+                                                           .ToDiagnosisListString(),
+                                                   PatientLength =
+                                                       examination.PatientLength.ToString(CultureInfo.CurrentCulture),
+                                                   PatientWeight =
+                                                       examination.PatientWeight.ToString(CultureInfo.CurrentCulture),
+                                                   PatientHeadCircumference =
+                                                       examination.PatientHeadCircumference.ToString(
+                                                           CultureInfo.CurrentCulture),
+                                                   Treatment =
+                                                       examination.ExaminationTreatments.Select(
+                                                           examinationTreatments => examinationTreatments.Treatment)
+                                                           .ToTreatmentsListString()
+                                               }).ToList();
+        }
+
+        #endregion
+
         #endregion
 
         #region Methods
@@ -197,8 +281,7 @@ namespace DrIbrahimClinic.PL
             ShowOrHidePatientControls(AddExaminationFormMode.Normal);
             btnAddNewPatient.Text = @"جديد";
             btnAddNewPatient.Image = Resources.Add;
-            expPanelMedicalHistory.Expanded = false;
-            expPanelInoculations.Expanded = false;
+            txtPatientName.BackColor = Color.Empty;
             ClearPatientData();
         }
 
@@ -212,12 +295,15 @@ namespace DrIbrahimClinic.PL
             txtPatientAddress.Text = string.Empty;
             switchBtnPatientBirthType.Value = true;
             switchBtnPatientSucklingType.Value = true;
+            expPanelMedicalHistory.Expanded = false;
+            expPanelInoculations.Expanded = false;
             //clear Medical History
             //clear Inoculations
         }
 
         private void ShowOrHidePatientControls(AddExaminationFormMode mode)
         {
+            Mode = mode;
             intInputPatientId.Enabled = mode == AddExaminationFormMode.Normal;
             txtPatientName.Enabled = mode == AddExaminationFormMode.Normal || mode == AddExaminationFormMode.AddNew ||
                                      mode == AddExaminationFormMode.Edit;
@@ -253,6 +339,23 @@ namespace DrIbrahimClinic.PL
             txtPatientAddress.Text = patient.Address ?? string.Empty;
             switchBtnPatientBirthType.Value = patient.BirthType == 1;
             switchBtnPatientSucklingType.Value = patient.SucklingType == 1;
+            //show Medical History data
+            //show inoculations data
+            //show Previous Visits data
+        }
+
+        private void SetAutoCompletion()
+        {
+            var namesCollection = new AutoCompleteStringCollection();
+            namesCollection.AddRange(Patients.Select(p => p.Name).ToArray());
+            SetAutoCompleteSourceForTextBox(txtPatientName, namesCollection);
+        }
+
+        private void FillMedicalHistoryGrid()
+        {
+            dgvMedicalHistory.DataSource = dgvMedicalHistory.DataSource ??
+                                           Patient.MedicalHistories.Select(
+                                               medicalHistory => medicalHistory.Description).ToList();
         }
 
         private void ClearPreviousVisitsDgv()

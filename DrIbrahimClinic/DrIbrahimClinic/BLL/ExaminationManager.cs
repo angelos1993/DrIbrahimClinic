@@ -52,6 +52,11 @@ namespace DrIbrahimClinic.BLL
             return GetAllExaminations().Where(where);
         }
 
+        public IEnumerable<Examination> GetExaminationsByPatientId(int patientId)
+        {
+            return GetExaminations(examination => examination.PatientId == patientId);
+        }
+
         #endregion
     }
 }
