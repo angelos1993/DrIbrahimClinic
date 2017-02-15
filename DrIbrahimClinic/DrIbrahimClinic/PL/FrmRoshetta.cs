@@ -2,17 +2,16 @@
 
 namespace DrIbrahimClinic.PL
 {
-    public partial class FrmRo4etta : MasterForm
+    public partial class FrmRoshetta : MasterForm
     {
-        public FrmRo4etta()
+        public FrmRoshetta()
         {
             InitializeComponent();
         }
 
         private void FrmRo4etta_Load(object sender, EventArgs e)
         {
-
-            this.reportViewer1.RefreshReport();
+            reportViewer1.RefreshReport();
         }
     }
 }

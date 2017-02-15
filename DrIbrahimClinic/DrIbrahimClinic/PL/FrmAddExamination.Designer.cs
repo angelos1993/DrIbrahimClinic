@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new DevComponents.DotNetBar.TabControl();
             this.tabControlPanel1 = new DevComponents.DotNetBar.TabControlPanel();
             this.pnlPatientData = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -40,22 +40,21 @@
             this.btnAddInoculation = new DevComponents.DotNetBar.ButtonX();
             this.lstVwPatientInoculations = new DevComponents.DotNetBar.Controls.ListViewEx();
             this.btnClearPatientData = new DevComponents.DotNetBar.ButtonX();
-            this.expandablePanel1 = new DevComponents.DotNetBar.ExpandablePanel();
+            this.expPanelMedicalHistory = new DevComponents.DotNetBar.ExpandablePanel();
             this.btnAddMedicalHistory = new DevComponents.DotNetBar.ButtonX();
             this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lstVwMedicalHistory = new DevComponents.DotNetBar.Controls.ListViewEx();
             this.btnEditPatientData = new DevComponents.DotNetBar.ButtonX();
             this.btnAddNewPatient = new DevComponents.DotNetBar.ButtonX();
             this.btnFindPatient = new DevComponents.DotNetBar.ButtonX();
-            this.txtId = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
-            this.switchBtnBirthType = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.switchBtnSucklingType = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.switchBtnGender = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.dateBirthdate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.txtAddress = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtPhone = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.switchBtnPatientBirthType = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.switchBtnPatientSucklingType = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.switchBtnPatientGender = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.dtPatientBirthdate = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.txtPatientAddress = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtPatientPhone = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtPatientName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
@@ -90,19 +89,21 @@
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.labelX9 = new DevComponents.DotNetBar.LabelX();
             this.tabItem3 = new DevComponents.DotNetBar.TabItem(this.components);
+            this.intInputPatientId = new DevComponents.Editors.IntegerInput();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabControlPanel1.SuspendLayout();
             this.pnlPatientData.SuspendLayout();
             this.expPanelInoculations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtInoculationDate)).BeginInit();
-            this.expandablePanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateBirthdate)).BeginInit();
+            this.expPanelMedicalHistory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtPatientBirthdate)).BeginInit();
             this.tabControlPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPreviousVisits)).BeginInit();
             this.tabControlPanel3.SuspendLayout();
             this.pnlTreatment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.intInputPatientId)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -110,8 +111,8 @@
             this.tabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.tabControl1.CanReorderTabs = true;
             this.tabControl1.Controls.Add(this.tabControlPanel1);
-            this.tabControl1.Controls.Add(this.tabControlPanel2);
             this.tabControl1.Controls.Add(this.tabControlPanel3);
+            this.tabControl1.Controls.Add(this.tabControlPanel2);
             this.tabControl1.Location = new System.Drawing.Point(11, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -149,21 +150,21 @@
             this.pnlPatientData.BackColor = System.Drawing.Color.Transparent;
             this.pnlPatientData.CanvasColor = System.Drawing.SystemColors.Control;
             this.pnlPatientData.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.pnlPatientData.Controls.Add(this.intInputPatientId);
             this.pnlPatientData.Controls.Add(this.expPanelInoculations);
             this.pnlPatientData.Controls.Add(this.btnClearPatientData);
-            this.pnlPatientData.Controls.Add(this.expandablePanel1);
+            this.pnlPatientData.Controls.Add(this.expPanelMedicalHistory);
             this.pnlPatientData.Controls.Add(this.btnEditPatientData);
             this.pnlPatientData.Controls.Add(this.btnAddNewPatient);
             this.pnlPatientData.Controls.Add(this.btnFindPatient);
-            this.pnlPatientData.Controls.Add(this.txtId);
             this.pnlPatientData.Controls.Add(this.labelX6);
-            this.pnlPatientData.Controls.Add(this.switchBtnBirthType);
-            this.pnlPatientData.Controls.Add(this.switchBtnSucklingType);
-            this.pnlPatientData.Controls.Add(this.switchBtnGender);
-            this.pnlPatientData.Controls.Add(this.dateBirthdate);
-            this.pnlPatientData.Controls.Add(this.txtAddress);
-            this.pnlPatientData.Controls.Add(this.txtPhone);
-            this.pnlPatientData.Controls.Add(this.txtName);
+            this.pnlPatientData.Controls.Add(this.switchBtnPatientBirthType);
+            this.pnlPatientData.Controls.Add(this.switchBtnPatientSucklingType);
+            this.pnlPatientData.Controls.Add(this.switchBtnPatientGender);
+            this.pnlPatientData.Controls.Add(this.dtPatientBirthdate);
+            this.pnlPatientData.Controls.Add(this.txtPatientAddress);
+            this.pnlPatientData.Controls.Add(this.txtPatientPhone);
+            this.pnlPatientData.Controls.Add(this.txtPatientName);
             this.pnlPatientData.Controls.Add(this.labelX8);
             this.pnlPatientData.Controls.Add(this.labelX7);
             this.pnlPatientData.Controls.Add(this.labelX5);
@@ -339,45 +340,45 @@
             this.btnClearPatientData.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnClearPatientData.Image = global::DrIbrahimClinic.Properties.Resources.Clear;
             this.btnClearPatientData.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnClearPatientData.Location = new System.Drawing.Point(445, 381);
+            this.btnClearPatientData.Location = new System.Drawing.Point(443, 381);
             this.btnClearPatientData.Name = "btnClearPatientData";
             this.btnClearPatientData.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnClearPatientData.Size = new System.Drawing.Size(67, 37);
+            this.btnClearPatientData.Size = new System.Drawing.Size(110, 37);
             this.btnClearPatientData.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnClearPatientData.TabIndex = 15;
             this.btnClearPatientData.Text = "مسح";
             this.btnClearPatientData.Click += new System.EventHandler(this.btnClearPatientData_Click);
             // 
-            // expandablePanel1
+            // expPanelMedicalHistory
             // 
-            this.expandablePanel1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.expandablePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.expandablePanel1.Controls.Add(this.btnAddMedicalHistory);
-            this.expandablePanel1.Controls.Add(this.textBoxX2);
-            this.expandablePanel1.Controls.Add(this.lstVwMedicalHistory);
-            this.expandablePanel1.Expanded = false;
-            this.expandablePanel1.ExpandedBounds = new System.Drawing.Rectangle(9, 21, 391, 215);
-            this.expandablePanel1.Location = new System.Drawing.Point(9, 21);
-            this.expandablePanel1.Name = "expandablePanel1";
-            this.expandablePanel1.Size = new System.Drawing.Size(391, 27);
-            this.expandablePanel1.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.expandablePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.expandablePanel1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.expandablePanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.expandablePanel1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.expandablePanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.expandablePanel1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
-            this.expandablePanel1.Style.GradientAngle = 90;
-            this.expandablePanel1.TabIndex = 16;
-            this.expandablePanel1.TitleHeight = 27;
-            this.expandablePanel1.TitleStyle.Alignment = System.Drawing.StringAlignment.Center;
-            this.expandablePanel1.TitleStyle.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.expandablePanel1.TitleStyle.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.expandablePanel1.TitleStyle.Border = DevComponents.DotNetBar.eBorderType.RaisedInner;
-            this.expandablePanel1.TitleStyle.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.expandablePanel1.TitleStyle.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.expandablePanel1.TitleStyle.GradientAngle = 90;
-            this.expandablePanel1.TitleText = "Medical History";
+            this.expPanelMedicalHistory.CanvasColor = System.Drawing.SystemColors.Control;
+            this.expPanelMedicalHistory.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.expPanelMedicalHistory.Controls.Add(this.btnAddMedicalHistory);
+            this.expPanelMedicalHistory.Controls.Add(this.textBoxX2);
+            this.expPanelMedicalHistory.Controls.Add(this.lstVwMedicalHistory);
+            this.expPanelMedicalHistory.Expanded = false;
+            this.expPanelMedicalHistory.ExpandedBounds = new System.Drawing.Rectangle(9, 21, 391, 215);
+            this.expPanelMedicalHistory.Location = new System.Drawing.Point(9, 21);
+            this.expPanelMedicalHistory.Name = "expPanelMedicalHistory";
+            this.expPanelMedicalHistory.Size = new System.Drawing.Size(391, 27);
+            this.expPanelMedicalHistory.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.expPanelMedicalHistory.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.expPanelMedicalHistory.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.expPanelMedicalHistory.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.expPanelMedicalHistory.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.expPanelMedicalHistory.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.expPanelMedicalHistory.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
+            this.expPanelMedicalHistory.Style.GradientAngle = 90;
+            this.expPanelMedicalHistory.TabIndex = 16;
+            this.expPanelMedicalHistory.TitleHeight = 27;
+            this.expPanelMedicalHistory.TitleStyle.Alignment = System.Drawing.StringAlignment.Center;
+            this.expPanelMedicalHistory.TitleStyle.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.expPanelMedicalHistory.TitleStyle.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.expPanelMedicalHistory.TitleStyle.Border = DevComponents.DotNetBar.eBorderType.RaisedInner;
+            this.expPanelMedicalHistory.TitleStyle.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.expPanelMedicalHistory.TitleStyle.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.expPanelMedicalHistory.TitleStyle.GradientAngle = 90;
+            this.expPanelMedicalHistory.TitleText = "Medical History";
             // 
             // btnAddMedicalHistory
             // 
@@ -428,10 +429,10 @@
             this.btnEditPatientData.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnEditPatientData.Image = global::DrIbrahimClinic.Properties.Resources.Edit;
             this.btnEditPatientData.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnEditPatientData.Location = new System.Drawing.Point(518, 381);
+            this.btnEditPatientData.Location = new System.Drawing.Point(559, 381);
             this.btnEditPatientData.Name = "btnEditPatientData";
             this.btnEditPatientData.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnEditPatientData.Size = new System.Drawing.Size(67, 37);
+            this.btnEditPatientData.Size = new System.Drawing.Size(110, 37);
             this.btnEditPatientData.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnEditPatientData.TabIndex = 16;
             this.btnEditPatientData.Text = "تعديل";
@@ -443,10 +444,10 @@
             this.btnAddNewPatient.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnAddNewPatient.Image = global::DrIbrahimClinic.Properties.Resources.Add;
             this.btnAddNewPatient.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnAddNewPatient.Location = new System.Drawing.Point(591, 381);
+            this.btnAddNewPatient.Location = new System.Drawing.Point(675, 381);
             this.btnAddNewPatient.Name = "btnAddNewPatient";
             this.btnAddNewPatient.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnAddNewPatient.Size = new System.Drawing.Size(67, 37);
+            this.btnAddNewPatient.Size = new System.Drawing.Size(110, 37);
             this.btnAddNewPatient.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnAddNewPatient.TabIndex = 14;
             this.btnAddNewPatient.Text = "جديد";
@@ -467,19 +468,6 @@
             this.btnFindPatient.Text = "بحث";
             this.btnFindPatient.Click += new System.EventHandler(this.btnFindPatient_Click);
             // 
-            // txtId
-            // 
-            // 
-            // 
-            // 
-            this.txtId.Border.Class = "TextBoxBorder";
-            this.txtId.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtId.Location = new System.Drawing.Point(484, 18);
-            this.txtId.Name = "txtId";
-            this.txtId.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtId.Size = new System.Drawing.Size(238, 26);
-            this.txtId.TabIndex = 10;
-            // 
             // labelX6
             // 
             this.labelX6.BackColor = System.Drawing.Color.Transparent;
@@ -496,147 +484,147 @@
             this.labelX6.TabIndex = 9;
             this.labelX6.Text = "رقم المريض";
             // 
-            // switchBtnBirthType
+            // switchBtnPatientBirthType
             // 
             // 
             // 
             // 
-            this.switchBtnBirthType.BackgroundStyle.Class = "";
-            this.switchBtnBirthType.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.switchBtnBirthType.Location = new System.Drawing.Point(642, 290);
-            this.switchBtnBirthType.Name = "switchBtnBirthType";
-            this.switchBtnBirthType.OffText = "قيصري";
-            this.switchBtnBirthType.OnBackColor = System.Drawing.Color.Transparent;
-            this.switchBtnBirthType.OnText = "طبيعي";
-            this.switchBtnBirthType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.switchBtnBirthType.Size = new System.Drawing.Size(79, 23);
-            this.switchBtnBirthType.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.switchBtnBirthType.TabIndex = 5;
-            this.switchBtnBirthType.Value = true;
+            this.switchBtnPatientBirthType.BackgroundStyle.Class = "";
+            this.switchBtnPatientBirthType.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.switchBtnPatientBirthType.Location = new System.Drawing.Point(642, 290);
+            this.switchBtnPatientBirthType.Name = "switchBtnPatientBirthType";
+            this.switchBtnPatientBirthType.OffText = "قيصري";
+            this.switchBtnPatientBirthType.OnBackColor = System.Drawing.Color.Transparent;
+            this.switchBtnPatientBirthType.OnText = "طبيعي";
+            this.switchBtnPatientBirthType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.switchBtnPatientBirthType.Size = new System.Drawing.Size(79, 23);
+            this.switchBtnPatientBirthType.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.switchBtnPatientBirthType.TabIndex = 5;
+            this.switchBtnPatientBirthType.Value = true;
             // 
-            // switchBtnSucklingType
-            // 
-            // 
-            // 
-            // 
-            this.switchBtnSucklingType.BackgroundStyle.Class = "";
-            this.switchBtnSucklingType.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.switchBtnSucklingType.Location = new System.Drawing.Point(642, 334);
-            this.switchBtnSucklingType.Name = "switchBtnSucklingType";
-            this.switchBtnSucklingType.OffText = "صناعي";
-            this.switchBtnSucklingType.OnBackColor = System.Drawing.Color.Transparent;
-            this.switchBtnSucklingType.OnText = "طبيعي";
-            this.switchBtnSucklingType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.switchBtnSucklingType.Size = new System.Drawing.Size(79, 23);
-            this.switchBtnSucklingType.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.switchBtnSucklingType.TabIndex = 6;
-            this.switchBtnSucklingType.Value = true;
-            // 
-            // switchBtnGender
+            // switchBtnPatientSucklingType
             // 
             // 
             // 
             // 
-            this.switchBtnGender.BackgroundStyle.Class = "";
-            this.switchBtnGender.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.switchBtnGender.Location = new System.Drawing.Point(642, 157);
-            this.switchBtnGender.Name = "switchBtnGender";
-            this.switchBtnGender.OffText = "بنت";
-            this.switchBtnGender.OnBackColor = System.Drawing.Color.Transparent;
-            this.switchBtnGender.OnText = "ولد";
-            this.switchBtnGender.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.switchBtnGender.Size = new System.Drawing.Size(79, 23);
-            this.switchBtnGender.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.switchBtnGender.TabIndex = 2;
-            this.switchBtnGender.Value = true;
+            this.switchBtnPatientSucklingType.BackgroundStyle.Class = "";
+            this.switchBtnPatientSucklingType.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.switchBtnPatientSucklingType.Location = new System.Drawing.Point(642, 334);
+            this.switchBtnPatientSucklingType.Name = "switchBtnPatientSucklingType";
+            this.switchBtnPatientSucklingType.OffText = "صناعي";
+            this.switchBtnPatientSucklingType.OnBackColor = System.Drawing.Color.Transparent;
+            this.switchBtnPatientSucklingType.OnText = "طبيعي";
+            this.switchBtnPatientSucklingType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.switchBtnPatientSucklingType.Size = new System.Drawing.Size(79, 23);
+            this.switchBtnPatientSucklingType.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.switchBtnPatientSucklingType.TabIndex = 6;
+            this.switchBtnPatientSucklingType.Value = true;
             // 
-            // dateBirthdate
-            // 
-            // 
-            // 
-            // 
-            this.dateBirthdate.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dateBirthdate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateBirthdate.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.dateBirthdate.ButtonDropDown.Visible = true;
-            this.dateBirthdate.Location = new System.Drawing.Point(541, 109);
-            // 
-            // 
-            // 
-            this.dateBirthdate.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dateBirthdate.MonthCalendar.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.dateBirthdate.MonthCalendar.BackgroundStyle.Class = "";
-            this.dateBirthdate.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateBirthdate.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.dateBirthdate.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.dateBirthdate.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.dateBirthdate.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.dateBirthdate.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.dateBirthdate.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.dateBirthdate.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.dateBirthdate.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.dateBirthdate.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateBirthdate.MonthCalendar.DisplayMonth = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
-            this.dateBirthdate.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.dateBirthdate.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dateBirthdate.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.dateBirthdate.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.dateBirthdate.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.dateBirthdate.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.dateBirthdate.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dateBirthdate.MonthCalendar.TodayButtonVisible = true;
-            this.dateBirthdate.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.dateBirthdate.Name = "dateBirthdate";
-            this.dateBirthdate.Size = new System.Drawing.Size(180, 26);
-            this.dateBirthdate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dateBirthdate.TabIndex = 1;
-            // 
-            // txtAddress
+            // switchBtnPatientGender
             // 
             // 
             // 
             // 
-            this.txtAddress.Border.Class = "TextBoxBorder";
-            this.txtAddress.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtAddress.Location = new System.Drawing.Point(484, 239);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtAddress.Size = new System.Drawing.Size(238, 26);
-            this.txtAddress.TabIndex = 4;
+            this.switchBtnPatientGender.BackgroundStyle.Class = "";
+            this.switchBtnPatientGender.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.switchBtnPatientGender.Location = new System.Drawing.Point(642, 157);
+            this.switchBtnPatientGender.Name = "switchBtnPatientGender";
+            this.switchBtnPatientGender.OffText = "بنت";
+            this.switchBtnPatientGender.OnBackColor = System.Drawing.Color.Transparent;
+            this.switchBtnPatientGender.OnText = "ولد";
+            this.switchBtnPatientGender.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.switchBtnPatientGender.Size = new System.Drawing.Size(79, 23);
+            this.switchBtnPatientGender.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.switchBtnPatientGender.TabIndex = 2;
+            this.switchBtnPatientGender.Value = true;
             // 
-            // txtPhone
-            // 
-            // 
-            // 
-            // 
-            this.txtPhone.Border.Class = "TextBoxBorder";
-            this.txtPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPhone.Location = new System.Drawing.Point(484, 195);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(238, 26);
-            this.txtPhone.TabIndex = 3;
-            // 
-            // txtName
+            // dtPatientBirthdate
             // 
             // 
             // 
             // 
-            this.txtName.Border.Class = "TextBoxBorder";
-            this.txtName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtName.Location = new System.Drawing.Point(484, 62);
-            this.txtName.Name = "txtName";
-            this.txtName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtName.Size = new System.Drawing.Size(238, 26);
-            this.txtName.TabIndex = 0;
+            this.dtPatientBirthdate.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dtPatientBirthdate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtPatientBirthdate.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dtPatientBirthdate.ButtonDropDown.Visible = true;
+            this.dtPatientBirthdate.Location = new System.Drawing.Point(541, 109);
+            // 
+            // 
+            // 
+            this.dtPatientBirthdate.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dtPatientBirthdate.MonthCalendar.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
+            this.dtPatientBirthdate.MonthCalendar.BackgroundStyle.Class = "";
+            this.dtPatientBirthdate.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtPatientBirthdate.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.dtPatientBirthdate.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dtPatientBirthdate.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dtPatientBirthdate.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dtPatientBirthdate.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dtPatientBirthdate.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dtPatientBirthdate.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dtPatientBirthdate.MonthCalendar.CommandsBackgroundStyle.Class = "";
+            this.dtPatientBirthdate.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtPatientBirthdate.MonthCalendar.DisplayMonth = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
+            this.dtPatientBirthdate.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.dtPatientBirthdate.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dtPatientBirthdate.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dtPatientBirthdate.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dtPatientBirthdate.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dtPatientBirthdate.MonthCalendar.NavigationBackgroundStyle.Class = "";
+            this.dtPatientBirthdate.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dtPatientBirthdate.MonthCalendar.TodayButtonVisible = true;
+            this.dtPatientBirthdate.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.dtPatientBirthdate.Name = "dtPatientBirthdate";
+            this.dtPatientBirthdate.Size = new System.Drawing.Size(180, 26);
+            this.dtPatientBirthdate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dtPatientBirthdate.TabIndex = 1;
+            // 
+            // txtPatientAddress
+            // 
+            // 
+            // 
+            // 
+            this.txtPatientAddress.Border.Class = "TextBoxBorder";
+            this.txtPatientAddress.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPatientAddress.Location = new System.Drawing.Point(484, 239);
+            this.txtPatientAddress.Name = "txtPatientAddress";
+            this.txtPatientAddress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtPatientAddress.Size = new System.Drawing.Size(238, 26);
+            this.txtPatientAddress.TabIndex = 4;
+            // 
+            // txtPatientPhone
+            // 
+            // 
+            // 
+            // 
+            this.txtPatientPhone.Border.Class = "TextBoxBorder";
+            this.txtPatientPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPatientPhone.Location = new System.Drawing.Point(484, 195);
+            this.txtPatientPhone.Name = "txtPatientPhone";
+            this.txtPatientPhone.Size = new System.Drawing.Size(238, 26);
+            this.txtPatientPhone.TabIndex = 3;
+            // 
+            // txtPatientName
+            // 
+            // 
+            // 
+            // 
+            this.txtPatientName.Border.Class = "TextBoxBorder";
+            this.txtPatientName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPatientName.Location = new System.Drawing.Point(484, 62);
+            this.txtPatientName.Name = "txtPatientName";
+            this.txtPatientName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtPatientName.Size = new System.Drawing.Size(238, 26);
+            this.txtPatientName.TabIndex = 0;
             // 
             // labelX8
             // 
@@ -777,14 +765,14 @@
             // dgvPreviousVisits
             // 
             this.dgvPreviousVisits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPreviousVisits.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPreviousVisits.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPreviousVisits.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPreviousVisits.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvPreviousVisits.Location = new System.Drawing.Point(1, 1);
@@ -1066,14 +1054,14 @@
             // dgvTreatments
             // 
             this.dgvTreatments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTreatments.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTreatments.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTreatments.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvTreatments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvTreatments.Location = new System.Drawing.Point(0, 44);
@@ -1174,6 +1162,20 @@
             this.tabItem3.Name = "tabItem3";
             this.tabItem3.Text = "الكشف";
             // 
+            // intInputPatientId
+            // 
+            // 
+            // 
+            // 
+            this.intInputPatientId.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.intInputPatientId.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.intInputPatientId.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.intInputPatientId.Location = new System.Drawing.Point(484, 21);
+            this.intInputPatientId.Name = "intInputPatientId";
+            this.intInputPatientId.ShowUpDown = true;
+            this.intInputPatientId.Size = new System.Drawing.Size(237, 26);
+            this.intInputPatientId.TabIndex = 18;
+            // 
             // FrmAddExamination
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1183,19 +1185,21 @@
             this.DoubleBuffered = true;
             this.Name = "FrmAddExamination";
             this.Text = "إضافة كشف جديد";
+            this.Load += new System.EventHandler(this.FrmAddExamination_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabControlPanel1.ResumeLayout(false);
             this.pnlPatientData.ResumeLayout(false);
             this.expPanelInoculations.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtInoculationDate)).EndInit();
-            this.expandablePanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dateBirthdate)).EndInit();
+            this.expPanelMedicalHistory.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtPatientBirthdate)).EndInit();
             this.tabControlPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPreviousVisits)).EndInit();
             this.tabControlPanel3.ResumeLayout(false);
             this.pnlTreatment.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTreatments)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.intInputPatientId)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1214,15 +1218,14 @@
         private DevComponents.DotNetBar.ButtonX btnEditPatientData;
         private DevComponents.DotNetBar.ButtonX btnAddNewPatient;
         private DevComponents.DotNetBar.ButtonX btnFindPatient;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtId;
         private DevComponents.DotNetBar.LabelX labelX6;
-        private DevComponents.DotNetBar.Controls.SwitchButton switchBtnBirthType;
-        private DevComponents.DotNetBar.Controls.SwitchButton switchBtnSucklingType;
-        private DevComponents.DotNetBar.Controls.SwitchButton switchBtnGender;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput dateBirthdate;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtAddress;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtPhone;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtName;
+        private DevComponents.DotNetBar.Controls.SwitchButton switchBtnPatientBirthType;
+        private DevComponents.DotNetBar.Controls.SwitchButton switchBtnPatientSucklingType;
+        private DevComponents.DotNetBar.Controls.SwitchButton switchBtnPatientGender;
+        private DevComponents.Editors.DateTimeAdv.DateTimeInput dtPatientBirthdate;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPatientAddress;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPatientPhone;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPatientName;
         private DevComponents.DotNetBar.LabelX labelX8;
         private DevComponents.DotNetBar.LabelX labelX7;
         private DevComponents.DotNetBar.LabelX labelX5;
@@ -1230,7 +1233,7 @@
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.ExpandablePanel expandablePanel1;
+        private DevComponents.DotNetBar.ExpandablePanel expPanelMedicalHistory;
         private DevComponents.DotNetBar.ButtonX btnAddMedicalHistory;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
         private DevComponents.DotNetBar.Controls.ListViewEx lstVwMedicalHistory;
@@ -1261,5 +1264,6 @@
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvTreatments;
+        private DevComponents.Editors.IntegerInput intInputPatientId;
     }
 }
