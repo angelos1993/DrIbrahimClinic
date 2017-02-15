@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
 using static DrIbrahimClinic.Utility.MessageBoxUtility;
@@ -25,13 +26,11 @@ namespace DrIbrahimClinic.PL
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            var isFormValid = true;
             if (string.IsNullOrEmpty(txtName.Text.FullTrim()))
             {
-                isFormValid = false;
                 txtName.BackColor = ErrorColor;
+                return;
             }
-            if (!isFormValid) return;
             var patient = new Patient
             {
                 Name = txtName.Text.FullTrim(),
@@ -64,7 +63,7 @@ namespace DrIbrahimClinic.PL
         private void ResetForm()
         {
             txtName.Text = string.Empty;
-            dtBirthdate.Value = new DateTime(1, 1, 1);
+            dtBirthdate.Value = default(DateTime);
             switchBtnGender.Value = true;
             txtPhone.Text = string.Empty;
             txtAddress.Text = string.Empty;
