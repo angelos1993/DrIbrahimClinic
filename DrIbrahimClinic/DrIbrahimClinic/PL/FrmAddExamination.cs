@@ -31,12 +31,19 @@ namespace DrIbrahimClinic.PL
         private IEnumerable<Patient> Patients => _patients ?? (_patients = PatientManager.GetAllPatients());
 
         private MedicalHistoryManager _medicalHistoryManager;
+
         private MedicalHistoryManager MedicalHistoryManager
             => _medicalHistoryManager ?? (_medicalHistoryManager = new MedicalHistoryManager());
 
         private ExaminationManager _examinationManager;
+
         private ExaminationManager ExaminationManager
             => _examinationManager ?? (_examinationManager = new ExaminationManager());
+
+        private InoculationManager _inoculationManager;
+
+        private InoculationManager InoculationManager
+            => _inoculationManager ?? (_inoculationManager = new InoculationManager());
 
         public Patient Patient { get; set; }
 
@@ -190,6 +197,22 @@ namespace DrIbrahimClinic.PL
             Cursor = Cursors.Default;
         }
 
+        private void dgvMedicalHistory_DoubleClick(object sender, EventArgs e)
+        {
+            if (ShowConfirmationDialog("هل أنت متأكد من أنك تريد حذف التاريخ المرضي المحدد؟") != DialogResult.Yes)
+                return;
+            Cursor = Cursors.WaitCursor;
+            var medicalHistory =
+                MedicalHistoryManager.GetMedicalHistoryByDescriptionAndPatientId(
+                    dgvMedicalHistory.SelectedRows[0].Cells[0].Value.ToString(), Patient.Id);
+            if (medicalHistory == null)
+                return;
+            Patient.MedicalHistories.Remove(medicalHistory);
+            MedicalHistoryManager.DeleteMedicalHistory(medicalHistory);
+            FillMedicalHistoryGrid();
+            Cursor = Cursors.Default;
+        }
+
         #endregion
 
         #region Inoculations Panel
@@ -199,15 +222,29 @@ namespace DrIbrahimClinic.PL
         {
             Cursor = Cursors.WaitCursor;
             if (e.NewExpandedValue)
-            {
-
-            }
+                FillInoculationsGrid();
             Cursor = Cursors.Default;
         }
 
         private void btnAddInoculation_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
+            if (string.IsNullOrEmpty(txtInoculation.Text.FullTrim()))
+            {
+                txtInoculation.BackColor = ErrorColor;
+                Cursor = Cursors.Default;
+                return;
+            }
+            var inoculation = new Inoculation
+            {
+                Name = txtInoculation.Text.FullTrim(),
+                Date = dtInoculationDate.Value != default(DateTime) ? dtInoculationDate.Value : (DateTime?) null,
+                PatientId = Patient.Id
+            };
+            InoculationManager.AddInoculation(inoculation);
+            Patient.Inoculations.Add(inoculation);
+            ClearInoculationInputs();
+            FillInoculationsGrid();
             Cursor = Cursors.Default;
         }
 
@@ -371,9 +408,6 @@ namespace DrIbrahimClinic.PL
             txtPatientAddress.Text = patient.Address ?? string.Empty;
             switchBtnPatientBirthType.Value = patient.BirthType == 1;
             switchBtnPatientSucklingType.Value = patient.SucklingType == 1;
-            //show Medical History data
-            //show inoculations data
-            //show Previous Visits data
         }
 
         private void SetAutoCompletion()
@@ -390,6 +424,15 @@ namespace DrIbrahimClinic.PL
                     medicalHistory => new MedicalHistoryVm {Description = medicalHistory.Description}).ToList();
         }
 
+        private void FillInoculationsGrid()
+        {
+            dgvInoculations.DataSource = Patient.Inoculations.Select(inoculation => new InoculationVm
+            {
+                Name = inoculation.Name,
+                Date = inoculation.Date?.ToFormattedArabicDate()
+            }).ToList();
+        }
+
         private void ClearPreviousVisitsDgv()
         {
             dgvPreviousVisits.Rows.Clear();
@@ -402,21 +445,5 @@ namespace DrIbrahimClinic.PL
         }
 
         #endregion
-
-        private void dgvMedicalHistory_DoubleClick(object sender, EventArgs e)
-        {
-            if (ShowConfirmationDialog("هل أنت متأكد من أنك تريد حذف التاريخ المرضي المحدد؟") != DialogResult.Yes)
-                return;
-            Cursor = Cursors.WaitCursor;
-            var medicalHistory =
-                MedicalHistoryManager.GetMedicalHistoryByDescriptionAndPatientId(
-                    dgvMedicalHistory.SelectedRows[0].Cells[0].Value.ToString(), Patient.Id);
-            if (medicalHistory == null)
-                return;
-            Patient.MedicalHistories.Remove(medicalHistory);
-            MedicalHistoryManager.DeleteMedicalHistory(medicalHistory);
-            FillMedicalHistoryGrid();
-            Cursor = Cursors.Default;
-        }
     }
 }
