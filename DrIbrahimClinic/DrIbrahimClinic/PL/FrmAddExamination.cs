@@ -22,6 +22,7 @@ namespace DrIbrahimClinic.PL
             => _examinationManager ?? (_examinationManager = new ExaminationManager());
 
         public Patient Patient { get; set; }
+
         public Examination Examination { get; set; }
 
         #endregion
@@ -83,7 +84,7 @@ namespace DrIbrahimClinic.PL
             ClearExaminationData();
         }
 
-        private void btnPrintRo4ta_Click(object sender, EventArgs e)
+        private void btnPrintRoshetta_Click(object sender, EventArgs e)
         {
 
         }

@@ -833,7 +833,7 @@
             this.btnPrintRo4ta.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnPrintRo4ta.TabIndex = 40;
             this.btnPrintRo4ta.Text = "طباعة الروشتة";
-            this.btnPrintRo4ta.Click += new System.EventHandler(this.btnPrintRo4ta_Click);
+            this.btnPrintRo4ta.Click += new System.EventHandler(this.btnPrintRoshetta_Click);
             // 
             // btnClear
             // 
