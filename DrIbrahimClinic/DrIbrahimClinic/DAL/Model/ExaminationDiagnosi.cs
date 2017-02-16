@@ -15,7 +15,7 @@ namespace DrIbrahimClinic.DAL.Model
     public partial class ExaminationDiagnosi
     {
         public int Id { get; set; }
-        public Nullable<int> ExaminationId { get; set; }
+        public int ExaminationId { get; set; }
         public int DisgnosisId { get; set; }
     
         public virtual Diagnosi Diagnosi { get; set; }

@@ -4,23 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9aeab27a6c21451e95dc773fef4f0f94" Name="Diagram1" >
-        <EntityTypeShape EntityType="DrIbrahimClinicModel.Diagnosi" Width="1.5" PointX="3" PointY="16" />
-        <EntityTypeShape EntityType="DrIbrahimClinicModel.ExaminationDiagnosi" Width="1.5" PointX="5.25" PointY="3.875" />
-        <EntityTypeShape EntityType="DrIbrahimClinicModel.Examination" Width="1.5" PointX="3" PointY="3.25" />
-        <EntityTypeShape EntityType="DrIbrahimClinicModel.ExaminationTreatment" Width="1.5" PointX="5.25" PointY="0.75" />
-        <EntityTypeShape EntityType="DrIbrahimClinicModel.Inoculation" Width="1.5" PointX="3" PointY="9.75" />
-        <EntityTypeShape EntityType="DrIbrahimClinicModel.MedicalHistory" Width="1.5" PointX="3" PointY="7.125" />
-        <EntityTypeShape EntityType="DrIbrahimClinicModel.Patient" Width="1.5" PointX="0.75" PointY="5.875" />
-        <EntityTypeShape EntityType="DrIbrahimClinicModel.sysdiagram" Width="1.5" PointX="5.75" PointY="6.75" />
-        <EntityTypeShape EntityType="DrIbrahimClinicModel.Treatment" Width="1.5" PointX="3" PointY="13.125" />
-        <AssociationConnector Association="DrIbrahimClinicModel.FK_ExaminationSign_Signs" />
-        <AssociationConnector Association="DrIbrahimClinicModel.FK_ExaminationSign_Examinations" />
-        <AssociationConnector Association="DrIbrahimClinicModel.FK_ExaminationMedication_Examinations" />
-        <AssociationConnector Association="DrIbrahimClinicModel.FK_Examinations_Patients" />
-        <AssociationConnector Association="DrIbrahimClinicModel.FK_ExaminationMedication_Medications" />
-        <AssociationConnector Association="DrIbrahimClinicModel.FK_Inoculations_Patients" />
-        <AssociationConnector Association="DrIbrahimClinicModel.FK_MedicalHistory_Patients" />
+      <Diagram DiagramId="0706193aec3c4414bd1db0c3d1040e0b" Name="Diagram1">
+        <EntityTypeShape EntityType="DrIbrahimClinicModel.Diagnosi" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="DrIbrahimClinicModel.ExaminationDiagnosi" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DrIbrahimClinicModel.Examination" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DrIbrahimClinicModel.ExaminationTreatment" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DrIbrahimClinicModel.Inoculation" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DrIbrahimClinicModel.MedicalHistory" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DrIbrahimClinicModel.Patient" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DrIbrahimClinicModel.sysdiagram" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DrIbrahimClinicModel.Treatment" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
+        <AssociationConnector Association="DrIbrahimClinicModel.FK_ExaminationSign_Signs" ManuallyRouted="false" />
+        <AssociationConnector Association="DrIbrahimClinicModel.FK_ExaminationSign_Examinations" ManuallyRouted="false" />
+        <AssociationConnector Association="DrIbrahimClinicModel.FK_ExaminationMedication_Examinations" ManuallyRouted="false" />
+        <AssociationConnector Association="DrIbrahimClinicModel.FK_Examinations_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="DrIbrahimClinicModel.FK_ExaminationMedication_Medications" ManuallyRouted="false" />
+        <AssociationConnector Association="DrIbrahimClinicModel.FK_Inoculations_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="DrIbrahimClinicModel.FK_MedicalHistory_Patients" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

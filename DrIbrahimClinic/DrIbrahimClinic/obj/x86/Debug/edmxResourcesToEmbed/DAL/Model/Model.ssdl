@@ -11,8 +11,8 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
-    <Property Name="ExaminationId" Type="int" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExaminationId" Type="int" Nullable="false" />
     <Property Name="DisgnosisId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Examinations">
@@ -34,7 +34,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ExaminationId" Type="int" Nullable="false" />
-    <Property Name="MedicationId" Type="int" Nullable="false" />
+    <Property Name="TreatmentId" Type="int" Nullable="false" />
     <Property Name="Description" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Inoculations">
@@ -104,7 +104,7 @@
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="ExaminationTreatment">
-        <PropertyRef Name="MedicationId" />
+        <PropertyRef Name="TreatmentId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -121,7 +121,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ExaminationSign_Examinations">
-    <End Role="Examinations" Type="Self.Examinations" Multiplicity="0..1" />
+    <End Role="Examinations" Type="Self.Examinations" Multiplicity="1" />
     <End Role="ExaminationDiagnosis" Type="Self.ExaminationDiagnosis" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Examinations">

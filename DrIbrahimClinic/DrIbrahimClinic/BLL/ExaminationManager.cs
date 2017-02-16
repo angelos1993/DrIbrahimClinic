@@ -13,9 +13,11 @@ namespace DrIbrahimClinic.BLL
 
         private ExaminationRepository _examinationRepository;
 
-        public ExaminationRepository ExaminationRepository
+        private ExaminationRepository ExaminationRepository
             => _examinationRepository ?? (_examinationRepository = new ExaminationRepository());
 
+        private TreatmentManager _treatmentManager;
+        private TreatmentManager TreatmentManager => _treatmentManager ?? (_treatmentManager = new TreatmentManager());
         #endregion
 
         #region Methods
@@ -75,8 +77,9 @@ namespace DrIbrahimClinic.BLL
                 examination.ExaminationTreatments.Add(new ExaminationTreatment
                 {
 
-                    //treatment = diagnosi.Id,
-                    ExaminationId = examination.Id
+                    TreatmentId = TreatmentManager.GetTreatmentIdByTreatmentName(treatment.TreatmentName),
+                    ExaminationId = examination.Id,
+                    Description = treatment.TreatmentDescription
                 });
             UpdateExamination(examination);
         }

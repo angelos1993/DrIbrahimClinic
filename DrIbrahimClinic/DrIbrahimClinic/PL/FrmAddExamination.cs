@@ -314,7 +314,6 @@ namespace DrIbrahimClinic.PL
             {
                 TreatmentName = treatment.Name,
                 TreatmentDescription = txtTreatmentDescription.Text.FullTrim()
-
             });
             ClearTreatmentsInputs();
             FillTreatmentsGrid();

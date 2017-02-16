@@ -1,41 +1,223 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="DrIbrahimClinicModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Diagnosi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ExaminationDiagnosis" Relationship="Self.FK_ExaminationSign_Signs" FromRole="Diagnosis" ToRole="ExaminationDiagnosis" />
+  </EntityType>
+  <EntityType Name="ExaminationDiagnosi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExaminationId" Type="Int32" Nullable="false" />
+    <Property Name="DisgnosisId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Diagnosi" Relationship="Self.FK_ExaminationSign_Signs" FromRole="ExaminationDiagnosis" ToRole="Diagnosis" />
+    <NavigationProperty Name="Examination" Relationship="Self.FK_ExaminationSign_Examinations" FromRole="ExaminationDiagnosis" ToRole="Examinations" />
+  </EntityType>
+  <EntityType Name="Examination">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PatientId" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ExaminationType" Type="Byte" Nullable="false" />
+    <Property Name="Complaint" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PatientLength" Type="Double" Nullable="false" />
+    <Property Name="PatientWeight" Type="Double" Nullable="false" />
+    <Property Name="PatientHeadCircumference" Type="Double" Nullable="false" />
+    <NavigationProperty Name="ExaminationDiagnosis" Relationship="Self.FK_ExaminationSign_Examinations" FromRole="Examinations" ToRole="ExaminationDiagnosis" />
+    <NavigationProperty Name="ExaminationTreatments" Relationship="Self.FK_ExaminationMedication_Examinations" FromRole="Examinations" ToRole="ExaminationTreatment" />
+    <NavigationProperty Name="Patient" Relationship="Self.FK_Examinations_Patients" FromRole="Examinations" ToRole="Patients" />
+  </EntityType>
+  <EntityType Name="ExaminationTreatment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExaminationId" Type="Int32" Nullable="false" />
+    <Property Name="TreatmentId" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Examination" Relationship="Self.FK_ExaminationMedication_Examinations" FromRole="ExaminationTreatment" ToRole="Examinations" />
+    <NavigationProperty Name="Treatment" Relationship="Self.FK_ExaminationMedication_Medications" FromRole="ExaminationTreatment" ToRole="Treatments" />
+  </EntityType>
+  <EntityType Name="Inoculation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PatientId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Patient" Relationship="Self.FK_Inoculations_Patients" FromRole="Inoculations" ToRole="Patients" />
+  </EntityType>
+  <EntityType Name="MedicalHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PatientId" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Patient" Relationship="Self.FK_MedicalHistory_Patients" FromRole="MedicalHistory" ToRole="Patients" />
+  </EntityType>
+  <EntityType Name="Patient">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Birthdate" Type="DateTime" Precision="0" />
+    <Property Name="Gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="BirthType" Type="Byte" Nullable="false" />
+    <Property Name="SucklingType" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="Examinations" Relationship="Self.FK_Examinations_Patients" FromRole="Patients" ToRole="Examinations" />
+    <NavigationProperty Name="Inoculations" Relationship="Self.FK_Inoculations_Patients" FromRole="Patients" ToRole="Inoculations" />
+    <NavigationProperty Name="MedicalHistories" Relationship="Self.FK_MedicalHistory_Patients" FromRole="Patients" ToRole="MedicalHistory" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Treatment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ExaminationTreatments" Relationship="Self.FK_ExaminationMedication_Medications" FromRole="Treatments" ToRole="ExaminationTreatment" />
+  </EntityType>
+  <Association Name="FK_ExaminationSign_Signs">
+    <End Role="Diagnosis" Type="Self.Diagnosi" Multiplicity="1" />
+    <End Role="ExaminationDiagnosis" Type="Self.ExaminationDiagnosi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diagnosis">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ExaminationDiagnosis">
+        <PropertyRef Name="DisgnosisId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExaminationSign_Examinations">
+    <End Role="Examinations" Type="Self.Examination" Multiplicity="1" />
+    <End Role="ExaminationDiagnosis" Type="Self.ExaminationDiagnosi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Examinations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ExaminationDiagnosis">
+        <PropertyRef Name="ExaminationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExaminationMedication_Examinations">
+    <End Role="Examinations" Type="Self.Examination" Multiplicity="1" />
+    <End Role="ExaminationTreatment" Type="Self.ExaminationTreatment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Examinations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ExaminationTreatment">
+        <PropertyRef Name="ExaminationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Examinations_Patients">
+    <End Role="Patients" Type="Self.Patient" Multiplicity="1" />
+    <End Role="Examinations" Type="Self.Examination" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Examinations">
+        <PropertyRef Name="PatientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExaminationMedication_Medications">
+    <End Role="Treatments" Type="Self.Treatment" Multiplicity="1" />
+    <End Role="ExaminationTreatment" Type="Self.ExaminationTreatment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Treatments">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ExaminationTreatment">
+        <PropertyRef Name="TreatmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inoculations_Patients">
+    <End Role="Patients" Type="Self.Patient" Multiplicity="1" />
+    <End Role="Inoculations" Type="Self.Inoculation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Inoculations">
+        <PropertyRef Name="PatientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MedicalHistory_Patients">
+    <End Role="Patients" Type="Self.Patient" Multiplicity="1" />
+    <End Role="MedicalHistory" Type="Self.MedicalHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MedicalHistory">
+        <PropertyRef Name="PatientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="DrIbrahimClinicEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Diagnosis" EntityType="DrIbrahimClinicModel.Diagnosi" />
-    <EntitySet Name="ExaminationDiagnosis" EntityType="DrIbrahimClinicModel.ExaminationDiagnosi" />
-    <EntitySet Name="Examinations" EntityType="DrIbrahimClinicModel.Examination" />
-    <EntitySet Name="ExaminationTreatments" EntityType="DrIbrahimClinicModel.ExaminationTreatment" />
-    <EntitySet Name="Inoculations" EntityType="DrIbrahimClinicModel.Inoculation" />
-    <EntitySet Name="MedicalHistories" EntityType="DrIbrahimClinicModel.MedicalHistory" />
-    <EntitySet Name="Patients" EntityType="DrIbrahimClinicModel.Patient" />
-    <EntitySet Name="sysdiagrams" EntityType="DrIbrahimClinicModel.sysdiagram" />
-    <EntitySet Name="Treatments" EntityType="DrIbrahimClinicModel.Treatment" />
-    <AssociationSet Name="FK_ExaminationSign_Signs" Association="DrIbrahimClinicModel.FK_ExaminationSign_Signs">
-      <End Role="Diagnosi" EntitySet="Diagnosis" />
-      <End Role="ExaminationDiagnosi" EntitySet="ExaminationDiagnosis" />
+    <EntitySet Name="Diagnosis" EntityType="Self.Diagnosi" />
+    <EntitySet Name="ExaminationDiagnosis" EntityType="Self.ExaminationDiagnosi" />
+    <EntitySet Name="Examinations" EntityType="Self.Examination" />
+    <EntitySet Name="ExaminationTreatments" EntityType="Self.ExaminationTreatment" />
+    <EntitySet Name="Inoculations" EntityType="Self.Inoculation" />
+    <EntitySet Name="MedicalHistories" EntityType="Self.MedicalHistory" />
+    <EntitySet Name="Patients" EntityType="Self.Patient" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Treatments" EntityType="Self.Treatment" />
+    <AssociationSet Name="FK_ExaminationSign_Signs" Association="Self.FK_ExaminationSign_Signs">
+      <End Role="Diagnosis" EntitySet="Diagnosis" />
+      <End Role="ExaminationDiagnosis" EntitySet="ExaminationDiagnosis" />
     </AssociationSet>
-    <AssociationSet Name="FK_ExaminationSign_Examinations" Association="DrIbrahimClinicModel.FK_ExaminationSign_Examinations">
-      <End Role="Examination" EntitySet="Examinations" />
-      <End Role="ExaminationDiagnosi" EntitySet="ExaminationDiagnosis" />
+    <AssociationSet Name="FK_ExaminationSign_Examinations" Association="Self.FK_ExaminationSign_Examinations">
+      <End Role="Examinations" EntitySet="Examinations" />
+      <End Role="ExaminationDiagnosis" EntitySet="ExaminationDiagnosis" />
     </AssociationSet>
-    <AssociationSet Name="FK_ExaminationMedication_Examinations" Association="DrIbrahimClinicModel.FK_ExaminationMedication_Examinations">
-      <End Role="Examination" EntitySet="Examinations" />
+    <AssociationSet Name="FK_ExaminationMedication_Examinations" Association="Self.FK_ExaminationMedication_Examinations">
+      <End Role="Examinations" EntitySet="Examinations" />
       <End Role="ExaminationTreatment" EntitySet="ExaminationTreatments" />
     </AssociationSet>
-    <AssociationSet Name="FK_Examinations_Patients" Association="DrIbrahimClinicModel.FK_Examinations_Patients">
-      <End Role="Patient" EntitySet="Patients" />
-      <End Role="Examination" EntitySet="Examinations" />
+    <AssociationSet Name="FK_Examinations_Patients" Association="Self.FK_Examinations_Patients">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="Examinations" EntitySet="Examinations" />
     </AssociationSet>
-    <AssociationSet Name="FK_ExaminationMedication_Medications" Association="DrIbrahimClinicModel.FK_ExaminationMedication_Medications">
-      <End Role="Treatment" EntitySet="Treatments" />
+    <AssociationSet Name="FK_ExaminationMedication_Medications" Association="Self.FK_ExaminationMedication_Medications">
+      <End Role="Treatments" EntitySet="Treatments" />
       <End Role="ExaminationTreatment" EntitySet="ExaminationTreatments" />
     </AssociationSet>
-    <AssociationSet Name="FK_Inoculations_Patients" Association="DrIbrahimClinicModel.FK_Inoculations_Patients">
-      <End Role="Patient" EntitySet="Patients" />
-      <End Role="Inoculation" EntitySet="Inoculations" />
+    <AssociationSet Name="FK_Inoculations_Patients" Association="Self.FK_Inoculations_Patients">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="Inoculations" EntitySet="Inoculations" />
     </AssociationSet>
-    <AssociationSet Name="FK_MedicalHistory_Patients" Association="DrIbrahimClinicModel.FK_MedicalHistory_Patients">
-      <End Role="Patient" EntitySet="Patients" />
+    <AssociationSet Name="FK_MedicalHistory_Patients" Association="Self.FK_MedicalHistory_Patients">
+      <End Role="Patients" EntitySet="Patients" />
       <End Role="MedicalHistory" EntitySet="MedicalHistories" />
     </AssociationSet>
     <FunctionImport Name="ResetDB" />
@@ -70,188 +252,6 @@
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
-  <EntityType Name="Diagnosi">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="ExaminationDiagnosis" Relationship="DrIbrahimClinicModel.FK_ExaminationSign_Signs" FromRole="Diagnosi" ToRole="ExaminationDiagnosi" />
-  </EntityType>
-  <EntityType Name="ExaminationDiagnosi">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" />
-    <Property Name="ExaminationId" Type="Int32" />
-    <Property Name="DisgnosisId" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Diagnosi" Relationship="DrIbrahimClinicModel.FK_ExaminationSign_Signs" FromRole="ExaminationDiagnosi" ToRole="Diagnosi" />
-    <NavigationProperty Name="Examination" Relationship="DrIbrahimClinicModel.FK_ExaminationSign_Examinations" FromRole="ExaminationDiagnosi" ToRole="Examination" />
-  </EntityType>
-  <EntityType Name="Examination">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="PatientId" Type="Int32" Nullable="false" />
-    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="ExaminationType" Type="Byte" Nullable="false" />
-    <Property Name="Complaint" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="PatientLength" Type="Double" Nullable="false" />
-    <Property Name="PatientWeight" Type="Double" Nullable="false" />
-    <Property Name="PatientHeadCircumference" Type="Double" Nullable="false" />
-    <NavigationProperty Name="ExaminationDiagnosis" Relationship="DrIbrahimClinicModel.FK_ExaminationSign_Examinations" FromRole="Examination" ToRole="ExaminationDiagnosi" />
-    <NavigationProperty Name="ExaminationTreatments" Relationship="DrIbrahimClinicModel.FK_ExaminationMedication_Examinations" FromRole="Examination" ToRole="ExaminationTreatment" />
-    <NavigationProperty Name="Patient" Relationship="DrIbrahimClinicModel.FK_Examinations_Patients" FromRole="Examination" ToRole="Patient" />
-  </EntityType>
-  <EntityType Name="ExaminationTreatment">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ExaminationId" Type="Int32" Nullable="false" />
-    <Property Name="MedicationId" Type="Int32" Nullable="false" />
-    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Examination" Relationship="DrIbrahimClinicModel.FK_ExaminationMedication_Examinations" FromRole="ExaminationTreatment" ToRole="Examination" />
-    <NavigationProperty Name="Treatment" Relationship="DrIbrahimClinicModel.FK_ExaminationMedication_Medications" FromRole="ExaminationTreatment" ToRole="Treatment" />
-  </EntityType>
-  <EntityType Name="Inoculation">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="PatientId" Type="Int32" Nullable="false" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Date" Type="DateTime" Precision="0" />
-    <NavigationProperty Name="Patient" Relationship="DrIbrahimClinicModel.FK_Inoculations_Patients" FromRole="Inoculation" ToRole="Patient" />
-  </EntityType>
-  <EntityType Name="MedicalHistory">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="PatientId" Type="Int32" Nullable="false" />
-    <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Patient" Relationship="DrIbrahimClinicModel.FK_MedicalHistory_Patients" FromRole="MedicalHistory" ToRole="Patient" />
-  </EntityType>
-  <EntityType Name="Patient">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Birthdate" Type="DateTime" Precision="0" />
-    <Property Name="Gender" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
-    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Phone" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
-    <Property Name="BirthType" Type="Byte" Nullable="false" />
-    <Property Name="SucklingType" Type="Byte" Nullable="false" />
-    <NavigationProperty Name="Examinations" Relationship="DrIbrahimClinicModel.FK_Examinations_Patients" FromRole="Patient" ToRole="Examination" />
-    <NavigationProperty Name="Inoculations" Relationship="DrIbrahimClinicModel.FK_Inoculations_Patients" FromRole="Patient" ToRole="Inoculation" />
-    <NavigationProperty Name="MedicalHistories" Relationship="DrIbrahimClinicModel.FK_MedicalHistory_Patients" FromRole="Patient" ToRole="MedicalHistory" />
-  </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
-  <EntityType Name="Treatment">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="ExaminationTreatments" Relationship="DrIbrahimClinicModel.FK_ExaminationMedication_Medications" FromRole="Treatment" ToRole="ExaminationTreatment" />
-  </EntityType>
-  <Association Name="FK_ExaminationSign_Signs">
-    <End Type="DrIbrahimClinicModel.Diagnosi" Role="Diagnosi" Multiplicity="1" />
-    <End Type="DrIbrahimClinicModel.ExaminationDiagnosi" Role="ExaminationDiagnosi" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Diagnosi">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="ExaminationDiagnosi">
-        <PropertyRef Name="DisgnosisId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ExaminationSign_Examinations">
-    <End Type="DrIbrahimClinicModel.Examination" Role="Examination" Multiplicity="0..1" />
-    <End Type="DrIbrahimClinicModel.ExaminationDiagnosi" Role="ExaminationDiagnosi" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Examination">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="ExaminationDiagnosi">
-        <PropertyRef Name="ExaminationId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ExaminationMedication_Examinations">
-    <End Type="DrIbrahimClinicModel.Examination" Role="Examination" Multiplicity="1" />
-    <End Type="DrIbrahimClinicModel.ExaminationTreatment" Role="ExaminationTreatment" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Examination">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="ExaminationTreatment">
-        <PropertyRef Name="ExaminationId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Examinations_Patients">
-    <End Type="DrIbrahimClinicModel.Patient" Role="Patient" Multiplicity="1" />
-    <End Type="DrIbrahimClinicModel.Examination" Role="Examination" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Patient">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Examination">
-        <PropertyRef Name="PatientId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_ExaminationMedication_Medications">
-    <End Type="DrIbrahimClinicModel.Treatment" Role="Treatment" Multiplicity="1" />
-    <End Type="DrIbrahimClinicModel.ExaminationTreatment" Role="ExaminationTreatment" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Treatment">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="ExaminationTreatment">
-        <PropertyRef Name="MedicationId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Inoculations_Patients">
-    <End Type="DrIbrahimClinicModel.Patient" Role="Patient" Multiplicity="1" />
-    <End Type="DrIbrahimClinicModel.Inoculation" Role="Inoculation" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Patient">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Inoculation">
-        <PropertyRef Name="PatientId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_MedicalHistory_Patients">
-    <End Type="DrIbrahimClinicModel.Patient" Role="Patient" Multiplicity="1" />
-    <End Type="DrIbrahimClinicModel.MedicalHistory" Role="MedicalHistory" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Patient">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="MedicalHistory">
-        <PropertyRef Name="PatientId" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
     <Property Type="Binary" Name="definition" Nullable="true" />

@@ -16,7 +16,7 @@ namespace DrIbrahimClinic.DAL.Model
     {
         public int Id { get; set; }
         public int ExaminationId { get; set; }
-        public int MedicationId { get; set; }
+        public int TreatmentId { get; set; }
         public string Description { get; set; }
     
         public virtual Examination Examination { get; set; }
