@@ -45,11 +45,21 @@ namespace DrIbrahimClinic.PL
         private InoculationManager InoculationManager
             => _inoculationManager ?? (_inoculationManager = new InoculationManager());
 
+        private DiagnosisManager _diagnosisManager;
+        private DiagnosisManager DiagnosisManager => _diagnosisManager ?? (_diagnosisManager = new DiagnosisManager());
+
+        private TreatmentManager _treatmentManager;
+        private TreatmentManager TreatmentManager => _treatmentManager ?? (_treatmentManager = new TreatmentManager());
+
         public Patient Patient { get; set; }
 
         public Examination Examination { get; set; }
 
         public AddExaminationFormMode Mode { get; set; }
+
+        public List<Diagnosi> Diagnosis { get; set; } = new List<Diagnosi>();
+
+        public List<ExaminationTreatmentVm> Treatments { get; set; } = new List<ExaminationTreatmentVm>();
 
         #endregion
 
@@ -248,18 +258,89 @@ namespace DrIbrahimClinic.PL
             Cursor = Cursors.Default;
         }
 
+        private void dgvInoculations_DoubleClick(object sender, EventArgs e)
+        {
+            if (ShowConfirmationDialog("هل أنت متأكد من أنك تريد حذف التطعيم المحدد؟") != DialogResult.Yes)
+                return;
+            Cursor = Cursors.WaitCursor;
+            var inoculation =
+                InoculationManager.GetInoculationByNameAndPatientId(
+                    dgvInoculations.SelectedRows[0].Cells[0].Value.ToString(), Patient.Id);
+            if (inoculation == null)
+                return;
+            Patient.Inoculations.Remove(inoculation);
+            InoculationManager.DeleteInoculation(inoculation);
+            FillInoculationsGrid();
+            Cursor = Cursors.Default;
+        }
+
         #endregion
 
         #endregion
 
         #region Examination
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnAddDiagnosis_Click(object sender, EventArgs e)
         {
-
+            Cursor = Cursors.WaitCursor;
+            if (string.IsNullOrEmpty(txtDiagnosis.Text.FullTrim()))
+            {
+                txtDiagnosis.BackColor = ErrorColor;
+                Cursor = Cursors.Default;
+                return;
+            }
+            var diagnosi = new Diagnosi {Name = txtDiagnosis.Text.FullTrim()};
+            if (!DiagnosisManager.IsDiagnisiFound(diagnosi))
+                DiagnosisManager.AddDiagnosi(diagnosi);
+            Diagnosis.Add(diagnosi);
+            ClearDiagnosisInputs();
+            FillDiagnosisGrid();
+            Cursor = Cursors.Default;
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+        private void btnAddTreatment_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            if (string.IsNullOrEmpty(txtTreatmentName.Text.FullTrim()))
+            {
+                txtTreatmentName.BackColor = ErrorColor;
+                Cursor = Cursors.Default;
+                return;
+            }
+            var treatment = new Treatment {Name = txtTreatmentName.Text.FullTrim()};
+            if (!TreatmentManager.IsTreatmentFound(treatment))
+                TreatmentManager.AddTreatment(treatment);
+            Treatments.Add(new ExaminationTreatmentVm
+            {
+                TreatmentName = treatment.Name,
+                TreatmentDescription = txtTreatmentDescription.Text.FullTrim()
+
+            });
+            ClearTreatmentsInputs();
+            FillTreatmentsGrid();
+            Cursor = Cursors.Default;
+        }
+
+        private void btnSaveExamination_Click(object sender, EventArgs e)
+        {
+            Examination = new Examination
+            {
+                PatientId = Patient.Id,
+                Date = DateTime.Now,
+                ExaminationType = radK4f.Checked ? (byte) 1 : (byte) 2,
+                Complaint = txtComplaint.Text.FullTrim(),
+                PatientLength = int.Parse(txtPatientLength.Text),
+                PatientWeight = int.Parse(txtPatientWeight.Text),
+                PatientHeadCircumference = int.Parse(txtPatientHeadCircumference.Text)
+            };
+            ExaminationManager.AddExamination(Examination);
+            if (Diagnosis.Any())
+                ExaminationManager.AddDiagnosisToExamination(Examination, Diagnosis);
+            if (Treatments.Any())
+                ExaminationManager.AddTreatmentsToExamination(Examination, Treatments);
+        }
+
+        private void btnClearExamination_Click(object sender, EventArgs e)
         {
             ClearExaminationPanel();
         }
@@ -288,33 +369,39 @@ namespace DrIbrahimClinic.PL
                 return;
             }
             e.NewTab.AttachedControl.Enabled = true;
-            if (e.NewTab.Text != @"الزيارات السابقة")
-                return;
-            dgvPreviousVisits.DataSource = dgvPreviousVisits.DataSource ??
-                                           ExaminationManager.GetExaminationsByPatientId(Patient.Id)
-                                               .Select(examination => new ExaminationVm
-                                               {
-                                                   PatientId = examination.PatientId,
-                                                   PatientName = examination.Patient.Name,
-                                                   ExaminationDate = examination.Date.ToFormattedArabicDate(),
-                                                   ExaminationType = examination.ExaminationType == 1 ? "كشف" : @"إعادة",
-                                                   Complaint = examination.Complaint,
-                                                   Diagnosis =
-                                                       examination.ExaminationDiagnosis.Select(
-                                                           examinationDiagnosis => examinationDiagnosis.Diagnosi)
-                                                           .ToDiagnosisListString(),
-                                                   PatientLength =
-                                                       examination.PatientLength.ToString(CultureInfo.CurrentCulture),
-                                                   PatientWeight =
-                                                       examination.PatientWeight.ToString(CultureInfo.CurrentCulture),
-                                                   PatientHeadCircumference =
-                                                       examination.PatientHeadCircumference.ToString(
-                                                           CultureInfo.CurrentCulture),
-                                                   Treatment =
-                                                       examination.ExaminationTreatments.Select(
-                                                           examinationTreatments => examinationTreatments.Treatment)
-                                                           .ToTreatmentsListString()
-                                               }).ToList();
+            if (e.NewTab.Text == @"الزيارات السابقة")
+            {
+                dgvPreviousVisits.DataSource = dgvPreviousVisits.DataSource ??
+                                               ExaminationManager.GetExaminationsByPatientId(Patient.Id)
+                                                   .Select(examination => new ExaminationVm
+                                                   {
+                                                       PatientId = examination.PatientId,
+                                                       PatientName = examination.Patient.Name,
+                                                       ExaminationDate = examination.Date.ToFormattedArabicDate(),
+                                                       ExaminationType =
+                                                           examination.ExaminationType == 1 ? "كشف" : @"إعادة",
+                                                       Complaint = examination.Complaint,
+                                                       Diagnosis =
+                                                           examination.ExaminationDiagnosis.Select(
+                                                               examinationDiagnosis => examinationDiagnosis.Diagnosi)
+                                                               .ToDiagnosisListString(),
+                                                       PatientLength =
+                                                           examination.PatientLength.ToString(CultureInfo.CurrentCulture),
+                                                       PatientWeight =
+                                                           examination.PatientWeight.ToString(CultureInfo.CurrentCulture),
+                                                       PatientHeadCircumference =
+                                                           examination.PatientHeadCircumference.ToString(
+                                                               CultureInfo.CurrentCulture),
+                                                       Treatment =
+                                                           examination.ExaminationTreatments.Select(
+                                                               examinationTreatments => examinationTreatments.Treatment)
+                                                               .ToTreatmentsListString()
+                                                   }).ToList();
+            }
+            else if (e.NewTab.Text == @"الكشف")
+            {
+                //set auto complete for diagnosis & treatments
+            }
         }
 
         #endregion
@@ -441,7 +528,31 @@ namespace DrIbrahimClinic.PL
 
         private void ClearExaminationPanel()
         {
+            
+        }
 
+        private void FillDiagnosisGrid()
+        {
+            dgvDiagnosis.DataSource =
+                Diagnosis.Select(diagnosi => new DiagnosiVm {DiagnosiName = diagnosi.Name}).ToList();
+        }
+
+        private void FillTreatmentsGrid()
+        {
+            dgvTreatments.DataSource = Treatments;
+        }
+
+        private void ClearDiagnosisInputs()
+        {
+            txtDiagnosis.Text = string.Empty;
+            txtDiagnosis.BackColor = Color.Empty;
+        }
+
+        private void ClearTreatmentsInputs()
+        {
+            txtTreatmentName.Text = string.Empty;
+            txtTreatmentDescription.Text = string.Empty;
+            txtTreatmentName.BackColor = Color.Empty;
         }
 
         #endregion

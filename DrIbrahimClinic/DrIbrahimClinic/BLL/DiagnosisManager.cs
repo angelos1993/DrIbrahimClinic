@@ -52,6 +52,11 @@ namespace DrIbrahimClinic.BLL
             return GetAllDiagnosis().Where(where);
         }
 
+        public bool IsDiagnisiFound(Diagnosi diagnosi)
+        {
+            return GetAllDiagnosis().Any(dia => dia.Name == diagnosi.Name);
+        }
+
         #endregion
     }
 }

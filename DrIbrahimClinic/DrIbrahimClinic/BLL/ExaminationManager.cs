@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DrIbrahimClinic.DAL;
 using DrIbrahimClinic.DAL.Model;
+using DrIbrahimClinic.DAL.VMs;
 
 namespace DrIbrahimClinic.BLL
 {
@@ -55,6 +56,29 @@ namespace DrIbrahimClinic.BLL
         public IEnumerable<Examination> GetExaminationsByPatientId(int patientId)
         {
             return GetExaminations(examination => examination.PatientId == patientId);
+        }
+
+        public void AddDiagnosisToExamination(Examination examination, List<Diagnosi> diagnosis)
+        {
+            foreach (var diagnosi in diagnosis)
+                examination.ExaminationDiagnosis.Add(new ExaminationDiagnosi
+                {
+                    DisgnosisId = diagnosi.Id,
+                    ExaminationId = examination.Id
+                });
+            UpdateExamination(examination);
+        }
+
+        public void AddTreatmentsToExamination(Examination examination, List<ExaminationTreatmentVm> treatments)
+        {
+            foreach (var treatment in treatments)
+                examination.ExaminationTreatments.Add(new ExaminationTreatment
+                {
+
+                    //treatment = diagnosi.Id,
+                    ExaminationId = examination.Id
+                });
+            UpdateExamination(examination);
         }
 
         #endregion

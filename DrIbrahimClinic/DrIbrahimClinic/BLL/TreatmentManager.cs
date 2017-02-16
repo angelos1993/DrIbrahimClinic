@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DrIbrahimClinic.DAL;
 using DrIbrahimClinic.DAL.Model;
+using DrIbrahimClinic.DAL.VMs;
 
 namespace DrIbrahimClinic.BLL
 {
@@ -49,12 +50,21 @@ namespace DrIbrahimClinic.BLL
 
         public Treatment GeTreatmentByName(string treatmentName)
         {
-            return GetAllTreatments().FirstOrDefault(treatment => string.Equals(treatment.Name, treatmentName, StringComparison.CurrentCultureIgnoreCase));
+            return
+                GetAllTreatments()
+                    .FirstOrDefault(
+                        treatment =>
+                            string.Equals(treatment.Name, treatmentName, StringComparison.CurrentCultureIgnoreCase));
         }
 
         public IEnumerable<Treatment> GetTreatments(Func<Treatment, bool> where)
         {
             return GetAllTreatments().Where(where);
+        }
+
+        public bool IsTreatmentFound(Treatment treatment)
+        {
+            return GetAllTreatments().Any(tr => tr.Name == treatment.Name);
         }
 
         #endregion

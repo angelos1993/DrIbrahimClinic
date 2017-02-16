@@ -67,6 +67,7 @@ namespace DrIbrahimClinic.PL
             if (string.IsNullOrEmpty(txtInoculationName.Text.FullTrim()))
             {
                 ShowErrorMsg("يجب إدخال اسم التطعيم");
+                Cursor = Cursors.Default;
                 return;
             }
             var inoculation = new Inoculation
