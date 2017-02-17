@@ -70,7 +70,7 @@ namespace DrIbrahimClinic.PL
         private void FrmAddExamination_Load(object sender, EventArgs e)
         {
             ClearForm();
-            SetAutoCompletion();
+            SetAutoCompletionForPatientsNames();
         }
 
         #endregion
@@ -430,7 +430,11 @@ namespace DrIbrahimClinic.PL
                     break;
                 case @"الكشف":
                     e.NewTab.AttachedControl.Enabled = true;
-                    //set auto complete for diagnosis & treatments
+                    SetAutoCompletionForDiagnosisNames();
+                    SetAutoCompletionForTreatmentsNames();
+                    break;
+                default:
+                    ShowErrorMsg("Not Inmlemented Tab!");
                     break;
             }
         }
@@ -529,7 +533,7 @@ namespace DrIbrahimClinic.PL
             switchBtnPatientSucklingType.Value = patient.SucklingType == 1;
         }
 
-        private void SetAutoCompletion()
+        private void SetAutoCompletionForPatientsNames()
         {
             var namesCollection = new AutoCompleteStringCollection();
             namesCollection.AddRange(Patients.Select(p => p.Name).ToArray());
@@ -599,6 +603,24 @@ namespace DrIbrahimClinic.PL
             txtTreatmentName.Text = string.Empty;
             txtTreatmentDescription.Text = string.Empty;
             txtTreatmentName.BackColor = Color.Empty;
+        }
+
+        private void SetAutoCompletionForTreatmentsNames()
+        {
+            if (txtTreatmentName.AutoCompleteCustomSource.Count > 0)
+                return;
+            var namesCollection = new AutoCompleteStringCollection();
+            namesCollection.AddRange(TreatmentManager.GetAllTreatments().Select(t => t.Name).ToArray());
+            SetAutoCompleteSourceForTextBox(txtTreatmentName, namesCollection);
+        }
+
+        private void SetAutoCompletionForDiagnosisNames()
+        {
+            if (txtDiagnosis.AutoCompleteCustomSource.Count > 0)
+                return;
+            var namesCollection = new AutoCompleteStringCollection();
+            namesCollection.AddRange(DiagnosisManager.GetAllDiagnosis().Select(d => d.Name).ToArray());
+            SetAutoCompleteSourceForTextBox(txtDiagnosis, namesCollection);
         }
 
         #endregion
