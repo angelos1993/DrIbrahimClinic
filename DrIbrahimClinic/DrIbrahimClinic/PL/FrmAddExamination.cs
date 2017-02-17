@@ -379,14 +379,13 @@ namespace DrIbrahimClinic.PL
         {
             switch (e.NewTab.Text)
             {
-                case @"المريض":
+                case @"الزيارات السابقة":
                     if (Patient == null || Mode != AddExaminationFormMode.HasPatient)
                     {
                         ShowWarningMsg(@"يجب إدخال المريض أولاً");
                         e.NewTab.AttachedControl.Enabled = false;
+                        return;
                     }
-                    break;
-                case @"الزيارات السابقة":
                     e.NewTab.AttachedControl.Enabled = true;
                     dgvPreviousVisits.DataSource = dgvPreviousVisits.DataSource ??
                                                    ExaminationManager.GetExaminationsByPatientId(Patient.Id)
@@ -425,12 +424,15 @@ namespace DrIbrahimClinic.PL
                                                        }).ToList();
                     break;
                 case @"الكشف":
+                    if (Patient == null || Mode != AddExaminationFormMode.HasPatient)
+                    {
+                        ShowWarningMsg(@"يجب إدخال المريض أولاً");
+                        e.NewTab.AttachedControl.Enabled = false;
+                        return;
+                    }
                     e.NewTab.AttachedControl.Enabled = true;
                     SetAutoCompletionForDiagnosisNames();
                     SetAutoCompletionForTreatmentsNames();
-                    break;
-                default:
-                    ShowErrorMsg("Not Inmlemented Tab!");
                     break;
             }
         }
@@ -443,10 +445,10 @@ namespace DrIbrahimClinic.PL
 
         private void ClearForm()
         {
+            tabExamination.SelectedTabIndex = 0;
             ClearPatientPanel();
             ClearPreviousVisitsDgv();
             ClearExaminationPanel();
-            tabExamination.SelectedTabIndex = 0;
             SetAutoCompletionForPatientsNames();
             ClearPropertiesValues();
         }
