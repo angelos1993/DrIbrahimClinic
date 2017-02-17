@@ -18,6 +18,10 @@ namespace DrIbrahimClinic.BLL
 
         private TreatmentManager _treatmentManager;
         private TreatmentManager TreatmentManager => _treatmentManager ?? (_treatmentManager = new TreatmentManager());
+
+        private DiagnosisManager _diagnosisManager;
+        private DiagnosisManager DiagnosisManager => _diagnosisManager ?? (_diagnosisManager = new DiagnosisManager());
+
         #endregion
 
         #region Methods
@@ -60,12 +64,12 @@ namespace DrIbrahimClinic.BLL
             return GetExaminations(examination => examination.PatientId == patientId);
         }
 
-        public void AddDiagnosisToExamination(Examination examination, List<Diagnosi> diagnosis)
+        public void AddDiagnosisToExamination(Examination examination, List<DiagnosiVm> diagnosis)
         {
             foreach (var diagnosi in diagnosis)
                 examination.ExaminationDiagnosis.Add(new ExaminationDiagnosi
                 {
-                    DisgnosisId = diagnosi.Id,
+                    DisgnosisId = DiagnosisManager.GetDiagnosiIdByTreatmentName(diagnosi.DiagnosiName),
                     ExaminationId = examination.Id
                 });
             UpdateExamination(examination);
@@ -76,7 +80,6 @@ namespace DrIbrahimClinic.BLL
             foreach (var treatment in treatments)
                 examination.ExaminationTreatments.Add(new ExaminationTreatment
                 {
-
                     TreatmentId = TreatmentManager.GetTreatmentIdByTreatmentName(treatment.TreatmentName),
                     ExaminationId = examination.Id,
                     Description = treatment.TreatmentDescription

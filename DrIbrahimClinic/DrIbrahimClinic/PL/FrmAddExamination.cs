@@ -57,7 +57,7 @@ namespace DrIbrahimClinic.PL
 
         public AddExaminationFormMode Mode { get; set; }
 
-        public List<Diagnosi> Diagnosis { get; set; } = new List<Diagnosi>();
+        public List<DiagnosiVm> Diagnosis { get; set; } = new List<DiagnosiVm>();
 
         public List<ExaminationTreatmentVm> Treatments { get; set; } = new List<ExaminationTreatmentVm>();
 
@@ -70,7 +70,6 @@ namespace DrIbrahimClinic.PL
         private void FrmAddExamination_Load(object sender, EventArgs e)
         {
             ClearForm();
-            SetAutoCompletionForPatientsNames();
         }
 
         #endregion
@@ -177,15 +176,6 @@ namespace DrIbrahimClinic.PL
 
         #region Medical Histort Panel
 
-        private void expPanelMedicalHistory_ExpandedChanged(object sender,
-            DevComponents.DotNetBar.ExpandedChangeEventArgs e)
-        {
-            Cursor = Cursors.WaitCursor;
-            if (e.NewExpandedValue)
-                FillMedicalHistoryGrid();
-            Cursor = Cursors.Default;
-        }
-
         private void btnAddMedicalHistory_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
@@ -226,16 +216,7 @@ namespace DrIbrahimClinic.PL
         #endregion
 
         #region Inoculations Panel
-
-        private void expPanelInoculations_ExpandedChanged(object sender,
-            DevComponents.DotNetBar.ExpandedChangeEventArgs e)
-        {
-            Cursor = Cursors.WaitCursor;
-            if (e.NewExpandedValue)
-                FillInoculationsGrid();
-            Cursor = Cursors.Default;
-        }
-
+        
         private void btnAddInoculation_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
@@ -289,12 +270,13 @@ namespace DrIbrahimClinic.PL
                 Cursor = Cursors.Default;
                 return;
             }
-            var diagnosi = new Diagnosi {Name = txtDiagnosis.Text.FullTrim()};
-            if (!DiagnosisManager.IsDiagnisiFound(diagnosi))
-                DiagnosisManager.AddDiagnosi(diagnosi);
-            Diagnosis.Add(diagnosi);
+            //var diagnosi = new Diagnosi {Name = txtDiagnosis.Text.FullTrim()};
+            if (!DiagnosisManager.IsDiagnisiFound(txtDiagnosis.Text.FullTrim()))
+                DiagnosisManager.AddDiagnosi(new Diagnosi { Name = txtDiagnosis.Text.FullTrim() });
+            Diagnosis.Add(new DiagnosiVm { DiagnosiName = txtDiagnosis.Text.FullTrim() });
             ClearDiagnosisInputs();
             FillDiagnosisGrid();
+            SetAutoCompletionForDiagnosisNames();
             Cursor = Cursors.Default;
         }
 
@@ -307,49 +289,37 @@ namespace DrIbrahimClinic.PL
                 Cursor = Cursors.Default;
                 return;
             }
-            var treatment = new Treatment {Name = txtTreatmentName.Text.FullTrim()};
-            if (!TreatmentManager.IsTreatmentFound(treatment))
-                TreatmentManager.AddTreatment(treatment);
+            if (!TreatmentManager.IsTreatmentFound(txtTreatmentName.Text.FullTrim()))
+                TreatmentManager.AddTreatment(new Treatment {Name = txtTreatmentName.Text.FullTrim()});
             Treatments.Add(new ExaminationTreatmentVm
             {
-                TreatmentName = treatment.Name,
+                TreatmentName = txtTreatmentName.Text.FullTrim(),
                 TreatmentDescription = txtTreatmentDescription.Text.FullTrim()
             });
             ClearTreatmentsInputs();
             FillTreatmentsGrid();
+            SetAutoCompletionForTreatmentsNames();
             Cursor = Cursors.Default;
         }
 
         private void btnSaveExamination_Click(object sender, EventArgs e)
         {
-            double patientLength, patientWeight, patientHeadCircumference;
-            bool isValid = true;
-            if (!double.TryParse(txtPatientLength.Text, out patientLength))
-            {
-                isValid = false;
-                txtPatientLength.BackColor = ErrorColor;
-            }
-            if (!double.TryParse(txtPatientWeight.Text, out patientWeight))
-            {
-                isValid = false;
-                txtPatientWeight.BackColor = ErrorColor;
-            }
-            if (!double.TryParse(txtPatientHeadCircumference.Text,out patientHeadCircumference))
-            {
-                isValid = false;
-                txtPatientHeadCircumference.BackColor = ErrorColor;
-            }
-            if (!isValid)
-                return;
+            double patientLengthTemp, patientWeightTemp, patientHeadCircumferenceTemp;
             Examination = new Examination
             {
                 PatientId = Patient.Id,
                 Date = DateTime.Now,
                 ExaminationType = radK4f.Checked ? (byte) 1 : (byte) 2,
                 Complaint = txtComplaint.Text.FullTrim(),
-                PatientLength = patientLength,
-                PatientWeight = patientWeight,
-                PatientHeadCircumference = patientHeadCircumference
+                PatientLength = double.TryParse(txtPatientLength.Text, out patientLengthTemp)
+                    ? patientLengthTemp
+                    : -1,
+                PatientWeight = double.TryParse(txtPatientLength.Text, out patientWeightTemp)
+                    ? patientWeightTemp
+                    : -1,
+                PatientHeadCircumference = double.TryParse(txtPatientLength.Text, out patientHeadCircumferenceTemp)
+                    ? patientHeadCircumferenceTemp
+                    : -1
             };
             ExaminationManager.AddExamination(Examination);
             if (Diagnosis.Any())
@@ -413,14 +383,20 @@ namespace DrIbrahimClinic.PL
                                                                    examinationDiagnosis => examinationDiagnosis.Diagnosi)
                                                                    .ToDiagnosisListString(),
                                                            PatientLength =
-                                                               examination.PatientLength.ToString(
-                                                                   CultureInfo.CurrentCulture),
+                                                               Math.Abs(examination.PatientLength - (-1)) > 0
+                                                                   ? examination.PatientLength.ToString(
+                                                                       CultureInfo.CurrentCulture)
+                                                                   : string.Empty,
                                                            PatientWeight =
-                                                               examination.PatientWeight.ToString(
-                                                                   CultureInfo.CurrentCulture),
+                                                               Math.Abs(examination.PatientWeight - (-1)) > 0
+                                                                   ? examination.PatientWeight.ToString(
+                                                                       CultureInfo.CurrentCulture)
+                                                                   : string.Empty,
                                                            PatientHeadCircumference =
-                                                               examination.PatientHeadCircumference.ToString(
-                                                                   CultureInfo.CurrentCulture),
+                                                               Math.Abs(examination.PatientHeadCircumference - (-1)) > 0
+                                                                   ? examination.PatientHeadCircumference.ToString(
+                                                                       CultureInfo.CurrentCulture)
+                                                                   : string.Empty,
                                                            Treatment =
                                                                examination.ExaminationTreatments.Select(
                                                                    examinationTreatments =>
@@ -451,6 +427,7 @@ namespace DrIbrahimClinic.PL
             ClearPreviousVisitsDgv();
             ClearExaminationPanel();
             tabExamination.SelectedTabIndex = 0;
+            SetAutoCompletionForPatientsNames();
         }
 
         private void ClearPatientPanel()
@@ -472,8 +449,6 @@ namespace DrIbrahimClinic.PL
             txtPatientAddress.Text = string.Empty;
             switchBtnPatientBirthType.Value = true;
             switchBtnPatientSucklingType.Value = true;
-            expPanelMedicalHistory.Expanded = false;
-            expPanelInoculations.Expanded = false;
             ClearMedicalHistoryInputs();
             dgvMedicalHistory.DataSource = null;
             ClearInoculationInputs();
@@ -509,9 +484,9 @@ namespace DrIbrahimClinic.PL
                                                 mode == AddExaminationFormMode.Edit;
             switchBtnPatientSucklingType.Enabled = mode == AddExaminationFormMode.AddNew ||
                                                    mode == AddExaminationFormMode.Edit;
-            expPanelMedicalHistory.Enabled = mode == AddExaminationFormMode.Edit ||
+            grpPanelMedicalHistory.Enabled = mode == AddExaminationFormMode.Edit ||
                                              mode == AddExaminationFormMode.HasPatient;
-            expPanelInoculations.Enabled = mode == AddExaminationFormMode.Edit ||
+            grpPanelInoculations.Enabled = mode == AddExaminationFormMode.Edit ||
                                            mode == AddExaminationFormMode.HasPatient;
             btnAddNewPatient.Enabled = mode == AddExaminationFormMode.Normal ||
                                        mode == AddExaminationFormMode.HasPatient ||
@@ -531,6 +506,8 @@ namespace DrIbrahimClinic.PL
             txtPatientAddress.Text = patient.Address ?? string.Empty;
             switchBtnPatientBirthType.Value = patient.BirthType == 1;
             switchBtnPatientSucklingType.Value = patient.SucklingType == 1;
+            FillMedicalHistoryGrid();
+            FillInoculationsGrid();
         }
 
         private void SetAutoCompletionForPatientsNames()
@@ -583,8 +560,7 @@ namespace DrIbrahimClinic.PL
 
         private void FillDiagnosisGrid()
         {
-            dgvDiagnosis.DataSource =
-                Diagnosis.Select(diagnosi => new DiagnosiVm {DiagnosiName = diagnosi.Name}).ToList();
+            dgvDiagnosis.DataSource = Diagnosis;
         }
 
         private void FillTreatmentsGrid()
@@ -607,8 +583,6 @@ namespace DrIbrahimClinic.PL
 
         private void SetAutoCompletionForTreatmentsNames()
         {
-            if (txtTreatmentName.AutoCompleteCustomSource.Count > 0)
-                return;
             var namesCollection = new AutoCompleteStringCollection();
             namesCollection.AddRange(TreatmentManager.GetAllTreatments().Select(t => t.Name).ToArray());
             SetAutoCompleteSourceForTextBox(txtTreatmentName, namesCollection);
@@ -616,8 +590,6 @@ namespace DrIbrahimClinic.PL
 
         private void SetAutoCompletionForDiagnosisNames()
         {
-            if (txtDiagnosis.AutoCompleteCustomSource.Count > 0)
-                return;
             var namesCollection = new AutoCompleteStringCollection();
             namesCollection.AddRange(DiagnosisManager.GetAllDiagnosis().Select(d => d.Name).ToArray());
             SetAutoCompleteSourceForTextBox(txtDiagnosis, namesCollection);
