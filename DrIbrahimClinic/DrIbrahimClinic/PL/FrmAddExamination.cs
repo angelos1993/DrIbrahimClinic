@@ -322,21 +322,42 @@ namespace DrIbrahimClinic.PL
 
         private void btnSaveExamination_Click(object sender, EventArgs e)
         {
+            double patientLength, patientWeight, patientHeadCircumference;
+            bool isValid = true;
+            if (!double.TryParse(txtPatientLength.Text, out patientLength))
+            {
+                isValid = false;
+                txtPatientLength.BackColor = ErrorColor;
+            }
+            if (!double.TryParse(txtPatientWeight.Text, out patientWeight))
+            {
+                isValid = false;
+                txtPatientWeight.BackColor = ErrorColor;
+            }
+            if (!double.TryParse(txtPatientHeadCircumference.Text,out patientHeadCircumference))
+            {
+                isValid = false;
+                txtPatientHeadCircumference.BackColor = ErrorColor;
+            }
+            if (!isValid)
+                return;
             Examination = new Examination
             {
                 PatientId = Patient.Id,
                 Date = DateTime.Now,
                 ExaminationType = radK4f.Checked ? (byte) 1 : (byte) 2,
                 Complaint = txtComplaint.Text.FullTrim(),
-                PatientLength = int.Parse(txtPatientLength.Text),
-                PatientWeight = int.Parse(txtPatientWeight.Text),
-                PatientHeadCircumference = int.Parse(txtPatientHeadCircumference.Text)
+                PatientLength = patientLength,
+                PatientWeight = patientWeight,
+                PatientHeadCircumference = patientHeadCircumference
             };
             ExaminationManager.AddExamination(Examination);
             if (Diagnosis.Any())
                 ExaminationManager.AddDiagnosisToExamination(Examination, Diagnosis);
             if (Treatments.Any())
                 ExaminationManager.AddTreatmentsToExamination(Examination, Treatments);
+            btnSaveExamination.Enabled = false;
+            btnPrintRoshetta.Enabled = true;
         }
 
         private void btnClearExamination_Click(object sender, EventArgs e)
@@ -346,7 +367,12 @@ namespace DrIbrahimClinic.PL
 
         private void btnPrintRoshetta_Click(object sender, EventArgs e)
         {
+            new FrmRoshetta(Examination).ShowDialog();
+        }
 
+        private void btnNewExamination_Click(object sender, EventArgs e)
+        {
+            ClearForm();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -414,6 +440,7 @@ namespace DrIbrahimClinic.PL
             ClearPatientPanel();
             ClearPreviousVisitsDgv();
             ClearExaminationPanel();
+            tabExamination.SelectedTabIndex = 0;
         }
 
         private void ClearPatientPanel()
@@ -527,7 +554,21 @@ namespace DrIbrahimClinic.PL
 
         private void ClearExaminationPanel()
         {
-            
+            radK4f.Checked = true;
+            txtPatientLength.Text = string.Empty;
+            txtPatientWeight.Text = string.Empty;
+            txtPatientHeadCircumference.Text = string.Empty;
+            txtComplaint.Text = string.Empty;
+            txtDiagnosis.Text = string.Empty;
+            dgvDiagnosis.DataSource = null;
+            txtTreatmentName.Text = string.Empty;
+            txtTreatmentDescription.Text = string.Empty;
+            dgvTreatments.DataSource = null;
+            txtPatientLength.BackColor = Color.Empty;
+            txtPatientWeight.BackColor = Color.Empty;
+            txtPatientHeadCircumference.BackColor = Color.Empty;
+            btnSaveExamination.Enabled = true;
+            btnPrintRoshetta.Enabled = false;
         }
 
         private void FillDiagnosisGrid()

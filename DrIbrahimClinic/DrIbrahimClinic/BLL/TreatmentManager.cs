@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using DrIbrahimClinic.DAL;
 using DrIbrahimClinic.DAL.Model;
-using DrIbrahimClinic.DAL.VMs;
 
 namespace DrIbrahimClinic.BLL
 {
