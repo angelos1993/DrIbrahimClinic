@@ -387,45 +387,51 @@ namespace DrIbrahimClinic.PL
         private void tabExamination_SelectedTabChanged(object sender,
             DevComponents.DotNetBar.TabStripTabChangedEventArgs e)
         {
-            if (e.NewTab.Text != @"المريض" && (Patient == null || Mode != AddExaminationFormMode.HasPatient))
+            switch (e.NewTab.Text)
             {
-                ShowWarningMsg(@"يجب إدخال المريض أولاً");
-                e.NewTab.AttachedControl.Enabled = false;
-                return;
-            }
-            e.NewTab.AttachedControl.Enabled = true;
-            if (e.NewTab.Text == @"الزيارات السابقة")
-            {
-                dgvPreviousVisits.DataSource = dgvPreviousVisits.DataSource ??
-                                               ExaminationManager.GetExaminationsByPatientId(Patient.Id)
-                                                   .Select(examination => new ExaminationVm
-                                                   {
-                                                       PatientId = examination.PatientId,
-                                                       PatientName = examination.Patient.Name,
-                                                       ExaminationDate = examination.Date.ToFormattedArabicDate(),
-                                                       ExaminationType =
-                                                           examination.ExaminationType == 1 ? "كشف" : @"إعادة",
-                                                       Complaint = examination.Complaint,
-                                                       Diagnosis =
-                                                           examination.ExaminationDiagnosis.Select(
-                                                               examinationDiagnosis => examinationDiagnosis.Diagnosi)
-                                                               .ToDiagnosisListString(),
-                                                       PatientLength =
-                                                           examination.PatientLength.ToString(CultureInfo.CurrentCulture),
-                                                       PatientWeight =
-                                                           examination.PatientWeight.ToString(CultureInfo.CurrentCulture),
-                                                       PatientHeadCircumference =
-                                                           examination.PatientHeadCircumference.ToString(
-                                                               CultureInfo.CurrentCulture),
-                                                       Treatment =
-                                                           examination.ExaminationTreatments.Select(
-                                                               examinationTreatments => examinationTreatments.Treatment)
-                                                               .ToTreatmentsListString()
-                                                   }).ToList();
-            }
-            else if (e.NewTab.Text == @"الكشف")
-            {
-                //set auto complete for diagnosis & treatments
+                case @"المريض":
+                    if (Patient == null || Mode != AddExaminationFormMode.HasPatient)
+                    {
+                        ShowWarningMsg(@"يجب إدخال المريض أولاً");
+                        e.NewTab.AttachedControl.Enabled = false;
+                    }
+                    break;
+                case @"الزيارات السابقة":
+                    e.NewTab.AttachedControl.Enabled = true;
+                    dgvPreviousVisits.DataSource = dgvPreviousVisits.DataSource ??
+                                                   ExaminationManager.GetExaminationsByPatientId(Patient.Id)
+                                                       .Select(examination => new ExaminationVm
+                                                       {
+                                                           PatientId = examination.PatientId,
+                                                           PatientName = examination.Patient.Name,
+                                                           ExaminationDate = examination.Date.ToFormattedArabicDate(),
+                                                           ExaminationType =
+                                                               examination.ExaminationType == 1 ? "كشف" : @"إعادة",
+                                                           Complaint = examination.Complaint,
+                                                           Diagnosis =
+                                                               examination.ExaminationDiagnosis.Select(
+                                                                   examinationDiagnosis => examinationDiagnosis.Diagnosi)
+                                                                   .ToDiagnosisListString(),
+                                                           PatientLength =
+                                                               examination.PatientLength.ToString(
+                                                                   CultureInfo.CurrentCulture),
+                                                           PatientWeight =
+                                                               examination.PatientWeight.ToString(
+                                                                   CultureInfo.CurrentCulture),
+                                                           PatientHeadCircumference =
+                                                               examination.PatientHeadCircumference.ToString(
+                                                                   CultureInfo.CurrentCulture),
+                                                           Treatment =
+                                                               examination.ExaminationTreatments.Select(
+                                                                   examinationTreatments =>
+                                                                       examinationTreatments.Treatment)
+                                                                   .ToTreatmentsListString()
+                                                       }).ToList();
+                    break;
+                case @"الكشف":
+                    e.NewTab.AttachedControl.Enabled = true;
+                    //set auto complete for diagnosis & treatments
+                    break;
             }
         }
 
