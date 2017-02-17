@@ -379,7 +379,7 @@ namespace DrIbrahimClinic.PL
                                                                examination.ExaminationType == 1 ? "كشف" : @"إعادة",
                                                            Complaint = examination.Complaint,
                                                            Diagnosis =
-                                                               examination.ExaminationDiagnosis.Select(
+                                                               examination.ExaminationDiagnosis?.Select(
                                                                    examinationDiagnosis => examinationDiagnosis.Diagnosi)
                                                                    .ToDiagnosisListString(),
                                                            PatientLength =
@@ -398,7 +398,7 @@ namespace DrIbrahimClinic.PL
                                                                        CultureInfo.CurrentCulture)
                                                                    : string.Empty,
                                                            Treatment =
-                                                               examination.ExaminationTreatments.Select(
+                                                               examination.ExaminationTreatments?.Select(
                                                                    examinationTreatments =>
                                                                        examinationTreatments.Treatment)
                                                                    .ToTreatmentsListString()
@@ -428,6 +428,16 @@ namespace DrIbrahimClinic.PL
             ClearExaminationPanel();
             tabExamination.SelectedTabIndex = 0;
             SetAutoCompletionForPatientsNames();
+            ClearPropertiesValues();
+        }
+
+        private void ClearPropertiesValues()
+        {
+            Patient = null;
+            Examination = null;
+            Mode=AddExaminationFormMode.Normal;
+            Diagnosis = null;
+            Treatments = null;
         }
 
         private void ClearPatientPanel()
@@ -560,11 +570,13 @@ namespace DrIbrahimClinic.PL
 
         private void FillDiagnosisGrid()
         {
+            dgvDiagnosis.DataSource = null;
             dgvDiagnosis.DataSource = Diagnosis;
         }
 
         private void FillTreatmentsGrid()
         {
+            dgvTreatments.DataSource = null;
             dgvTreatments.DataSource = Treatments;
         }
 
