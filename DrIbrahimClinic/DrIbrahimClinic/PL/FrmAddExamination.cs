@@ -270,7 +270,6 @@ namespace DrIbrahimClinic.PL
                 Cursor = Cursors.Default;
                 return;
             }
-            //var diagnosi = new Diagnosi {Name = txtDiagnosis.Text.FullTrim()};
             if (!DiagnosisManager.IsDiagnisiFound(txtDiagnosis.Text.FullTrim()))
                 DiagnosisManager.AddDiagnosi(new Diagnosi { Name = txtDiagnosis.Text.FullTrim() });
             Diagnosis.Add(new DiagnosiVm { DiagnosiName = txtDiagnosis.Text.FullTrim() });
@@ -328,6 +327,8 @@ namespace DrIbrahimClinic.PL
                 ExaminationManager.AddTreatmentsToExamination(Examination, Treatments);
             btnSaveExamination.Enabled = false;
             btnPrintRoshetta.Enabled = true;
+            pnlExaminationData.Enabled = true;
+            pnlTreatment.Enabled = true;
         }
 
         private void btnClearExamination_Click(object sender, EventArgs e)
@@ -348,6 +349,25 @@ namespace DrIbrahimClinic.PL
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void dgvDiagnosis_DoubleClick(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Diagnosis.Remove(
+                Diagnosis.FirstOrDefault(d => d.DiagnosiName == dgvDiagnosis.SelectedRows[0].Cells[0].Value.ToString()));
+            FillDiagnosisGrid();
+            Cursor = Cursors.Default;
+        }
+
+        private void dgvTreatments_DoubleClick(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Treatments.Remove(
+                Treatments.FirstOrDefault(
+                    t => t.TreatmentName == dgvTreatments.SelectedRows[0].Cells[0].Value.ToString()));
+            FillTreatmentsGrid();
+            Cursor = Cursors.Default;
         }
 
         #endregion
@@ -435,9 +455,9 @@ namespace DrIbrahimClinic.PL
         {
             Patient = null;
             Examination = null;
-            Mode=AddExaminationFormMode.Normal;
-            Diagnosis = null;
-            Treatments = null;
+            Mode = AddExaminationFormMode.Normal;
+            Diagnosis = new List<DiagnosiVm>();
+            Treatments = new List<ExaminationTreatmentVm>();
         }
 
         private void ClearPatientPanel()
@@ -561,11 +581,10 @@ namespace DrIbrahimClinic.PL
             txtTreatmentName.Text = string.Empty;
             txtTreatmentDescription.Text = string.Empty;
             dgvTreatments.DataSource = null;
-            txtPatientLength.BackColor = Color.Empty;
-            txtPatientWeight.BackColor = Color.Empty;
-            txtPatientHeadCircumference.BackColor = Color.Empty;
             btnSaveExamination.Enabled = true;
             btnPrintRoshetta.Enabled = false;
+            pnlExaminationData.Enabled = true;
+            pnlTreatment.Enabled = true;
         }
 
         private void FillDiagnosisGrid()
