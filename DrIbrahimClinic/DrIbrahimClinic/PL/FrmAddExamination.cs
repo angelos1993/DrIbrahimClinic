@@ -567,7 +567,7 @@ namespace DrIbrahimClinic.PL
 
         private void ClearPreviousVisitsDgv()
         {
-            dgvPreviousVisits.Rows.Clear();
+            dgvPreviousVisits.DataSource = null;
             dgvPreviousVisits.Refresh();
         }
 
