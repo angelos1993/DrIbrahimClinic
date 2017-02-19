@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
 using DrIbrahimClinic.DAL.VMs;
 using DrIbrahimClinic.Utility;
+using static System.Math;
 
 namespace DrIbrahimClinic.PL
 {
@@ -19,7 +19,7 @@ namespace DrIbrahimClinic.PL
                 PatientId = examination.PatientId.ToString(),
                 PatientName = examination.Patient.Name,
                 PatientWeight =
-                    Math.Abs(examination.PatientWeight - (-1)) > 0
+                    Abs(examination.PatientWeight - (-1)) > 0
                         ? examination.PatientWeight.ToString(CultureInfo.CurrentCulture)
                         : string.Empty,
                 ExaminationDate = examination.Date.ToShortDateString(),

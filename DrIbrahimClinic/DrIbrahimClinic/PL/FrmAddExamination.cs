@@ -12,6 +12,7 @@ using static DrIbrahimClinic.Utility.MessageBoxUtility;
 using static DrIbrahimClinic.Utility.Constants;
 using DrIbrahimClinic.Properties;
 using static DrIbrahimClinic.Utility.Utility;
+using static System.Math;
 
 namespace DrIbrahimClinic.PL
 {
@@ -402,17 +403,17 @@ namespace DrIbrahimClinic.PL
                                                                    examinationDiagnosis => examinationDiagnosis.Diagnosi)
                                                                    .ToDiagnosisListString(),
                                                            PatientLength =
-                                                               Math.Abs(examination.PatientLength - (-1)) > 0
+                                                               Abs(examination.PatientLength - (-1)) > 0
                                                                    ? examination.PatientLength.ToString(
                                                                        CultureInfo.CurrentCulture)
                                                                    : string.Empty,
                                                            PatientWeight =
-                                                               Math.Abs(examination.PatientWeight - (-1)) > 0
+                                                               Abs(examination.PatientWeight - (-1)) > 0
                                                                    ? examination.PatientWeight.ToString(
                                                                        CultureInfo.CurrentCulture)
                                                                    : string.Empty,
                                                            PatientHeadCircumference =
-                                                               Math.Abs(examination.PatientHeadCircumference - (-1)) > 0
+                                                               Abs(examination.PatientHeadCircumference - (-1)) > 0
                                                                    ? examination.PatientHeadCircumference.ToString(
                                                                        CultureInfo.CurrentCulture)
                                                                    : string.Empty,
