@@ -44,5 +44,12 @@ namespace DrIbrahimClinic.Utility
         {
             return dateTime.ToString("dd MMMM yyyy", GetCultureInfo("ar-AE"));
         }
+
+        public static string ToAgeFromBirthdate(this DateTime? dateTime)
+        {
+            if (dateTime == null || dateTime == default(DateTime))
+                return string.Empty;
+            return (DateTime.Now.Year - dateTime.Value.Year).ToString();
+        }
     }
 }

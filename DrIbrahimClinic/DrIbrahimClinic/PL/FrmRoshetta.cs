@@ -1,5 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
+using DrIbrahimClinic.DAL.VMs;
+using DrIbrahimClinic.Utility;
 
 namespace DrIbrahimClinic.PL
 {
@@ -8,12 +14,32 @@ namespace DrIbrahimClinic.PL
         public FrmRoshetta(Examination examination)
         {
             InitializeComponent();
-            Examination = examination;
+            RoshettaVm = new RoshettaVm
+            {
+                PatientId = examination.PatientId.ToString(),
+                PatientName = examination.Patient.Name,
+                PatientWeight =
+                    Math.Abs(examination.PatientWeight - (-1)) > 0
+                        ? examination.PatientWeight.ToString(CultureInfo.CurrentCulture)
+                        : string.Empty,
+                ExaminationDate = examination.Date.ToShortDateString(),
+                PatientAge = examination.Patient.Birthdate.ToAgeFromBirthdate(),
+                RoshettaTreatments =
+                    examination.ExaminationTreatments.Select(examinationTreatment => new RoshettaTreatmentVm
+                    {
+                        R = "R",
+                        TreatmentName = TreatmentManager.GetTreatmentById(examinationTreatment.TreatmentId).Name,
+                        TreatmentDescription = examinationTreatment.Description
+                    }).ToList()
+            };
         }
 
         #region Properties
 
-        public Examination Examination { get; set; }
+        public RoshettaVm RoshettaVm { get; set; }
+
+        private TreatmentManager _treatmentManager;
+        private TreatmentManager TreatmentManager => _treatmentManager ?? (_treatmentManager = new TreatmentManager());
 
         #endregion
 

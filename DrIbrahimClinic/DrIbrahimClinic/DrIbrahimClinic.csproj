@@ -132,6 +132,8 @@
     <Compile Include="DAL\VMs\InoculationVm.cs" />
     <Compile Include="DAL\VMs\MedicalHistoryVm.cs" />
     <Compile Include="DAL\VMs\PatientVm.cs" />
+    <Compile Include="DAL\VMs\RoshettaTreatmentVm.cs" />
+    <Compile Include="DAL\VMs\RoshettaVm.cs" />
     <Compile Include="DAL\VMs\TreatmentVm.cs" />
     <Compile Include="PL\FrmAddExamination.cs">
       <SubType>Form</SubType>
