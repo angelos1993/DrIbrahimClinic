@@ -818,7 +818,7 @@
     </DataSet>
     <DataSet Name="RoshettaTreatments">
       <Query>
-        <DataSourceName>DrIbrahimClinicDALVMs1</DataSourceName>
+        <DataSourceName>DrIbrahimClinicDALVMs</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
