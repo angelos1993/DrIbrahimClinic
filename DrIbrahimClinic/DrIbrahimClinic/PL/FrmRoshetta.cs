@@ -45,7 +45,7 @@ namespace DrIbrahimClinic.PL
 
         private void FrmRo4etta_Load(object sender, EventArgs e)
         {
-            reportViewer1.RefreshReport();
+            rptViewerRoshetta.RefreshReport();
         }
     }
 }

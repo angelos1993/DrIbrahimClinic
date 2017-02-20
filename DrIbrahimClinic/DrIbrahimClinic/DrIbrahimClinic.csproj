@@ -281,6 +281,7 @@
     </None>
     <None Include="DB\DrIbrahimClinic.bak" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DrIbrahimClinic.DAL.VMs.RoshettaVm.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
