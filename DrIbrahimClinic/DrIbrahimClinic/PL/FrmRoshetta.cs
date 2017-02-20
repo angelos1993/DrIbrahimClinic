@@ -5,6 +5,7 @@ using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
 using DrIbrahimClinic.DAL.VMs;
 using DrIbrahimClinic.Utility;
+using Microsoft.Reporting.WinForms;
 using static System.Math;
 
 namespace DrIbrahimClinic.PL
@@ -45,6 +46,7 @@ namespace DrIbrahimClinic.PL
 
         private void FrmRo4etta_Load(object sender, EventArgs e)
         {
+            rptViewerRoshetta.LocalReport.DataSources.Add(new ReportDataSource("RoshettaDataSet", RoshettaVm));
             rptViewerRoshetta.RefreshReport();
         }
     }
