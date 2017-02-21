@@ -8,6 +8,7 @@ using DrIbrahimClinic.DAL.VMs;
 using DrIbrahimClinic.Utility;
 using static DrIbrahimClinic.Utility.MessageBoxUtility;
 using static DrIbrahimClinic.Utility.Utility;
+using static DrIbrahimClinic.Utility.InputLanguageUtility;
 
 namespace DrIbrahimClinic.PL
 {
@@ -40,6 +41,7 @@ namespace DrIbrahimClinic.PL
         {
             ResetForm();
             SetAutoCompletion();
+            SetTextBoxesInputLanguages();
         }
 
         private void btnFindPatient_Click(object sender, EventArgs e)
@@ -154,6 +156,12 @@ namespace DrIbrahimClinic.PL
             var namesCollection = new AutoCompleteStringCollection();
             namesCollection.AddRange(Patients.Select(p => p.Name).ToArray());
             SetAutoCompleteSourceForTextBox(txtPatientName, namesCollection);
+        }
+
+        private void SetTextBoxesInputLanguages()
+        {
+            txtPatientName.GotFocus += SetArabicInputLanguage;
+            txtInoculationName.GotFocus += SetEnglishInputLanguage;
         }
 
         #endregion

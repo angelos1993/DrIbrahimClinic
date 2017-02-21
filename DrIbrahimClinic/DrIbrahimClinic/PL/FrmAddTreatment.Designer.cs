@@ -43,7 +43,7 @@
             this.labelX1.BackgroundStyle.Class = "";
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Location = new System.Drawing.Point(294, 7);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(4);
             this.labelX1.Name = "labelX1";
             this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX1.Size = new System.Drawing.Size(71, 36);
@@ -119,6 +119,7 @@
             this.Name = "FrmAddTreatment";
             this.RightToLeftLayout = true;
             this.Text = "إضافة علاج جديد";
+            this.Load += new System.EventHandler(this.FrmAddTreatment_Load);
             this.ResumeLayout(false);
 
         }

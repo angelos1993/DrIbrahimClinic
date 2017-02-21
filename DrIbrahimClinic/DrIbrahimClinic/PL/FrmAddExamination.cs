@@ -11,8 +11,10 @@ using DrIbrahimClinic.Utility;
 using static DrIbrahimClinic.Utility.MessageBoxUtility;
 using static DrIbrahimClinic.Utility.Constants;
 using DrIbrahimClinic.Properties;
+using DrIbrahimClinic.Utility.Enums;
 using static DrIbrahimClinic.Utility.Utility;
 using static System.Math;
+using static DrIbrahimClinic.Utility.InputLanguageUtility;
 
 namespace DrIbrahimClinic.PL
 {
@@ -71,6 +73,7 @@ namespace DrIbrahimClinic.PL
         private void FrmAddExamination_Load(object sender, EventArgs e)
         {
             ClearForm();
+            SetTextBoxesInputLanguages();
         }
 
         #endregion
@@ -627,6 +630,31 @@ namespace DrIbrahimClinic.PL
             var namesCollection = new AutoCompleteStringCollection();
             namesCollection.AddRange(DiagnosisManager.GetAllDiagnosis().Select(d => d.Name).ToArray());
             SetAutoCompleteSourceForTextBox(txtDiagnosis, namesCollection);
+        }
+
+        private void SetTextBoxesInputLanguages()
+        {
+            #region Patient Tab
+
+            txtPatientName.GotFocus += SetArabicInputLanguage;
+            txtPatientPhone.GotFocus += SetArabicInputLanguage;
+            txtPatientAddress.GotFocus += SetArabicInputLanguage;
+            txtInoculation.GotFocus += SetEnglishInputLanguage;
+            txtMedicalHistory.GotFocus += SetEnglishInputLanguage;
+
+            #endregion
+
+            #region Examination Tab
+
+            txtPatientLength.GotFocus += SetArabicInputLanguage;
+            txtPatientWeight.GotFocus += SetArabicInputLanguage;
+            txtPatientHeadCircumference.GotFocus += SetArabicInputLanguage;
+            txtComplaint.GotFocus += SetEnglishInputLanguage;
+            txtDiagnosis.GotFocus += SetEnglishInputLanguage;
+            txtTreatmentName.GotFocus += SetEnglishInputLanguage;
+            txtTreatmentDescription.GotFocus += SetArabicInputLanguage;
+
+            #endregion
         }
 
         #endregion

@@ -4,6 +4,7 @@ using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
 using DrIbrahimClinic.Utility;
 using static DrIbrahimClinic.Utility.Constants;
+using static DrIbrahimClinic.Utility.InputLanguageUtility;
 
 namespace DrIbrahimClinic.PL
 {
@@ -22,6 +23,11 @@ namespace DrIbrahimClinic.PL
         #endregion
 
         #region Events
+
+        private void FrmAddTreatment_Load(object sender, EventArgs e)
+        {
+            SetTextBoxesInputLanguages();
+        }
 
         private void btnSaveAndNew_Click(object sender, EventArgs e)
         {
@@ -65,6 +71,11 @@ namespace DrIbrahimClinic.PL
             }
             else
                 Close();
+        }
+
+        private void SetTextBoxesInputLanguages()
+        {
+            txtTreatmentName.GotFocus += SetEnglishInputLanguage;
         }
 
         #endregion

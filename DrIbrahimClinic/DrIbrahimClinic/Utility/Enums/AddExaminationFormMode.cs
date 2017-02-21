@@ -1,4 +1,4 @@
-﻿namespace DrIbrahimClinic.Utility
+﻿namespace DrIbrahimClinic.Utility.Enums
 {
     public enum AddExaminationFormMode
     {

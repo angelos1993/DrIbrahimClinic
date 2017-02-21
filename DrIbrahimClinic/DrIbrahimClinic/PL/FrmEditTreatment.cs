@@ -8,6 +8,7 @@ using DrIbrahimClinic.Utility;
 using static DrIbrahimClinic.Utility.Constants;
 using static DrIbrahimClinic.Utility.Utility;
 using static DrIbrahimClinic.Utility.MessageBoxUtility;
+using static DrIbrahimClinic.Utility.InputLanguageUtility;
 
 namespace DrIbrahimClinic.PL
 {
@@ -35,6 +36,7 @@ namespace DrIbrahimClinic.PL
         private void FrmEditTreatment_Load(object sender, EventArgs e)
         {
             SetAutoCompletion();
+            SetTextBoxesInputLanguages();
         }
 
         private void btnSaveAndNew_Click(object sender, EventArgs e)
@@ -106,6 +108,12 @@ namespace DrIbrahimClinic.PL
             var namesCollection = new AutoCompleteStringCollection();
             namesCollection.AddRange(Treatments.Select(t => t.Name).ToArray());
             SetAutoCompleteSourceForTextBox(txtTreatmentOldName, namesCollection);
+        }
+
+        private void SetTextBoxesInputLanguages()
+        {
+            txtTreatmentOldName.GotFocus += SetEnglishInputLanguage;
+            txtTreatmentNewName.GotFocus += SetEnglishInputLanguage;
         }
 
         #endregion

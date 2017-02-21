@@ -5,6 +5,7 @@ using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
 using DrIbrahimClinic.DAL.VMs;
 using DrIbrahimClinic.Utility;
+using static DrIbrahimClinic.Utility.InputLanguageUtility;
 
 namespace DrIbrahimClinic.PL
 {
@@ -30,6 +31,7 @@ namespace DrIbrahimClinic.PL
         private void FrmSearchPatient_Load(object sender, EventArgs e)
         {
             FillGrid();
+            SetTextBoxesInputLanguages();
         }
 
         private void FindPatient(object sender, EventArgs e)
@@ -79,7 +81,13 @@ namespace DrIbrahimClinic.PL
             txtPatientName.Text = string.Empty;
             txtPatientPhone.Text = string.Empty;
         }
-        
+
+        private void SetTextBoxesInputLanguages()
+        {
+            txtPatientName.GotFocus += SetArabicInputLanguage;
+            txtPatientPhone.GotFocus += SetArabicInputLanguage;
+        }
+
         #endregion
     }
 }

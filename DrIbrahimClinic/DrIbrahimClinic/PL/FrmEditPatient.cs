@@ -7,6 +7,7 @@ using DrIbrahimClinic.DAL.Model;
 using DrIbrahimClinic.Utility;
 using static DrIbrahimClinic.Utility.MessageBoxUtility;
 using static DrIbrahimClinic.Utility.Utility;
+using static DrIbrahimClinic.Utility.InputLanguageUtility;
 
 namespace DrIbrahimClinic.PL
 {
@@ -35,6 +36,7 @@ namespace DrIbrahimClinic.PL
         {
             ResetForm();
             SetAutoCompletion();
+            SetTextBoxesInputLanguages();
         }
 
         private void btnFindPatient_Click(object sender, EventArgs e)
@@ -126,6 +128,13 @@ namespace DrIbrahimClinic.PL
             switchBtnSucklingType.Enabled = isEnabled;
             btnSave.Enabled = isEnabled;
             btnFindPatient.Enabled = !isEnabled;
+        }
+
+        private void SetTextBoxesInputLanguages()
+        {
+            txtName.GotFocus += SetArabicInputLanguage;
+            txtAddress.GotFocus += SetArabicInputLanguage;
+            txtPhone.GotFocus += SetArabicInputLanguage;
         }
 
         #endregion

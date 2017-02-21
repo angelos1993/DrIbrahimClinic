@@ -4,6 +4,7 @@ using DrIbrahimClinic.DAL.Model;
 using static DrIbrahimClinic.Utility.MessageBoxUtility;
 using static DrIbrahimClinic.Utility.StringExtensions;
 using static DrIbrahimClinic.Utility.Constants;
+using static DrIbrahimClinic.Utility.InputLanguageUtility;
 
 namespace DrIbrahimClinic.PL
 {
@@ -22,6 +23,11 @@ namespace DrIbrahimClinic.PL
         #endregion
 
         #region Events
+
+        private void FrmAddPatient_Load(object sender, EventArgs e)
+        {
+            SetTextBoxesInputLanguages();
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -68,6 +74,13 @@ namespace DrIbrahimClinic.PL
             txtAddress.Text = string.Empty;
             switchBtnBirthType.Value = true;
             switchBtnSucklingType.Value = true;
+        }
+
+        private void SetTextBoxesInputLanguages()
+        {
+            txtName.GotFocus += SetArabicInputLanguage;
+            txtAddress.GotFocus += SetArabicInputLanguage;
+            txtPhone.GotFocus += SetArabicInputLanguage;
         }
 
         #endregion
