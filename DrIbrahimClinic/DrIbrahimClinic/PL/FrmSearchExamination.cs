@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Windows.Forms;
 using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
 using DrIbrahimClinic.DAL.VMs;
@@ -41,6 +42,7 @@ namespace DrIbrahimClinic.PL
 
         private void FindExamination(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             if (intInputPatientId.Value != 0)
                 FillGrid(examination => examination.PatientId == intInputPatientId.Value);
             else
@@ -48,11 +50,14 @@ namespace DrIbrahimClinic.PL
                     examination =>
                         examination.Patient.Name.Contains(txtPatientName.Text) &&
                         (dtExaminationDate.Value != default(DateTime) && examination.Date == dtExaminationDate.Value));
+            Cursor = Cursors.Default;
         }
 
         private void btnClearSearch_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             ClearSearch();
+            Cursor = Cursors.Default;
         }
 
         #endregion

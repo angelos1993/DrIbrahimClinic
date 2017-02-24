@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
 using DrIbrahimClinic.DAL.VMs;
@@ -36,10 +37,12 @@ namespace DrIbrahimClinic.PL
 
         private void FindTreatment(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             if (radStartsWith.Checked)
                 FillGrid(treatment => treatment.Name.ToLower().StartsWith(txtTreatmentName.Text.FullTrim().ToLower()));
             else
                 FillGrid(treatment => treatment.Name.ToLower().Contains(txtTreatmentName.Text.FullTrim().ToLower()));
+            Cursor = Cursors.Default;
         }
 
         #endregion

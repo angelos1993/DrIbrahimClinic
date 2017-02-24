@@ -307,6 +307,7 @@ namespace DrIbrahimClinic.PL
 
         private void btnSaveExamination_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             double patientLengthTemp, patientWeightTemp, patientHeadCircumferenceTemp;
             Examination = new Examination
             {
@@ -333,21 +334,28 @@ namespace DrIbrahimClinic.PL
             btnPrintRoshetta.Enabled = true;
             pnlExaminationData.Enabled = true;
             pnlTreatment.Enabled = true;
+            Cursor = Cursors.Default;
         }
 
         private void btnClearExamination_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             ClearExaminationPanel();
+            Cursor = Cursors.Default;
         }
 
         private void btnPrintRoshetta_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             new FrmRoshetta(Examination).ShowDialog();
+            Cursor = Cursors.Default;
         }
 
         private void btnNewExamination_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             ClearForm();
+            Cursor = Cursors.Default;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -381,11 +389,13 @@ namespace DrIbrahimClinic.PL
         private void tabExamination_SelectedTabChanged(object sender,
             DevComponents.DotNetBar.TabStripTabChangedEventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             switch (e.NewTab.Text)
             {
                 case @"الزيارات السابقة":
                     if (Patient == null || Mode != AddExaminationFormMode.HasPatient)
                     {
+                        Cursor = Cursors.Default;
                         ShowWarningMsg(@"يجب إدخال المريض أولاً");
                         e.NewTab.AttachedControl.Enabled = false;
                         return;
@@ -430,6 +440,7 @@ namespace DrIbrahimClinic.PL
                 case @"الكشف":
                     if (Patient == null || Mode != AddExaminationFormMode.HasPatient)
                     {
+                        Cursor = Cursors.Default;
                         ShowWarningMsg(@"يجب إدخال المريض أولاً");
                         e.NewTab.AttachedControl.Enabled = false;
                         return;
@@ -439,6 +450,7 @@ namespace DrIbrahimClinic.PL
                     SetAutoCompletionForTreatmentsNames();
                     break;
             }
+            Cursor = Cursors.Default;
         }
 
         #endregion

@@ -55,7 +55,9 @@ namespace DrIbrahimClinic.PL
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             ResetForm();
+            Cursor = Cursors.Default;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
 using static DrIbrahimClinic.Utility.MessageBoxUtility;
@@ -31,9 +32,11 @@ namespace DrIbrahimClinic.PL
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             if (string.IsNullOrEmpty(txtName.Text.FullTrim()))
             {
                 txtName.BackColor = ErrorColor;
+                Cursor = Cursors.Default;
                 return;
             }
             var patient = new Patient
@@ -47,13 +50,16 @@ namespace DrIbrahimClinic.PL
                 SucklingType = switchBtnSucklingType.Value ? (byte) 1 : (byte) 2
             };
             PatientManager.AddPatient(patient);
+            Cursor = Cursors.Default;
             ShowInfoMsg($"تم إضافة المريض بنجاح\nرقم المريض هو: {patient.Id}");
             Close();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             ResetForm();
+            Cursor = Cursors.Default;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

@@ -30,6 +30,7 @@ namespace DrIbrahimClinic.PL
             if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
                 DatabaseManager.Backup(folderBrowserDialog.SelectedPath);
             ShowInfoMsg("تم نسخ قاعدة البيانات بنجاح");
+            Cursor = Cursors.Default;
             Close();
         }
 
@@ -45,6 +46,7 @@ namespace DrIbrahimClinic.PL
             if (openFileDialog.ShowDialog() == DialogResult.OK)
                 DatabaseManager.Restore(openFileDialog.FileName);
             ShowInfoMsg("تم إستعادة قاعدة البيانات بنجاح");
+            Cursor = Cursors.Default;
             Close();
         }
 

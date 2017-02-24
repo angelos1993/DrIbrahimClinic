@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
 using DrIbrahimClinic.DAL.VMs;
@@ -36,6 +37,7 @@ namespace DrIbrahimClinic.PL
 
         private void FindPatient(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             if (intInputPatientId.Value != 0)
                 FillGrid(patient => patient.Id == intInputPatientId.Value);
             else
@@ -43,11 +45,14 @@ namespace DrIbrahimClinic.PL
                     patient =>
                         patient.Name.Contains(txtPatientName.Text.FullTrim()) &&
                         patient.Phone.Contains(txtPatientPhone.Text.FullTrim()));
+            Cursor = Cursors.Default;
         }
 
         private void btnClearSearch_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             ClearSearch();
+            Cursor = Cursors.Default;
         }
 
         #endregion

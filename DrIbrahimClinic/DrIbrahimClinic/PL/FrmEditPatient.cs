@@ -41,9 +41,11 @@ namespace DrIbrahimClinic.PL
 
         private void btnFindPatient_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             if (intInputId.Value == 0 && string.IsNullOrEmpty(txtName.Text))
             {
                 ShowInfoMsg("يجب إدخال رقم المريض او اسم المريض");
+                Cursor = Cursors.Default;
                 return;
             }
             Patient = intInputId.Value != 0
@@ -53,6 +55,7 @@ namespace DrIbrahimClinic.PL
                 ShowPatient(Patient);
             else
                 ShowErrorMsg("لا يوجد مريض بهذا الرقم او الاسم");
+            Cursor = Cursors.Default;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -72,7 +75,9 @@ namespace DrIbrahimClinic.PL
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             ResetForm();
+            Cursor = Cursors.Default;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

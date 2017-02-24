@@ -87,7 +87,9 @@ namespace DrIbrahimClinic.PL
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             ResetForm();
+            Cursor = Cursors.Default;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -99,6 +101,7 @@ namespace DrIbrahimClinic.PL
         {
             if (ShowConfirmationDialog("هل أنت متأكد من أنك تريد حذف التطعيم المحدد؟") != DialogResult.Yes)
                 return;
+            Cursor = Cursors.WaitCursor;
             var inoculation =
                 InoculationManager.GetInoculationByNameAndPatientId(
                     dgvPatientInoculations.SelectedRows[0].Cells[0].Value.ToString(), Patient.Id);
@@ -107,6 +110,7 @@ namespace DrIbrahimClinic.PL
             Patient.Inoculations.Remove(inoculation);
             InoculationManager.DeleteInoculation(inoculation);
             FillGrid();
+            Cursor = Cursors.Default;
         }
 
         #endregion
