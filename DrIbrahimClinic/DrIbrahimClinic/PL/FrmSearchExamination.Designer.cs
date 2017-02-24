@@ -106,7 +106,7 @@
             this.intInputPatientId.Name = "intInputPatientId";
             this.intInputPatientId.ShowUpDown = true;
             this.intInputPatientId.Size = new System.Drawing.Size(238, 26);
-            this.intInputPatientId.TabIndex = 23;
+            this.intInputPatientId.TabIndex = 0;
             this.intInputPatientId.ValueChanged += new System.EventHandler(this.FindExamination);
             // 
             // btnClearSearch
@@ -119,7 +119,7 @@
             this.btnClearSearch.Name = "btnClearSearch";
             this.btnClearSearch.Size = new System.Drawing.Size(192, 26);
             this.btnClearSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClearSearch.TabIndex = 19;
+            this.btnClearSearch.TabIndex = 3;
             this.btnClearSearch.Text = "إلغاء البحث";
             this.btnClearSearch.Click += new System.EventHandler(this.btnClearSearch_Click);
             // 
@@ -171,7 +171,7 @@
             this.dtExaminationDate.Name = "dtExaminationDate";
             this.dtExaminationDate.Size = new System.Drawing.Size(123, 26);
             this.dtExaminationDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dtExaminationDate.TabIndex = 18;
+            this.dtExaminationDate.TabIndex = 2;
             this.dtExaminationDate.ValueChanged += new System.EventHandler(this.FindExamination);
             // 
             // labelX2
@@ -232,7 +232,7 @@
             this.txtPatientName.Location = new System.Drawing.Point(436, 46);
             this.txtPatientName.Name = "txtPatientName";
             this.txtPatientName.Size = new System.Drawing.Size(238, 26);
-            this.txtPatientName.TabIndex = 17;
+            this.txtPatientName.TabIndex = 1;
             this.txtPatientName.TextChanged += new System.EventHandler(this.FindExamination);
             // 
             // dgvExaminations
@@ -255,7 +255,7 @@
             this.dgvExaminations.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvExaminations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvExaminations.Size = new System.Drawing.Size(781, 436);
-            this.dgvExaminations.TabIndex = 3;
+            this.dgvExaminations.TabIndex = 4;
             // 
             // FrmSearchExamination
             // 

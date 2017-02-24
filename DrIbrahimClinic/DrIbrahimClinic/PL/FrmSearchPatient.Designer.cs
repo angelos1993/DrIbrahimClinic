@@ -118,7 +118,7 @@
             this.btnClearSearch.Name = "btnClearSearch";
             this.btnClearSearch.Size = new System.Drawing.Size(259, 26);
             this.btnClearSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClearSearch.TabIndex = 4;
+            this.btnClearSearch.TabIndex = 3;
             this.btnClearSearch.Text = "إلغاء البحث";
             this.btnClearSearch.Click += new System.EventHandler(this.btnClearSearch_Click);
             // 
@@ -132,7 +132,7 @@
             this.txtPatientPhone.Location = new System.Drawing.Point(175, 7);
             this.txtPatientPhone.Name = "txtPatientPhone";
             this.txtPatientPhone.Size = new System.Drawing.Size(191, 26);
-            this.txtPatientPhone.TabIndex = 3;
+            this.txtPatientPhone.TabIndex = 2;
             this.txtPatientPhone.TextChanged += new System.EventHandler(this.FindPatient);
             // 
             // labelX5
@@ -216,7 +216,7 @@
             this.dgvPatients.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPatients.Size = new System.Drawing.Size(785, 449);
-            this.dgvPatients.TabIndex = 5;
+            this.dgvPatients.TabIndex = 4;
             // 
             // FrmSearchPatient
             // 

@@ -60,7 +60,7 @@
             this.txtTreatmentName.Location = new System.Drawing.Point(11, 13);
             this.txtTreatmentName.Name = "txtTreatmentName";
             this.txtTreatmentName.Size = new System.Drawing.Size(288, 26);
-            this.txtTreatmentName.TabIndex = 1;
+            this.txtTreatmentName.TabIndex = 0;
             // 
             // btnSaveAndNew
             // 
@@ -72,7 +72,7 @@
             this.btnSaveAndNew.Name = "btnSaveAndNew";
             this.btnSaveAndNew.Size = new System.Drawing.Size(160, 37);
             this.btnSaveAndNew.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSaveAndNew.TabIndex = 2;
+            this.btnSaveAndNew.TabIndex = 1;
             this.btnSaveAndNew.Text = "حفظ وإضافة آخر";
             this.btnSaveAndNew.Click += new System.EventHandler(this.btnSaveAndNew_Click);
             // 
@@ -86,7 +86,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(93, 37);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnCancel.TabIndex = 4;
+            this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "خروج";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -100,7 +100,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(93, 37);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSave.TabIndex = 3;
+            this.btnSave.TabIndex = 2;
             this.btnSave.Text = "حفظ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 

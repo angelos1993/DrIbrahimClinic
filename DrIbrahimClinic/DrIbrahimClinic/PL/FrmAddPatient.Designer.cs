@@ -256,7 +256,7 @@
             this.labelX8.BackgroundStyle.Class = "";
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX8.Location = new System.Drawing.Point(325, 269);
-            this.labelX8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX8.Margin = new System.Windows.Forms.Padding(4);
             this.labelX8.Name = "labelX8";
             this.labelX8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX8.Size = new System.Drawing.Size(85, 36);
@@ -272,7 +272,7 @@
             this.labelX7.BackgroundStyle.Class = "";
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX7.Location = new System.Drawing.Point(325, 225);
-            this.labelX7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX7.Margin = new System.Windows.Forms.Padding(4);
             this.labelX7.Name = "labelX7";
             this.labelX7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX7.Size = new System.Drawing.Size(85, 36);
@@ -288,7 +288,7 @@
             this.labelX5.BackgroundStyle.Class = "";
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX5.Location = new System.Drawing.Point(325, 137);
-            this.labelX5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX5.Margin = new System.Windows.Forms.Padding(4);
             this.labelX5.Name = "labelX5";
             this.labelX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX5.Size = new System.Drawing.Size(85, 36);
@@ -304,7 +304,7 @@
             this.labelX4.BackgroundStyle.Class = "";
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX4.Location = new System.Drawing.Point(325, 181);
-            this.labelX4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX4.Margin = new System.Windows.Forms.Padding(4);
             this.labelX4.Name = "labelX4";
             this.labelX4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX4.Size = new System.Drawing.Size(85, 36);
@@ -320,7 +320,7 @@
             this.labelX3.BackgroundStyle.Class = "";
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.Location = new System.Drawing.Point(325, 93);
-            this.labelX3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX3.Margin = new System.Windows.Forms.Padding(4);
             this.labelX3.Name = "labelX3";
             this.labelX3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX3.Size = new System.Drawing.Size(85, 36);
@@ -336,7 +336,7 @@
             this.labelX2.BackgroundStyle.Class = "";
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX2.Location = new System.Drawing.Point(325, 48);
-            this.labelX2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX2.Margin = new System.Windows.Forms.Padding(4);
             this.labelX2.Name = "labelX2";
             this.labelX2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX2.Size = new System.Drawing.Size(85, 36);
@@ -352,7 +352,7 @@
             this.labelX1.BackgroundStyle.Class = "";
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Location = new System.Drawing.Point(325, 4);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(4);
             this.labelX1.Name = "labelX1";
             this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX1.Size = new System.Drawing.Size(85, 36);
@@ -369,7 +369,7 @@
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(93, 37);
             this.btnClear.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClear.TabIndex = 8;
+            this.btnClear.TabIndex = 2;
             this.btnClear.Text = "مسح";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
@@ -383,7 +383,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(93, 37);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnCancel.TabIndex = 9;
+            this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "خروج";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -397,7 +397,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(93, 37);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSave.TabIndex = 7;
+            this.btnSave.TabIndex = 1;
             this.btnSave.Text = "حفظ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 

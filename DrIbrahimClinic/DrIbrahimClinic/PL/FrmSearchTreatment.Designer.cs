@@ -80,7 +80,7 @@
             // 
             this.pnlSearchTreatments.StyleMouseOver.Class = "";
             this.pnlSearchTreatments.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.pnlSearchTreatments.TabIndex = 6;
+            this.pnlSearchTreatments.TabIndex = 0;
             this.pnlSearchTreatments.Text = "بحث عن علاج";
             // 
             // radStartsWith

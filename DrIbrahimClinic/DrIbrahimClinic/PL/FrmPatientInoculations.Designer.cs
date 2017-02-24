@@ -92,7 +92,7 @@
             // 
             this.grpPanelPatientData.StyleMouseOver.Class = "";
             this.grpPanelPatientData.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.grpPanelPatientData.TabIndex = 11;
+            this.grpPanelPatientData.TabIndex = 0;
             this.grpPanelPatientData.Text = "بيانات المريض";
             // 
             // intInputPatientId
@@ -108,7 +108,7 @@
             this.intInputPatientId.Name = "intInputPatientId";
             this.intInputPatientId.ShowUpDown = true;
             this.intInputPatientId.Size = new System.Drawing.Size(234, 26);
-            this.intInputPatientId.TabIndex = 12;
+            this.intInputPatientId.TabIndex = 0;
             // 
             // btnFindPatient
             // 
@@ -121,7 +121,7 @@
             this.btnFindPatient.Name = "btnFindPatient";
             this.btnFindPatient.Size = new System.Drawing.Size(72, 72);
             this.btnFindPatient.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnFindPatient.TabIndex = 2;
+            this.btnFindPatient.TabIndex = 1;
             this.btnFindPatient.Text = "بحث";
             this.btnFindPatient.Click += new System.EventHandler(this.btnFindPatient_Click);
             // 
@@ -288,7 +288,7 @@
             // 
             this.grpPanelPatientInoculations.StyleMouseOver.Class = "";
             this.grpPanelPatientInoculations.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.grpPanelPatientInoculations.TabIndex = 16;
+            this.grpPanelPatientInoculations.TabIndex = 1;
             this.grpPanelPatientInoculations.Text = "التطعيمات";
             // 
             // dgvPatientInoculations
@@ -324,7 +324,7 @@
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(93, 37);
             this.btnClear.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClear.TabIndex = 0;
+            this.btnClear.TabIndex = 2;
             this.btnClear.Text = "مسح";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
@@ -338,7 +338,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(93, 37);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnCancel.TabIndex = 1;
+            this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "خروج";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 

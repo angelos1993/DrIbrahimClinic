@@ -64,7 +64,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(93, 37);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSave.TabIndex = 0;
+            this.btnSave.TabIndex = 1;
             this.btnSave.Text = "حفظ";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -78,7 +78,7 @@
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(93, 37);
             this.btnClear.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClear.TabIndex = 1;
+            this.btnClear.TabIndex = 2;
             this.btnClear.Text = "مسح";
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
@@ -92,7 +92,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(93, 37);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnCancel.TabIndex = 2;
+            this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "خروج";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -151,7 +151,7 @@
             // 
             this.grpPanelPatient.StyleMouseOver.Class = "";
             this.grpPanelPatient.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.grpPanelPatient.TabIndex = 10;
+            this.grpPanelPatient.TabIndex = 0;
             this.grpPanelPatient.Text = "بيانات المريض";
             // 
             // intInputId
@@ -167,7 +167,7 @@
             this.intInputId.Name = "intInputId";
             this.intInputId.ShowUpDown = true;
             this.intInputId.Size = new System.Drawing.Size(237, 26);
-            this.intInputId.TabIndex = 16;
+            this.intInputId.TabIndex = 0;
             // 
             // btnFindPatient
             // 
@@ -180,7 +180,7 @@
             this.btnFindPatient.Name = "btnFindPatient";
             this.btnFindPatient.Size = new System.Drawing.Size(72, 72);
             this.btnFindPatient.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnFindPatient.TabIndex = 15;
+            this.btnFindPatient.TabIndex = 2;
             this.btnFindPatient.Text = "بحث";
             this.btnFindPatient.Click += new System.EventHandler(this.btnFindPatient_Click);
             // 
@@ -215,7 +215,7 @@
             this.switchBtnBirthType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.switchBtnBirthType.Size = new System.Drawing.Size(79, 23);
             this.switchBtnBirthType.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.switchBtnBirthType.TabIndex = 6;
+            this.switchBtnBirthType.TabIndex = 7;
             this.switchBtnBirthType.Value = true;
             // 
             // switchBtnSucklingType
@@ -233,7 +233,7 @@
             this.switchBtnSucklingType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.switchBtnSucklingType.Size = new System.Drawing.Size(79, 23);
             this.switchBtnSucklingType.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.switchBtnSucklingType.TabIndex = 7;
+            this.switchBtnSucklingType.TabIndex = 8;
             this.switchBtnSucklingType.Value = true;
             // 
             // switchBtnGender
@@ -251,7 +251,7 @@
             this.switchBtnGender.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.switchBtnGender.Size = new System.Drawing.Size(79, 23);
             this.switchBtnGender.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.switchBtnGender.TabIndex = 3;
+            this.switchBtnGender.TabIndex = 4;
             this.switchBtnGender.Value = true;
             // 
             // dtBirthdate
@@ -302,7 +302,7 @@
             this.dtBirthdate.Name = "dtBirthdate";
             this.dtBirthdate.Size = new System.Drawing.Size(180, 26);
             this.dtBirthdate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dtBirthdate.TabIndex = 2;
+            this.dtBirthdate.TabIndex = 3;
             // 
             // txtAddress
             // 
@@ -315,7 +315,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtAddress.Size = new System.Drawing.Size(287, 26);
-            this.txtAddress.TabIndex = 5;
+            this.txtAddress.TabIndex = 6;
             // 
             // txtPhone
             // 
@@ -327,7 +327,7 @@
             this.txtPhone.Location = new System.Drawing.Point(31, 188);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(287, 26);
-            this.txtPhone.TabIndex = 4;
+            this.txtPhone.TabIndex = 5;
             // 
             // txtName
             // 

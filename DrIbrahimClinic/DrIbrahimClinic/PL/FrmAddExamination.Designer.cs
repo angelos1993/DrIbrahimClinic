@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabExamination = new DevComponents.DotNetBar.TabControl();
             this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
@@ -122,8 +122,8 @@
             // 
             this.tabExamination.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.tabExamination.CanReorderTabs = true;
-            this.tabExamination.Controls.Add(this.tabControlPanel1);
             this.tabExamination.Controls.Add(this.tabControlPanel3);
+            this.tabExamination.Controls.Add(this.tabControlPanel1);
             this.tabExamination.Controls.Add(this.tabControlPanel2);
             this.tabExamination.Location = new System.Drawing.Point(11, 13);
             this.tabExamination.Name = "tabExamination";
@@ -194,7 +194,7 @@
             this.radE3ada.Location = new System.Drawing.Point(102, 12);
             this.radE3ada.Name = "radE3ada";
             this.radE3ada.Size = new System.Drawing.Size(53, 24);
-            this.radE3ada.TabIndex = 60;
+            this.radE3ada.TabIndex = 1;
             this.radE3ada.Text = "إعادة";
             this.radE3ada.UseVisualStyleBackColor = false;
             // 
@@ -206,7 +206,7 @@
             this.radK4f.Location = new System.Drawing.Point(178, 12);
             this.radK4f.Name = "radK4f";
             this.radK4f.Size = new System.Drawing.Size(55, 24);
-            this.radK4f.TabIndex = 59;
+            this.radK4f.TabIndex = 0;
             this.radK4f.TabStop = true;
             this.radK4f.Text = "كشف";
             this.radK4f.UseVisualStyleBackColor = false;
@@ -231,14 +231,14 @@
             // 
             this.dgvDiagnosis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDiagnosis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDiagnosis.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDiagnosis.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDiagnosis.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvDiagnosis.Location = new System.Drawing.Point(4, 157);
             this.dgvDiagnosis.Name = "dgvDiagnosis";
@@ -246,7 +246,7 @@
             this.dgvDiagnosis.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvDiagnosis.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDiagnosis.Size = new System.Drawing.Size(393, 250);
-            this.dgvDiagnosis.TabIndex = 57;
+            this.dgvDiagnosis.TabIndex = 7;
             this.dgvDiagnosis.DoubleClick += new System.EventHandler(this.dgvDiagnosis_DoubleClick);
             // 
             // txtPatientHeadCircumference
@@ -260,7 +260,7 @@
             this.txtPatientHeadCircumference.Name = "txtPatientHeadCircumference";
             this.txtPatientHeadCircumference.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPatientHeadCircumference.Size = new System.Drawing.Size(45, 26);
-            this.txtPatientHeadCircumference.TabIndex = 56;
+            this.txtPatientHeadCircumference.TabIndex = 4;
             // 
             // txtPatientWeight
             // 
@@ -273,7 +273,7 @@
             this.txtPatientWeight.Name = "txtPatientWeight";
             this.txtPatientWeight.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPatientWeight.Size = new System.Drawing.Size(45, 26);
-            this.txtPatientWeight.TabIndex = 55;
+            this.txtPatientWeight.TabIndex = 3;
             // 
             // txtPatientLength
             // 
@@ -286,7 +286,7 @@
             this.txtPatientLength.Name = "txtPatientLength";
             this.txtPatientLength.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPatientLength.Size = new System.Drawing.Size(49, 26);
-            this.txtPatientLength.TabIndex = 54;
+            this.txtPatientLength.TabIndex = 2;
             // 
             // labelX13
             // 
@@ -347,7 +347,7 @@
             this.txtComplaint.Name = "txtComplaint";
             this.txtComplaint.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtComplaint.Size = new System.Drawing.Size(292, 26);
-            this.txtComplaint.TabIndex = 49;
+            this.txtComplaint.TabIndex = 5;
             // 
             // txtDiagnosis
             // 
@@ -360,7 +360,7 @@
             this.txtDiagnosis.Name = "txtDiagnosis";
             this.txtDiagnosis.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtDiagnosis.Size = new System.Drawing.Size(263, 26);
-            this.txtDiagnosis.TabIndex = 48;
+            this.txtDiagnosis.TabIndex = 6;
             // 
             // labelX10
             // 
@@ -418,7 +418,7 @@
             this.btnNewExamination.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnNewExamination.Size = new System.Drawing.Size(150, 37);
             this.btnNewExamination.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnNewExamination.TabIndex = 46;
+            this.btnNewExamination.TabIndex = 3;
             this.btnNewExamination.Text = "كشف جديد";
             this.btnNewExamination.Click += new System.EventHandler(this.btnNewExamination_Click);
             // 
@@ -478,7 +478,7 @@
             this.btnAddTreatment.Name = "btnAddTreatment";
             this.btnAddTreatment.Size = new System.Drawing.Size(23, 27);
             this.btnAddTreatment.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddTreatment.TabIndex = 16;
+            this.btnAddTreatment.TabIndex = 2;
             this.btnAddTreatment.Click += new System.EventHandler(this.btnAddTreatment_Click);
             // 
             // txtTreatmentName
@@ -492,7 +492,7 @@
             this.txtTreatmentName.Name = "txtTreatmentName";
             this.txtTreatmentName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTreatmentName.Size = new System.Drawing.Size(187, 26);
-            this.txtTreatmentName.TabIndex = 13;
+            this.txtTreatmentName.TabIndex = 0;
             // 
             // txtTreatmentDescription
             // 
@@ -505,20 +505,20 @@
             this.txtTreatmentDescription.Name = "txtTreatmentDescription";
             this.txtTreatmentDescription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTreatmentDescription.Size = new System.Drawing.Size(187, 26);
-            this.txtTreatmentDescription.TabIndex = 12;
+            this.txtTreatmentDescription.TabIndex = 1;
             // 
             // dgvTreatments
             // 
             this.dgvTreatments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTreatments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTreatments.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTreatments.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTreatments.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvTreatments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvTreatments.Location = new System.Drawing.Point(0, 44);
@@ -526,7 +526,7 @@
             this.dgvTreatments.ReadOnly = true;
             this.dgvTreatments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTreatments.Size = new System.Drawing.Size(412, 341);
-            this.dgvTreatments.TabIndex = 0;
+            this.dgvTreatments.TabIndex = 3;
             this.dgvTreatments.DoubleClick += new System.EventHandler(this.dgvTreatments_DoubleClick);
             // 
             // btnPrintRoshetta
@@ -540,7 +540,7 @@
             this.btnPrintRoshetta.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnPrintRoshetta.Size = new System.Drawing.Size(150, 37);
             this.btnPrintRoshetta.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnPrintRoshetta.TabIndex = 40;
+            this.btnPrintRoshetta.TabIndex = 2;
             this.btnPrintRoshetta.Text = "طباعة الروشتة";
             this.btnPrintRoshetta.Click += new System.EventHandler(this.btnPrintRoshetta_Click);
             // 
@@ -555,7 +555,7 @@
             this.btnClearExamination.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnClearExamination.Size = new System.Drawing.Size(150, 37);
             this.btnClearExamination.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClearExamination.TabIndex = 38;
+            this.btnClearExamination.TabIndex = 1;
             this.btnClearExamination.Text = "مسح بيانات الكشف";
             this.btnClearExamination.Click += new System.EventHandler(this.btnClearExamination_Click);
             // 
@@ -570,7 +570,7 @@
             this.btnCancel.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnCancel.Size = new System.Drawing.Size(150, 37);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnCancel.TabIndex = 39;
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "خروج";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -585,7 +585,7 @@
             this.btnSaveExamination.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnSaveExamination.Size = new System.Drawing.Size(150, 37);
             this.btnSaveExamination.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSaveExamination.TabIndex = 37;
+            this.btnSaveExamination.TabIndex = 0;
             this.btnSaveExamination.Text = "حفظ الكشف";
             this.btnSaveExamination.Click += new System.EventHandler(this.btnSaveExamination_Click);
             // 
@@ -674,7 +674,7 @@
             // 
             this.pnlPatientData.StyleMouseOver.Class = "";
             this.pnlPatientData.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.pnlPatientData.TabIndex = 2;
+            this.pnlPatientData.TabIndex = 0;
             this.pnlPatientData.Text = "بيانات المريض";
             // 
             // grpPanelInoculations
@@ -733,7 +733,7 @@
             this.txtInoculation.Name = "txtInoculation";
             this.txtInoculation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtInoculation.Size = new System.Drawing.Size(212, 26);
-            this.txtInoculation.TabIndex = 25;
+            this.txtInoculation.TabIndex = 0;
             // 
             // dtInoculationDate
             // 
@@ -783,7 +783,7 @@
             this.dtInoculationDate.Name = "dtInoculationDate";
             this.dtInoculationDate.Size = new System.Drawing.Size(124, 26);
             this.dtInoculationDate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dtInoculationDate.TabIndex = 23;
+            this.dtInoculationDate.TabIndex = 1;
             // 
             // btnAddInoculation
             // 
@@ -795,21 +795,21 @@
             this.btnAddInoculation.Name = "btnAddInoculation";
             this.btnAddInoculation.Size = new System.Drawing.Size(23, 27);
             this.btnAddInoculation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddInoculation.TabIndex = 24;
+            this.btnAddInoculation.TabIndex = 2;
             this.btnAddInoculation.Click += new System.EventHandler(this.btnAddInoculation_Click);
             // 
             // dgvInoculations
             // 
             this.dgvInoculations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInoculations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInoculations.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInoculations.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvInoculations.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvInoculations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvInoculations.Location = new System.Drawing.Point(0, 34);
@@ -862,7 +862,7 @@
             // 
             this.grpPanelMedicalHistory.StyleMouseOver.Class = "";
             this.grpPanelMedicalHistory.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.grpPanelMedicalHistory.TabIndex = 19;
+            this.grpPanelMedicalHistory.TabIndex = 13;
             this.grpPanelMedicalHistory.Text = "Medical History";
             // 
             // btnAddMedicalHistory
@@ -875,7 +875,7 @@
             this.btnAddMedicalHistory.Name = "btnAddMedicalHistory";
             this.btnAddMedicalHistory.Size = new System.Drawing.Size(23, 27);
             this.btnAddMedicalHistory.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddMedicalHistory.TabIndex = 23;
+            this.btnAddMedicalHistory.TabIndex = 1;
             this.btnAddMedicalHistory.Click += new System.EventHandler(this.btnAddMedicalHistory_Click);
             // 
             // txtMedicalHistory
@@ -889,20 +889,20 @@
             this.txtMedicalHistory.Name = "txtMedicalHistory";
             this.txtMedicalHistory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtMedicalHistory.Size = new System.Drawing.Size(342, 26);
-            this.txtMedicalHistory.TabIndex = 22;
+            this.txtMedicalHistory.TabIndex = 0;
             // 
             // dgvMedicalHistory
             // 
             this.dgvMedicalHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMedicalHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMedicalHistory.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMedicalHistory.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvMedicalHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvMedicalHistory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvMedicalHistory.Location = new System.Drawing.Point(0, 36);
@@ -911,7 +911,7 @@
             this.dgvMedicalHistory.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvMedicalHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMedicalHistory.Size = new System.Drawing.Size(379, 161);
-            this.dgvMedicalHistory.TabIndex = 21;
+            this.dgvMedicalHistory.TabIndex = 2;
             this.dgvMedicalHistory.DoubleClick += new System.EventHandler(this.dgvMedicalHistory_DoubleClick);
             // 
             // intInputPatientId
@@ -927,7 +927,7 @@
             this.intInputPatientId.Name = "intInputPatientId";
             this.intInputPatientId.ShowUpDown = true;
             this.intInputPatientId.Size = new System.Drawing.Size(237, 26);
-            this.intInputPatientId.TabIndex = 18;
+            this.intInputPatientId.TabIndex = 0;
             // 
             // labelX6
             // 
@@ -960,7 +960,7 @@
             this.switchBtnPatientBirthType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.switchBtnPatientBirthType.Size = new System.Drawing.Size(79, 23);
             this.switchBtnPatientBirthType.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.switchBtnPatientBirthType.TabIndex = 5;
+            this.switchBtnPatientBirthType.TabIndex = 7;
             this.switchBtnPatientBirthType.Value = true;
             // 
             // switchBtnPatientSucklingType
@@ -978,7 +978,7 @@
             this.switchBtnPatientSucklingType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.switchBtnPatientSucklingType.Size = new System.Drawing.Size(79, 23);
             this.switchBtnPatientSucklingType.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.switchBtnPatientSucklingType.TabIndex = 6;
+            this.switchBtnPatientSucklingType.TabIndex = 8;
             this.switchBtnPatientSucklingType.Value = true;
             // 
             // switchBtnPatientGender
@@ -996,7 +996,7 @@
             this.switchBtnPatientGender.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.switchBtnPatientGender.Size = new System.Drawing.Size(79, 23);
             this.switchBtnPatientGender.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.switchBtnPatientGender.TabIndex = 2;
+            this.switchBtnPatientGender.TabIndex = 4;
             this.switchBtnPatientGender.Value = true;
             // 
             // dtPatientBirthdate
@@ -1047,7 +1047,7 @@
             this.dtPatientBirthdate.Name = "dtPatientBirthdate";
             this.dtPatientBirthdate.Size = new System.Drawing.Size(180, 26);
             this.dtPatientBirthdate.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dtPatientBirthdate.TabIndex = 1;
+            this.dtPatientBirthdate.TabIndex = 3;
             // 
             // txtPatientAddress
             // 
@@ -1060,7 +1060,7 @@
             this.txtPatientAddress.Name = "txtPatientAddress";
             this.txtPatientAddress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPatientAddress.Size = new System.Drawing.Size(238, 26);
-            this.txtPatientAddress.TabIndex = 4;
+            this.txtPatientAddress.TabIndex = 6;
             // 
             // txtPatientPhone
             // 
@@ -1072,7 +1072,7 @@
             this.txtPatientPhone.Location = new System.Drawing.Point(484, 195);
             this.txtPatientPhone.Name = "txtPatientPhone";
             this.txtPatientPhone.Size = new System.Drawing.Size(238, 26);
-            this.txtPatientPhone.TabIndex = 3;
+            this.txtPatientPhone.TabIndex = 5;
             // 
             // txtPatientName
             // 
@@ -1085,7 +1085,7 @@
             this.txtPatientName.Name = "txtPatientName";
             this.txtPatientName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPatientName.Size = new System.Drawing.Size(238, 26);
-            this.txtPatientName.TabIndex = 0;
+            this.txtPatientName.TabIndex = 1;
             // 
             // labelX8
             // 
@@ -1210,7 +1210,7 @@
             this.btnClearPatientData.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnClearPatientData.Size = new System.Drawing.Size(110, 37);
             this.btnClearPatientData.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnClearPatientData.TabIndex = 15;
+            this.btnClearPatientData.TabIndex = 11;
             this.btnClearPatientData.Text = "مسح";
             this.btnClearPatientData.Click += new System.EventHandler(this.btnClearPatientData_Click);
             // 
@@ -1225,7 +1225,7 @@
             this.btnEditPatientData.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnEditPatientData.Size = new System.Drawing.Size(110, 37);
             this.btnEditPatientData.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnEditPatientData.TabIndex = 16;
+            this.btnEditPatientData.TabIndex = 10;
             this.btnEditPatientData.Text = "تعديل";
             this.btnEditPatientData.Click += new System.EventHandler(this.btnEditPatientData_Click);
             // 
@@ -1240,7 +1240,7 @@
             this.btnAddNewPatient.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnAddNewPatient.Size = new System.Drawing.Size(110, 37);
             this.btnAddNewPatient.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddNewPatient.TabIndex = 14;
+            this.btnAddNewPatient.TabIndex = 9;
             this.btnAddNewPatient.Text = "جديد";
             this.btnAddNewPatient.Click += new System.EventHandler(this.btnAddNewPatient_Click);
             // 
@@ -1255,7 +1255,7 @@
             this.btnFindPatient.Name = "btnFindPatient";
             this.btnFindPatient.Size = new System.Drawing.Size(72, 70);
             this.btnFindPatient.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnFindPatient.TabIndex = 14;
+            this.btnFindPatient.TabIndex = 2;
             this.btnFindPatient.Text = "بحث";
             this.btnFindPatient.Click += new System.EventHandler(this.btnFindPatient_Click);
             // 

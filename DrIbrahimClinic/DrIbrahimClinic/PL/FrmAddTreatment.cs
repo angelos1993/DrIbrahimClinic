@@ -5,7 +5,6 @@ using DrIbrahimClinic.DAL.Model;
 using DrIbrahimClinic.Utility;
 using static DrIbrahimClinic.Utility.Constants;
 using static DrIbrahimClinic.Utility.InputLanguageUtility;
-using static DrIbrahimClinic.Utility.PlaceholderUtility;
 
 namespace DrIbrahimClinic.PL
 {
@@ -82,7 +81,7 @@ namespace DrIbrahimClinic.PL
 
         private void SetTextBoxesPlaceholders()
         {
-            txtTreatmentName.SetPlaceholderText("Enter treatment name here ...");
+            //txtTreatmentName.SetPlaceholderText("Enter treatment name here ...");
         }
 
         #endregion
