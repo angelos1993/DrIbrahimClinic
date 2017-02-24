@@ -309,7 +309,6 @@
             this.dgvPatientInoculations.MultiSelect = false;
             this.dgvPatientInoculations.Name = "dgvPatientInoculations";
             this.dgvPatientInoculations.ReadOnly = true;
-            this.dgvPatientInoculations.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvPatientInoculations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPatientInoculations.Size = new System.Drawing.Size(413, 240);
             this.dgvPatientInoculations.TabIndex = 3;

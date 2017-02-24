@@ -237,6 +237,7 @@
             // 
             // dgvExaminations
             // 
+            this.dgvExaminations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvExaminations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
@@ -250,6 +251,9 @@
             this.dgvExaminations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvExaminations.Location = new System.Drawing.Point(0, 85);
             this.dgvExaminations.Name = "dgvExaminations";
+            this.dgvExaminations.ReadOnly = true;
+            this.dgvExaminations.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dgvExaminations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvExaminations.Size = new System.Drawing.Size(781, 436);
             this.dgvExaminations.TabIndex = 3;
             // 
