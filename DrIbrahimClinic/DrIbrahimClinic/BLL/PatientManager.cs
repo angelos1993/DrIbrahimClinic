@@ -57,6 +57,11 @@ namespace DrIbrahimClinic.BLL
             return GetAllPatients().Where(where);
         }
 
+        public string GetPatientNameByPatientId(int patientId)
+        {
+            return GetAllPatients().FirstOrDefault(patient => patient.Id == patientId)?.Name ?? string.Empty;
+        }
+
         #endregion
     }
 }

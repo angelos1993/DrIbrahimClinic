@@ -318,10 +318,10 @@ namespace DrIbrahimClinic.PL
                 PatientLength = double.TryParse(txtPatientLength.Text, out patientLengthTemp)
                     ? patientLengthTemp
                     : -1,
-                PatientWeight = double.TryParse(txtPatientLength.Text, out patientWeightTemp)
+                PatientWeight = double.TryParse(txtPatientWeight.Text, out patientWeightTemp)
                     ? patientWeightTemp
                     : -1,
-                PatientHeadCircumference = double.TryParse(txtPatientLength.Text, out patientHeadCircumferenceTemp)
+                PatientHeadCircumference = double.TryParse(txtPatientHeadCircumference.Text, out patientHeadCircumferenceTemp)
                     ? patientHeadCircumferenceTemp
                     : -1
             };

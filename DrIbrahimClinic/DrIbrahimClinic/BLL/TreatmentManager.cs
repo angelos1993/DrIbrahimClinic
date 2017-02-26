@@ -71,6 +71,11 @@ namespace DrIbrahimClinic.BLL
             return GetAllTreatments().FirstOrDefault(treatment => treatment.Name == treatmentName)?.Id ?? -1;
         }
 
+        public string GetTreatmentNameByTreatmentId(int treatmentId)
+        {
+            return GetAllTreatments().FirstOrDefault(treatment => treatment.Id == treatmentId)?.Name ?? string.Empty;
+        }
+
         #endregion
     }
 }

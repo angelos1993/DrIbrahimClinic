@@ -133,7 +133,6 @@
     <Compile Include="DAL\VMs\MedicalHistoryVm.cs" />
     <Compile Include="DAL\VMs\PatientVm.cs" />
     <Compile Include="DAL\VMs\RoshettaTreatmentVm.cs" />
-    <Compile Include="DAL\VMs\RoshettaVm.cs" />
     <Compile Include="DAL\VMs\TreatmentVm.cs" />
     <Compile Include="PL\FrmAddExamination.cs">
       <SubType>Form</SubType>
@@ -282,6 +281,7 @@
     </None>
     <None Include="DB\DrIbrahimClinic.bak" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DrIbrahimClinic.DAL.VMs.RoshettaTreatmentVm.datasource" />
     <None Include="Properties\DataSources\DrIbrahimClinic.DAL.VMs.RoshettaVm.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

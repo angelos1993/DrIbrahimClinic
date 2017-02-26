@@ -1,12 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
 using DrIbrahimClinic.DAL.VMs;
-using DrIbrahimClinic.Utility;
 using Microsoft.Reporting.WinForms;
-using static System.Math;
 
 namespace DrIbrahimClinic.PL
 {
@@ -15,39 +13,45 @@ namespace DrIbrahimClinic.PL
         public FrmRoshetta(Examination examination)
         {
             InitializeComponent();
-            RoshettaVm = new RoshettaVm
-            {
-                PatientId = examination.PatientId.ToString(),
-                PatientName = examination.Patient.Name,
-                PatientWeight =
-                    Abs(examination.PatientWeight - (-1)) > 0
-                        ? examination.PatientWeight.ToString(CultureInfo.CurrentCulture)
-                        : string.Empty,
-                ExaminationDate = examination.Date.ToShortDateString(),
-                PatientAge = examination.Patient.Birthdate.ToAgeFromBirthdate(),
-                RoshettaTreatments =
-                    examination.ExaminationTreatments.Select(examinationTreatment => new RoshettaTreatmentVm
-                    {
-                        R = "R",
-                        TreatmentName = TreatmentManager.GetTreatmentById(examinationTreatment.TreatmentId).Name,
-                        TreatmentDescription = examinationTreatment.Description
-                    }).ToList()
-            };
+            Examination = examination;
+            RoshettaTreatmentVm = new List<RoshettaTreatmentVm>();
         }
 
         #region Properties
 
-        public RoshettaVm RoshettaVm { get; set; }
-
+        private Examination Examination { get; }
+        private List<RoshettaTreatmentVm> RoshettaTreatmentVm { get; }
         private TreatmentManager _treatmentManager;
         private TreatmentManager TreatmentManager => _treatmentManager ?? (_treatmentManager = new TreatmentManager());
-
+        private PatientManager _patientManager;
+        private PatientManager PatientManager => _patientManager ?? (_patientManager = new PatientManager());
         #endregion
+
+        #region Events
 
         private void FrmRo4etta_Load(object sender, EventArgs e)
         {
-            rptViewerRoshetta.LocalReport.DataSources.Add(new ReportDataSource("RoshettaDataSet", RoshettaVm));
+            foreach (var treatment in Examination.ExaminationTreatments)
+            {
+                RoshettaTreatmentVm.Add(new RoshettaTreatmentVm
+                {
+                    R = "R",
+                    TreatmentName = TreatmentManager.GetTreatmentNameByTreatmentId(treatment.TreatmentId),
+                    TreatmentDescription = treatment.Description
+                });
+            }
+            rptViewerRoshetta.LocalReport.SetParameters(new[]
+            {
+                new ReportParameter("ExaminationDate", Examination.Date.ToShortDateString()),
+                new ReportParameter("PatientAge", (DateTime.Now.Year - Examination.Date.Year).ToString()),
+                new ReportParameter("PatientId", Examination.PatientId.ToString()),
+                new ReportParameter("PatientName", PatientManager.GetPatientNameByPatientId(Examination.PatientId)),
+                new ReportParameter("PatientWeight", Examination.PatientWeight.ToString(CultureInfo.CurrentCulture))
+            });
+            rptViewerRoshetta.LocalReport.DataSources.Add(new ReportDataSource("RoshettaDataSet", RoshettaTreatmentVm));
             rptViewerRoshetta.RefreshReport();
         }
+
+        #endregion
     }
 }
