@@ -28,28 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.RoshettaTreatmentVmBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rptViewerRoshetta = new Microsoft.Reporting.WinForms.ReportViewer();
+            ((System.ComponentModel.ISupportInitialize)(this.RoshettaTreatmentVmBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // RoshettaTreatmentVmBindingSource
+            // 
+            this.RoshettaTreatmentVmBindingSource.DataSource = typeof(DrIbrahimClinic.DAL.VMs.RoshettaTreatmentVm);
             // 
             // rptViewerRoshetta
             // 
             this.rptViewerRoshetta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rptViewerRoshetta.LocalReport.ReportEmbeddedResource = "DrIbrahimClinic.PL.Reports.Roshetta.rdlc";
+            reportDataSource1.Name = "RoshettaDataSet";
+            reportDataSource1.Value = this.RoshettaTreatmentVmBindingSource;
+            this.rptViewerRoshetta.LocalReport.DataSources.Add(reportDataSource1);
+            this.rptViewerRoshetta.LocalReport.ReportEmbeddedResource = "DrIbrahimClinic.PL.Reports.RoshettaReport.rdlc";
             this.rptViewerRoshetta.Location = new System.Drawing.Point(0, 0);
             this.rptViewerRoshetta.Name = "rptViewerRoshetta";
-            this.rptViewerRoshetta.Size = new System.Drawing.Size(394, 494);
+            this.rptViewerRoshetta.Size = new System.Drawing.Size(584, 741);
             this.rptViewerRoshetta.TabIndex = 0;
             // 
             // FrmRoshetta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 494);
+            this.ClientSize = new System.Drawing.Size(584, 741);
             this.Controls.Add(this.rptViewerRoshetta);
             this.DoubleBuffered = true;
             this.Name = "FrmRoshetta";
             this.Text = "الروشتة";
             this.Load += new System.EventHandler(this.FrmRo4etta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.RoshettaTreatmentVmBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -57,5 +69,6 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer rptViewerRoshetta;
+        private System.Windows.Forms.BindingSource RoshettaTreatmentVmBindingSource;
     }
 }

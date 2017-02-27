@@ -260,7 +260,7 @@
     <EmbeddedResource Include="PL\MasterForm.resx">
       <DependentUpon>MasterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\Reports\Roshetta.rdlc" />
+    <EmbeddedResource Include="PL\Reports\RoshettaReport.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -356,6 +356,7 @@
     <None Include="Resources\Undo.png" />
     <None Include="Resources\Exit.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

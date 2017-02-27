@@ -43,12 +43,14 @@ namespace DrIbrahimClinic.PL
             rptViewerRoshetta.LocalReport.SetParameters(new[]
             {
                 new ReportParameter("ExaminationDate", Examination.Date.ToShortDateString()),
-                new ReportParameter("PatientAge", (DateTime.Now.Year - Examination.Date.Year).ToString()),
+                new ReportParameter("PatientAge",
+                    (DateTime.Now.Year - PatientManager.GetPatientBirthdateByPatientId(Examination.PatientId).Year)
+                        .ToString()),
                 new ReportParameter("PatientId", Examination.PatientId.ToString()),
                 new ReportParameter("PatientName", PatientManager.GetPatientNameByPatientId(Examination.PatientId)),
                 new ReportParameter("PatientWeight", Examination.PatientWeight.ToString(CultureInfo.CurrentCulture))
             });
-            rptViewerRoshetta.LocalReport.DataSources.Add(new ReportDataSource("RoshettaDataSet", RoshettaTreatmentVm));
+            RoshettaTreatmentVmBindingSource.DataSource = RoshettaTreatmentVm;
             rptViewerRoshetta.RefreshReport();
         }
 
