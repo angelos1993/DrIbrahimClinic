@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using DrIbrahimClinic.DAL.Model;
@@ -16,18 +17,42 @@ namespace DrIbrahimClinic.Utility
 
         public static string ToTreatmentsListString(this IEnumerable<Treatment> treatments)
         {
-            var treatmentsStringBuilder = new StringBuilder();
-            foreach (var treatment in treatments)
-                treatmentsStringBuilder.Append($"{treatment.Name}, ");
-            return treatmentsStringBuilder.ToString();
+            var enumerable = treatments as IList<Treatment> ?? treatments.ToList();
+            if (!enumerable.Any())
+                return string.Empty;
+            switch (enumerable.Count)
+            {
+                case 1:
+                    return enumerable[0].Name;
+                case 2:
+                    return $"{enumerable[0].Name} and {enumerable[1].Name}";
+                default:
+                    var result = new StringBuilder();
+                    for (var i = 0; i < enumerable.Count - 1; i++)
+                        result.Append($"{enumerable[i].Name}, ");
+                    result.Append($"and {enumerable[enumerable.Count - 1].Name}");
+                    return result.ToString();
+            }
         }
 
         public static string ToDiagnosisListString(this IEnumerable<Diagnosi> diagnosis)
         {
-            var diagnosisStringBuilder = new StringBuilder();
-            foreach (var diagnosi in diagnosis)
-                diagnosisStringBuilder.Append($"{diagnosi.Name}, ");
-            return diagnosisStringBuilder.ToString();
+            var enumerable = diagnosis as IList<Diagnosi> ?? diagnosis.ToList();
+            if (!enumerable.Any())
+                return string.Empty;
+            switch (enumerable.Count)
+            {
+                case 1:
+                    return enumerable[0].Name;
+                case 2:
+                    return $"{enumerable[0].Name} and {enumerable[1].Name}";
+                default:
+                    var result = new StringBuilder();
+                    for (var i = 0; i < enumerable.Count - 1; i++)
+                        result.Append($"{enumerable[i].Name}, ");
+                    result.Append($"and {enumerable[enumerable.Count - 1].Name}");
+                    return result.ToString();
+            }
         }
     }
 }
