@@ -15,11 +15,19 @@ namespace DrIbrahimClinic.Utility
         public static void SetArabicInputLanguage(object sender, EventArgs e)
         {
             InputLanguage.CurrentInputLanguage = Arabic;
+            var textBox = sender as TextBox;
+            if (textBox == null)
+                return;
+            textBox.RightToLeft = RightToLeft.Yes;
         }
 
         public static void SetEnglishInputLanguage(object sender, EventArgs e)
         {
             InputLanguage.CurrentInputLanguage = English;
+            var textBox = sender as TextBox;
+            if (textBox == null)
+                return;
+            textBox.RightToLeft = RightToLeft.No;
         }
     }
 }
