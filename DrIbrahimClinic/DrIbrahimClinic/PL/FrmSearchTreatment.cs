@@ -7,6 +7,7 @@ using DrIbrahimClinic.DAL.Model;
 using DrIbrahimClinic.DAL.VMs;
 using DrIbrahimClinic.Utility;
 using static DrIbrahimClinic.Utility.InputLanguageUtility;
+using static DrIbrahimClinic.Utility.MessageBoxUtility;
 
 namespace DrIbrahimClinic.PL
 {
@@ -42,6 +43,20 @@ namespace DrIbrahimClinic.PL
                 FillGrid(treatment => treatment.Name.ToLower().StartsWith(txtTreatmentName.Text.FullTrim().ToLower()));
             else
                 FillGrid(treatment => treatment.Name.ToLower().Contains(txtTreatmentName.Text.FullTrim().ToLower()));
+            Cursor = Cursors.Default;
+        }
+
+        private void dgvTreatments_DoubleClick(object sender, EventArgs e)
+        {
+            if (ShowConfirmationDialog("هل أنت متأكد من أنك تريد حذف العلاج المحدد؟") != DialogResult.Yes)
+                return;
+            Cursor = Cursors.WaitCursor;
+            var treatment = TreatmentManager.GeTreatmentByName(dgvTreatments.SelectedRows[0].Cells[0].Value.ToString());
+            if (treatment == null)
+                return;
+            Treatments.ToList().Remove(treatment);
+            TreatmentManager.DeleteTreatment(treatment);
+            FillGrid();
             Cursor = Cursors.Default;
         }
 

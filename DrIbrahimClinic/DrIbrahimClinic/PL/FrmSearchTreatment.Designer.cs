@@ -142,6 +142,7 @@
             this.dgvTreatments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTreatments.Size = new System.Drawing.Size(456, 436);
             this.dgvTreatments.TabIndex = 3;
+            this.dgvTreatments.DoubleClick += new System.EventHandler(this.dgvTreatments_DoubleClick);
             // 
             // FrmSearchTreatment
             // 
