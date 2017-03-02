@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using DrIbrahimClinic.BLL;
@@ -8,6 +9,7 @@ using DrIbrahimClinic.Utility;
 using static DrIbrahimClinic.Utility.MessageBoxUtility;
 using static DrIbrahimClinic.Utility.Utility;
 using static DrIbrahimClinic.Utility.InputLanguageUtility;
+using static DrIbrahimClinic.Utility.Constants;
 
 namespace DrIbrahimClinic.PL
 {
@@ -61,6 +63,18 @@ namespace DrIbrahimClinic.PL
         private void btnSave_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
+            if (string.IsNullOrEmpty(txtName.Text.FullTrim()))
+            {
+                txtName.BackColor = ErrorColor;
+                Cursor = Cursors.Default;
+                return;
+            }
+            if (txtName.Text.FullTrim() != Patient.Name && PatientManager.IsPatientFoundByName(txtName.Text.FullTrim()))
+            {
+                ShowErrorMsg("يوجد مريض آخر بنفس الاسم");
+                Cursor = Cursors.Default;
+                return;
+            }
             Patient.Name = txtName.Text.FullTrim();
             Patient.Birthdate = dtBirthdate.Value != default(DateTime) ? dtBirthdate.Value : (DateTime?) null;
             Patient.Gender = switchBtnGender.Value ? "M" : "F";
@@ -100,6 +114,7 @@ namespace DrIbrahimClinic.PL
             txtAddress.Text = string.Empty;
             switchBtnBirthType.Value = true;
             switchBtnSucklingType.Value = true;
+            txtName.BackColor = Color.Empty;
         }
 
         private void SetAutoCompletion()

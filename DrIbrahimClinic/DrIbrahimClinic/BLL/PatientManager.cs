@@ -67,6 +67,11 @@ namespace DrIbrahimClinic.BLL
             return GetAllPatients().FirstOrDefault(patient => patient.Id == patientId)?.Birthdate ?? default(DateTime);
         }
 
+        public bool IsPatientFoundByName(string patientName)
+        {
+            return GetAllPatients().Any(patient => patient.Name == patientName);
+        }
+
         #endregion
     }
 }

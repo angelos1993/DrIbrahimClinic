@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using DrIbrahimClinic.BLL;
 using DrIbrahimClinic.DAL.Model;
@@ -36,6 +37,12 @@ namespace DrIbrahimClinic.PL
             if (string.IsNullOrEmpty(txtName.Text.FullTrim()))
             {
                 txtName.BackColor = ErrorColor;
+                Cursor = Cursors.Default;
+                return;
+            }
+            if (PatientManager.IsPatientFoundByName(txtName.Text.FullTrim()))
+            {
+                ShowErrorMsg("يوجد مريض آخر بنفس الاسم");
                 Cursor = Cursors.Default;
                 return;
             }
@@ -80,6 +87,7 @@ namespace DrIbrahimClinic.PL
             txtAddress.Text = string.Empty;
             switchBtnBirthType.Value = true;
             switchBtnSucklingType.Value = true;
+            txtName.BackColor = Color.Empty;
         }
 
         private void SetTextBoxesInputLanguages()
