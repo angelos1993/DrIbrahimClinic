@@ -6,7 +6,7 @@ namespace DrIbrahimClinic.Utility
     {
         public static string FullTrim(this string str)
         {
-            return Regex.Replace(str, @"\s+", " ");
+            return Regex.Replace(str.TrimStart().TrimEnd().Trim(), @"\s+", " ");
         }
     }
 }
