@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using DrIbrahimClinic.BLL;
@@ -71,25 +72,33 @@ namespace DrIbrahimClinic.PL
 
         private void EditTreatment(bool editAnother = false)
         {
-            var isValid = true;
             if (string.IsNullOrEmpty(txtTreatmentOldName.Text.FullTrim()))
             {
                 txtTreatmentOldName.BackColor = ErrorColor;
                 txtTreatmentOldName.Focus();
-                isValid = false;
+                return;
             }
             if (string.IsNullOrEmpty(txtTreatmentNewName.Text.FullTrim()))
             {
                 txtTreatmentNewName.BackColor = ErrorColor;
-                isValid = false;
+                return;
             }
-            if (!isValid) return;
             Treatment = TreatmentManager.GeTreatmentByName(txtTreatmentOldName.Text);
             if (Treatment == null)
                 ShowErrorMsg("لا يوجد علاج بهذا الاسم");
             else
             {
-                Treatment.Name = txtTreatmentNewName.Text;
+                if (txtTreatmentNewName.Text.FullTrim() == txtTreatmentOldName.Text.FullTrim())
+                {
+                    ShowErrorMsg("لا يمكن الحفظ بنفس الاسم");
+                    return;
+                }
+                if (TreatmentManager.IsTreatmentFoundByName(txtTreatmentNewName.Text.FullTrim()))
+                {
+                    ShowErrorMsg("يوجد علاج آخر بنفس الاسم");
+                    return;
+                }
+                Treatment.Name = txtTreatmentNewName.Text.FullTrim();
                 TreatmentManager.UpdateTreatment(Treatment);
                 if (!editAnother)
                     Close();
@@ -103,6 +112,7 @@ namespace DrIbrahimClinic.PL
         private void ResetForm()
         {
             txtTreatmentOldName.Text = txtTreatmentNewName.Text = string.Empty;
+            txtTreatmentOldName.BackColor = txtTreatmentNewName.BackColor = Color.Empty;
         }
 
         private void SetAutoCompletion()

@@ -5,6 +5,7 @@ using DrIbrahimClinic.DAL.Model;
 using DrIbrahimClinic.Utility;
 using static DrIbrahimClinic.Utility.Constants;
 using static DrIbrahimClinic.Utility.InputLanguageUtility;
+using static DrIbrahimClinic.Utility.MessageBoxUtility;
 
 namespace DrIbrahimClinic.PL
 {
@@ -59,6 +60,11 @@ namespace DrIbrahimClinic.PL
             {
                 txtTreatmentName.BackColor = ErrorColor;
                 txtTreatmentName.Focus();
+                return;
+            }
+            if (TreatmentManager.IsTreatmentFoundByName(txtTreatmentName.Text.FullTrim()))
+            {
+                ShowErrorMsg("يوجد علاج آخر بنفس الاسم");
                 return;
             }
             TreatmentManager.AddTreatment(new Treatment

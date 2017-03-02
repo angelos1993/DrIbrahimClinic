@@ -292,7 +292,7 @@ namespace DrIbrahimClinic.PL
                 Cursor = Cursors.Default;
                 return;
             }
-            if (!TreatmentManager.IsTreatmentFound(txtTreatmentName.Text.FullTrim()))
+            if (!TreatmentManager.IsTreatmentFoundByName(txtTreatmentName.Text.FullTrim()))
                 TreatmentManager.AddTreatment(new Treatment {Name = txtTreatmentName.Text.FullTrim()});
             Treatments.Add(new ExaminationTreatmentVm
             {

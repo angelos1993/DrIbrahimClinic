@@ -61,9 +61,13 @@ namespace DrIbrahimClinic.BLL
             return GetAllTreatments().Where(where);
         }
 
-        public bool IsTreatmentFound(string treatmentName)
+        public bool IsTreatmentFoundByName(string treatmentName)
         {
-            return GetAllTreatments().Any(tr => tr.Name == treatmentName);
+            return
+                GetAllTreatments()
+                    .Any(
+                        treatment =>
+                            string.Equals(treatment.Name, treatmentName, StringComparison.CurrentCultureIgnoreCase));
         }
 
         public int GetTreatmentIdByTreatmentName(string treatmentName)
