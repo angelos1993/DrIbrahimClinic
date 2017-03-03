@@ -210,10 +210,13 @@ namespace DrIbrahimClinic.PL
                 MedicalHistoryManager.GetMedicalHistoryByDescriptionAndPatientId(
                     dgvMedicalHistory.SelectedRows[0].Cells[0].Value.ToString(), Patient.Id);
             if (medicalHistory == null)
+            {
+                Cursor = Cursors.Default;
                 return;
-            Patient.MedicalHistories.Remove(medicalHistory);
+            }
             MedicalHistoryManager.DeleteMedicalHistory(medicalHistory);
             FillMedicalHistoryGrid();
+            dgvMedicalHistory.Refresh();
             Cursor = Cursors.Default;
         }
 
@@ -253,7 +256,6 @@ namespace DrIbrahimClinic.PL
                     dgvInoculations.SelectedRows[0].Cells[0].Value.ToString(), Patient.Id);
             if (inoculation == null)
                 return;
-            Patient.Inoculations.Remove(inoculation);
             InoculationManager.DeleteInoculation(inoculation);
             FillInoculationsGrid();
             Cursor = Cursors.Default;
@@ -568,17 +570,22 @@ namespace DrIbrahimClinic.PL
         private void FillMedicalHistoryGrid()
         {
             dgvMedicalHistory.DataSource =
-                Patient.MedicalHistories.Select(
-                    medicalHistory => new MedicalHistoryVm {Description = medicalHistory.Description}).ToList();
+                MedicalHistoryManager.GetMedicalHistorys(medicalHistory => medicalHistory.PatientId == Patient.Id)
+                    .Select(medicalHistory => new MedicalHistoryVm
+                    {
+                        Description = medicalHistory.Description
+                    }).ToList();
         }
 
         private void FillInoculationsGrid()
         {
-            dgvInoculations.DataSource = Patient.Inoculations.Select(inoculation => new InoculationVm
-            {
-                Name = inoculation.Name,
-                Date = inoculation.Date?.ToFormattedArabicDate()
-            }).ToList();
+            dgvInoculations.DataSource =
+                InoculationManager.GetInoculations(inoculation => inoculation.PatientId == Patient.Id)
+                    .Select(inoculation => new InoculationVm
+                    {
+                        Name = inoculation.Name,
+                        Date = inoculation.Date?.ToFormattedArabicDate()
+                    }).ToList();
         }
 
         private void ClearPreviousVisitsDgv()
