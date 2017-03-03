@@ -5,6 +5,14 @@ namespace DrIbrahimClinic.Utility
     public static class Constants
     {
         public static Color ErrorColor = Color.HotPink;
-        public static string DatabaseName = "DrIbrahimClinic";
+
+        #region DB
+
+        public static string ServerName = @"ANGELOS-PC\SQLEXPRESS";
+        public static string DatabaseName = @"DrIbrahimClinic";
+        public static string LoginName = @"sa";
+        public static string Password = @"dev";
+
+        #endregion
     }
 }

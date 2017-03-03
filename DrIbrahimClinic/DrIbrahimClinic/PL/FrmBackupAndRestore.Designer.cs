@@ -28,9 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lblProgress = new DevComponents.DotNetBar.LabelX();
             this.btnBackup = new DevComponents.DotNetBar.ButtonX();
             this.btnRestore = new DevComponents.DotNetBar.ButtonX();
+            this.progressBar = new DevComponents.DotNetBar.Controls.ProgressBarX();
             this.SuspendLayout();
+            // 
+            // lblProgress
+            // 
+            // 
+            // 
+            // 
+            this.lblProgress.BackgroundStyle.Class = "";
+            this.lblProgress.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblProgress.Location = new System.Drawing.Point(128, 197);
+            this.lblProgress.Name = "lblProgress";
+            this.lblProgress.Size = new System.Drawing.Size(75, 23);
+            this.lblProgress.TabIndex = 3;
+            this.lblProgress.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // btnBackup
             // 
@@ -62,16 +77,32 @@
             this.btnRestore.Text = "إستعادة قاعدة البيانات";
             this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
             // 
+            // progressBar
+            // 
+            // 
+            // 
+            // 
+            this.progressBar.BackgroundStyle.Class = "";
+            this.progressBar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.progressBar.Location = new System.Drawing.Point(12, 168);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(306, 23);
+            this.progressBar.TabIndex = 4;
+            this.progressBar.Text = "progressBarX1";
+            // 
             // FrmBackupAndRestore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 174);
+            this.ClientSize = new System.Drawing.Size(330, 222);
+            this.Controls.Add(this.progressBar);
+            this.Controls.Add(this.lblProgress);
             this.Controls.Add(this.btnBackup);
             this.Controls.Add(this.btnRestore);
             this.DoubleBuffered = true;
             this.Name = "FrmBackupAndRestore";
             this.Text = "قاعدة البيانات";
+            this.Load += new System.EventHandler(this.FrmBackupAndRestore_Load);
             this.ResumeLayout(false);
 
         }
@@ -80,5 +111,7 @@
 
         private DevComponents.DotNetBar.ButtonX btnRestore;
         private DevComponents.DotNetBar.ButtonX btnBackup;
+        private DevComponents.DotNetBar.LabelX lblProgress;
+        private DevComponents.DotNetBar.Controls.ProgressBarX progressBar;
     }
 }
