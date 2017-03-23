@@ -120,6 +120,7 @@
             this.txtTreatmentName.Name = "txtTreatmentName";
             this.txtTreatmentName.Size = new System.Drawing.Size(238, 26);
             this.txtTreatmentName.TabIndex = 0;
+            this.txtTreatmentName.WatermarkText = "Treatment Name ...";
             this.txtTreatmentName.TextChanged += new System.EventHandler(this.FindTreatment);
             // 
             // dgvTreatments

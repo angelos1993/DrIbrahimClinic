@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabExamination = new DevComponents.DotNetBar.TabControl();
             this.tabControlPanel3 = new DevComponents.DotNetBar.TabControlPanel();
             this.pnlExaminationData = new System.Windows.Forms.Panel();
@@ -123,8 +123,8 @@
             this.tabExamination.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(217)))), ((int)(((byte)(247)))));
             this.tabExamination.CanReorderTabs = true;
             this.tabExamination.Controls.Add(this.tabControlPanel3);
-            this.tabExamination.Controls.Add(this.tabControlPanel1);
             this.tabExamination.Controls.Add(this.tabControlPanel2);
+            this.tabExamination.Controls.Add(this.tabControlPanel1);
             this.tabExamination.Location = new System.Drawing.Point(11, 13);
             this.tabExamination.Name = "tabExamination";
             this.tabExamination.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -231,14 +231,14 @@
             // 
             this.dgvDiagnosis.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDiagnosis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDiagnosis.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDiagnosis.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDiagnosis.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvDiagnosis.Location = new System.Drawing.Point(4, 157);
             this.dgvDiagnosis.Name = "dgvDiagnosis";
@@ -345,9 +345,10 @@
             this.txtComplaint.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtComplaint.Location = new System.Drawing.Point(102, 87);
             this.txtComplaint.Name = "txtComplaint";
-            this.txtComplaint.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtComplaint.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtComplaint.Size = new System.Drawing.Size(292, 26);
             this.txtComplaint.TabIndex = 5;
+            this.txtComplaint.WatermarkText = "Complaint ...";
             // 
             // txtDiagnosis
             // 
@@ -358,9 +359,10 @@
             this.txtDiagnosis.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtDiagnosis.Location = new System.Drawing.Point(102, 125);
             this.txtDiagnosis.Name = "txtDiagnosis";
-            this.txtDiagnosis.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtDiagnosis.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtDiagnosis.Size = new System.Drawing.Size(263, 26);
             this.txtDiagnosis.TabIndex = 6;
+            this.txtDiagnosis.WatermarkText = "Diagnosis ...";
             // 
             // labelX10
             // 
@@ -490,9 +492,10 @@
             this.txtTreatmentName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTreatmentName.Location = new System.Drawing.Point(2, 3);
             this.txtTreatmentName.Name = "txtTreatmentName";
-            this.txtTreatmentName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtTreatmentName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtTreatmentName.Size = new System.Drawing.Size(187, 26);
             this.txtTreatmentName.TabIndex = 0;
+            this.txtTreatmentName.WatermarkText = "Treatment Name ...";
             // 
             // txtTreatmentDescription
             // 
@@ -506,19 +509,20 @@
             this.txtTreatmentDescription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTreatmentDescription.Size = new System.Drawing.Size(187, 26);
             this.txtTreatmentDescription.TabIndex = 1;
+            this.txtTreatmentDescription.WatermarkText = "الوصف ...";
             // 
             // dgvTreatments
             // 
             this.dgvTreatments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTreatments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTreatments.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTreatments.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvTreatments.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvTreatments.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvTreatments.Location = new System.Drawing.Point(0, 44);
@@ -731,9 +735,10 @@
             this.txtInoculation.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtInoculation.Location = new System.Drawing.Point(5, 3);
             this.txtInoculation.Name = "txtInoculation";
-            this.txtInoculation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtInoculation.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtInoculation.Size = new System.Drawing.Size(212, 26);
             this.txtInoculation.TabIndex = 0;
+            this.txtInoculation.WatermarkText = "Inoculation Name ...";
             // 
             // dtInoculationDate
             // 
@@ -802,14 +807,14 @@
             // 
             this.dgvInoculations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInoculations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInoculations.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInoculations.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvInoculations.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvInoculations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvInoculations.Location = new System.Drawing.Point(0, 34);
@@ -887,22 +892,23 @@
             this.txtMedicalHistory.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtMedicalHistory.Location = new System.Drawing.Point(5, 4);
             this.txtMedicalHistory.Name = "txtMedicalHistory";
-            this.txtMedicalHistory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtMedicalHistory.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtMedicalHistory.Size = new System.Drawing.Size(342, 26);
             this.txtMedicalHistory.TabIndex = 0;
+            this.txtMedicalHistory.WatermarkText = "Medical History ...";
             // 
             // dgvMedicalHistory
             // 
             this.dgvMedicalHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMedicalHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMedicalHistory.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMedicalHistory.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvMedicalHistory.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvMedicalHistory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvMedicalHistory.Location = new System.Drawing.Point(0, 36);
@@ -1061,6 +1067,7 @@
             this.txtPatientAddress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPatientAddress.Size = new System.Drawing.Size(238, 26);
             this.txtPatientAddress.TabIndex = 6;
+            this.txtPatientAddress.WatermarkText = "العنوان ...";
             // 
             // txtPatientPhone
             // 
@@ -1073,6 +1080,7 @@
             this.txtPatientPhone.Name = "txtPatientPhone";
             this.txtPatientPhone.Size = new System.Drawing.Size(238, 26);
             this.txtPatientPhone.TabIndex = 5;
+            this.txtPatientPhone.WatermarkText = "رقم التليفون ...";
             // 
             // txtPatientName
             // 
@@ -1086,6 +1094,7 @@
             this.txtPatientName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPatientName.Size = new System.Drawing.Size(238, 26);
             this.txtPatientName.TabIndex = 1;
+            this.txtPatientName.WatermarkText = "اسم المريض ...";
             // 
             // labelX8
             // 
@@ -1287,14 +1296,14 @@
             // 
             this.dgvPreviousVisits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvPreviousVisits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPreviousVisits.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPreviousVisits.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPreviousVisits.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPreviousVisits.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvPreviousVisits.Location = new System.Drawing.Point(1, 1);

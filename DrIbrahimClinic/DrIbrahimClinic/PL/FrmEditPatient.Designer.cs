@@ -316,6 +316,7 @@
             this.txtAddress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtAddress.Size = new System.Drawing.Size(287, 26);
             this.txtAddress.TabIndex = 6;
+            this.txtAddress.WatermarkText = "العنوان ...";
             // 
             // txtPhone
             // 
@@ -326,8 +327,10 @@
             this.txtPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPhone.Location = new System.Drawing.Point(31, 188);
             this.txtPhone.Name = "txtPhone";
+            this.txtPhone.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPhone.Size = new System.Drawing.Size(287, 26);
             this.txtPhone.TabIndex = 5;
+            this.txtPhone.WatermarkText = "رقم التليفون ...";
             // 
             // txtName
             // 
@@ -341,6 +344,7 @@
             this.txtName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtName.Size = new System.Drawing.Size(238, 26);
             this.txtName.TabIndex = 1;
+            this.txtName.WatermarkText = "اسم المريض ...";
             // 
             // labelX8
             // 

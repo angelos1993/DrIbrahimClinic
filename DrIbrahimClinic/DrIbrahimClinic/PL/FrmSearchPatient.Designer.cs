@@ -131,8 +131,10 @@
             this.txtPatientPhone.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPatientPhone.Location = new System.Drawing.Point(175, 7);
             this.txtPatientPhone.Name = "txtPatientPhone";
+            this.txtPatientPhone.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPatientPhone.Size = new System.Drawing.Size(191, 26);
             this.txtPatientPhone.TabIndex = 2;
+            this.txtPatientPhone.WatermarkText = "رقم التليفون ...";
             this.txtPatientPhone.TextChanged += new System.EventHandler(this.FindPatient);
             // 
             // labelX5
@@ -192,8 +194,10 @@
             this.txtPatientName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPatientName.Location = new System.Drawing.Point(449, 35);
             this.txtPatientName.Name = "txtPatientName";
+            this.txtPatientName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPatientName.Size = new System.Drawing.Size(232, 26);
             this.txtPatientName.TabIndex = 1;
+            this.txtPatientName.WatermarkText = "اسم المريض ...";
             this.txtPatientName.TextChanged += new System.EventHandler(this.FindPatient);
             // 
             // dgvPatients

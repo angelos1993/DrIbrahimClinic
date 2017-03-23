@@ -231,8 +231,10 @@
             this.txtPatientName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtPatientName.Location = new System.Drawing.Point(436, 46);
             this.txtPatientName.Name = "txtPatientName";
+            this.txtPatientName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPatientName.Size = new System.Drawing.Size(238, 26);
             this.txtPatientName.TabIndex = 1;
+            this.txtPatientName.WatermarkText = "اسم المريض ...";
             this.txtPatientName.TextChanged += new System.EventHandler(this.FindExamination);
             // 
             // dgvExaminations

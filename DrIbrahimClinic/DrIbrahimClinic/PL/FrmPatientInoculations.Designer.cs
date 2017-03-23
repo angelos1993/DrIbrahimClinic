@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpPanelPatientData = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.intInputPatientId = new DevComponents.Editors.IntegerInput();
             this.btnFindPatient = new DevComponents.DotNetBar.ButtonX();
@@ -153,6 +153,7 @@
             this.txtPatientName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPatientName.Size = new System.Drawing.Size(235, 26);
             this.txtPatientName.TabIndex = 1;
+            this.txtPatientName.WatermarkText = "اسم المريض ...";
             // 
             // labelX1
             // 
@@ -179,9 +180,9 @@
             this.txtInoculationName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtInoculationName.Location = new System.Drawing.Point(3, 3);
             this.txtInoculationName.Name = "txtInoculationName";
-            this.txtInoculationName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtInoculationName.Size = new System.Drawing.Size(248, 26);
             this.txtInoculationName.TabIndex = 0;
+            this.txtInoculationName.WatermarkText = "Inoculation Name ...";
             // 
             // dtInoculationDate
             // 
@@ -295,14 +296,14 @@
             // 
             this.dgvPatientInoculations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPatientInoculations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPatientInoculations.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPatientInoculations.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPatientInoculations.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvPatientInoculations.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvPatientInoculations.Location = new System.Drawing.Point(0, 36);

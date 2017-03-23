@@ -61,6 +61,7 @@
             this.txtTreatmentName.Name = "txtTreatmentName";
             this.txtTreatmentName.Size = new System.Drawing.Size(288, 26);
             this.txtTreatmentName.TabIndex = 0;
+            this.txtTreatmentName.WatermarkText = "Treatment Name ...";
             // 
             // btnSaveAndNew
             // 

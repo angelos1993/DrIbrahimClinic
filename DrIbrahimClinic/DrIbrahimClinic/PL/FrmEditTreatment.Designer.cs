@@ -49,6 +49,7 @@
             this.txtTreatmentOldName.Name = "txtTreatmentOldName";
             this.txtTreatmentOldName.Size = new System.Drawing.Size(266, 26);
             this.txtTreatmentOldName.TabIndex = 0;
+            this.txtTreatmentOldName.WatermarkText = "Treatment Name ...";
             // 
             // labelX1
             // 
@@ -118,6 +119,7 @@
             this.txtTreatmentNewName.Name = "txtTreatmentNewName";
             this.txtTreatmentNewName.Size = new System.Drawing.Size(266, 26);
             this.txtTreatmentNewName.TabIndex = 1;
+            this.txtTreatmentNewName.WatermarkText = "New Treatment Name ...";
             // 
             // labelX2
             // 
