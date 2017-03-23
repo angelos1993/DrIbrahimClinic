@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Index));
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.panelButtons = new DevComponents.DotNetBar.PanelEx();
             this.btnBackupAndRestoreDB = new DevComponents.DotNetBar.ButtonX();
@@ -425,6 +426,7 @@
             this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Index";
             this.Text = "د / ابراهيم رزق الميري";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

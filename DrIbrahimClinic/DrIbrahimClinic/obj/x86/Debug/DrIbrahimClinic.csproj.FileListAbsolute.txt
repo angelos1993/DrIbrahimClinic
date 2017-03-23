@@ -47,4 +47,3 @@ G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\Micros
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\Microsoft.SqlServer.Dmf.dll
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
-G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.csprojResolveAssemblyReference.cache
