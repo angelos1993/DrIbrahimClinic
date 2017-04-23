@@ -403,8 +403,8 @@ namespace DrIbrahimClinic.PL
                         return;
                     }
                     e.NewTab.AttachedControl.Enabled = true;
-                    dgvPreviousVisits.DataSource = dgvPreviousVisits.DataSource ??
-                                                   ExaminationManager.GetExaminationsByPatientId(Patient.Id)
+                    dgvPreviousVisits.DataSource = ExaminationManager.GetExaminationsByPatientId(Patient.Id)
+                                                       .OrderByDescending(examination => examination.Date)
                                                        .Select(examination => new ExaminationVm
                                                        {
                                                            PatientId = examination.PatientId,

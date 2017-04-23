@@ -8,10 +8,11 @@ namespace DrIbrahimClinic.Utility
 
         #region DB
 
-        public static string ServerName = @"ANGELOS-PC\SQLEXPRESS";
         public static string DatabaseName = @"DrIbrahimClinic";
-        public static string LoginName = @"sa";
-        public static string Password = @"dev";
+        //development
+        public static string ServerName = @"ANGELOS-PC\SQLEXPRESS";
+        //production
+        //public static string ServerName = @"ASHRAF1\MSSQLSERVER2012";
 
         #endregion
     }

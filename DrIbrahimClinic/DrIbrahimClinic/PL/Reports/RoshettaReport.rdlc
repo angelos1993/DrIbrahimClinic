@@ -6,18 +6,18 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.33333in</Width>
+              <Width>0.39999in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.41667in</Width>
+              <Width>2.15418in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.91667in</Width>
+              <Width>1.9in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.25in</Height>
+              <Height>0.34375in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -29,7 +29,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!R.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -40,8 +42,7 @@
                       <rd:DefaultName>R</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -61,7 +62,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!TreatmentName.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -72,8 +75,7 @@
                       <rd:DefaultName>TreatmentName</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -93,7 +95,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!TreatmentDescription.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -104,8 +108,7 @@
                       <rd:DefaultName>TreatmentDescription</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -134,80 +137,457 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>RoshettaDataSet</DataSetName>
-        <Top>0.08556in</Top>
-        <Left>0.31125in</Left>
-        <Height>0.25in</Height>
-        <Width>4.66667in</Width>
+        <Top>2.29389in</Top>
+        <Left>0.54697in</Left>
+        <Height>0.34375in</Height>
+        <Width>4.45417in</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>دكتور</Value>
+                <Style>
+                  <FontFamily>Batang</FontFamily>
+                  <FontSize>15pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ابراهيم رزق الميري</Value>
+                <Style>
+                  <FontSize>20pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ماجستير طب الأطفال وحديثي الولادة</Value>
+                <Style>
+                  <FontFamily>Sitka Heading</FontFamily>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>أخصائي طب الأطفال بمستشفي القوصية المركزي</Value>
+                <Style>
+                  <FontFamily>Sitka Heading</FontFamily>
+                  <FontSize>12pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>0.18936in</Top>
+        <Left>2.71524in</Left>
+        <Height>1.3125in</Height>
+        <Width>2.89632in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Dr</Value>
+                <Style>
+                  <FontFamily>Batang</FontFamily>
+                  <FontSize>15pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Ibrahim Rizk Ibrahim</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <FontSize>19pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>
+M.B.B.Ch
+M.Sc. Of Pediatric</Value>
+                <Style>
+                  <FontFamily>Batang</FontFamily>
+                  <FontSize>15pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>0.18936in</Top>
+        <Left>0.26252in</Left>
+        <Height>1.3125in</Height>
+        <Width>2.45342in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line1">
+        <Top>4.04755cm</Top>
+        <Left>13.80051cm</Left>
+        <Height>0cm</Height>
+        <Width>-12.94848cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line2">
+        <Top>4.92977cm</Top>
+        <Left>13.80051cm</Left>
+        <Height>0cm</Height>
+        <Width>-12.94848cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>الاسم</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>4.14986cm</Top>
+        <Left>10.00414cm</Left>
+        <Height>0.67055cm</Height>
+        <Width>1.07125cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="PatientName">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PatientName.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>PatientName</rd:DefaultName>
+        <Top>4.18866cm</Top>
+        <Left>6.89671cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.36143cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox5">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>التاريخ</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>4.15338cm</Top>
+        <Left>5.57388cm</Left>
+        <Height>0.67056cm</Height>
+        <Width>1.17708cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="ExaminationDate">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!ExaminationDate.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>ExaminationDate</rd:DefaultName>
+        <Top>4.18866cm</Top>
+        <Left>3.26438cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.5cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>الرقم</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>4.15339cm</Top>
+        <Left>12.5759cm</Left>
+        <Height>0.67055cm</Height>
+        <Width>1.07125cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="PatientId">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PatientId.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>PatientId</rd:DefaultName>
+        <Top>4.18866cm</Top>
+        <Left>11.24768cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.45522cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>الوزن</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>4.15338cm</Top>
+        <Left>1.72394cm</Left>
+        <Height>0.67056cm</Height>
+        <Width>1.17708cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="PatientWeight">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PatientWeight.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>PatientWeight</rd:DefaultName>
+        <Top>4.18513cm</Top>
+        <Left>0.9843cm</Left>
+        <Height>0.6cm</Height>
+        <Width>0.99364cm</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>21cm</Height>
     <Style />
   </Body>
-  <Width>15.90146cm</Width>
+  <Width>14.80602cm</Width>
   <Page>
-    <PageHeader>
-      <Height>5cm</Height>
-      <PrintOnFirstPage>true</PrintOnFirstPage>
-      <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Image Name="RoshettaHeader">
-          <Source>Embedded</Source>
-          <Value>RoshettaHeader</Value>
-          <Sizing>Fit</Sizing>
-          <Top>0.155in</Top>
-          <Left>0.19792in</Left>
-          <Height>1.32764in</Height>
-          <Width>5.85417in</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </Image>
-      </ReportItems>
-      <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
-      </Style>
-    </PageHeader>
-    <PageFooter>
-      <Height>3cm</Height>
-      <PrintOnFirstPage>true</PrintOnFirstPage>
-      <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Image Name="RoshettaFooter">
-          <Source>Embedded</Source>
-          <Value>RoshettaFooter</Value>
-          <Sizing>Fit</Sizing>
-          <Top>0.20833in</Top>
-          <Left>0.19792in</Left>
-          <Height>0.79167in</Height>
-          <Width>5.85417in</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </Image>
-      </ReportItems>
-      <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
-      </Style>
-    </PageFooter>
     <PageHeight>21cm</PageHeight>
-    <PageWidth>14.85cm</PageWidth>
-    <LeftMargin>1cm</LeftMargin>
-    <RightMargin>1cm</RightMargin>
-    <TopMargin>1cm</TopMargin>
-    <BottomMargin>1cm</BottomMargin>
+    <PageWidth>14.8cm</PageWidth>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>0cm</BottomMargin>
+    <ColumnSpacing>1.27cm</ColumnSpacing>
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
@@ -348,6 +728,7 @@ RLHgqVEsePLmOStU998MuUDerIHt0Nv1Lfes07k2z6Pv2hh9j9s+W0tXe5L40NsNeQ7zPN/a8v7qV79a
 2+XCIVDAEIoFANyhvgvj3YRSQj7//PPr//7tb39rZQN3SrEAgDtU9ix88sknzq4ELB3FAgDuUNmr8KMf/ciKAJaOYgEAAMQGFQtXjAQAAKZZXV2tFouz9g/Pzs6sKQAAoFf3lNdNsXjX/uHx8bE1BQAAVJ2fn3eLxXlTLA7avzg4OLC2AACAqtPT026xOGmKxWftX7x588baAgAAqo6OjrrF4qgpFtvtX7x8+dLaAgAAqnZ2drrFYr8pFqvdyRcXFxfWGAAA8JHuqWbHeXVdLCbt4rj9y7dv31pjAADAB8oZZDul4mqclXaxeN2+wYsXL1zPAgAA+MD29nZ1fkW7WLzoHg61v79vzQEAANcqZ4Mq2f6gWEzKxVH7RuVqevZaAAAAxebmZrdUXDSHQXWLxdrkGKn3Ny4zvgEAgKft8PCwtrdis+kSHxSLSbnYd0gUAADQODk5Ga2srHRLxWm7R9SKxfNySe5uuXj37p01CgAAT8z5+fn1FInKmaBeTi0WrYncl+1/XBrKwcGBNQsAAE9EmaxdKRUlW90OUS0Wk3LxqnIHo93dXWsYAACWXJlTUTn8qWSv1h96i8WkXOzUysX6+rpDowAAYAmVC+BVzv7U5KCvO0wtFpNysdU9U1STjY2N64kcAADA41bmUpQzwvYUiql7KgYVi0m5WJ+co7b6IOW4q3IFvqOjI0UDAAAegVIkjo+Pr6c6vHjxYlqhuOqbUzF3sZiUi9Vx3k15wI9SFrDs1RARERERkYeRnnkTfTmtnf0pKhatgrExeYCRiIiIiIgsZcrRStvz9IS5i0Vn7sVh97S0IiIiIiLyaFOOUConcFpZqCMs8o8qp6bdH+d4Ei+KiIiIiMjDztlk7H7w7IudBs/TXvD/YFIydgWTh5kAAAAASUVORK5CYII=</ImageData>
     </EmbeddedImage>
   </EmbeddedImages>
-  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>c07f3835-acfe-43b5-b654-c4b9ed1702b8</rd:ReportID>
 </Report>

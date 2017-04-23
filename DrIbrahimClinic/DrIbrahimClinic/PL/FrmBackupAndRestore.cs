@@ -71,7 +71,7 @@ namespace DrIbrahimClinic.PL
                 if (folderBrowserDialog.ShowDialog() != DialogResult.OK)
                     return;
                 ShowOrHideControls(true);
-                var server = new Server(new ServerConnection(ServerName, LoginName, Password));
+                var server = new Server(new ServerConnection(ServerName));
                 var backup = new Backup {Action = BackupActionType.Database, Database = DatabaseName};
                 backup.Devices.AddDevice(
                     $@"{folderBrowserDialog.SelectedPath}\{DatabaseName} - {DateTime.Now.ToFormattedDate()}.bak",
@@ -101,7 +101,7 @@ namespace DrIbrahimClinic.PL
                 if (openFileDialog.ShowDialog() != DialogResult.OK)
                     return;
                 ShowOrHideControls(true);
-                var server = new Server(new ServerConnection(ServerName, LoginName, Password));
+                var server = new Server(new ServerConnection(ServerName));
                 var restore = new Restore
                 {
                     Database = DatabaseName,

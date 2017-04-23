@@ -48,14 +48,14 @@
             this.rptViewerRoshetta.LocalReport.ReportEmbeddedResource = "DrIbrahimClinic.PL.Reports.RoshettaReport.rdlc";
             this.rptViewerRoshetta.Location = new System.Drawing.Point(0, 0);
             this.rptViewerRoshetta.Name = "rptViewerRoshetta";
-            this.rptViewerRoshetta.Size = new System.Drawing.Size(584, 741);
+            this.rptViewerRoshetta.Size = new System.Drawing.Size(675, 741);
             this.rptViewerRoshetta.TabIndex = 0;
             // 
             // FrmRoshetta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 741);
+            this.ClientSize = new System.Drawing.Size(675, 741);
             this.Controls.Add(this.rptViewerRoshetta);
             this.DoubleBuffered = true;
             this.Name = "FrmRoshetta";

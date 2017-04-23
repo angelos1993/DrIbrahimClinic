@@ -221,6 +221,7 @@
             this.dgvPatients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPatients.Size = new System.Drawing.Size(785, 449);
             this.dgvPatients.TabIndex = 4;
+            this.dgvPatients.DoubleClick += new System.EventHandler(this.dgvPatients_DoubleClick);
             // 
             // FrmSearchPatient
             // 

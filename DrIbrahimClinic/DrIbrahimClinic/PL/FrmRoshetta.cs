@@ -35,11 +35,14 @@ namespace DrIbrahimClinic.PL
             {
                 RoshettaTreatmentVm.Add(new RoshettaTreatmentVm
                 {
-                    R = "R",
+                    R = @"R\",
                     TreatmentName = TreatmentManager.GetTreatmentNameByTreatmentId(treatment.TreatmentId),
                     TreatmentDescription = treatment.Description
                 });
             }
+            var patientWeight = Examination.PatientWeight.ToString(CultureInfo.CurrentCulture);
+            if (patientWeight == "-1")
+                patientWeight = string.Empty;
             rptViewerRoshetta.LocalReport.SetParameters(new[]
             {
                 new ReportParameter("ExaminationDate", Examination.Date.ToShortDateString()),
@@ -48,7 +51,7 @@ namespace DrIbrahimClinic.PL
                         .ToString()),
                 new ReportParameter("PatientId", Examination.PatientId.ToString()),
                 new ReportParameter("PatientName", PatientManager.GetPatientNameByPatientId(Examination.PatientId)),
-                new ReportParameter("PatientWeight", Examination.PatientWeight.ToString(CultureInfo.CurrentCulture))
+                new ReportParameter("PatientWeight", Examination.PatientWeight != -1 ? Examination.PatientWeight.ToString(CultureInfo.CurrentCulture) : "...")
             });
             RoshettaTreatmentVmBindingSource.DataSource = RoshettaTreatmentVm;
             rptViewerRoshetta.RefreshReport();

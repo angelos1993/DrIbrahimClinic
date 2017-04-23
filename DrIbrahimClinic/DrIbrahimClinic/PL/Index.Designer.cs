@@ -123,6 +123,7 @@
             this.btnStatistics.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnStatistics.TabIndex = 9;
             this.btnStatistics.Text = "إحصائيات";
+            this.btnStatistics.Visible = false;
             // 
             // btnTreatment
             // 
@@ -185,6 +186,7 @@
             this.btnRo4etta.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnRo4etta.TabIndex = 5;
             this.btnRo4etta.Text = "روشتة";
+            this.btnRo4etta.Visible = false;
             this.btnRo4etta.Click += new System.EventHandler(this.btnRo4etta_Click);
             // 
             // btnPatient
@@ -280,6 +282,7 @@
             this.btnEditExamination.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnEditExamination.Name = "btnEditExamination";
             this.btnEditExamination.Text = "تعديل كشف ...";
+            this.btnEditExamination.Visible = false;
             this.btnEditExamination.Click += new System.EventHandler(this.btnEditExamination_Click);
             // 
             // btnSearchExaminations
@@ -289,6 +292,7 @@
             this.btnSearchExaminations.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnSearchExaminations.Name = "btnSearchExaminations";
             this.btnSearchExaminations.Text = "بحث ...";
+            this.btnSearchExaminations.Visible = false;
             this.btnSearchExaminations.Click += new System.EventHandler(this.btnSearchExaminations_Click);
             // 
             // buttonItem1
@@ -317,7 +321,7 @@
             // 
             this.lblMonthName.BackgroundStyle.Class = "";
             this.lblMonthName.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblMonthName.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMonthName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMonthName.ForeColor = System.Drawing.Color.White;
             this.lblMonthName.Location = new System.Drawing.Point(46, 462);
             this.lblMonthName.Name = "lblMonthName";
@@ -381,7 +385,7 @@
             // 
             this.lblDayName.BackgroundStyle.Class = "";
             this.lblDayName.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblDayName.Font = new System.Drawing.Font("Arial Unicode MS", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDayName.ForeColor = System.Drawing.Color.Red;
             this.lblDayName.Location = new System.Drawing.Point(40, 252);
             this.lblDayName.Name = "lblDayName";

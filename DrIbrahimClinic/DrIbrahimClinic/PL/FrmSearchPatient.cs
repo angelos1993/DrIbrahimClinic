@@ -7,6 +7,7 @@ using DrIbrahimClinic.DAL.Model;
 using DrIbrahimClinic.DAL.VMs;
 using DrIbrahimClinic.Utility;
 using static DrIbrahimClinic.Utility.InputLanguageUtility;
+using static DrIbrahimClinic.Utility.MessageBoxUtility;
 
 namespace DrIbrahimClinic.PL
 {
@@ -55,13 +56,26 @@ namespace DrIbrahimClinic.PL
             Cursor = Cursors.Default;
         }
 
+        private void dgvPatients_DoubleClick(object sender, EventArgs e)
+        {
+            if (ShowConfirmationDialog("هل أنت متأكد من أنك تريد حذف المريض المحدد؟") != DialogResult.Yes)
+                return;
+            Cursor = Cursors.WaitCursor;
+            var patient = PatientManager.GetPatientById(int.Parse(dgvPatients.SelectedRows[0].Cells[0].Value.ToString()));
+            if (patient == null)
+                return;
+            PatientManager.DeletePatient(patient);
+            FillGrid();
+            Cursor = Cursors.Default;
+        }
+
         #endregion
 
         #region Methods
 
         private void FillGrid(Func<Patient, bool> where = null)
         {
-            dgvPatients.DataSource = Patients.Where(where ?? (p => true)).Select(patient => new PatientVm
+            dgvPatients.DataSource = Patients.Where(where ?? (p => true)).OrderBy(patient => patient.Name).Select(patient => new PatientVm
             {
                 Id = patient.Id,
                 Name = patient.Name,
