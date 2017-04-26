@@ -190,6 +190,7 @@
     <Compile Include="DAL\TreatmentRepository.cs" />
     <Compile Include="DAL\VMs\DiagnosiVm.cs" />
     <Compile Include="DAL\VMs\ExaminationTreatmentVm.cs" />
+    <Compile Include="DAL\VMs\PreviousExaminationVm.cs" />
     <Compile Include="DAL\VMs\ExaminationVm.cs" />
     <Compile Include="DAL\VMs\InoculationVm.cs" />
     <Compile Include="DAL\VMs\MedicalHistoryVm.cs" />

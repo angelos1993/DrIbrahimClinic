@@ -418,10 +418,8 @@ namespace DrIbrahimClinic.PL
                     e.NewTab.AttachedControl.Enabled = true;
                     dgvPreviousVisits.DataSource = ExaminationManager.GetExaminationsByPatientId(Patient.Id)
                         .OrderByDescending(examination => examination.Date)
-                        .Select(examination => new ExaminationVm
+                        .Select(examination => new PreviousExaminationVm
                         {
-                            PatientId = examination.PatientId,
-                            PatientName = examination.Patient.Name,
                             ExaminationDate = examination.Date.ToFormattedArabicDate(),
                             ExaminationType =
                                 examination.ExaminationType == 1 ? "كشف" : @"إعادة",
