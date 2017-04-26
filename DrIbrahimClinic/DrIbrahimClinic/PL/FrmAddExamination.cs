@@ -54,6 +54,11 @@ namespace DrIbrahimClinic.PL
         private TreatmentManager _treatmentManager;
         private TreatmentManager TreatmentManager => _treatmentManager ?? (_treatmentManager = new TreatmentManager());
 
+        private TreatmentsDescriptionManager _treatmentsDescriptionManager;
+
+        private TreatmentsDescriptionManager TreatmentsDescriptionManager
+            => _treatmentsDescriptionManager ?? (_treatmentsDescriptionManager = new TreatmentsDescriptionManager());
+
         public Patient Patient { get; set; }
 
         public Examination Examination { get; set; }
@@ -223,7 +228,7 @@ namespace DrIbrahimClinic.PL
         #endregion
 
         #region Inoculations Panel
-        
+
         private void btnAddInoculation_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
@@ -277,8 +282,8 @@ namespace DrIbrahimClinic.PL
                 return;
             }
             if (!DiagnosisManager.IsDiagnisiFound(txtDiagnosis.Text.FullTrim()))
-                DiagnosisManager.AddDiagnosi(new Diagnosi { Name = txtDiagnosis.Text.FullTrim() });
-            Diagnosis.Add(new DiagnosiVm { DiagnosiName = txtDiagnosis.Text.FullTrim() });
+                DiagnosisManager.AddDiagnosi(new Diagnosi {Name = txtDiagnosis.Text.FullTrim()});
+            Diagnosis.Add(new DiagnosiVm {DiagnosiName = txtDiagnosis.Text.FullTrim()});
             ClearDiagnosisInputs();
             FillDiagnosisGrid();
             SetAutoCompletionForDiagnosisNames();
@@ -296,6 +301,12 @@ namespace DrIbrahimClinic.PL
             }
             if (!TreatmentManager.IsTreatmentFoundByName(txtTreatmentName.Text.FullTrim()))
                 TreatmentManager.AddTreatment(new Treatment {Name = txtTreatmentName.Text.FullTrim()});
+            if (!string.IsNullOrEmpty(txtTreatmentDescription.Text.FullTrim()) &&
+                !TreatmentsDescriptionManager.IsTreatmentFoundByDescription(txtTreatmentDescription.Text.FullTrim()))
+                TreatmentsDescriptionManager.AddTreatmentsDescription(new TreatmentsDescription
+                {
+                    Description = txtTreatmentDescription.Text.FullTrim()
+                });
             Treatments.Add(new ExaminationTreatmentVm
             {
                 TreatmentName = txtTreatmentName.Text.FullTrim(),
@@ -304,6 +315,7 @@ namespace DrIbrahimClinic.PL
             ClearTreatmentsInputs();
             FillTreatmentsGrid();
             SetAutoCompletionForTreatmentsNames();
+            SetAutoCompletionForTreatmentsDescription();
             Cursor = Cursors.Default;
         }
 
@@ -323,9 +335,10 @@ namespace DrIbrahimClinic.PL
                 PatientWeight = double.TryParse(txtPatientWeight.Text, out patientWeightTemp)
                     ? patientWeightTemp
                     : -1,
-                PatientHeadCircumference = double.TryParse(txtPatientHeadCircumference.Text, out patientHeadCircumferenceTemp)
-                    ? patientHeadCircumferenceTemp
-                    : -1
+                PatientHeadCircumference =
+                    double.TryParse(txtPatientHeadCircumference.Text, out patientHeadCircumferenceTemp)
+                        ? patientHeadCircumferenceTemp
+                        : -1
             };
             ExaminationManager.AddExamination(Examination);
             if (Diagnosis.Any())
@@ -404,40 +417,40 @@ namespace DrIbrahimClinic.PL
                     }
                     e.NewTab.AttachedControl.Enabled = true;
                     dgvPreviousVisits.DataSource = ExaminationManager.GetExaminationsByPatientId(Patient.Id)
-                                                       .OrderByDescending(examination => examination.Date)
-                                                       .Select(examination => new ExaminationVm
-                                                       {
-                                                           PatientId = examination.PatientId,
-                                                           PatientName = examination.Patient.Name,
-                                                           ExaminationDate = examination.Date.ToFormattedArabicDate(),
-                                                           ExaminationType =
-                                                               examination.ExaminationType == 1 ? "كشف" : @"إعادة",
-                                                           Complaint = examination.Complaint,
-                                                           Diagnosis =
-                                                               examination.ExaminationDiagnosis?.Select(
-                                                                   examinationDiagnosis => examinationDiagnosis.Diagnosi)
-                                                                   .ToDiagnosisListString(),
-                                                           PatientLength =
-                                                               Abs(examination.PatientLength - (-1)) > 0
-                                                                   ? examination.PatientLength.ToString(
-                                                                       CultureInfo.CurrentCulture)
-                                                                   : string.Empty,
-                                                           PatientWeight =
-                                                               Abs(examination.PatientWeight - (-1)) > 0
-                                                                   ? examination.PatientWeight.ToString(
-                                                                       CultureInfo.CurrentCulture)
-                                                                   : string.Empty,
-                                                           PatientHeadCircumference =
-                                                               Abs(examination.PatientHeadCircumference - (-1)) > 0
-                                                                   ? examination.PatientHeadCircumference.ToString(
-                                                                       CultureInfo.CurrentCulture)
-                                                                   : string.Empty,
-                                                           Treatment =
-                                                               examination.ExaminationTreatments?.Select(
-                                                                   examinationTreatments =>
-                                                                       examinationTreatments.Treatment)
-                                                                   .ToTreatmentsListString()
-                                                       }).ToList();
+                        .OrderByDescending(examination => examination.Date)
+                        .Select(examination => new ExaminationVm
+                        {
+                            PatientId = examination.PatientId,
+                            PatientName = examination.Patient.Name,
+                            ExaminationDate = examination.Date.ToFormattedArabicDate(),
+                            ExaminationType =
+                                examination.ExaminationType == 1 ? "كشف" : @"إعادة",
+                            Complaint = examination.Complaint,
+                            Diagnosis =
+                                examination.ExaminationDiagnosis?.Select(
+                                    examinationDiagnosis => examinationDiagnosis.Diagnosi)
+                                    .ToDiagnosisListString(),
+                            PatientLength =
+                                Abs(examination.PatientLength - (-1)) > 0
+                                    ? examination.PatientLength.ToString(
+                                        CultureInfo.CurrentCulture)
+                                    : string.Empty,
+                            PatientWeight =
+                                Abs(examination.PatientWeight - (-1)) > 0
+                                    ? examination.PatientWeight.ToString(
+                                        CultureInfo.CurrentCulture)
+                                    : string.Empty,
+                            PatientHeadCircumference =
+                                Abs(examination.PatientHeadCircumference - (-1)) > 0
+                                    ? examination.PatientHeadCircumference.ToString(
+                                        CultureInfo.CurrentCulture)
+                                    : string.Empty,
+                            Treatment =
+                                examination.ExaminationTreatments?.Select(
+                                    examinationTreatments =>
+                                        examinationTreatments.Treatment)
+                                    .ToTreatmentsListString()
+                        }).ToList();
                     break;
                 case @"الكشف":
                     if (Patient == null || Mode != AddExaminationFormMode.HasPatient)
@@ -450,6 +463,7 @@ namespace DrIbrahimClinic.PL
                     e.NewTab.AttachedControl.Enabled = true;
                     SetAutoCompletionForDiagnosisNames();
                     SetAutoCompletionForTreatmentsNames();
+                    SetAutoCompletionForTreatmentsDescription();
                     break;
             }
             Cursor = Cursors.Default;
@@ -649,6 +663,15 @@ namespace DrIbrahimClinic.PL
             var namesCollection = new AutoCompleteStringCollection();
             namesCollection.AddRange(DiagnosisManager.GetAllDiagnosis().Select(d => d.Name).ToArray());
             SetAutoCompleteSourceForTextBox(txtDiagnosis, namesCollection);
+        }
+
+        private void SetAutoCompletionForTreatmentsDescription()
+        {
+            var descriptionsCollection = new AutoCompleteStringCollection();
+            descriptionsCollection.AddRange(
+                TreatmentsDescriptionManager.GetAllTreatmentsDescription().Select(td => td.Description).ToArray());
+            SetAutoCompleteSourceForTextBox(txtTreatmentDescription, descriptionsCollection);
+
         }
 
         private void SetTextBoxesInputLanguages()

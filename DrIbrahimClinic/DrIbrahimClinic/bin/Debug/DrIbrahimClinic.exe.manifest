@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DrIbrahimClinic.exe" size="2596776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DrIbrahimClinic.exe" size="2599848">
       <assemblyIdentity name="DrIbrahimClinic" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ACZWyO2PJS3xikdcW+hmCKPnHoU=</dsig:DigestValue>
+        <dsig:DigestValue>eDbfIo84Qh0qv0C7Y+AFYtii7bU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -324,13 +324,13 @@
       <dsig:DigestValue>K/gdrt1cRyts1Cgu2OwhY56IYOo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="DB\DrIbrahimClinic.sql" size="19582">
+  <file name="DB\DrIbrahimClinic.sql" size="50580">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>zj515ACcbRjwLicuap1RH7sYgaE=</dsig:DigestValue>
+      <dsig:DigestValue>2NMV+ER3ezZ2gsRqAuTAma04GaA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="DrIbrahimClinic.exe.config" size="1790">

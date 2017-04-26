@@ -36,6 +36,7 @@ namespace DrIbrahimClinic.DAL.Model
         public virtual DbSet<Patient> Patients { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Treatment> Treatments { get; set; }
+        public virtual DbSet<TreatmentsDescription> TreatmentsDescriptions { get; set; }
     
         public virtual int ResetDB()
         {

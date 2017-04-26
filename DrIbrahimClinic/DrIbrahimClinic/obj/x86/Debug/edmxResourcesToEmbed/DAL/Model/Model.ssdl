@@ -84,6 +84,13 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <EntityType Name="TreatmentsDescription">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <Association Name="FK_ExaminationMedication_Examinations">
     <End Role="Examinations" Type="Self.Examinations" Multiplicity="1" />
     <End Role="ExaminationTreatment" Type="Self.ExaminationTreatment" Multiplicity="*" />
@@ -210,6 +217,7 @@
     <EntitySet Name="Patients" EntityType="Self.Patients" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Treatments" EntityType="Self.Treatments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TreatmentsDescription" EntityType="Self.TreatmentsDescription" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_ExaminationMedication_Examinations" Association="Self.FK_ExaminationMedication_Examinations">
       <End Role="Examinations" EntitySet="Examinations" />
       <End Role="ExaminationTreatment" EntitySet="ExaminationTreatment" />
