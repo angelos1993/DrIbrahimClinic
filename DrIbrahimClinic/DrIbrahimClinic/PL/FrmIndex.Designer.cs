@@ -1,6 +1,6 @@
 ﻿namespace DrIbrahimClinic.PL
 {
-    partial class Index
+    partial class FrmIndex
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Index));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIndex));
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.panelButtons = new DevComponents.DotNetBar.PanelEx();
             this.btnBackupAndRestoreDB = new DevComponents.DotNetBar.ButtonX();
@@ -413,7 +413,7 @@
             this.picBoxCalendar.TabIndex = 1;
             this.picBoxCalendar.TabStop = false;
             // 
-            // Index
+            // FrmIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -431,7 +431,7 @@
             this.EnableGlass = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Index";
+            this.Name = "FrmIndex";
             this.Text = "د / ابراهيم رزق الميري";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Index_Load);

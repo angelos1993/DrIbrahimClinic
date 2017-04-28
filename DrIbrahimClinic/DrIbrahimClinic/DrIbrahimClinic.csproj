@@ -264,11 +264,11 @@
     <Compile Include="PL\FrmSearchTreatment.Designer.cs">
       <DependentUpon>FrmSearchTreatment.cs</DependentUpon>
     </Compile>
-    <Compile Include="PL\Index.cs">
+    <Compile Include="PL\FrmIndex.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PL\Index.Designer.cs">
-      <DependentUpon>Index.cs</DependentUpon>
+    <Compile Include="PL\FrmIndex.Designer.cs">
+      <DependentUpon>FrmIndex.cs</DependentUpon>
     </Compile>
     <Compile Include="PL\MasterForm.cs">
       <SubType>Form</SubType>
@@ -318,8 +318,8 @@
     <EmbeddedResource Include="PL\FrmSearchTreatment.resx">
       <DependentUpon>FrmSearchTreatment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PL\Index.resx">
-      <DependentUpon>Index.cs</DependentUpon>
+    <EmbeddedResource Include="PL\FrmIndex.resx">
+      <DependentUpon>FrmIndex.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PL\MasterForm.resx">
       <DependentUpon>MasterForm.cs</DependentUpon>

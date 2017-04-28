@@ -6,9 +6,9 @@ using DrIbrahimClinic.Utility;
 
 namespace DrIbrahimClinic.PL
 {
-    public partial class Index : Office2007Form
+    public partial class FrmIndex : Office2007Form
     {
-        public Index()
+        public FrmIndex()
         {
             InitializeComponent();
         }
