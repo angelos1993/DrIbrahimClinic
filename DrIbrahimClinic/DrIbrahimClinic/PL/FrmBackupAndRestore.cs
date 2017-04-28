@@ -8,7 +8,7 @@ using static DrIbrahimClinic.Utility.Constants;
 
 namespace DrIbrahimClinic.PL
 {
-    public partial class FrmBackupAndRestore : MasterForm
+    public partial class FrmBackupAndRestore : FrmMaster
     {
         public FrmBackupAndRestore()
         {

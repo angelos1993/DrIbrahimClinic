@@ -11,7 +11,7 @@ using static DrIbrahimClinic.Utility.MessageBoxUtility;
 
 namespace DrIbrahimClinic.PL
 {
-    public partial class FrmSearchTreatment : MasterForm
+    public partial class FrmSearchTreatment : FrmMaster
     {
         public FrmSearchTreatment()
         {

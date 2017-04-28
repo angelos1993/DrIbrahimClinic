@@ -12,7 +12,7 @@ using static DrIbrahimClinic.Utility.InputLanguageUtility;
 
 namespace DrIbrahimClinic.PL
 {
-    public partial class FrmPatientInoculations : MasterForm
+    public partial class FrmPatientInoculations : FrmMaster
     {
         public FrmPatientInoculations()
         {

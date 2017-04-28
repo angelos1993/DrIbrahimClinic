@@ -9,7 +9,7 @@ using static DrIbrahimClinic.Utility.MessageBoxUtility;
 
 namespace DrIbrahimClinic.PL
 {
-    public partial class FrmAddTreatment : MasterForm
+    public partial class FrmAddTreatment : FrmMaster
     {
         public FrmAddTreatment()
         {

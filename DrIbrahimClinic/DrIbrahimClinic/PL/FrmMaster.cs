@@ -3,9 +3,9 @@ using DevComponents.DotNetBar;
 
 namespace DrIbrahimClinic.PL
 {
-    public partial class MasterForm : Office2007Form
+    public partial class FrmMaster : Office2007Form
     {
-        public MasterForm()
+        public FrmMaster()
         {
             InitializeComponent();
             SetupForm();

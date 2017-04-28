@@ -18,7 +18,7 @@ using static DrIbrahimClinic.Utility.InputLanguageUtility;
 
 namespace DrIbrahimClinic.PL
 {
-    public partial class FrmAddExamination : MasterForm
+    public partial class FrmAddExamination : FrmMaster
     {
         public FrmAddExamination()
         {

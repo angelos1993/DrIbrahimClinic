@@ -10,7 +10,7 @@ using static DrIbrahimClinic.Utility.InputLanguageUtility;
 
 namespace DrIbrahimClinic.PL
 {
-    public partial class FrmAddPatient : MasterForm
+    public partial class FrmAddPatient : FrmMaster
     {
         public FrmAddPatient()
         {

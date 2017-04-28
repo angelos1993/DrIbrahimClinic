@@ -13,7 +13,7 @@ using static DrIbrahimClinic.Utility.InputLanguageUtility;
 
 namespace DrIbrahimClinic.PL
 {
-    public partial class FrmEditTreatment : MasterForm
+    public partial class FrmEditTreatment : FrmMaster
     {
         public FrmEditTreatment()
         {

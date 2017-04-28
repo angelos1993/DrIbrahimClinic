@@ -13,7 +13,7 @@ using static DrIbrahimClinic.Utility.Constants;
 
 namespace DrIbrahimClinic.PL
 {
-    public partial class FrmEditPatient : MasterForm
+    public partial class FrmEditPatient : FrmMaster
     {
         public FrmEditPatient()
         {

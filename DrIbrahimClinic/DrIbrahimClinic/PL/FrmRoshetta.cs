@@ -8,7 +8,7 @@ using Microsoft.Reporting.WinForms;
 
 namespace DrIbrahimClinic.PL
 {
-    public partial class FrmRoshetta : MasterForm
+    public partial class FrmRoshetta : FrmMaster
     {
         public FrmRoshetta(Examination examination)
         {
