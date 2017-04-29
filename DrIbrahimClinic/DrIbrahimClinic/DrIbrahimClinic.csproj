@@ -198,6 +198,7 @@
     <Compile Include="DAL\VMs\RoshettaTreatmentVm.cs" />
     <Compile Include="DAL\TreatmentsDescriptionRepository.cs" />
     <Compile Include="DAL\VMs\TreatmentVm.cs" />
+    <Content Include="DB\ResetDB.sql" />
     <Compile Include="PL\FrmAddExamination.cs">
       <SubType>Form</SubType>
     </Compile>
