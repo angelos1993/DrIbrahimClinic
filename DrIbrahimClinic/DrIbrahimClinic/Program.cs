@@ -14,7 +14,7 @@ namespace DrIbrahimClinic
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmIndex());
+            Application.Run(new FrmSplash());
         }
     }
 }

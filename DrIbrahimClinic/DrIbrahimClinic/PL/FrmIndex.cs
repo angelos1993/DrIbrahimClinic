@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Net.Mime;
 using static System.DateTime;
 using DevComponents.DotNetBar;
 using DrIbrahimClinic.Utility;
@@ -22,6 +23,11 @@ namespace DrIbrahimClinic.PL
             PrepareCalendarAndTime();
             SetCurrentDate();
             SetCurrentTime();
+        }
+
+        private void FrmIndex_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
 
         #endregion

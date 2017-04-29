@@ -434,6 +434,7 @@
             this.Name = "FrmIndex";
             this.Text = "د / ابراهيم رزق الميري";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmIndex_FormClosing);
             this.Load += new System.EventHandler(this.Index_Load);
             this.panelButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxClock)).EndInit();
