@@ -422,6 +422,7 @@
     </Content>
     <Content Include="DB\DrIbrahimClinic.sql" />
     <Content Include="Logo.ico" />
+    <None Include="Resources\HomeBackground.png" />
     <None Include="Resources\New.png" />
     <None Include="Resources\Inoculations.png" />
     <None Include="Resources\Restore.png" />

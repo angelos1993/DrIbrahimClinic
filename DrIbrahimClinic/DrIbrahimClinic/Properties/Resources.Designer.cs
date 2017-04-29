@@ -163,9 +163,9 @@ namespace DrIbrahimClinic.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Inoculations {
+        internal static System.Drawing.Bitmap HomeBackground {
             get {
-                object obj = ResourceManager.GetObject("Inoculations", resourceCulture);
+                object obj = ResourceManager.GetObject("HomeBackground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace DrIbrahimClinic.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Loading {
+        internal static System.Drawing.Bitmap Inoculations {
             get {
-                object obj = ResourceManager.GetObject("Loading", resourceCulture);
+                object obj = ResourceManager.GetObject("Inoculations", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
