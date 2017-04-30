@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>iduyTMVFXC6OjjMapvompK5GTVo=</dsig:DigestValue>
+        <dsig:DigestValue>SFWnY0XQRUfKq2lJIUEVhJB2s3E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -339,7 +339,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>bf4HD8XFHo+SvXJjlJOZ5DokzGo=</dsig:DigestValue>
+      <dsig:DigestValue>nEudbI/exaE5f+5xCm5tB8EBcwU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Logo.ico" size="370070">
