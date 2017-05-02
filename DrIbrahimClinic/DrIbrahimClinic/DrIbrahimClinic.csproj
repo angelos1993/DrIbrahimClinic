@@ -354,99 +354,6 @@
     <None Include="DAL\Model\Model.edmx.diagram">
       <DependentUpon>Model.edmx</DependentUpon>
     </None>
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\DrIbrahimClinic - %28Empty Database%29.bak" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\DrIbrahimClinic - %28Stable Database%29.bak" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\DAL\Model\Model.Context.tt.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\DAL\Model\Model.tt.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\DB\DrIbrahimClinic.sql.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\DevComponents.Instrumentation.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\DrIbrahimClinic.application" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\DrIbrahimClinic.exe.config.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\DrIbrahimClinic.exe.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\DrIbrahimClinic.exe.manifest" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\EntityFramework.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\EntityFramework.SqlServer.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Logo.ico.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.ReportViewer.Common.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.ReportViewer.DataVisualization.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.ReportViewer.ProcessingObjectModel.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.ReportViewer.WinForms.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.ConnectionInfo.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.ConnectionInfoExtended.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.Diagnostics.STrace.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.Dmf.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.Management.Sdk.Sfc.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.Management.SmoMetadataProvider.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.Management.SqlParser.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.RegSvrEnum.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.ServiceBrokerEnum.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.Smo.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.SmoExtended.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.SqlClrProvider.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.SqlEnum.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.Types.dll.deploy" />
-    <None Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\DrIbrahimClinic.application" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\DrIbrahimClinic - %28Empty Database%29.bak" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\DrIbrahimClinic - %28Stable Database%29.bak" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\DAL\Model\Model.Context.tt.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\DAL\Model\Model.tt.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\DB\DrIbrahimClinic.sql.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\DevComponents.Instrumentation.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\DrIbrahimClinic.application" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\DrIbrahimClinic.exe.config.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\DrIbrahimClinic.exe.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\DrIbrahimClinic.exe.manifest" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\EntityFramework.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\EntityFramework.SqlServer.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Logo.ico.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.ReportViewer.Common.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.ReportViewer.DataVisualization.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.ReportViewer.ProcessingObjectModel.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.ReportViewer.WinForms.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.ConnectionInfo.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.ConnectionInfoExtended.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.Diagnostics.STrace.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.Dmf.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.Management.Sdk.Sfc.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.Management.SmoMetadataProvider.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.Management.SqlParser.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.RegSvrEnum.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.ServiceBrokerEnum.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.Smo.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.SmoExtended.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.SqlClrProvider.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.SqlEnum.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\Application Files\DrIbrahimClinic_1_0_0_1\Microsoft.SqlServer.Types.dll.deploy" />
-    <None Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\DrIbrahimClinic.application" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\DAL\Model\Model.Context.tt.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\DAL\Model\Model.tt.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\DevComponents.Instrumentation.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\DrIbrahimClinic.application" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\DrIbrahimClinic.exe.config.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\DrIbrahimClinic.exe.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\DrIbrahimClinic.exe.manifest" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\EntityFramework.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\EntityFramework.SqlServer.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Logo.ico.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.ReportViewer.Common.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.ReportViewer.DataVisualization.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.ReportViewer.ProcessingObjectModel.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.ReportViewer.WinForms.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.SqlServer.ConnectionInfo.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.SqlServer.ConnectionInfoExtended.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.SqlServer.Diagnostics.STrace.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.SqlServer.Dmf.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.SqlServer.Management.Sdk.Sfc.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.SqlServer.Management.SmoMetadataProvider.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.SqlServer.Management.SqlParser.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.SqlServer.RegSvrEnum.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.SqlServer.ServiceBrokerEnum.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.SqlServer.Smo.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.SqlServer.SmoExtended.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.SqlServer.SqlClrProvider.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.SqlServer.SqlEnum.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\Application Files\DrIbrahimClinic_1_0_0_2\Microsoft.SqlServer.Types.dll.deploy" />
-    <None Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\DrIbrahimClinic.application" />
     <None Include="DevComponents.DotNetBar.pfx" />
     <None Include="DrIbrahimClinic_TemporaryKey.pfx" />
     <None Include="packages.config" />
@@ -512,11 +419,6 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
-    <Content Include="Deployment Versions\1.Apr 23, 2017 %281.0.0.0%29\Publish\setup.exe" />
-    <Content Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\DrIbrahimClinic.sql" />
-    <Content Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\Publish\setup.exe" />
-    <Content Include="Deployment Versions\2.Apr 29, 2017 %281.0.0.1%29\ResetDB.sql" />
-    <Content Include="Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\setup.exe" />
     <Content Include="Logo.ico" />
     <None Include="Resources\HomeBackground.png" />
     <None Include="Resources\New.png" />
@@ -650,10 +552,7 @@
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Deployment Versions\1.Apr 23, 2017\" />
-    <Folder Include="Deployment Versions\2.Apr 29, 2017\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
