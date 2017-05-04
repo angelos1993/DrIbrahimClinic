@@ -49,7 +49,7 @@ namespace DrIbrahimClinic.PL
                 FillGrid(
                     examination =>
                         examination.Patient.Name.Contains(txtPatientName.Text) &&
-                        (dtExaminationDate.Value != default(DateTime) && examination.Date == dtExaminationDate.Value));
+                        (dtExaminationDate.Value == default(DateTime) || examination.Date == dtExaminationDate.Value));
             Cursor = Cursors.Default;
         }
 
@@ -67,23 +67,26 @@ namespace DrIbrahimClinic.PL
         private void FillGrid(Func<Examination, bool> where = null)
         {
             dgvExaminations.DataSource =
-                Examinations.Where(where ?? (p => true)).Select(examination => new ExaminationVm
-                {
-                    PatientId = examination.PatientId,
-                    PatientName = examination.Patient.Name,
-                    ExaminationDate = examination.Date.ToFormattedArabicDate(),
-                    ExaminationType = examination.ExaminationType == 1 ? "كشف" : "إعادة",
-                    Complaint = examination.Complaint,
-                    Diagnosis =
-                        examination.ExaminationDiagnosis.Select(examinationDiagnosi => examinationDiagnosi.Diagnosi)
-                            .ToDiagnosisListString(),
-                    PatientLength = examination.PatientLength.ToString(CultureInfo.CurrentCulture),
-                    PatientWeight = examination.PatientWeight.ToString(CultureInfo.CurrentCulture),
-                    PatientHeadCircumference = examination.PatientHeadCircumference.ToString(CultureInfo.CurrentCulture),
-                    Treatment =
-                        examination.ExaminationTreatments.Select(
-                            examinationTreatments => examinationTreatments.Treatment).ToTreatmentsListString()
-                });
+                Examinations.Where(where ?? (p => true))
+                .OrderBy(examination => examination.Date)
+                    .Select(examination => new ExaminationVm
+                    {
+                        PatientId = examination.PatientId,
+                        PatientName = examination.Patient.Name,
+                        ExaminationDate = examination.Date.ToFormattedArabicDate(),
+                        ExaminationType = examination.ExaminationType == 1 ? "كشف" : "إعادة",
+                        Complaint = examination.Complaint,
+                        Diagnosis =
+                            examination.ExaminationDiagnosis.Select(examinationDiagnosi => examinationDiagnosi.Diagnosi)
+                                .ToDiagnosisListString(),
+                        PatientLength = examination.PatientLength.ToString(CultureInfo.CurrentCulture),
+                        PatientWeight = examination.PatientWeight.ToString(CultureInfo.CurrentCulture),
+                        PatientHeadCircumference =
+                            examination.PatientHeadCircumference.ToString(CultureInfo.CurrentCulture),
+                        Treatment =
+                            examination.ExaminationTreatments.Select(
+                                examinationTreatments => examinationTreatments.Treatment).ToTreatmentsListString()
+                    }).ToList();
         }
 
         private void ClearSearch()

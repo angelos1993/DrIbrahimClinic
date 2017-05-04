@@ -38,7 +38,6 @@
             this.btnAddTreatment = new DevComponents.DotNetBar.ButtonItem();
             this.btnEditTreatment = new DevComponents.DotNetBar.ButtonItem();
             this.btnSearchTreatment = new DevComponents.DotNetBar.ButtonItem();
-            this.btnRo4etta = new DevComponents.DotNetBar.ButtonX();
             this.btnPatient = new DevComponents.DotNetBar.ButtonX();
             this.btnAddPatient = new DevComponents.DotNetBar.ButtonItem();
             this.btnEditPatient = new DevComponents.DotNetBar.ButtonItem();
@@ -46,7 +45,6 @@
             this.btnPatientInoculations = new DevComponents.DotNetBar.ButtonItem();
             this.btnExamination = new DevComponents.DotNetBar.ButtonX();
             this.btnAddExamination = new DevComponents.DotNetBar.ButtonItem();
-            this.btnEditExamination = new DevComponents.DotNetBar.ButtonItem();
             this.btnSearchExaminations = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
@@ -74,7 +72,6 @@
             this.panelButtons.Controls.Add(this.btnBackupAndRestoreDB);
             this.panelButtons.Controls.Add(this.btnStatistics);
             this.panelButtons.Controls.Add(this.btnTreatment);
-            this.panelButtons.Controls.Add(this.btnRo4etta);
             this.panelButtons.Controls.Add(this.btnPatient);
             this.panelButtons.Controls.Add(this.btnExamination);
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Top;
@@ -101,7 +98,7 @@
             this.btnBackupAndRestoreDB.Image = global::DrIbrahimClinic.Properties.Resources.BackupAndRestore;
             this.btnBackupAndRestoreDB.ImageFixedSize = new System.Drawing.Size(80, 70);
             this.btnBackupAndRestoreDB.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnBackupAndRestoreDB.Location = new System.Drawing.Point(500, 0);
+            this.btnBackupAndRestoreDB.Location = new System.Drawing.Point(400, 0);
             this.btnBackupAndRestoreDB.Name = "btnBackupAndRestoreDB";
             this.btnBackupAndRestoreDB.Size = new System.Drawing.Size(100, 100);
             this.btnBackupAndRestoreDB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -117,7 +114,7 @@
             this.btnStatistics.Image = global::DrIbrahimClinic.Properties.Resources.Statistics;
             this.btnStatistics.ImageFixedSize = new System.Drawing.Size(80, 70);
             this.btnStatistics.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnStatistics.Location = new System.Drawing.Point(400, 0);
+            this.btnStatistics.Location = new System.Drawing.Point(300, 0);
             this.btnStatistics.Name = "btnStatistics";
             this.btnStatistics.Size = new System.Drawing.Size(100, 100);
             this.btnStatistics.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -133,7 +130,7 @@
             this.btnTreatment.Image = global::DrIbrahimClinic.Properties.Resources.Treatment;
             this.btnTreatment.ImageFixedSize = new System.Drawing.Size(80, 70);
             this.btnTreatment.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnTreatment.Location = new System.Drawing.Point(300, 0);
+            this.btnTreatment.Location = new System.Drawing.Point(200, 0);
             this.btnTreatment.Name = "btnTreatment";
             this.btnTreatment.Size = new System.Drawing.Size(100, 100);
             this.btnTreatment.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -171,23 +168,6 @@
             this.btnSearchTreatment.Name = "btnSearchTreatment";
             this.btnSearchTreatment.Text = "بحث ...";
             this.btnSearchTreatment.Click += new System.EventHandler(this.btnSearchTreatment_Click);
-            // 
-            // btnRo4etta
-            // 
-            this.btnRo4etta.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnRo4etta.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnRo4etta.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnRo4etta.Image = global::DrIbrahimClinic.Properties.Resources.Ro4etta;
-            this.btnRo4etta.ImageFixedSize = new System.Drawing.Size(80, 70);
-            this.btnRo4etta.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnRo4etta.Location = new System.Drawing.Point(200, 0);
-            this.btnRo4etta.Name = "btnRo4etta";
-            this.btnRo4etta.Size = new System.Drawing.Size(100, 100);
-            this.btnRo4etta.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnRo4etta.TabIndex = 5;
-            this.btnRo4etta.Text = "روشتة";
-            this.btnRo4etta.Visible = false;
-            this.btnRo4etta.Click += new System.EventHandler(this.btnRo4etta_Click);
             // 
             // btnPatient
             // 
@@ -260,7 +240,6 @@
             this.btnExamination.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnExamination.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnAddExamination,
-            this.btnEditExamination,
             this.btnSearchExaminations});
             this.btnExamination.TabIndex = 0;
             this.btnExamination.Text = "كشف";
@@ -275,16 +254,6 @@
             this.btnAddExamination.Text = "إضافة كشف جديد ...";
             this.btnAddExamination.Click += new System.EventHandler(this.btnExamination_Click);
             // 
-            // btnEditExamination
-            // 
-            this.btnEditExamination.GlobalItem = false;
-            this.btnEditExamination.Image = global::DrIbrahimClinic.Properties.Resources.Edit;
-            this.btnEditExamination.ImageFixedSize = new System.Drawing.Size(20, 20);
-            this.btnEditExamination.Name = "btnEditExamination";
-            this.btnEditExamination.Text = "تعديل كشف ...";
-            this.btnEditExamination.Visible = false;
-            this.btnEditExamination.Click += new System.EventHandler(this.btnEditExamination_Click);
-            // 
             // btnSearchExaminations
             // 
             this.btnSearchExaminations.GlobalItem = false;
@@ -292,7 +261,6 @@
             this.btnSearchExaminations.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnSearchExaminations.Name = "btnSearchExaminations";
             this.btnSearchExaminations.Text = "بحث ...";
-            this.btnSearchExaminations.Visible = false;
             this.btnSearchExaminations.Click += new System.EventHandler(this.btnSearchExaminations_Click);
             // 
             // buttonItem1
@@ -453,7 +421,6 @@
         private DevComponents.DotNetBar.ButtonItem btnAddExamination;
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
         private DevComponents.DotNetBar.ButtonItem buttonItem2;
-        private DevComponents.DotNetBar.ButtonItem btnEditExamination;
         private DevComponents.DotNetBar.ButtonItem btnSearchExaminations;
         private DevComponents.DotNetBar.ButtonX btnPatient;
         private DevComponents.DotNetBar.ButtonItem btnAddPatient;
@@ -474,6 +441,5 @@
         private DevComponents.DotNetBar.ButtonItem btnAddTreatment;
         private DevComponents.DotNetBar.ButtonItem btnEditTreatment;
         private DevComponents.DotNetBar.ButtonItem btnSearchTreatment;
-        private DevComponents.DotNetBar.ButtonX btnRo4etta;
     }
 }

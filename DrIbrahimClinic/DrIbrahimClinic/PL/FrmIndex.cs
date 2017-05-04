@@ -74,15 +74,6 @@ namespace DrIbrahimClinic.PL
 
         #endregion
 
-        #region Ro4etta
-
-        private void btnRo4etta_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        #endregion
-
         #region Treatment
 
         private void btnTreatment_Click(object sender, EventArgs e)

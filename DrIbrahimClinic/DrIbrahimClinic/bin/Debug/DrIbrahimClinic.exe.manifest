@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DrIbrahimClinic.exe" size="3624360">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DrIbrahimClinic.exe" size="3623848">
       <assemblyIdentity name="DrIbrahimClinic" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>2uXUk63zj2/SyR5aJeT3zPC9lBk=</dsig:DigestValue>
+        <dsig:DigestValue>GqBWdk9rVaZtqwbKmCe+aZzcOA8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -330,7 +330,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>nEudbI/exaE5f+5xCm5tB8EBcwU=</dsig:DigestValue>
+      <dsig:DigestValue>bf4HD8XFHo+SvXJjlJOZ5DokzGo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Logo.ico" size="370070">
