@@ -178,6 +178,7 @@
             this.dgvPreviousVisits.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPreviousVisits.Size = new System.Drawing.Size(829, 471);
             this.dgvPreviousVisits.TabIndex = 1;
+            this.dgvPreviousVisits.DoubleClick += new System.EventHandler(this.dgvPreviousVisits_DoubleClick);
             // 
             // tabItem2
             // 

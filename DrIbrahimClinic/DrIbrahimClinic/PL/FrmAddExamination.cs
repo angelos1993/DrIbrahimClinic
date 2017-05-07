@@ -270,6 +270,17 @@ namespace DrIbrahimClinic.PL
 
         #endregion
 
+        #region Previous Visits
+
+        private void dgvPreviousVisits_DoubleClick(object sender, EventArgs e)
+        {
+            new FrmExaminationDetails(ExaminationManager.GetExaminationsByDateAndPatientId(
+                dgvPreviousVisits.SelectedRows[0].Cells[0].Value.ToString().ToDateTimeFromArabicFormattedDate(),
+                Patient.Id)).ShowDialog();
+        }
+
+        #endregion
+
         #region Examination
 
         private void btnAddDiagnosis_Click(object sender, EventArgs e)
@@ -462,6 +473,7 @@ namespace DrIbrahimClinic.PL
                     SetAutoCompletionForDiagnosisNames();
                     SetAutoCompletionForTreatmentsNames();
                     SetAutoCompletionForTreatmentsDescription();
+                    SetAutoCompletionForComplaintsNames();
                     break;
             }
             Cursor = Cursors.Default;
@@ -661,6 +673,13 @@ namespace DrIbrahimClinic.PL
             var namesCollection = new AutoCompleteStringCollection();
             namesCollection.AddRange(DiagnosisManager.GetAllDiagnosis().Select(d => d.Name).ToArray());
             SetAutoCompleteSourceForTextBox(txtDiagnosis, namesCollection);
+        }
+
+        private void SetAutoCompletionForComplaintsNames()
+        {
+            var namesCollection = new AutoCompleteStringCollection();
+            namesCollection.AddRange(ExaminationManager.GetExaminationsComplaintsDistinct());
+            SetAutoCompleteSourceForTextBox(txtComplaint, namesCollection);
         }
 
         private void SetAutoCompletionForTreatmentsDescription()

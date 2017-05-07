@@ -261,6 +261,7 @@
             this.btnSearchExaminations.ImageFixedSize = new System.Drawing.Size(20, 20);
             this.btnSearchExaminations.Name = "btnSearchExaminations";
             this.btnSearchExaminations.Text = "بحث ...";
+            this.btnSearchExaminations.Visible = false;
             this.btnSearchExaminations.Click += new System.EventHandler(this.btnSearchExaminations_Click);
             // 
             // buttonItem1

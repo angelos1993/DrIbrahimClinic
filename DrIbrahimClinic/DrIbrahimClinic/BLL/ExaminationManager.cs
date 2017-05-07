@@ -87,6 +87,19 @@ namespace DrIbrahimClinic.BLL
             UpdateExamination(examination);
         }
 
+        public Examination GetExaminationsByDateAndPatientId(DateTime examinationDate, int patientId)
+        {
+            return
+                GetAllExaminations()
+                    .FirstOrDefault(
+                        examination => examination.Date == examinationDate && examination.PatientId == patientId);
+        }
+
+        public string[] GetExaminationsComplaintsDistinct()
+        {
+            return GetAllExaminations().Select(examination => examination.Complaint).Distinct().ToArray();
+        }
+
         #endregion
     }
 }
