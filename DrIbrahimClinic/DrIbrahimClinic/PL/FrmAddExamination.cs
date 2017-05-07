@@ -677,9 +677,9 @@ namespace DrIbrahimClinic.PL
 
         private void SetAutoCompletionForComplaintsNames()
         {
-            var namesCollection = new AutoCompleteStringCollection();
-            namesCollection.AddRange(ExaminationManager.GetExaminationsComplaintsDistinct());
-            SetAutoCompleteSourceForTextBox(txtComplaint, namesCollection);
+            var complaintsCollection = new AutoCompleteStringCollection();
+            complaintsCollection.AddRange(ExaminationManager.GetExaminationsComplaintsDistinct());
+            SetAutoCompleteSourceForTextBox(txtComplaint, complaintsCollection);
         }
 
         private void SetAutoCompletionForTreatmentsDescription()
