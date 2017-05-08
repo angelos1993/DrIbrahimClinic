@@ -64,6 +64,12 @@ namespace DrIbrahimClinic.PL
             var patient = PatientManager.GetPatientById(int.Parse(dgvPatients.SelectedRows[0].Cells[0].Value.ToString()));
             if (patient == null)
                 return;
+            if (patient.Examinations.Any() || patient.MedicalHistories.Any() || patient.Inoculations.Any())
+            {
+                ShowErrorMsg("لا يمكن حذف هذا المريض حيث أنة لدية كشف / تطعيم / تاريخ مرضي");
+                Cursor = Cursors.Default;
+                return;
+            }
             PatientManager.DeletePatient(patient);
             FillGrid();
             Cursor = Cursors.Default;
