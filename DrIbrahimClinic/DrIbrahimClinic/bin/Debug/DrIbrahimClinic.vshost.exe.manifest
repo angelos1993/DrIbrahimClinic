@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DrIbrahimClinic.exe" size="3629992">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DrIbrahimClinic.exe" size="3627944">
       <assemblyIdentity name="DrIbrahimClinic" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>L996WPjjld/p2IGXnIyDWtsKdDw=</dsig:DigestValue>
+        <dsig:DigestValue>HtjWA8F2E9Nh1nZ/j98IRGziltk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -54,11 +54,6 @@ namespace DrIbrahimClinic.PL
         private TreatmentManager _treatmentManager;
         private TreatmentManager TreatmentManager => _treatmentManager ?? (_treatmentManager = new TreatmentManager());
 
-        private TreatmentsDescriptionManager _treatmentsDescriptionManager;
-
-        private TreatmentsDescriptionManager TreatmentsDescriptionManager
-            => _treatmentsDescriptionManager ?? (_treatmentsDescriptionManager = new TreatmentsDescriptionManager());
-
         public Patient Patient { get; set; }
 
         public Examination Examination { get; set; }
@@ -312,12 +307,6 @@ namespace DrIbrahimClinic.PL
             }
             if (!TreatmentManager.IsTreatmentFoundByName(txtTreatmentName.Text.FullTrim()))
                 TreatmentManager.AddTreatment(new Treatment {Name = txtTreatmentName.Text.FullTrim()});
-            if (!string.IsNullOrEmpty(txtTreatmentDescription.Text.FullTrim()) &&
-                !TreatmentsDescriptionManager.IsTreatmentFoundByDescription(txtTreatmentDescription.Text.FullTrim()))
-                TreatmentsDescriptionManager.AddTreatmentsDescription(new TreatmentsDescription
-                {
-                    Description = txtTreatmentDescription.Text.FullTrim()
-                });
             Treatments.Add(new ExaminationTreatmentVm
             {
                 TreatmentName = txtTreatmentName.Text.FullTrim(),
@@ -685,8 +674,7 @@ namespace DrIbrahimClinic.PL
         private void SetAutoCompletionForTreatmentsDescription()
         {
             var descriptionsCollection = new AutoCompleteStringCollection();
-            descriptionsCollection.AddRange(
-                TreatmentsDescriptionManager.GetAllTreatmentsDescription().Select(td => td.Description).ToArray());
+            descriptionsCollection.AddRange(ExaminationManager.GetExaminationTreatmentsDescriptionDistinct());
             SetAutoCompleteSourceForTextBox(txtTreatmentDescription, descriptionsCollection);
 
         }

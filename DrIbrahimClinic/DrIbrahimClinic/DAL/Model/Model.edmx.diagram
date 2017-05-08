@@ -21,7 +21,6 @@
         <AssociationConnector Association="DrIbrahimClinicModel.FK_ExaminationMedication_Medications" ManuallyRouted="false" />
         <AssociationConnector Association="DrIbrahimClinicModel.FK_Inoculations_Patients" ManuallyRouted="false" />
         <AssociationConnector Association="DrIbrahimClinicModel.FK_MedicalHistory_Patients" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="DrIbrahimClinicModel.TreatmentsDescription" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

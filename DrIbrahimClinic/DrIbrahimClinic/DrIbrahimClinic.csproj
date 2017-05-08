@@ -129,7 +129,6 @@
     <Compile Include="BLL\MedicalHistoryManager.cs" />
     <Compile Include="BLL\PatientManager.cs" />
     <Compile Include="BLL\TreatmentManager.cs" />
-    <Compile Include="BLL\TreatmentsDescriptionManager.cs" />
     <Compile Include="DAL\DiagnosisRepository.cs" />
     <Compile Include="DAL\ExaminationRepository.cs" />
     <Compile Include="DAL\InoculationRepository.cs" />
@@ -182,9 +181,6 @@
     <Compile Include="DAL\Model\Treatment.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Model\TreatmentsDescription.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="DAL\RepositoryBase.cs" />
     <Compile Include="DAL\PatientRepository.cs" />
     <Compile Include="DAL\TreatmentRepository.cs" />
@@ -196,7 +192,6 @@
     <Compile Include="DAL\VMs\MedicalHistoryVm.cs" />
     <Compile Include="DAL\VMs\PatientVm.cs" />
     <Compile Include="DAL\VMs\RoshettaTreatmentVm.cs" />
-    <Compile Include="DAL\TreatmentsDescriptionRepository.cs" />
     <Compile Include="DAL\VMs\TreatmentVm.cs" />
     <Compile Include="PL\FrmAddExamination.cs">
       <SubType>Form</SubType>

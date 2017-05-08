@@ -100,6 +100,15 @@ namespace DrIbrahimClinic.BLL
             return GetAllExaminations().Select(examination => examination.Complaint).Distinct().ToArray();
         }
 
+        public string[] GetExaminationTreatmentsDescriptionDistinct()
+        {
+            return
+                GetAllExaminations()
+                    .SelectMany(examination => examination.ExaminationTreatments)
+                    .Select(examinationTreatment => examinationTreatment.Description)
+                    .Distinct().ToArray();
+        }
+
         #endregion
     }
 }
