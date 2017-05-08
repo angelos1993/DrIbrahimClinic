@@ -45,3 +45,4 @@ G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\bin\Debug\Entity
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.exe.manifest
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.application
 G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.PL.FrmExaminationDetails.resources
+G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\obj\x86\Debug\DrIbrahimClinic.csprojResolveAssemblyReference.cache

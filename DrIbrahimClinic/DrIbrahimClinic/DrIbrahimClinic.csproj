@@ -15,7 +15,7 @@
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\</PublishUrl>
+    <PublishUrl>G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\Deployment Versions\3.May 8, 2017 %281.1.0.0%29\Publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -27,8 +27,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>My Clinic</ProductName>
     <PublisherName>Angelos M Reda</PublisherName>
-    <ApplicationRevision>3</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.1.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>

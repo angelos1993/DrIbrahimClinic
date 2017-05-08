@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectView>ProjectFiles</ProjectView>
-    <PublishUrlHistory>G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\|G:\ads\Apr 29, 2017\Publish\|G:\ads\Publish\|D:\publish\|publish\</PublishUrlHistory>
+    <PublishUrlHistory>G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\Deployment Versions\3.May 8, 2017 %281.1.0.0%29\Publish\|G:\Angelos\DrIbrahimClinic\Repo\DrIbrahimClinic\DrIbrahimClinic\Deployment Versions\3.May 2, 2017 %281.0.0.2%29\Publish\|G:\ads\Apr 29, 2017\Publish\|G:\ads\Publish\|D:\publish\</PublishUrlHistory>
     <InstallUrlHistory />
     <SupportUrlHistory />
     <UpdateUrlHistory />
