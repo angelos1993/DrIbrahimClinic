@@ -25,7 +25,7 @@ namespace DrIbrahimClinic.Utility
                 case "مارس":
                     monthNumbre = 3;
                     break;
-                case "ابريل":
+                case "أبريل":
                     monthNumbre = 4;
                     break;
                 case "مايو":
@@ -34,7 +34,7 @@ namespace DrIbrahimClinic.Utility
                 case "يونيو":
                     monthNumbre = 6;
                     break;
-                case "يوليو":
+                case "يوليه":
                     monthNumbre = 7;
                     break;
                 case "أغسطس":
