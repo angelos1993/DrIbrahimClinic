@@ -188,13 +188,13 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>13cm</Height>
+        <Height>4.67in</Height>
         <Style />
       </Body>
-      <Width>14.8cm</Width>
+      <Width>5.83in</Width>
       <Page>
         <PageHeader>
-          <Height>6.74625cm</Height>
+          <Height>2.6in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -737,7 +737,7 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>3cm</Height>
+          <Height>1in</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -810,13 +810,8 @@
             </Border>
           </Style>
         </PageFooter>
-        <PageHeight>21cm</PageHeight>
-        <PageWidth>14.8cm</PageWidth>
-        <LeftMargin>0cm</LeftMargin>
-        <RightMargin>0cm</RightMargin>
-        <TopMargin>0cm</TopMargin>
-        <BottomMargin>0cm</BottomMargin>
-        <ColumnSpacing>1.27cm</ColumnSpacing>
+        <PageHeight>8.27in</PageHeight>
+        <PageWidth>5.83in</PageWidth>
         <Style />
       </Page>
     </ReportSection>
@@ -956,6 +951,6 @@ RLHgqVEsePLmOStU998MuUDerIHt0Nv1Lfes07k2z6Pv2hh9j9s+W0tXe5L40NsNeQ7zPN/a8v7qV79a
     </EmbeddedImage>
   </EmbeddedImages>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
-  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>c07f3835-acfe-43b5-b654-c4b9ed1702b8</rd:ReportID>
 </Report>
